@@ -38,9 +38,6 @@ a generative space centered on participation, community engagement, and sustaina
 - seafoam green
 - yellow
 
-![colour palette](/color-palette.png)
-Format: ![Alt Text](url)
-
 ### Colours from logo:
 
 ##### A
