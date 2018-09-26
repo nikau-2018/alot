@@ -1,25 +1,33 @@
 # ALoT: Auckland Library of Tools Prototype App
 
+## Contact Info
+
 - Email: aucklandtoollibrary@gmail.com.
 - [Facebook page](https://www.facebook.com/AucklandLibraryofTools/)
 - [ALoT draft website](https://aucklandlibraryoftools.wordpress.com/)
 
-## App Colours
-- seafoam green: #57d2b3
-- yellow: fff442
+## Styling Info
 
-## Colours from logo:
+### CSS Framework
+- [Bulma](https://bulma.io)
+- [Why Bulma?](https://bulma.io/documentation/columns/basics/)
 
-### A
+### App Colours (See L & O below)
+- seafoam green
+- yellow
+
+### Colours from logo:
+
+##### A
 - light grey: #ffffff
 - dark grey: #787878
 
-### L
+##### L
 - seafoam green: #57d2b3
 
-### O
+##### O
 - yellow: fff442
 
-### T
+##### T
 - grey: #dcdcdc
 - tan: #ead8b4
