@@ -11,6 +11,10 @@
 ### CSS Framework
 - Can we use [Bulma](https://bulma.io)?
 
+### Font
+- To be confirmed
+- If Bulma font is okay, keep it. Otherwise, go to [FontCDN](https://fontcdn.org/) or [Google Fonts](https://fonts.google.com/)
+
 ### App Colours
 - seafoam green
 - yellow
