@@ -9,8 +9,7 @@
 ## Styling Info
 
 ### CSS Framework
-- [Bulma](https://bulma.io)
-- [Why Bulma?](https://bulma.io/documentation/columns/basics/)
+- Can we use [Bulma](https://bulma.io)?
 
 ### App Colours
 - seafoam green
