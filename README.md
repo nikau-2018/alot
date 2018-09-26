@@ -20,7 +20,7 @@ a generative space centered on participation, community engagement, and sustaina
 
 ## Contact Info
 
-- Email: aucklandtoollibrary@gmail.com.
+- aucklandtoollibrary@gmail.com.
 - [Facebook page](https://www.facebook.com/AucklandLibraryofTools/)
 - [ALoT draft website](https://aucklandlibraryoftools.wordpress.com/)
 
