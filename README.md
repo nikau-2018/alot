@@ -28,6 +28,7 @@ a generative space centered on participation, community engagement, and sustaina
 
 ### CSS Framework
 - Can we use [Bulma](https://bulma.io)?
+- Another option is Semantic UI (https://semantic-ui.com/) both seem good options to start with
 
 ### Font
 - To be confirmed
