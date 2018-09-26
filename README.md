@@ -12,7 +12,7 @@
 - [Bulma](https://bulma.io)
 - [Why Bulma?](https://bulma.io/documentation/columns/basics/)
 
-### App Colours (See L & O below)
+### App Colours
 - seafoam green
 - yellow
 
