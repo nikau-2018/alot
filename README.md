@@ -1,5 +1,5 @@
 # ALoT: Auckland Library of Tools App
-A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way. Join us!
+A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way.
 
 The Auckland Library of Tools will provide members with access to high quality and well
 maintained tools and equipment. The hub will consist of a well stocked “library”, a storage
