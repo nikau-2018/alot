@@ -34,3 +34,7 @@
 ##### T
 - grey: #dcdcdc
 - tan: #ead8b4
+
+## Library of Tools Examples
+- [Newtown Tool Library](https://newtown-tool-library.myturn.com/library/)
+- [Tacoma Tool Library](https://rebecca-solverson.squarespace.com/)
