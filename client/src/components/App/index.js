@@ -7,6 +7,11 @@ import './styles.css'
 import Nav from '../Nav'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
+import WelcomeContainer from '../WelcomeContainer'
+import ToolsContainer from '../ToolsContainer'
+import ToolDetailContainer from '../ToolDetailContainer'
+import WorkshopsContainer from '../WorkshopsContainer'
+import WorkshopDetailContainer from '../WorkshopDetailContainer'
 
 export default class App extends Component {
   
@@ -17,6 +22,11 @@ export default class App extends Component {
         <CategoryFilter />
         Yup. It&lsquo;s an app.
         <ToolCard />
+        <Route exact path='/' component={WelcomeContainer}/>
+        <Route exact path='/tools' component={ToolsContainer}/>
+        <Route path='/tools/:id' component={ToolDetailContainer}/>
+        <Route exact path='/workshops' component={WorkshopsContainer} />
+        <Route path='/workshops/:id' component={WorkshopDetailContainer} />
       </div>
     )
   }
