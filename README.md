@@ -57,3 +57,10 @@ a generative space centered on participation, community engagement, and sustaina
 ## Library of Tools Examples
 - [Newtown Tool Library](https://newtown-tool-library.myturn.com/library/)
 - [Tacoma Tool Library](https://rebecca-solverson.squarespace.com/)
+
+## Dev Team
+- James Built [@james-built](https://github.com/james-built)
+- Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
+- Tom Hall [@tommy-hall](https://github.com/tommy-hall)
+- George Hardy [@georgehardy](https://github.com/georgehardy)  
+- Alisa Herrera-Hayman [@alisamhh](https://github.com/alisamhh)  
