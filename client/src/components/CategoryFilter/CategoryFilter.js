@@ -6,7 +6,7 @@ export default class CategoryFilter extends Component {
     this.props.fetchCategories()
   }
 
-  // THE BELOW NEEDS TO BE ADDED INTO TOOLS CONTAINER AND THEN PASSED DOWN AS PROPS TO THIS COMPONENT
+  // The below needs to be added into Tools Container and then passed down to CategoryFilter as props. Check to see if onClick in Dropdown.Item render is working.
   // onClick (e) {
   //   this.setState({
   //     category: e.target.text
