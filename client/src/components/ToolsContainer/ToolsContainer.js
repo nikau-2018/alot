@@ -18,9 +18,9 @@ export default class ToolsContainer extends Component {
   }
 
   render() {
-
-    tools.map((tool) => {
-      if (displayedCategory.contains(tool.categoryId)){
+    <CategoryFilter filterCategory={this.filterCategory}/>
+    this.state.tools.map((tool) => {
+      if (displayedCategory.contains(this.state.tool.categoryId)){
         return <ToolCard
         key={tool.id}
         name={tool.name}
