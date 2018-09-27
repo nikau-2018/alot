@@ -22,7 +22,7 @@ export default class App extends Component {
         <CategoryFilter />
         Yup. It&lsquo;s an app.
         <ToolCard />
-        <Route exact path='/' component={WelcomeContainer}/>
+        {/* <Route exact path='/' component={WelcomeContainer}/> */}
         <h1>We Are Awesome!</h1>
         {/*   <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
