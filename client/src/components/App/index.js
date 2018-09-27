@@ -2,16 +2,27 @@ import React, {Component} from 'react'
 import {Route} from 'react-router-dom'
 
 import './styles.css'
-/* import WelcomeContainer from '../WelcomeContainer'
-import ToolsContainer from '../ToolsContainer'
+
+// components for testing, remove later
+import Nav from '../Nav'
+import CategoryFilter from '../CategoryFilter'
+import ToolCard from '../ToolCard'
+import WelcomeContainer from '../WelcomeContainer'
+/* import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
 import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
 
 export default class App extends Component {
+  
   render () {
     return (
-      <div className="App" >
+      <div className="app">
+        <Nav />
+        <CategoryFilter />
+        Yup. It&lsquo;s an app.
+        <ToolCard />
+        <Route exact path='/' component={WelcomeContainer}/>
         <h1>We Are Awesome!</h1>
         {/*   <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
