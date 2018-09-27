@@ -35,7 +35,17 @@ export default class ToolsContainer extends Component {
   }
 
   render () {
+    const filteredTools = this.state.tools.filter((tool) => {
+      displayedCategory.contains(this.state.tool.categoryId)
+    }
+
     return (
+    <Tools
+    filterCategory={this.filterCategory}
+    displayedCategory={this.displayedCategory}
+    filteredTools={filteredTools}
+    />
+
     <CategoryFilter filterCategory={this.filterCategory}/>
     this.state.tools.map((tool) => {
       if (displayedCategory.contains(this.state.tool.categoryId)) {
