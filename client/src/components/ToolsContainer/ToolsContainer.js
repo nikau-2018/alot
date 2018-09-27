@@ -5,9 +5,9 @@ export default class ToolsContainer extends Component {
     super(props)
     this.state = {
       displayedCategory: [
-        'Sewing', 'Gardening', 'Painting', 'Woodwork'
+        77701, 77702, 77703, 77704
       ],// will be set from the store in redux
-      Tools: []
+      tools: []
     }
   }
 
@@ -18,12 +18,14 @@ export default class ToolsContainer extends Component {
   }
 
   render() {
-    displayedCategory.map((category) => {
+
+    tools.map((tool) => {
+      if (displayedCategory.contains(tool.categoryId))
       <ToolCard
-      key={}
-      name={}
-      image={}
-      description={}/>
+      key={tool.id}
+      name={tool.name}
+      image={tool.image}
+      description={tool.description}/>
     })
     return (
 
