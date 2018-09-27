@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
 import {Dropdown} from 'semantic-ui-react'
 
 import {fetchCategories} from './actions'
 
-class CategoryFilter extends Component {
+export default class CategoryFilter extends Component {
   componentDidMount () {
     this.props.dispatch(fetchCategories())
   }
@@ -28,11 +27,3 @@ class CategoryFilter extends Component {
     )
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    categories: state.categories
-  }
-}
-
-export default connect(mapStateToProps)(CategoryFilter)
