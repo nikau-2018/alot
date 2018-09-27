@@ -20,12 +20,13 @@ export default class ToolsContainer extends Component {
   render() {
 
     tools.map((tool) => {
-      if (displayedCategory.contains(tool.categoryId))
-      <ToolCard
-      key={tool.id}
-      name={tool.name}
-      image={tool.image}
-      description={tool.description}/>
+      if (displayedCategory.contains(tool.categoryId)){
+        return <ToolCard
+        key={tool.id}
+        name={tool.name}
+        image={tool.image}
+        description={tool.description}/>
+      }
     })
     return (
 
