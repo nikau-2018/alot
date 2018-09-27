@@ -8,4 +8,8 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  fetchTools: () => dispatch(fetchTools())
+})
+
 export default connect(mapStateToProps)(ToolsContainer)
