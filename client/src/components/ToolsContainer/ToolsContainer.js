@@ -10,7 +10,7 @@ export default class ToolsContainer extends Component {
     this.state = {
       displayedCategory: [
         77701, 77702, 77703, 77704
-      ],// will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
+      ], // will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
       tools: [{
         id: 55501,
         category_id: 77702,
@@ -33,16 +33,18 @@ export default class ToolsContainer extends Component {
     })
   }
 
-  render() {
+  render () {
+    return (
     <CategoryFilter filterCategory={this.filterCategory}/>
     this.state.tools.map((tool) => {
-      if (displayedCategory.contains(this.state.tool.categoryId)){
+      if (displayedCategory.contains(this.state.tool.categoryId)) {
         return <ToolCard
-        key={tool.id}
-        name={tool.name}
-        image={tool.image}
-        description={tool.description}/>
+          key={tool.id}
+          name={tool.name}
+          image={tool.image}
+          description={tool.description}/>
       }
     })
+  )
   }
 }
