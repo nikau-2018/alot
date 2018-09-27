@@ -18,7 +18,7 @@ export default class CategoryFilter extends Component {
             <Dropdown.Item
               text={`${category.name}`}
               key={category.id}
-              onClick={this.props.filterCategory(category.id)}
+              onClick={() => this.props.filterCategory(category.id)}
             />
           )}
         </Dropdown.Menu>
