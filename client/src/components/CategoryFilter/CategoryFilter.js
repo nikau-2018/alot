@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
 import {Dropdown} from 'semantic-ui-react'
 
-import {fetchCategories} from './actions'
-
 export default class CategoryFilter extends Component {
   componentDidMount () {
-    this.props.dispatch(fetchCategories())
+    this.props.fetchCategories()
   }
 
   // THE BELOW NEEDS TO BE ADDED INTO TOOLS CONTAINER AND THEN PASSED DOWN AS PROPS TO THIS COMPONENT
