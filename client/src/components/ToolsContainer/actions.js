@@ -1,30 +1,24 @@
 import request from 'axios'
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_TOOLS = 'RECEIVE_TOOLS'
+export const RECEIVE_TOOLS_ERROR = 'RECEIVE_TOOLS_ERROR'
 export const REQUEST_TOOLS = 'REQUEST_TOOLS'
+export const RECEIVE_TOOLS = 'RECEIVE_TOOLS'
 
-export const showError = (errorMessage) => {
-  return {
-    type: SHOW_ERROR,
-    errorMessage: errorMessage
-  }
-}
+export const showError = error => ({
+    type: RECEIVE_TOOLS_ERROR,
+    error
+})
 
-export const requestTools = () => {
-  return {
+export const requestTools = () => ({
     type: REQUEST_TOOLS
-  }
-}
+  })
 
-export const receiveTools = (tools) => {
-  return {
+export const receiveTools = tools => ({
     type: RECEIVE_TOOLS,
     tools: tools
-  }
-}
+  })
 
-export function fetchTools () {
+export const fetchTools = () => {
   return (dispatch) => {
     dispatch(requestTools())
     return request
