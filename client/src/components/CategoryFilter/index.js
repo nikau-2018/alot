@@ -1,12 +1,19 @@
 import React, {Component} from 'react'
-import {Label} from 'semantic-ui-react'
+import {Dropdown} from 'semantic-ui-react'
 
 export default class CategoryFilter extends Component {
+  componentDidMount () {
+
+  }
+
   render () {
     return (
-      <div>
-        <a href='https://www.google.com'><Label>Test</Label></a>
-      </div>
+      <Dropdown text='Categories'>
+        <Dropdown.Menu>
+          <Dropdown.Item text='Gardening' />
+          <Dropdown.Item text='Cooking' />
+        </Dropdown.Menu>
+      </Dropdown>
     )
   }
 }
