@@ -25,7 +25,7 @@ module.exports = {
     useNullAsDefault: true
   },
 
-  dev: {
+  staging: {
     client: 'postgresql',
     connection: 'postgres://localhost/alot',
     pool: {
