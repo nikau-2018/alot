@@ -6,7 +6,7 @@ exports.up = knex =>
     t.string('name')
     t.string('description')
     t.string('body')
-    t.string('iamge')
+    t.string('image')
     t.string('instructor')
     t.dateTime('date_time')
     t.timestamps(false, true)
