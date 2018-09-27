@@ -32,7 +32,7 @@
     "preinstall": "yarn install:client",
     "server:dev": "nodemon index",
     "server:prod": "node index",
-    "postinstall": "knex migrate:latest",
+    "postinstall": "knex migrate:latest && seed:run",
     "start": "yarn --silent message && yarn server:prod"
   }
 }
