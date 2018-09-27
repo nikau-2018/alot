@@ -7,6 +7,7 @@ import './styles.css'
 import Nav from '../Nav'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
+import WorkshopCard from '../WorkshopCard'
 import WelcomeContainer from '../WelcomeContainer'
 /* import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
@@ -24,6 +25,7 @@ export default class App extends Component {
         <ToolCard />
         <Route exact path='/' component={WelcomeContainer}/>
         <h1>We Are Awesome!</h1>
+        <WorkshopCard />
         {/*   <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
         <Route path='/tools/:id' component={ToolDetailContainer}/>
