@@ -4,7 +4,10 @@ export default class ToolsContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      displayedCategory: ''
+      displayedCategory: [
+        'Sewing', 'Gardening', 'Painting', 'Woodwork'
+      ],// will be set from the store in redux
+      Tools: []
     }
   }
 
@@ -13,5 +16,17 @@ export default class ToolsContainer extends Component {
       displayedCategory: selectedCategory
     })
   }
-  
+
+  render() {
+    displayedCategory.map((category) => {
+      <ToolCard
+      key={}
+      name={}
+      image={}
+      description={}/>
+    })
+    return (
+
+    )
+  }
 }
