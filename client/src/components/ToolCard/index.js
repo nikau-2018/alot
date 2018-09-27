@@ -19,3 +19,9 @@ export default class ToolCard extends Component {
     )
   }
 }
+
+ToolCard.defaultProps = {
+  name: 'Saw',
+  description: 'it cuts stuff',
+  image: 'https://www.worx.com/media/catalog/product/w/x/wx429-1.1458148644.jpg'
+}
