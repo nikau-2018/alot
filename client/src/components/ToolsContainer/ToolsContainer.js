@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 
 // Components
-import CategoryFilter from '../CategoryFilter'
-import ToolCard from '../ToolCard'
 import Tools from '../Tools'
 
 export default class ToolsContainer extends Component {
@@ -14,7 +12,7 @@ export default class ToolsContainer extends Component {
       ], // will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
       tools: [{
         id: 55501,
-        category_id: 77702,
+        categoryId: 77702,
         name: 'lawn Mower',
         description: 'Ryobi 190cc....',
         image: '/placeholder-image.jpeg',
@@ -36,26 +34,14 @@ export default class ToolsContainer extends Component {
 
   render () {
     const filteredTools = this.state.tools.filter((tool) => {
-      displayedCategory.contains(this.state.tool.categoryId)
-    }
+      this.state.displayedCategory.includes(tool.categoryId)
+    })
 
     return (
-    <Tools
-    filterCategory={this.filterCategory}
-    displayedCategory={this.displayedCategory}
-    filteredTools={filteredTools}
-    />
-
-    <CategoryFilter filterCategory={this.filterCategory}/>
-    this.state.tools.map((tool) => {
-      if (displayedCategory.contains(this.state.tool.categoryId)) {
-        return <ToolCard
-          key={tool.id}
-          name={tool.name}
-          image={tool.image}
-          description={tool.description}/>
-      }
-    })
-  )
+      <Tools
+        filterCategory={this.filterCategory}
+        filteredTools={filteredTools}
+      />
+    )
   }
 }
