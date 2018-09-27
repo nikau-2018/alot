@@ -6,6 +6,7 @@ import Nav from '../Nav'
 import CategoryFilter from '../CategoryFilter'
 
 export default class App extends Component {
+  
   render () {
     return (
       <div className="App">
