@@ -1,14 +1,12 @@
 import React, {Component} from 'react'
+import {Button} from 'semantic-ui-react'
 
 export default class Nav extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
+  render () {
     return (
       <div>
-        <p>Tools</p>
+        <p>test</p>
+        <Button>hello!</Button>
       </div>
     )
   }
