@@ -59,10 +59,8 @@ a generative space centered on participation, community engagement, and sustaina
 - [Tacoma Tool Library](https://rebecca-solverson.squarespace.com/)
 
 ## Dev Team
-
-**Dev Team**  
-James Built [@james-built](https://github.com/james-built)
-Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
-Tom Hall [@tommy-hall](https://github.com/tommy-hall)
-George Hardy [@georgehardy](https://github.com/georgehardy)  
-Alisa Herrera-Hayman [@alisamhh](https://github.com/alisamhh)  
+- James Built [@james-built](https://github.com/james-built)
+- Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
+- Tom Hall [@tommy-hall](https://github.com/tommy-hall)
+- George Hardy [@georgehardy](https://github.com/georgehardy)  
+- Alisa Herrera-Hayman [@alisamhh](https://github.com/alisamhh)  
