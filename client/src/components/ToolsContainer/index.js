@@ -1,5 +1,7 @@
 import {connect} from 'react-redux'
 
+import {fetchTools} from './actions'
+
 import ToolsContainer from './ToolsContainer'
 
 const mapStateToProps = (state) => {
@@ -12,4 +14,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchTools: () => dispatch(fetchTools())
 })
 
-export default connect(mapStateToProps)(ToolsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ToolsContainer)
