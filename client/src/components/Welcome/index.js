@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import logo from '/alot-logo.png'
+import logo from './alot-logo.png'
 
 export default class Footer extends Component {
   render () {

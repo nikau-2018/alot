@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Welcome from '../Welcome'
-import ToolsGallery from '../ToolsGallery'
+/* import ToolsGallery from '../ToolsGallery' */
 import Footer from '../Footer'
 
 export default class WelcomeContainer extends Component {
@@ -9,7 +9,7 @@ export default class WelcomeContainer extends Component {
     return (
       <div className='welcome-container' >
         <Welcome />
-        <ToolsGallery />
+       {/*  <ToolsGallery /> */}
         <Footer />
       </div>
     )
