@@ -28,9 +28,7 @@ export function fetchCategories () {
   return (dispatch) => {
     dispatch(requestCategories())
     return request
-      .get('/api/v1/categories')
-      // IS THE BELOW NEEDED INSTEAD?
-      // .get('/api/v1/categories', {headers: getHeaders()})      
+      .get('/api/v1/categories')    
       .then(res => {
         dispatch(receiveCategories(res.data.categories))
       })
