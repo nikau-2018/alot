@@ -2,6 +2,10 @@ import React, {Component} from 'react'
 import {Dropdown} from 'semantic-ui-react'
 
 export default class CategoryFilter extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {} // empty state, looks funny
+  }
   componentDidMount () {
     this.props.fetchCategories()
   }
@@ -11,7 +15,11 @@ export default class CategoryFilter extends Component {
       <Dropdown className= 'categories' text='Categories'>
         <Dropdown.Menu>
           {this.props.categories.map(category =>
-            <Dropdown.Item text={`${category.name}`} key={category.id} onClick={this.props.filterCategory(category.id)} />
+            <Dropdown.Item
+              text={`${category.name}`}
+              key={category.id}
+              onClick={this.props.filterCategory(category.id)}
+            />
           )}
         </Dropdown.Menu>
       </Dropdown>

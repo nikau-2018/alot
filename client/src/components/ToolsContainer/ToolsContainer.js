@@ -34,9 +34,8 @@ export default class ToolsContainer extends Component {
 
   render () {
     const filteredTools = this.state.tools.filter((tool) => {
-      this.state.displayedCategory.includes(tool.categoryId)
+      return this.state.displayedCategory.includes(tool.categoryId)
     })
-
     return (
       <Tools
         filterCategory={this.filterCategory}
