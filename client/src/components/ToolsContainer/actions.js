@@ -11,12 +11,12 @@ export const showError = error => ({
 
 export const requestTools = () => ({
     type: REQUEST_TOOLS
-  })
+})
 
 export const receiveTools = tools => ({
     type: RECEIVE_TOOLS,
-    tools: tools
-  })
+    allTools: tools
+})
 
 export const fetchTools = () => {
   return (dispatch) => {

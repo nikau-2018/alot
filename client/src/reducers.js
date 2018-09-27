@@ -7,5 +7,5 @@ import tools from './components/ToolsContainer/reducer'
 
 export default combineReducers({
   categories,
-  tools
+  allTools
 })
