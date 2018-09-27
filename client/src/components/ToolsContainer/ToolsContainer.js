@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 
 // Components
-import CategoryFilter from './CategoryFilter'
+import CategoryFilter from '../CategoryFilter'
+import ToolCard from '../ToolCard'
 
 export default class ToolsContainer extends Component {
   constructor (props) {
