@@ -5,13 +5,15 @@ import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
 
 const Tools = (props) => (
-
-<CategoryFilter filterCategory={props.filterCategory}/>
-{props.filteredTools.map((tool) =>(
-  <ToolCard
-      key={tool.id}
-      name={tool.name}
-      image={tool.image}
-      description={tool.description}/>
-))}
+  <div>hello</div>
+  <CategoryFilter filterCategory={props.filterCategory}/>
+  {props.filteredTools.map((tool) =>(
+    <ToolCard
+    key={tool.id}
+    name={tool.name}
+    image={tool.image}
+    description={tool.description}/>
+    ))}
 )
+
+export default Tools

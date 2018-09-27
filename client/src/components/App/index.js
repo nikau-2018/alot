@@ -7,7 +7,8 @@ import './styles.css'
 import Nav from '../Nav'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
-import WelcomeContainer from '../WelcomeContainer'
+// import WelcomeContainer from '../WelcomeContainer'
+import ToolsContainer from '../ToolsContainer'
 /* import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
 import WorkshopsContainer from '../WorkshopsContainer'
@@ -22,6 +23,7 @@ export default class App extends Component {
         <CategoryFilter />
         Yup. It&lsquo;s an app.
         <ToolCard />
+        <ToolsContainer />
         {/* <Route exact path='/' component={WelcomeContainer}/> */}
         <h1>We Are Awesome!</h1>
         {/*   <Route exact path='/' component={WelcomeContainer}/>
