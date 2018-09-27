@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 
+// Components
+import CategoryFilter from './CategoryFilter'
+
 export default class ToolsContainer extends Component {
   constructor (props) {
     super(props)
