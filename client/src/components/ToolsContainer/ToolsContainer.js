@@ -10,14 +10,26 @@ export default class ToolsContainer extends Component {
     this.state = {
       displayedCategory: [
         77701, 77702, 77703, 77704
-      ],// will be set from the store in redux
-      tools: []
+      ],// will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
+      tools: [{
+        id: 55501,
+        category_id: 77702,
+        name: 'lawn Mower',
+        description: 'Ryobi 190cc....',
+        image: '/placeholder-image.jpeg',
+        active: true
+      }]
     }
+    this.filterCategory = this.filterCategory.bind(this)
+  }
+
+  componentDidMount () {
+    this.props.fetchTools()
   }
 
   filterCategory (selectedCategory) {
     this.setState({
-      displayedCategory: selectedCategory
+      displayedCategory: [Number(selectedCategory)]
     })
   }
 
@@ -32,8 +44,5 @@ export default class ToolsContainer extends Component {
         description={tool.description}/>
       }
     })
-    return (
-
-    )
   }
 }
