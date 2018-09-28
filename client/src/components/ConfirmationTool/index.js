@@ -6,11 +6,14 @@ const ConfirmationTool = (props) => (
   <div className='confirmation'>
   <h1>Confirm Your Tool Rental</h1>
   <Divider/>
-  <Image src={props.selectedTool.image}/>
+  <Image 
+  src={props.selectedTool.image}
+  size='small'
+  />
     <h2>{props.selectedTool.name}</h2>
     <p>{props.selectedTool.description}</p>
       <br/>
-      <p>Are you sure you would like to rent this tool?</p>
+      <p>Would like to rent this tool?</p>
       <br/>
       <p>It will be available for collection from 9am Monday - Friday</p>
       <Button.Group>

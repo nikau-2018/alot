@@ -7,14 +7,18 @@ const ConfirmationWorkshop = (props) => (
   <div className='confirmation'>
   <h1>Confirm Your Workshop Booking</h1>
   <Divider/>
-  <Image src={props.selectedWorkshop.image}/>
+  <Image src={props.selectedWorkshop.image}
+  size='small'
+  />
     <h2>{props.selectedWorkshop.name}</h2>
+    <h4><Icon circular name='user circle' /> lead by: {props.selectedWorkshop.instructor}</h4>
     <p>{props.selectedWorkshop.description}</p>
-      <br/>
+    <h4><Icon circular name='question' /> about this workshop:</h4>
     <p>{props.selectedWorkshop.body}</p>
-      <p>Are you sure you would like to attend this workshop?</p>
+    <h4><Icon circular name='clock' /> scheduled time:</h4>
+    <p>To be held on {props.dateTime}</p>
+      <p>Would like to attend this workshop?</p>
       <br/>
-      <p>It will be held on {props.dateTime}</p>
       <Button.Group>
         <Link to='#'>
           <Button>Cancel</Button>
