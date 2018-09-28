@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Card, Image} from 'semantic-ui-react'
 
 export default class ToolDetail extends Component {
   constructor (props) {
@@ -10,7 +9,10 @@ export default class ToolDetail extends Component {
   render () {
     return (
       <div>
-        {this.props.tool.name}
+        <h1>{this.props.tool.name}</h1>
+        <img src={this.props.tool.image}/>
+        <h5></h5>
+        <p>{this.props.tool.description}</p>
       </div>
     )
   }
