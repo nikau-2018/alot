@@ -4,7 +4,8 @@ import {Container} from 'semantic-ui-react'
 const Confirmation = () => (
   <Container>
     <div className='confirmation'>
-      <p>test</p>
+      <p>Are you sure you would like to rent ?</p>
+      
     </div>
   </Container>
 )
