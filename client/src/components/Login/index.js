@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 const FormExampleForm = () => (
   <Form>
@@ -13,7 +14,9 @@ const FormExampleForm = () => (
         <label>Password</label>
         <input placeholder='Password' />
       </Form.Field>
-      <Button type='submit'>Sign In</Button>
+      <Button type='sign in'>Sign In</Button> <br /><br />
+      <Link to={'/Register'} className='button'>
+        <Button type='Need'>Need an account?</Button> </Link>
     </div>
   </Form>
 )
