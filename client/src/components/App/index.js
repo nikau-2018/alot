@@ -7,12 +7,13 @@ import './styles.css'
 import Nav from '../Nav'
 import WelcomeContainer from '../WelcomeContainer'
 import ToolsContainer from '../ToolsContainer'
-/* import ToolDetailContainer from '../ToolDetailContainer'
-import WorkshopsContainer from '../WorkshopsContainer'
+import ToolDetailContainer from '../ToolDetailContainer'
+/* import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
 import Login from '../Login'
 import Register from '../Register'
 import Confirmation from '../Confirmation'
+import Footer from '../Footer'
 
 export default class App extends Component {
   render () {
@@ -23,10 +24,12 @@ export default class App extends Component {
         <Route exact path='/tools' component={ToolsContainer}/>
         <Route path='/Login' component={Login}/>
         <Route path='/Register' component={Register}/>
-        {/* <Route path='/tools/:id' component={ToolDetailContainer}/> */}
+        <Route path='/tools/:id' component={ToolDetailContainer}/>
         {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirmation' component={Confirmation}/>
+        <hr/>
+        <Route path='/' component={Footer}/>
       </div>
     )
   }
