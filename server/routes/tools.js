@@ -14,4 +14,14 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req,res) => {
+  db.getSingleTool()
+    .then(tool => {
+      res.status(200).json({tool})
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
+})
+
 module.exports = router
