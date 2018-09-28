@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 export default class ToolsGallery extends Component {
   render () {
     const randomTool = this.props.tools[Math.floor(Math.random() * this.props.tools.length)]
+    const 
+    
     return (
       <div>
         <h1>What a tool!</h1>
