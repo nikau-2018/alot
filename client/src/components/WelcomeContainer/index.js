@@ -10,9 +10,8 @@ export default class WelcomeContainer extends Component {
       <div className='welcome-container' >
         <Welcome />
         <hr/>
-        <p>tools gallery will go here</p>
-        <hr/>
         <ToolsGallery />
+        <hr/>        
         <Footer />
       </div>
     )
