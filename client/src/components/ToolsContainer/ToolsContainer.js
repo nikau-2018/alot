@@ -7,9 +7,7 @@ export default class ToolsContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      displayedCategory: [
-        77701, 77702, 77703, 77704
-      ], // will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
+      displayedCategory: [], // will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
       tools: []
     }
     this.filterCategory = this.filterCategory.bind(this)
@@ -17,6 +15,7 @@ export default class ToolsContainer extends Component {
 
   componentDidMount () {
     this.props.fetchTools()
+    this.props.fetchCategories()
   }
 
   filterCategory (selectedCategory) {
