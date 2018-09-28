@@ -37,7 +37,7 @@ export default class ToolsContainer extends Component {
       return this.state.displayedCategory.includes(tool.categoryId)
     })
     return (
-      <div className='ui sixteen wide column'>
+      <div className='tools-container'>
         <Tools
           filterCategory={this.filterCategory}
           filteredTools={filteredTools}

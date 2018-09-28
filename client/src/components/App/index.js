@@ -14,8 +14,8 @@ import WorkshopDetailContainer from '../WorkshopDetailContainer' */
 export default class App extends Component {
   render () {
     return (
-      <div className="ui grid">
-        <Nav className='right floated sixteen wide column'/>
+      <div>
+        <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
         {/* <Route path='/tools/:id' component={ToolDetailContainer}/> */}
