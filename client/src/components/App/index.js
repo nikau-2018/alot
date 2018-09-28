@@ -12,6 +12,7 @@ import ToolDetailContainer from '../ToolDetailContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
 import Login from '../Login'
 import Register from '../Register'
+import Footer from '../Footer'
 
 export default class App extends Component {
   render () {
@@ -25,6 +26,8 @@ export default class App extends Component {
         <Route path='/tools/:id' component={ToolDetailContainer}/>
         {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
+        <hr/>
+        <Route path='/' component={Footer}/>
       </div>
     )
   }
