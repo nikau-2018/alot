@@ -9,7 +9,9 @@ export default function ToolDetail (props) {
       <Divider/>
       <img src={props.tool.image}/>
       <h3>Description:</h3>
-      <p>{props.tool.description}</p>
+      <div>
+        {props.tool.description}
+      </div>
       <Button basic color='green'>Rent</Button>
     </div>
   )
