@@ -1,13 +1,11 @@
-import React from 'react'
-import {Container} from 'semantic-ui-react'
+import {connect} from 'react-redux'
 
-const Confirmation = () => (
-  <Container>
-    <div className='confirmation'>
-      <p>Are you sure you would like to rent ?</p>
-      
-    </div>
-  </Container>
-)
+import Confirmation from './Confirmation'
 
-export default Confirmation
+const mapStateToProps = (state) => {
+  return {
+    tools: state.tools.tools
+  }
+}
+
+export default connect(mapStateToProps)(Confirmation)
