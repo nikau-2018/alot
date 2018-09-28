@@ -18,6 +18,14 @@ export default class ToolsContainer extends Component {
     this.props.fetchCategories()
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.displayedCategory !== prevProps.displayedCategory) {
+      this.setState({
+        displayedCategory: this.props.displayedCategory
+      })
+    }
+  }
+
   filterCategory (selectedCategory) {
     this.setState({
       displayedCategory: [Number(selectedCategory)]
