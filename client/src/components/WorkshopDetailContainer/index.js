@@ -10,6 +10,9 @@ export default class WorkshopDetailContainer extends Component {
     }
   }
 
+componentDidMount () {
+  this.props.
+}
 
   render () {
     return (
