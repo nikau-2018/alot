@@ -1,12 +1,12 @@
 import {REQUEST_TOOLS, RECEIVE_TOOLS, RECEIVE_TOOLS_ERROR} from './actions'
 
 const defaultState = {
-  allTools: null,
+  tools: null,
   error: null,
   pending: false
 }
 
-export default function (state = defaultState, {type, allTools, error}) {
+export default function (state = defaultState, {type, tools, error}) {
   switch (type) {
     case REQUEST_TOOLS:
       return {
@@ -18,14 +18,14 @@ export default function (state = defaultState, {type, allTools, error}) {
       return {
         ...state,
         error: null,
-        allTools,
-        pending:false
+        tools,
+        pending: false
       }
     case RECEIVE_TOOLS_ERROR:
       return {
         ...state,
         error,
-        allTools: null,
+        tools: null,
         pending: false
       }
     default:
