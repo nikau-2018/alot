@@ -20,7 +20,7 @@ export default class Confirmation extends Component {
               {selectedTool.description}
               <p>Are you sure you would like to rent this tool?</p>
               <br/>
-              <p>It will be available for collection from</p>
+              <p>It will be available for collection from 9am Monday - Friday</p>
             </Item.Description>
             <Item.Extra>
               <Button.Group>
