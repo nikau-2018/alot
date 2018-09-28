@@ -5,6 +5,13 @@ export default class WorkshopCard extends Component {
   constructor (props) {
     super(props)
     this.state = {} // not sure if we will need state yet
+    // let a = this.props.description.split(', ')
+    // a.foreach(function (element) {
+    // return <li> element </li>
+    // })
+    // .forEach(function (element) {
+    // console.log(element)
+    // })
     // this gives an array of [ "2-3 hours", "kid-friendly" ] so now I need to mapp over it and add it to a bullet list
   }
 
@@ -14,9 +21,7 @@ export default class WorkshopCard extends Component {
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
           <Image src={this.props.image} />
-          <Card.Description>{this.props.description.split(', ').forEach(function (element) {
-            console.log(element)
-          })}
+          <Card.Description>{this.props.description}
           </Card.Description>
         </Card.Content>
       </Card>
