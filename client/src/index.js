@@ -17,7 +17,7 @@ const store = createStore(reducers, composeEnhancers(
 render(
   <Provider store={store}>
     <Router>
-      
+
       <App />
     </Router>
   </Provider>,
