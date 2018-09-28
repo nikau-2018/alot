@@ -7,7 +7,7 @@ export default class ToolsGallery extends Component {
       <div>
         <h1>What a tool!</h1>
         <p>{randomTool.name}</p>
-        <p>{randomTool.description}</p>        
+        <p>{randomTool.description}</p>
         <img src={`${randomTool.image}`} />
       </div>
     )
