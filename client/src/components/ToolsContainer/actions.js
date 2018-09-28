@@ -15,7 +15,7 @@ export const requestTools = () => ({
 
 export const receiveTools = tools => ({
   type: RECEIVE_TOOLS,
-  tools: tools
+  tools
 })
 
 export const fetchTools = () => {

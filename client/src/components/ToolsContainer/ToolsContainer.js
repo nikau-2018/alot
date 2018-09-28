@@ -10,14 +10,7 @@ export default class ToolsContainer extends Component {
       displayedCategory: [
         77701, 77702, 77703, 77704
       ], // will need to be set from the store in redux not sure if the action & reducer for this belong with this component yet?
-      tools: [{
-        id: 55501,
-        categoryId: 77702,
-        name: 'lawn Mower',
-        description: 'Ryobi 190cc....',
-        image: '/placeholder-image.jpeg',
-        active: true
-      }]
+      tools: []
     }
     this.filterCategory = this.filterCategory.bind(this)
   }
