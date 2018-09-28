@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
 
-// This component doesn't need to be stateful but for now I have left it as stateful because we could use state to display another image onClick.
 export default class ToolsGallery extends Component {
   render () {
     const randomTool = this.props.tools[Math.floor(Math.random() * this.props.tools.length)]
