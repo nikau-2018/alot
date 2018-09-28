@@ -1,4 +1,4 @@
-const db = require('../server/db')
+const db = require('../server/db/tools')
 const testEnv = require('./testEnvironment')
 
 let testDb = null
@@ -12,9 +12,9 @@ afterEach(() => {
   testEnv.cleanup(testDb)
 })
 
-test('getDrivers returns 3 drivers', () => {
-  return db.getDrivers(testDb)
-    .then(drivers => {
-      expect(drivers.length).toBe(3)
+test('getTools returns 3 drivers', () => {
+  return db.getTools(testDb)
+    .then(tools => {
+      expect(tools.length).toBe(5)
     })
 })
