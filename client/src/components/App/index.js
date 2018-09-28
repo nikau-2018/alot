@@ -6,7 +6,7 @@ import './styles.css'
 // components for testing, remove later
 import Nav from '../Nav'
 // import WelcomeContainer from '../WelcomeContainer'
-import ToolsContainer from '../ToolsContainer'
+// import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
 /* import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
