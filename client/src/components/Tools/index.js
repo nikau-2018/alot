@@ -10,6 +10,7 @@ const Tools = (props) => (
     {props.filteredTools.map((tool) => (
       <ToolCard
         key={tool.id}
+        id={tool.id}
         name={tool.name}
         image={tool.image}
         description={tool.description}/>

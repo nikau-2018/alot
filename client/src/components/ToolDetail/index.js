@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Divider } from 'semantic-ui-react'
+import { Button, Divider } from 'semantic-ui-react'
 
 export default function ToolDetail (props) {
   return (
@@ -10,6 +10,7 @@ export default function ToolDetail (props) {
       <img src={props.tool.image}/>
       <h3>Description:</h3>
       <p>{props.tool.description}</p>
+      <Button basic color='green'>Rent</Button>
     </div>
   )
 }
