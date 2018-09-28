@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Divider, Icon, Item, Label, Image} from 'semantic-ui-react'
+import {Button, Divider, Icon, Image} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 
