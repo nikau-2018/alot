@@ -5,7 +5,6 @@ import CategoryFilter from '../CategoryFilter'
 import WorkshopCard from '../WorkshopCard'
 
 export default class WorkshopsContainer extends Component {
-
   componentDidMount () {
     this.props.fetchWorkshops()
   }
@@ -14,7 +13,7 @@ export default class WorkshopsContainer extends Component {
       <div className='workshops-container' >
         <Search />
         <CategoryFilter />
-        <WorkshopCard />
+        {/* <WorkshopCard /> */}
       </div>
     )
   }
