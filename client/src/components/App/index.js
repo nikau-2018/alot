@@ -10,7 +10,7 @@ import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
 /* import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
-import Login from '../Login'
+import LoginContainer from '../LoginContainer'
 import Register from '../Register'
 import Footer from '../Footer'
 
@@ -21,7 +21,7 @@ export default class App extends Component {
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
-        <Route path='/Login' component={Login}/>
+        <Route path='/Login' component={LoginContainer}/>
         <Route path='/Register' component={Register}/>
         <Route path='/tools/:id' component={ToolDetailContainer}/>
         {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
