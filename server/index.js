@@ -5,11 +5,12 @@ const tools = require('./routes/tools')
 const categories = require('./routes/categories')
 const workshops = require('./routes/workshops')
 const orders = require('./routes/orders')
+const users = require('./routes/users')
 
 const server = express()
 
 if (process.env.NODE_ENV === 'production') {
-  server.use(express.static(path.join(__dirname, '../public')))
+  server.use(express.static(path.join(__dirname, '..', 'public')))
 }
 
 server.use(function (req, res, next) {
@@ -24,12 +25,13 @@ server.use('/api/v1/tools', tools)
 server.use('/api/v1/categories', categories)
 server.use('/api/v1/workshops', workshops)
 server.use('/api/v1/orders', orders)
+server.use('/api/v1/users', users)
 
 // In production, serve any request not covered by the above as the built index
 // from CRA's `yarn build` (for BrowserRouter)
 if (process.env.NODE_ENV === 'production') {
   server.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname, '../public/index.html'))
+    res.sendfile(path.join(__dirname, '..', 'public/index.html'))
   })
 }
 
