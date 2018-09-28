@@ -9,6 +9,9 @@ export default class WelcomeContainer extends Component {
     return (
       <div className='welcome-container' >
         <Welcome />
+        <hr/>
+        <p>tools gallery will go here</p>
+        <hr/>
         {/*  <ToolsGallery /> */}
         <Footer />
       </div>
