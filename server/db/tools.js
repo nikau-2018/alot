@@ -10,7 +10,8 @@ function getTools (db = connection) {
     .select()
 }
 
-function getSingleTool (db = connection, toolId) {
+function getSingleTool (toolId, db = connection) {
   return db('tools')
     .where('id', toolId)
+    .first()
 }
