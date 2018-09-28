@@ -5,6 +5,7 @@ const tools = require('./routes/tools')
 const categories = require('./routes/categories')
 const workshops = require('./routes/workshops')
 const orders = require('./routes/orders')
+const users = require('./routes/users')
 
 const server = express()
 
@@ -24,6 +25,7 @@ server.use('/api/v1/tools', tools)
 server.use('/api/v1/categories', categories)
 server.use('/api/v1/workshops', workshops)
 server.use('/api/v1/orders', orders)
+server.use('/api/v1/users', users)
 
 // In production, serve any request not covered by the above as the built index
 // from CRA's `yarn build` (for BrowserRouter)
