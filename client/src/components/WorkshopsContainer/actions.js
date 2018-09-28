@@ -13,9 +13,9 @@ export const requestWorkshops = () => ({
   type: REQUEST_WORKSHOPS
 })
 
-export const receiveWorkshops = Workshops => ({
+export const receiveWorkshops = workshops => ({
   type: RECEIVE_WORKSHOPS,
-  Workshops
+  workshops
 })
 
 export const fetchWorkshops = () => {

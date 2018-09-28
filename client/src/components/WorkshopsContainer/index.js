@@ -8,7 +8,7 @@ import WorkshopsContainer from './WorkshopsContainer'
 const mapStateToProps = (state) => {
   const allCategories = state.categories.map((category) => category.id)
   return {
-    tools: state.tools.tools,
+    workshops: state.workshops,
     displayedCategory: allCategories
   }
 }
