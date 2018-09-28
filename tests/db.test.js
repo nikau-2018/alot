@@ -18,3 +18,10 @@ test('getTools returns 5 tools', () => {
       expect(tools.length).toBe(5)
     })
 })
+
+test('getCategories returns 4 tools', () => {
+  return db.getCategories(testDb)
+    .then(categories => {
+      expect(categories.length).toBe(4)
+    })
+})
