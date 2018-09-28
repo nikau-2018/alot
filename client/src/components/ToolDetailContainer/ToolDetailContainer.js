@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 // Components
 import ToolDetail from '../ToolDetail'
 
-export default class ToolsContainer extends Component {
+export default class ToolDetailContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
