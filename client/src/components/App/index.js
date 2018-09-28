@@ -27,7 +27,7 @@ export default class App extends Component {
         <Route path='/tools/:id' component={ToolDetailContainer}/>
         {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
-        <Route exact path='/confirmation' component={Confirmation}/>
+        <Route exact path='/confirm/:type/:id' component={Confirmation}/>
         <hr/>
         <Route path='/' component={Footer}/>
       </div>
