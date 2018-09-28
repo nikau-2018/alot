@@ -20,11 +20,11 @@ const ConfirmationWorkshop = (props) => (
     <br/>
     <Button.Group>
       <Link to='#'>
-        <Button>Cancel</Button>
-      </Link>
-      <Button.Or />
-      <Link to='#'>
         <Button positive>Confirm</Button>
+      </Link>
+      <Button.Or />      
+      <Link to='#'>
+        <Button>Cancel</Button>
       </Link>
     </Button.Group>
   </div>
