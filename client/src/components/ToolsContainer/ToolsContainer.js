@@ -33,7 +33,7 @@ export default class ToolsContainer extends Component {
   }
 
   render () {
-    const filteredTools = this.state.tools.filter((tool) => {
+    const filteredTools = this.props.tools.filter((tool) => {
       return this.state.displayedCategory.includes(tool.categoryId)
     })
     return (
