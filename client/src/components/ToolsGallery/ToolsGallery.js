@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
 
 export default class ToolsGallery extends Component {
+  componentDidMount () {
+    this.props.fetchTools()
+  }
   render () {
     const randomTool = this.props.tools[Math.floor(Math.random() * this.props.tools.length)]
 
