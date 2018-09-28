@@ -1,7 +1,7 @@
-// import {LOGOUT_SUCCESS} from '../actions/logout'
-// import {REGISTER_REQUEST, REGISTER_FAILURE} from '../actions/register'
-import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from './actions'
-import {isAuthenticated, getUserTokenInfo} from '../../utils/auth'
+// import {LOGOUT_SUCCESS} from './logout/actions'
+import {REGISTER_REQUEST, REGISTER_FAILURE} from './Register/actions'
+import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from './Login/actions'
+import {isAuthenticated, getUserTokenInfo} from './utils/auth'
 
 const initialState = {
   isFetching: false,
@@ -40,20 +40,20 @@ export default function auth (state = initialState, action) {
     //     isAuthenticated: false,
     //     user: null
     //   }
-    // case REGISTER_REQUEST:
-    //   return {
-    //     ...state,
-    //     isFetching: true,
-    //     isAuthenticated: false,
-    //     errorMessage: ''
-    //   }
-    // case REGISTER_FAILURE:
-    //   return {
-    //     ...state,
-    //     isFetching: false,
-    //     isAuthenticated: false,
-    //     errorMessage: action.message
-    //   }
+    case REGISTER_REQUEST:
+      return {
+        ...state,
+        isFetching: true,
+        isAuthenticated: false,
+        errorMessage: ''
+      }
+    case REGISTER_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+        isAuthenticated: false,
+        errorMessage: action.message
+      }
     default:
       return state
   }

@@ -4,10 +4,10 @@ import {combineReducers} from 'redux'
 // e.g import register from './components/Register/reducer'
 import categories from './components/CategoryFilter/reducer'
 import tools from './components/ToolsContainer/reducer'
-import login from './components/LoginContainer/reducer'
+import auth from './components/Auth/reducer'
 
 export default combineReducers({
   categories,
   tools,
-  login
+  auth
 })

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 // import ErrorMessage from './ErrorMessage'
 
-export default class LoginContainer extends React.Component {
+export default class LoginForm extends React.Component {
   constructor (props) {
     super(props)
     this.state = {

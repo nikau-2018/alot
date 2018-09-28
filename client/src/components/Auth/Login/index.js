@@ -1,8 +1,6 @@
 import {connect} from 'react-redux'
-
 import {loginUser} from './actions'
-
-import LoginContainer from './LoginContainer'
+import LoginForm from './LoginForm'
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -12,4 +10,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(LoginContainer)
+export default connect(null, mapDispatchToProps)(LoginForm)

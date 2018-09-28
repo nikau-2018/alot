@@ -1,5 +1,5 @@
 import request from 'axios'
-import {saveUserToken} from '../../utils/auth'
+import {saveUserToken} from '../utils/auth'
 
 export const LOGIN_REQUEST = 'LOGIN_REQUEST'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
@@ -40,7 +40,6 @@ export function loginUser (creds) {
 
     return request.post('/api/v1/users/login', creds)
       .then((response) => {
-        console.log(response.data)
         if (!response.data.ok) {
           // If there was a problem, we want to
           // dispatch the error condition
