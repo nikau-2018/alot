@@ -5,6 +5,10 @@ import CategoryFilter from '../CategoryFilter'
 import WorkshopCard from '../WorkshopCard'
 
 export default class WorkshopsContainer extends Component {
+
+  componentDidMount () {
+    this.props.fetchWorkshops()
+  }
   render () {
     return (
       <div className='workshops-container' >
