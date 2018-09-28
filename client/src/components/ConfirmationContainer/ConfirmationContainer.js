@@ -12,9 +12,9 @@ export default class ConfirmationContainer extends Component {
     const [ selectedWorkshop ] = this.props.workshops.filter((workshop) => selectedId === workshop.id)
     switch (type) {
       case 'tool':
-      return <ConfirmationTool selectedTool={selectedTool}/>
+        return <ConfirmationTool selectedTool={selectedTool}/>
       case 'workshop':
-      return <ConfirmationWorkshop selectedWorkshop={selectedWorkshop}/>
+        return <ConfirmationWorkshop selectedWorkshop={selectedWorkshop}/>
     }
   }
 }

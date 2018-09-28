@@ -2,14 +2,13 @@ import React from 'react'
 import {Button, Divider, Icon, Image} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
-
 const ConfirmationWorkshop = (props) => (
   <div className='confirmation'>
-  <h1>Confirm Your Workshop Booking</h1>
-  <Divider/>
-  <Image src={props.selectedWorkshop.image}
-  size='small'
-  />
+    <h1>Confirm Your Workshop Booking</h1>
+    <Divider/>
+    <Image src={props.selectedWorkshop.image}
+      size='small'
+    />
     <h2>{props.selectedWorkshop.name}</h2>
     <h4><Icon circular name='user circle' /> lead by: {props.selectedWorkshop.instructor}</h4>
     <p>{props.selectedWorkshop.description}</p>
@@ -17,17 +16,17 @@ const ConfirmationWorkshop = (props) => (
     <p>{props.selectedWorkshop.body}</p>
     <h4><Icon circular name='clock' /> scheduled time:</h4>
     <p>To be held on {props.dateTime}</p>
-      <p>Would like to attend this workshop?</p>
-      <br/>
-      <Button.Group>
-        <Link to='#'>
-          <Button>Cancel</Button>
-        </Link>
-        <Button.Or />
-        <Link to='#'>
-          <Button positive>Confirm</Button>
-        </Link>
-      </Button.Group>
+    <p>Would like to attend this workshop?</p>
+    <br/>
+    <Button.Group>
+      <Link to='#'>
+        <Button>Cancel</Button>
+      </Link>
+      <Button.Or />
+      <Link to='#'>
+        <Button positive>Confirm</Button>
+      </Link>
+    </Button.Group>
   </div>
 )
 
