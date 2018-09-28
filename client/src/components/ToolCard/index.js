@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Card, Image} from 'semantic-ui-react'
+import {Button, Card, Image} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 export default class ToolCard extends Component {
   constructor (props) {
@@ -12,9 +13,16 @@ export default class ToolCard extends Component {
       <Card>
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
-          <Image src={this.props.image} />
+          <Link to={`/tools/${this.props.id}`}>
+            <Image src={this.props.image} />
+          </Link>
           <Card.Description>{this.props.description}</Card.Description>
         </Card.Content>
+        <Link to={`/confirm/${this.props.id}`}>
+          <Button basic color='green'>
+              Rent
+          </Button>
+        </Link>
       </Card>
     )
   }
