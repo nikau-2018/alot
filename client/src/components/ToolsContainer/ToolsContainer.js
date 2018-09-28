@@ -41,10 +41,12 @@ export default class ToolsContainer extends Component {
       return this.state.displayedCategory.includes(tool.categoryId)
     })
     return (
-      <Tools
-        filterCategory={this.filterCategory}
-        filteredTools={filteredTools}
-      />
+      <div className='tools-container'>
+        <Tools
+          filterCategory={this.filterCategory}
+          filteredTools={filteredTools}
+        />
+      </div>
     )
   }
 }
