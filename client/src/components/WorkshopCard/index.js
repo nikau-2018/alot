@@ -9,7 +9,6 @@ export default class WorkshopCard extends Component {
     array1.forEach(function (element) {
       console.log(element)
     })
-
     // this gives an array of [ "2-3 hours", "kid-friendly" ] so now I need to mapp over it and add it to a bullet list
   }
 
@@ -19,7 +18,7 @@ export default class WorkshopCard extends Component {
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
           <Image src={this.props.image} />
-          <Card.Description>{this.props.description.split(', ')}
+          <Card.Description>{this.props.description.split(',')}
           </Card.Description>
         </Card.Content>
       </Card>
