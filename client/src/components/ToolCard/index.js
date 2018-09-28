@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Card, Image} from 'semantic-ui-react'
+import {Button, Card, Image} from 'semantic-ui-react'
 
 export default class ToolCard extends Component {
   constructor (props) {
@@ -12,9 +12,14 @@ export default class ToolCard extends Component {
       <Card>
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
-          <Image src={this.props.image} />
+          <a href={`/tools/${this.props.id}`}>
+            <Image src={this.props.image} />
+          </a>
           <Card.Description>{this.props.description}</Card.Description>
         </Card.Content>
+        <Button basic color='green'>
+            Rent
+        </Button>
       </Card>
     )
   }
