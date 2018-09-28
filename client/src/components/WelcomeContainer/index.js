@@ -7,8 +7,11 @@ import Footer from '../Footer'
 export default class WelcomeContainer extends Component {
   render () {
     return (
-      <div className='welcome-container' >
+      <div className='welcome-container sixteen wide column' >
         <Welcome />
+        <hr/>
+        <p>tools gallery will go here</p>
+        <hr/>
         {/*  <ToolsGallery /> */}
         <Footer />
       </div>
