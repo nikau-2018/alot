@@ -11,7 +11,7 @@ export default class WelcomeContainer extends Component {
         <Welcome />
         <hr/>
         <ToolsGallery />
-        <hr/>        
+        <hr/>
         <Footer />
       </div>
     )
