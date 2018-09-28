@@ -14,6 +14,10 @@ export default class CategoryFilter extends Component {
     return (
       <Dropdown className= 'categories' text='Categories'>
         <Dropdown.Menu>
+          <Dropdown.Item
+            text='All'
+            onClick={() => this.props.filterCategory(0)}
+          />
           {this.props.categories.map(category =>
             <Dropdown.Item
               text={`${category.name}`}
