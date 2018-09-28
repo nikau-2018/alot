@@ -7,30 +7,18 @@ export default class ToolsGallery extends Component {
     const randomTool = this.props.tools[Math.floor(Math.random() * this.props.tools.length)]
 
     return (
-    <Card>
-      <Card.Content>
-        <Image floated='right' size='medium' src={`${randomTool.image}`} />
-        <Card.Header>{randomTool.name}</Card.Header>
-        <Card.Meta>Friends of Elliot</Card.Meta>
-        <Card.Description>
-          Steve wants to add you to the group <strong>best friends</strong>
-        </Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <div className='ui two buttons'>
-          <Button basic color='green'>
-            Approve
-          </Button>
-          <Button basic color='red'>
-            Decline
-          </Button>
-        </div>
-      </Card.Content>
-    </Card>
       <div>
-        <h2>What a tool!</h2>
-        <h3>{randomTool.name}</h3>
-        <a href={`/tools/${randomTool.id}`}><img src={`${randomTool.image}`} /></a>
+        <h3>What a tool...</h3>
+        <Card>
+          <a href={`/tools/${randomTool.id}`}><Image src={`${randomTool.image}`} /></a>
+          <Card.Content>
+            <Card.Header>{randomTool.name}</Card.Header>
+            <Card.Meta>{randomTool.description}</Card.Meta>
+          </Card.Content>
+          <Button basic color='green'>
+            Rent
+          </Button>
+        </Card>
       </div>
     )
   }
