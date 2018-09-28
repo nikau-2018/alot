@@ -5,7 +5,11 @@ export default class WorkshopCard extends Component {
   constructor (props) {
     super(props)
     this.state = {} // not sure if we will need state yet
-    console.log(this.props.description.split(', '))
+    let array1 = this.props.description.split(', ')
+    array1.forEach(function (element) {
+      console.log(element)
+    })
+
     // this gives an array of [ "2-3 hours", "kid-friendly" ] so now I need to mapp over it and add it to a bullet list
   }
 
