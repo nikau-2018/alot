@@ -1,12 +1,12 @@
 import {connect} from 'react-redux'
 
-import {fetchTools} from './actions'
+import {fetchTools} from '../ToolsContainer/actions'
 
 import ToolsGallery from './ToolsGallery'
 
 const mapStateToProps = (state) => {
   return {
-    tools: state.tools
+    tools: state.tools.tools
   }
 }
 
