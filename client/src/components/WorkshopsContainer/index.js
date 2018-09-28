@@ -1,17 +1,21 @@
-import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-import Search from '../Search'
-import CategoryFilter from '../CategoryFilter'
-import WorkshopCard from '../WorkshopCard'
+import {fetchWorkshops} from './actions'
+import {fetchCategories} from '../CategoryFilter/actions'
 
-export default class WorkshopsContainer extends Component {
-  render () {
-    return (
-      <div className='workshops-container' >
-        <Search />
-        <CategoryFilter />
-        <WorkshopCard />
-      </div>
-    )
+import WorkshopsContainer from './WorkshopsContainer'
+
+const mapStateToProps = (state) => {
+  const allCategories = state.categories.map((category) => category.id)
+  return {
+    tools: state.tools.tools,
+    displayedCategory: allCategories
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchWorkshops: () => dispatch(fetchWorkshops()),
+  // fetchCategories: () => dispatch(fetchCategories())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(WorkshopsContainer)
