@@ -5,31 +5,29 @@ import './styles.css'
 
 // components for testing, remove later
 import Nav from '../Nav'
-import CategoryFilter from '../CategoryFilter'
-import ToolCard from '../ToolCard'
-import WorkshopCard from '../WorkshopCard'
 import WelcomeContainer from '../WelcomeContainer'
-/* import ToolsContainer from '../ToolsContainer'
+import ToolsContainer from '../ToolsContainer'
 import ToolDetailContainer from '../ToolDetailContainer'
-import WorkshopsContainer from '../WorkshopsContainer'
+/* import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer' */
+import Login from '../Login'
+import Register from '../Register'
+import Footer from '../Footer'
 
 export default class App extends Component {
   render () {
     return (
-      <div className="app">
+      <div>
         <Nav />
-        <CategoryFilter />
-        Yup. It&lsquo;s an app.
-        <ToolCard />
         <Route exact path='/' component={WelcomeContainer}/>
-        <h1>We Are Awesome!</h1>
-        <WorkshopCard />
-        {/*   <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools' component={ToolsContainer}/>
+        <Route path='/Login' component={Login}/>
+        <Route path='/Register' component={Register}/>
         <Route path='/tools/:id' component={ToolDetailContainer}/>
-        <Route exact path='/workshops' component={WorkshopsContainer} />
-        <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
+        {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
+        {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
+        <hr/>
+        <Route path='/' component={Footer}/>
       </div>
     )
   }
