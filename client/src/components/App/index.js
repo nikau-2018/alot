@@ -21,7 +21,7 @@ export default class App extends Component {
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
-        <Route path='/Auth' component={Auth}/>
+        <Route path='/login' component={Auth}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route exact path='/workshops' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
