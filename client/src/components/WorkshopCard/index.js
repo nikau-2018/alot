@@ -20,10 +20,3 @@ export default class WorkshopCard extends Component {
     )
   }
 }
-
-// Default props until dummy data comes in, to remove later
-WorkshopCard.defaultProps = {
-  image: '/placeholder-image.jpeg',
-  name: 'Build a Birdhouse Workshop',
-  description: '2-3 hours, kid-friendly'
-}
