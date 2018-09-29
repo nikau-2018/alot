@@ -16,18 +16,18 @@ export default class CategoryFilter extends Component {
     return (
       <Dropdown className= 'categories' text='Categories'>
         <Dropdown.Menu>
-          <Link to="/tools">
+          <Link to={`/${this.props.type}`}>
             <Dropdown.Item
               text='All'
-              onClick={() => this.props.filterCategory(0)}
+              // onClick={() => this.props.filterCategory(0)}
             />
           </Link>
           {this.props.categories.map(category =>
-            <Link to={`/tools/${category.id}`} key={category.id}>
+            <Link to={`/${this.props.type}/${category.id}`} key={category.id}>
               <Dropdown.Item
                 text={`${category.name}`}
                 // Below to be taken out once tools/:category route working
-                onClick={() => this.props.filterCategory(category.id)}
+                // onClick={() => this.props.filterCategory(category.id)}
               />
             </Link>
           )}

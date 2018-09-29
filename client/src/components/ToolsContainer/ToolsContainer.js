@@ -7,9 +7,8 @@ export default class ToolsContainer extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      displayedCategory: []
+      displayedCategory: null
     }
-    this.filterCategory = this.filterCategory.bind(this)
   }
 
   componentDidMount () {
@@ -22,25 +21,26 @@ export default class ToolsContainer extends Component {
     this.props.fetchCategories()
   }
 
-  filterCategory (selectedCategory) {
-    this.setState({
-      displayedCategory: [Number(selectedCategory)]
-    })
-  }
+  // filterCategory () {
+  //   this.setState({
+  //     displayedCategory: [Number(this.props.match.params.category)]
+  //   })
+  // }
 
   render () {
     console.log(this.props.match.params.category)
-    const filteredTools = this.state.displayedCategory == 0
+    const filteredTools = this.props.match.params.category == null
       ? this.props.tools
       : this.props.tools.filter((tool) => {
-        return this.state.displayedCategory.includes(tool.categoryId)
+        return this.props.match.params.category == tool.categoryId
       })
     return (
       <div className='tools-container'>
         <Tools
-          filterCategory={this.filterCategory}
+          // filterCategory={this.filterCategory}
           filteredTools={filteredTools}
         />
+
       </div>
     )
   }
