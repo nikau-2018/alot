@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Button} from 'semantic-ui-react'
 import {Link, withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
+import Logout from '../Auth/Logout'
 
 class Nav extends Component {
   constructor (props) {
@@ -20,7 +21,7 @@ class Nav extends Component {
           <Link to="/workshops"><Button>Workshops</Button></Link>
           {
             this.props.isAuthenticated
-              ? <Link to="/logout"><Button>Logout</Button></Link>
+              ? <Logout />
               : <Link to="/auth"><Button>Login</Button></Link>
           }
         </Button.Group>
