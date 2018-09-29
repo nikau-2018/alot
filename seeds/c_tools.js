@@ -9,7 +9,8 @@ exports.seed = function (knex, Promise) {
         {id: 55505, category_id: 77702, name: 'Garden Hand Tools', description: 'Fiskars Garden Hand Tool Set 3pc, soft grip', image: '/tool-images/garden-hand-tools.jpg', active: true},
         {id: 55506, category_id: 77702, name: 'Rake', description: 'Saxon Long Handle 14 Tine Garden Rake, long timber handle, ideal for raking and clearing soils, leaves and stones ', image: '/tool-images/rake.jpg', active: true},
         {id: 55507, category_id: 77702, name: 'Garden Trolley', description: '60L Garden Trolley, good volume carrying capacity, strong, lightweight', image: '/tool-images/garden-trolley.jpg', active: true},
-        {id: 55508, category_id: 77703, name: 'Paint Roller', description: 'Paint Partner Roller Frame & Roller Cover 230mm, comfortable grip, sturdy steel frame, washable and reusable', image: '/tool-images/paint-roller.jpg', active: true}
+        {id: 55508, category_id: 77703, name: 'Paint Roller', description: 'Paint Partner Roller Frame & Roller Cover 230mm, comfortable grip, sturdy steel frame, washable and reusable', image: '/tool-images/paint-roller.jpg', active: true},
+        {id: 55509, category_id: 77703, name: 'Paint Tray', description: 'Monarch Paint Tray 230mm, suitable for 230mm paint rollers, light and sturdy construction, paint spout for easy pouring, easy to clean and reusable', image: '/tool-images/paint-tray.jpg', active: true}
       ])
     })
 }
