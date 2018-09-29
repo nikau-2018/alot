@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {Dropdown} from 'semantic-ui-react'
 
 export default class CategoryFilter extends Component {
@@ -6,6 +7,7 @@ export default class CategoryFilter extends Component {
     super(props)
     this.state = {} // empty state, looks funny
   }
+
   componentDidMount () {
     this.props.fetchCategories()
   }
@@ -14,16 +16,20 @@ export default class CategoryFilter extends Component {
     return (
       <Dropdown className= 'categories' text='Categories'>
         <Dropdown.Menu>
-          <Dropdown.Item
-            text='All'
-            onClick={() => this.props.filterCategory(0)}
-          />
-          {this.props.categories.map(category =>
+          <Link to="/tools">
             <Dropdown.Item
-              text={`${category.name}`}
-              key={category.id}
-              onClick={() => this.props.filterCategory(category.id)}
+              text='All'
+              onClick={() => this.props.filterCategory(0)}
             />
+          </Link>
+          {this.props.categories.map(category =>
+            <Link to={`/tools/${category.id}`} key={category.id}>
+              <Dropdown.Item
+                text={`${category.name}`}
+                // Below to be taken out once tools/:category route working
+                onClick={() => this.props.filterCategory(category.id)}
+              />
+            </Link>
           )}
         </Dropdown.Menu>
       </Dropdown>

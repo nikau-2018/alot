@@ -13,9 +13,9 @@ export default class ToolsGallery extends Component {
       <div>
         <h3>What a tool...</h3>
         <Card>
-          <a href={`/tools/${randomTool.id}`}>
+          <Link to={`/tools/${randomTool.id}`}>
             <Image src={`${randomTool.image}`} />
-          </a>
+          </Link>
           <Card.Content>
             <Card.Header>{randomTool.name}</Card.Header>
             <Card.Meta>{randomTool.description}</Card.Meta>
