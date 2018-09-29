@@ -11,5 +11,7 @@ export default combineReducers({
   categories,
   tools,
   auth,
-  workshops
+  workshops,
+  toolCategoryId,
+  workshopCategoryId
 })
