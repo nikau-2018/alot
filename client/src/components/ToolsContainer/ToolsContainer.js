@@ -19,6 +19,7 @@ export default class ToolsContainer extends Component {
       <div className='tools-container'>
         <Tools
           filteredTools={filteredTools}
+          categories={this.props.categories}
         />
       </div>
     )
