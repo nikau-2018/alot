@@ -9,14 +9,14 @@ export default class WorkshopsContainer extends Component {
   }
   
   render () {
+    if(!this.props.loading){
     const {id} = this.props.categories.find((cat) => (
       cat.name.toLowerCase() == this.props.match.params.category
     ))
     const filteredWorkshops = this.props.workshops.filter((workshop) => (
       workshop.categoryId === id
     ))
-      console.log(this.props.categories)
-      console.log(this.props.match.params)
+      console.log(this.props.workshops)
       console.log(id)
       console.log(filteredWorkshops)
     return (
@@ -32,5 +32,8 @@ export default class WorkshopsContainer extends Component {
       }
       </div>
     )
+  } else {
+    return(null)
   }
+}
 }
