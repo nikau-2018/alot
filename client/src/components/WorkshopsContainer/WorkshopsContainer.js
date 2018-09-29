@@ -21,6 +21,7 @@ export default class WorkshopsContainer extends Component {
       })
   }
   render () {
+    const filteredCategory = 
     return (
       <div className='workshops-container' >
         <Workshops
