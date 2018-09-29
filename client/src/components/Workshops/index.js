@@ -9,7 +9,9 @@ const Workshops = (props) => (
     <Search />
     <CategoryFilter />
     {props.workshops.map((workshop) => (
+      (props.category.includes(workshop.categoryId)) &&
       <WorkshopCard
+        category={props.category}
         key={workshop.id}
         id={workshop.id}
         name={workshop.name}
