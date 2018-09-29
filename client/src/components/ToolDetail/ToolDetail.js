@@ -14,7 +14,7 @@ export default function ToolDetail (props) {
         <Button basic color='green'>Rent</Button>
       </Link>
       <Link to={`/tools/${props.tool.categoryId}`}>
-        <Button basic>Tools</Button>
+        <Button basic>Similar Tools</Button>
       </Link>
     </div>
   )

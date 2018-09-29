@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-import Welcome from '../Welcome'
-import ToolsGallery from '../ToolsGallery'
+import {fetchTools} from '../ToolsContainer/actions'
 
-export default class WelcomeContainer extends Component {
-  render () {
-    return (
-      <div className='welcome-container' >
-        <Welcome />
-        <hr/>
-        <ToolsGallery />
-      </div>
-    )
+import WelcomeContainer from './WelcomeContainer'
+
+const mapStateToProps = (state) => {
+  return {
+    tools: state.tools.tools
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchTools: () => dispatch(fetchTools())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer)
