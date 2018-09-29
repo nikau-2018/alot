@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Button} from 'semantic-ui-react'
-import {Link, withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Logout from '../Auth/Logout'
 
