@@ -15,7 +15,8 @@ export default class WorkshopsContainer extends Component {
     const filteredWorkshops = this.props.workshops.filter((workshop) => (
       workshop.categoryId === id
     ))
-      console.log(this.props.workshops)
+      console.log(this.props.categories)
+      console.log(this.props.match.params)
       console.log(id)
       console.log(filteredWorkshops)
     return (
