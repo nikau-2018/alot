@@ -13,8 +13,8 @@ export default function ToolDetail (props) {
       <Link to={`/confirm/tool/${props.tool.id}`}>
         <Button basic color='green'>Rent</Button>
       </Link>
-      <Link to='/tools'>
-        <Button basic>Back</Button>
+      <Link to={`/tools/${props.tool.categoryId}`}>
+        <Button basic>{props.tool.categoryId} Tools</Button>
       </Link>
     </div>
   )
