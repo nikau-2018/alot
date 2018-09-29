@@ -1,4 +1,4 @@
-import {RECEIVE_CATEGORIES, ADD_CATEGORY_FILTER} from './actions'
+import {RECEIVE_CATEGORIES} from './actions'
 
 const defaultState = [
   {
@@ -9,7 +9,7 @@ const defaultState = [
   }
 ]
 
-export function categories (state = defaultState, action) {
+function categories (state = defaultState, action) {
   switch (action.type) {
     case RECEIVE_CATEGORIES:
       return action.categories
@@ -19,12 +19,4 @@ export function categories (state = defaultState, action) {
   }
 }
 
-export function toolCategoryId (state = null, action) {
-  switch (action.type) {
-    case ADD_CATEGORY_FILTER:
-      return action.categoryId
-
-    default:
-      return state
-  }
-}
+export default categories
