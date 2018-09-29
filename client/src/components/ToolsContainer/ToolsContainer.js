@@ -10,7 +10,6 @@ export default class ToolsContainer extends Component {
   }
 
   render () {
-    console.log(this.props.match.params.category)
     const filteredTools = !this.props.match.params.category
       ? this.props.tools
       : this.props.tools.filter((tool) => {
@@ -21,7 +20,6 @@ export default class ToolsContainer extends Component {
         <Tools
           filteredTools={filteredTools}
         />
-
       </div>
     )
   }
