@@ -13,7 +13,8 @@ exports.seed = function (knex, Promise) {
         {id: 55509, category_id: 77703, name: 'Paint Tray', description: 'Monarch Paint Tray 230mm, suitable for 230mm paint rollers, light and sturdy construction, paint spout for easy pouring, easy to clean and reusable', image: '/tool-images/paint-tray.jpg', active: true},
         {id: 55510, category_id: 77704, name: 'Screwdrivers', description: 'Fuller Robertson Screwdriver Set 4pc, non-slip grip handles, set includes: S2x38mm S1x100mm S2x100mm S2x200mm', image: '/tool-images/screwdrivers.jpg', active: true},
         {id: 55511, category_id: 77704, name: 'Sander', description: 'Ryobi 180W Multi Pad Sander, 180W motor, efficient cyclonic micro filtration dust collection, triangular shaped front base for detail & corner sanding', image: '/tool-images/sander.jpg', active: true},
-        {id: 55512, category_id: 77701, name: 'Overlocker', description: 'Singer 14SH654 Finishing Touch Overlocker, up to 1,300 stitches per minute, three-thread overlock, conversion from normal over edging to rolled hemming can be accomplished without changing the throat plate)', image: '/tool-images/overlocker.jpg', active: true}
+        {id: 55512, category_id: 77701, name: 'Overlocker', description: 'Singer 14SH654 Finishing Touch Overlocker, up to 1,300 stitches per minute, three-thread overlock, conversion from normal over edging to rolled hemming can be accomplished without changing the throat plate', image: '/tool-images/overlocker.jpg', active: true},
+        {id: 55513, category_id: 77701, name: 'Needles', description: 'Birch Crewel Needles, versatile all-purpose needles, durable and easy to handle', image: '/tool-images/needles.jpg', active: true}
       ])
     })
 }
