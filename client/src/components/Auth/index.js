@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Button} from 'semantic-ui-react'
 import Login from './Login'
-// import Logout from './Logout'
 import Register from './Register'
 
 class Auth extends React.Component {
