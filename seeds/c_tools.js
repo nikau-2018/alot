@@ -11,7 +11,8 @@ exports.seed = function (knex, Promise) {
         {id: 55507, category_id: 77702, name: 'Garden Trolley', description: '60L Garden Trolley, good volume carrying capacity, strong, lightweight', image: '/tool-images/garden-trolley.jpg', active: true},
         {id: 55508, category_id: 77703, name: 'Paint Roller', description: 'Paint Partner Roller Frame & Roller Cover 230mm, comfortable grip, sturdy steel frame, washable and reusable', image: '/tool-images/paint-roller.jpg', active: true},
         {id: 55509, category_id: 77703, name: 'Paint Tray', description: 'Monarch Paint Tray 230mm, suitable for 230mm paint rollers, light and sturdy construction, paint spout for easy pouring, easy to clean and reusable', image: '/tool-images/paint-tray.jpg', active: true},
-        {id: 55510, category_id: 77704, name: 'Screwdrivers', description: 'Fuller Robertson Screwdriver Set 4pc, non-slip grip handles, set includes: S2x38mm S1x100mm S2x100mm S2x200mm', image: '/tool-images/screwdrivers.jpg', active: true}
+        {id: 55510, category_id: 77704, name: 'Screwdrivers', description: 'Fuller Robertson Screwdriver Set 4pc, non-slip grip handles, set includes: S2x38mm S1x100mm S2x100mm S2x200mm', image: '/tool-images/screwdrivers.jpg', active: true},
+        {id: 55511, category_id: 77704, name: 'Sander', description: 'Ryobi 180W Multi Pad Sander, 180W motor, efficient cyclonic micro filtration dust collection, triangular shaped front base for detail & corner sanding', image: '/tool-images/sander.jpg', active: true}
       ])
     })
 }
