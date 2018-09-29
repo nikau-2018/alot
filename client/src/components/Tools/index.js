@@ -6,14 +6,16 @@ import ToolCard from '../ToolCard'
 
 const Tools = (props) => (
   <div>
-    <CategoryFilter filterCategory={props.filterCategory}/>
+    <CategoryFilter type='tools' />
     {props.filteredTools.map((tool) => (
       <ToolCard
         key={tool.id}
         id={tool.id}
         name={tool.name}
         image={tool.image}
-        description={tool.description}/>
+        description={tool.description}
+        category={tool.categoryId}
+      />
     ))}
   </div>
 )
