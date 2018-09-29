@@ -24,7 +24,7 @@ class Auth extends React.Component {
       <div>
         {
           this.props.isAuthenticated
-            ? <p>logged in</p>
+            ? this.props.history.goBack()
             : action === 'login'
               ? <Login callback={this.setAction}/>
               : action === 'register' && <Register callback={this.setAction}/>
