@@ -28,6 +28,7 @@ export default class App extends Component {
         {/* <Route exact path='/workshops' component={WorkshopsContainer} /> */}
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
+        {/* For testing non connected components <Route exact path='/test' component={}/> */}
         <hr/>
         <Route path='/' component={Footer}/>
       </div>
