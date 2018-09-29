@@ -1,1 +1,1 @@
-{"version":3,"sources":["components/App/styles.css"],"names":[],"mappings":"AAAA,MACE,YACA,eAAkB","file":"static/css/main.7feea8b9.css","sourcesContent":[".main {\n  color: green;\n  font-weight: bold;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/components/App/styles.css"],"sourceRoot":""}
+{"version":3,"sources":["components/App/styles.css"],"names":[],"mappings":"AAAA,MACE,YACA,eAAkB","file":"static/css/main.7feea8b9.css","sourcesContent":[".main {\n  color: green;\n  font-weight: bold;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/components/App/styles.css"],"sourceRoot":""}
