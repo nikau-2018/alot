@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
 import Welcome from '../Welcome'
-/* import ToolsGallery from '../ToolsGallery' */
-import Footer from '../Footer'
+import ToolsGallery from '../ToolsGallery'
 
 export default class WelcomeContainer extends Component {
   render () {
@@ -10,10 +9,7 @@ export default class WelcomeContainer extends Component {
       <div className='welcome-container' >
         <Welcome />
         <hr/>
-        <p>tools gallery will go here</p>
-        <hr/>
-        {/*  <ToolsGallery /> */}
-        <Footer />
+        <ToolsGallery />
       </div>
     )
   }
