@@ -1,4 +1,5 @@
 import {RECEIVE_CATEGORIES} from './actions'
+
 const defaultState = [
   {
     id: 77701,
@@ -7,6 +8,7 @@ const defaultState = [
     image: '/placeholder-image.jpeg'
   }
 ]
+
 function categories (state = defaultState, action) {
   switch (action.type) {
     case RECEIVE_CATEGORIES:
