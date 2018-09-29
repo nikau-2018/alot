@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Card, Image} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class WorkshopCard extends Component {
   constructor (props) {
     super(props)

@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Logout from '../Auth/Logout'
 
+import styles from './styles.css'
+
 class Nav extends Component {
   constructor (props) {
     super(props)

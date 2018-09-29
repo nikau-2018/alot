@@ -4,6 +4,8 @@ import Search from '../Search'
 import CategoryFilter from '../CategoryFilter'
 import WorkshopCard from '../WorkshopCard'
 
+import styles from './styles.css'
+
 const Workshops = (props) => (
   <div className='workshops'>
     <Search />
