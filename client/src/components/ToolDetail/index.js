@@ -1,7 +1,6 @@
-import React from 'react'
-import {Button, Divider} from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
+<<<<<<< HEAD
 import styles from './styles.css'
 
 export default function ToolDetail (props) {
@@ -17,4 +16,20 @@ export default function ToolDetail (props) {
       </Link>
     </div>
   )
+=======
+import {fetchCategories} from '../CategoryFilter/actions'
+
+import ToolDetail from './ToolDetail'
+
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categories
+  }
+>>>>>>> d921b530a1da30a38e34b95aacbe7aaff8ec66dd
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchCategories: () => dispatch(fetchCategories())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToolDetail)
