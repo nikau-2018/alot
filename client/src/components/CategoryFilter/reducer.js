@@ -1,5 +1,4 @@
-import {RECEIVE_CATEGORIES} from './actions'
-import ADD_CATEGORY_FILTER = 'ADD_CATEGORY_FILTER'
+import {RECEIVE_CATEGORIES, ADD_CATEGORY_FILTER} from './actions'
 
 const defaultState = [
   {
@@ -29,4 +28,3 @@ export function toolCategoryId (state = null, action) {
       return state
   }
 }
-
