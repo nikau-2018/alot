@@ -9,17 +9,26 @@ export default class WorkshopsContainer extends Component {
   }
   
   render () {
-    // const filteredWorkshops = this.state.displayedCategory === 0
-    //   ? this.props.workshops
-    //   : this.props.workshops.filter((workshops) => {
-    //     return this.state.displayedCategory.includes(workshops.categoryId)
-    //   })
-      console.log(this.props.workshops)
+    const workshopId = this.props.categories.find((cat) => {
+      cat.name == this.props.match.params.category
+    })
+    const filteredWorkshops = this.props.workshops.map((workshop) => (
+      workshop.id === workshopId
+    ))
+      console.log(this.props.categories)
+      console.log(typeof this.props.match.params.category)
+      console.log(workshopId)
     return (
       <div className='workshops-container' >
-        <Workshops
-          workshops={this.props.workshops}
-          category={this.props.categories}/>
+      {
+        this.props.match.params.category
+        ? <Workshops
+        workshops={this.props.workshops}
+        category={this.props.categories}/>
+        : <Workshops
+        workshops={this.props.workshops}
+        category={this.props.categories}/>
+      }
       </div>
     )
   }
