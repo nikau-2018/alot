@@ -1,17 +1,13 @@
-import {connect} from 'react-redux'
+import React, { Component } from 'react'
 
-import {fetchWorkshops} from '../WorkshopsContainer/actions'
+import WorkshopDetail from '../WorkshopDetail'
 
-import WorkshopDetailContainer from './WorkshopDetailContainer'
-
-const mapStateToProps = (state) => {
-  return {
-    workshops: state.workshops.workshops
+export default class WorkshopDetailContainer extends Component {
+  render () {
+    return (
+      <div className='workshop-detail-container' >
+        <WorkshopDetail />
+      </div>
+    )
   }
 }
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchWorkshops: () => dispatch(fetchWorkshops())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(WorkshopDetailContainer)
