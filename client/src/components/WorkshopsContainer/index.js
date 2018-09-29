@@ -6,10 +6,9 @@ import {fetchCategories} from '../CategoryFilter/actions'
 import WorkshopsContainer from './WorkshopsContainer'
 
 const mapStateToProps = (state) => {
-  const allCategories = state.categories.map((category) => category.id)
   return {
     workshops: state.workshops.workshops,
-    displayedCategory: allCategories
+    categories: state.categories.map((category) => category.id)
   }
 }
 
