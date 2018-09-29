@@ -7,7 +7,7 @@ export default class WorkshopsContainer extends Component {
     super(props)
     this.state = {
       workshops: [],
-      category: 0
+      displayedCategory: []
     }
   }
 
@@ -20,12 +20,18 @@ export default class WorkshopsContainer extends Component {
         })
       })
   }
+
   render () {
-    const filteredCategory = 
+    const filteredWorkshops = this.state.displayedCategory === 0
+      ? this.props.workshops
+      : this.props.workshops.filter((workshops) => {
+        return this.state.displayedCategory.includes(workshops.categoryId)
+      })
+
     return (
       <div className='workshops-container' >
         <Workshops
-          workshops={this.state.workshops}
+          filteredWorkshops={filteredWorkshops}
           category={this.state.category}/>
       </div>
     )
