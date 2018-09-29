@@ -10,7 +10,7 @@ export default function ToolDetail (props) {
       <Divider/>
       <Image src={props.tool.image} size='large' />
       <h3>Description:</h3>
-      <ul>{description.split(', ').map(element => <li>{element}</li>)}</ul>
+      <ul>{description.split('-').map(element => <li>{element}</li>)}</ul>
       <Link to={`/confirm/tool/${props.tool.id}`}>
         <Button basic color='green'>Rent</Button>
       </Link>
