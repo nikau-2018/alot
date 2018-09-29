@@ -39,9 +39,16 @@ export function fetchCategories () {
   }
 }
 
-export function addCategoryFilter (categoryId) {
+export function addToolCategoryFilter (toolCategoryId) {
   return {
     type: ADD_CATEGORY_FILTER,
-    categoryId: categoryId
+    toolcategoryId: toolCategoryId
+  }
+}
+
+export function addWorkshopCategoryFilter (workshopCategoryId) {
+  return {
+    type: ADD_CATEGORY_FILTER,
+    workshopcategoryId: workshopCategoryId
   }
 }
