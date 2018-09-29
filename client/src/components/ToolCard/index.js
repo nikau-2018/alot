@@ -13,7 +13,7 @@ export default class ToolCard extends Component {
       <Card>
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
-          <Link to={`/tools/${this.props.id}`}>
+          <Link to={`/tools/${this.props.category}/${this.props.id}`}>
             <Image src={this.props.image} />
           </Link>
           <Card.Description>{this.props.description}</Card.Description>
