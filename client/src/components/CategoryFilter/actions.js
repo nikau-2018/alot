@@ -3,6 +3,7 @@ import request from 'axios'
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'
 export const REQUEST_CATEGORIES = 'REQUEST_CATEGORIES'
+export const ADD_CATEGORY_FILTER = 'ADD_CATEGORY_FILTER'
 
 export const showError = (errorMessage) => {
   return {
@@ -35,5 +36,12 @@ export function fetchCategories () {
       .catch(err => {
         dispatch(showError(err.message))
       })
+  }
+}
+
+export function addCategoryFilter (categoryId) {
+  return {
+    type: ADD_CATEGORY_FILTER,
+    categoryId: categoryId
   }
 }
