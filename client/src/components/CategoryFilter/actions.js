@@ -3,8 +3,6 @@ import request from 'axios'
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'
 export const REQUEST_CATEGORIES = 'REQUEST_CATEGORIES'
-export const ADD_TOOL_CATEGORY_FILTER = 'ADD_TOOL_CATEGORY_FILTER'
-export const ADD_WORKSHOP_CATEGORY_FILTER = 'ADD_WORKSHOP_CATEGORY_FILTER'
 
 export const showError = (errorMessage) => {
   return {
