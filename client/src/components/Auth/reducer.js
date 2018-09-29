@@ -1,4 +1,4 @@
-// import {LOGOUT_SUCCESS} from './logout/actions'
+import {LOGOUT_SUCCESS} from './Logout/actions'
 import {REGISTER_REQUEST, REGISTER_FAILURE} from './Register/actions'
 import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from './Login/actions'
 import {isAuthenticated, getUserTokenInfo} from './utils/auth'
@@ -33,13 +33,13 @@ export default function auth (state = initialState, action) {
         isAuthenticated: false,
         errorMessage: action.message
       }
-    // case LOGOUT_SUCCESS:
-    //   return {
-    //     ...state,
-    //     isFetching: false,
-    //     isAuthenticated: false,
-    //     user: null
-    //   }
+    case LOGOUT_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        isAuthenticated: false,
+        user: null
+      }
     case REGISTER_REQUEST:
       return {
         ...state,
