@@ -1,8 +1,7 @@
 import React from 'react'
 import {Button, Form} from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
 
-// import ErrorMessage from './ErrorMessage'
+import ErrorMessage from '../ErrorMessage'
 
 export default class LoginForm extends React.Component {
   constructor (props) {
@@ -11,24 +10,27 @@ export default class LoginForm extends React.Component {
       email: '',
       password: ''
     }
-    this.handleClick = this.handleClick.bind(this)
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange (e) {
+  handleChange = (e) => {
     this.setState({
       ...this.state,
       [e.target.name]: e.target.value
     })
   }
 
-  handleClick () {
+  handleClick = () => {
     const {email, password} = this.state
     const creds = {
       email: email.trim(),
       password: password.trim()
     }
     this.props.loginUser(creds)
+  }
+
+  handleSwitch = () => {
+    console.log(this.props)
+    this.props.callback('register')
   }
 
   render () {
@@ -50,9 +52,8 @@ export default class LoginForm extends React.Component {
               onChange={this.handleChange} />
           </Form.Field>
           <Button onClick={this.handleClick}>Submit</Button>
-          {/* <ErrorMessage reducer='auth' /> */}
-          <Link to={'/Register'} className='button'>
-            <Button type='Need'>Need an account?</Button> </Link>
+          <ErrorMessage reducer='auth' />
+          <Button onClick={this.handleSwitch}>Need an account?</Button>
         </div>
       </Form>
     )
