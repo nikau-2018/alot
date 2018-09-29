@@ -2,7 +2,7 @@ const express = require('express')
 const verifyJwt = require('express-jwt')
 
 const {checkHash} = require('../auth/hash')
-const {getToken} = require('../auth/token')
+const {getToken, getSecret, handleError} = require('../auth')
 
 const router = express.Router()
 
@@ -62,6 +62,16 @@ function login (req, res) {
       ok: false,
       message: 'Unknown error when logging in.'
     }))
+}
+
+router.get('/secret', verifyJwt({secret: getSecret}), handleError, secret)
+
+// These routes are protected
+function secret (req, res) {
+  res.json({
+    message: 'This is a SECRET quote.',
+    user: `Your user ID is: ${req.user.id}`
+  })
 }
 
 module.exports = router
