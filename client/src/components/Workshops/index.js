@@ -4,12 +4,14 @@ import Search from '../Search'
 import CategoryFilter from '../CategoryFilter'
 import WorkshopCard from '../WorkshopCard'
 
-const Workshops = (props) => (
-  <div className='workshops'>
-    <Search />
-    <CategoryFilter />
-    {props.workshops.map((workshop) => (
-      (props.category.includes(workshop.categoryId)) &&
+const Workshops = (props) => {
+  if (props.category) {
+    return (
+      <div className='workshops'>
+        <Search />
+        <CategoryFilter />
+        {props.workshops.map((workshop) => (
+          (props.category.includes(workshop.categoryId)) &&
       <WorkshopCard
         category={props.category}
         key={workshop.id}
@@ -19,8 +21,28 @@ const Workshops = (props) => (
         description={workshop.description}
         instructor={workshop.instructor}
         dateTime={workshop.dateTime}/>
-    ))}
-  </div>
-)
+        ))}
+      </div>
+    )
+  } else {
+    return (
+      <div className='workshops'>
+        <Search />
+        <CategoryFilter />
+        {props.workshops.map((workshop) => (
+          <WorkshopCard
+            category={props.category}
+            key={workshop.id}
+            id={workshop.id}
+            name={workshop.name}
+            image={workshop.image}
+            description={workshop.description}
+            instructor={workshop.instructor}
+            dateTime={workshop.dateTime}/>
+        ))}
+      </div>
+    )
+  }
+}
 
 export default Workshops

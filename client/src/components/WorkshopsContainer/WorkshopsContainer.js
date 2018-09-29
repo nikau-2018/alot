@@ -7,7 +7,7 @@ export default class WorkshopsContainer extends Component {
     super(props)
     this.state = {
       workshops: [],
-      category: [77701, 77702, 77703, 77704]
+      category: 0
     }
   }
 
@@ -15,7 +15,8 @@ export default class WorkshopsContainer extends Component {
     this.props.fetchWorkshops()
       .then(() => {
         this.setState({
-          workshops: this.props.workshops
+          workshops: this.props.workshops,
+          category: this.props.match.params.category
         })
       })
   }
