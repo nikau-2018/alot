@@ -13,7 +13,8 @@ const Tools = (props) => (
         id={tool.id}
         name={tool.name}
         image={tool.image}
-        description={tool.description}/>
+        description={tool.description}
+        category={tool.categoryId}/>
     ))}
   </div>
 )

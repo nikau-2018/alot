@@ -22,7 +22,7 @@ export default class App extends Component {
         <Route exact path='/' component={WelcomeContainer}/>
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route path='/Auth' component={Auth}/>
-        <Route path='/tools/:id' component={ToolDetailContainer}/>
+        <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route exact path='/workshops' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
