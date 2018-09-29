@@ -1,108 +1,102 @@
 import React from 'react'
 import {Button, Checkbox, Form} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import {pick, clone} from 'lodash'
 
-const FormExampleForm = () => (
-  <Form>
-    <div className='register'>
-      <h1> Create an Account </h1>
-      <Form.Field>
-        <label>First Name</label>
-        <input placeholder='First Name' />
-      </Form.Field>
-      <Form.Field>
-        <label>Last Name</label>
-        <input placeholder='Last Name' />
-      </Form.Field>
-      <Form.Field>
-        <label>Email</label>
-        <input placeholder='Email' />
-      </Form.Field>
-      <Form.Field>
-        <label>Phone Number</label>
-        <input placeholder='Phone Number' />
-      </Form.Field>
-      <Form.Field>
-        <label>Password</label>
-        <input placeholder='Password' />
-      </Form.Field>
-      <Form.Field>
-        <Checkbox label='By signing up, you agree with the Terms of Service and Privacy Policy' />
-      </Form.Field>
-      <Button type='sign up'>Sign Up</Button><br /><br />
-      <Link to={'/Login'} className='button'>
-        <Button type='Already'>Already have an account?</Button> </Link>
-    </div>
-  </Form>
-)
-import React from 'react'
-import {connect} from 'react-redux'
+import ErrorMessage from '../ErrorMessage'
 
-import {registerUser, registerError} from './actions'
-//import ErrorMessage from './ErrorMessage'
-
-class RegisterForm extends React.Component {
+export default class RegisterForm extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      username: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
       password: '',
       confirm: ''
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleChange (e) {
+  handleChange = (e) => {
     this.setState({
       ...this.state,
       [e.target.name]: e.target.value
     })
   }
-
-  handleClick (event) {
-    const {username, password, confirm} = this.state
-    if (password !== confirm) {
-      this.props.registerError('Passwords do not match!')
-      return
-    }
+  
+  handleClick = (e) => {
+    // we need to add some validation here
     const creds = {
-      username: username.trim(),
-      password: password.trim()
+      user: pick(clone(this.state), ['firstName', 'lastName', 'email', 'phone']),
+      password: this.state.password
     }
     this.props.registerUser(creds)
   }
 
+  handleSwitch = () => {
+    console.log(this.props)
+    this.props.callback('login')
+  }
+
   render () {
-    const {username, password, confirm} = this.state
+    const {firstName, lastName, email, phone, password, confirm} = this.state
     return (
       <div>
-        <p><input name='username' placeholder='Username'
-          onChange={this.handleChange} value={username} /></p>
-
-        <p><input type='password' name='password' placeholder='Password'
-          onChange={this.handleChange} value={password} /></p>
-
-        <p><input type='password' name='confirm' placeholder='Confirm'
-          onChange={this.handleChange} value={confirm} /></p>
-
-        <button onClick={this.handleClick}>Register</button>
-
-        {/* <ErrorMessage reducer='auth' /> */}
+              
+        <Form>
+        <div className='register'>
+          <h1> Create an Account </h1>
+          <Form.Field>
+            <label>First Name</label>
+            <input name='firstName'
+            placeholder='First Name'
+            value = {firstName}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Last Name</label>
+            <input name='lastName'
+            placeholder='Last Name'
+            value = {lastName}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Email</label>
+            <input name='email'
+            placeholder='Email'
+            value = {email}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Phone Number</label>
+            <input name='phone'
+            placeholder='Phone Number'
+            value={phone}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Password</label>
+            <input name='password'
+            type='password'
+            placeholder='Password'
+            value={password}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <Form.Field>
+            <label>Confirm Password</label>
+            <input name='confirm'
+            type='password'
+            placeholder='Password'
+            value={confirm}
+            onChange={this.handleChange} />
+          </Form.Field>
+          <ErrorMessage reducer='auth' />
+          <Button onClick={this.handleClick}>Submit</Button><br /><br />
+          <Button onClick={this.handleSwitch}>Already have an account?</Button>
+        </div>
+      </Form>
       </div>
     )
   }
 }
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    registerUser: (creds) => {
-      return dispatch(registerUser(creds))
-    },
-    registerError: (message) => {
-      dispatch(registerError(message))
-    }
-  }
-}
-
-export default connect(null, mapDispatchToProps)(RegisterForm)
