@@ -1,19 +1,27 @@
 import React, {Component} from 'react'
 
-import Search from '../Search'
-import CategoryFilter from '../CategoryFilter'
-import WorkshopCard from '../WorkshopCard'
+import Workshops from '../Workshops'
 
 export default class WorkshopsContainer extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      workshops: []
+    }
+  }
+
   componentDidMount () {
     this.props.fetchWorkshops()
+      .then(() => {
+        this.setState({
+          workshops: this.props.workshops
+        })
+      })
   }
   render () {
     return (
       <div className='workshops-container' >
-        <Search />
-        <CategoryFilter />
-        {/* <WorkshopCard /> */}
+        <Workshops workshops={this.state.workshops}/>
       </div>
     )
   }
