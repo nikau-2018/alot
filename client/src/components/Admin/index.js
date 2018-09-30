@@ -7,7 +7,7 @@ import Orders from '../Orders'
 // import AddWorkshop from '../AddWorkshop'
 // import AddEmployee from '../AddEmployee'
 
-import './styles.css'
+import styles from './styles.css'
 
 // Not sure whether this needs to be stateful. Will leave as stateful for now.
 export default class Admin extends Component {
