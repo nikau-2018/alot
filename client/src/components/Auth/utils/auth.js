@@ -19,6 +19,26 @@ export function isAuthenticated () {
   }
 }
 
+export function isAdmin () {
+  const token = get('token')
+
+  if (token) {
+    const payload = decode(token)
+    const expiry = payload.exp
+
+    if (expiry < new Date().getTime() / 1000) {
+      removeUser() // Our token has expired, so lets remove it from storage
+      return false
+    }
+    if (payload.role) {
+      return true
+    }
+    return false
+  } else {
+    return false
+  }
+}
+
 export function saveUserToken (token) {
   set('token', token)
   return decode(token)

@@ -13,6 +13,7 @@ import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
+import Admin from '../Admin'
 import Footer from '../Footer'
 import AddTool from '../AddTool'
 

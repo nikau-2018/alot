@@ -21,6 +21,7 @@ class Nav extends Component {
           <Link to="/"><Button>Home</Button></Link>
           <Link to="/tools"><Button>Tools</Button></Link>
           <Link to="/workshops"><Button>Workshops</Button></Link>
+          {this.props.isAdmin && <Link to="/admin"><Button>Admin</Button></Link>}
           {
             this.props.isAuthenticated
               ? <Logout />
@@ -34,7 +35,8 @@ class Nav extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    isAdmin: state.auth.isAdmin
   }
 }
 
