@@ -6,7 +6,7 @@ import CategoryFilter from './CategoryFilter'
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categories.categories
   }
 }
 

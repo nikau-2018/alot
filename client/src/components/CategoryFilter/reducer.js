@@ -2,14 +2,7 @@ import {REQUEST_CATEGORIES, RECEIVE_CATEGORIES, RECEIVE_CATEGORIES_ERROR} from '
 
 const defaultState =
 {
-  categories: [
-    {
-      id: 77701,
-      name: 'Sewing',
-      description: 'Everything to do with sewing',
-      image: '/placeholder-image.jpeg'
-    }
-  ],
+  categories: [],
   error: null,
   pending: false
 }

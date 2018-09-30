@@ -6,7 +6,7 @@ import ToolDetail from './ToolDetail'
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categories.categories
   }
 }
 

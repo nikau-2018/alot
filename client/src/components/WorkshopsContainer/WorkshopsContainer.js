@@ -3,12 +3,6 @@ import React, {Component} from 'react'
 import Workshops from '../Workshops'
 
 export default class WorkshopsContainer extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      ready: false
-    }
-  }
 
   componentDidMount () {
     this.props.fetchWorkshops()
@@ -17,10 +11,10 @@ export default class WorkshopsContainer extends Component {
 
   render () {
     if (this.props.ready) {
-      const selectedId = this.props.categories.find((cat) => (
+      const {id} = this.props.categories.find((cat) => (
         cat.name.toLowerCase() === this.props.match.params.category))
       const filteredWorkshops = this.props.workshops.filter((workshop) => (
-        workshop.categoryId === selectedId))
+        workshop.categoryId === id))
       return (
         <div className='workshops-container' >
           {
