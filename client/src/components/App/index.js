@@ -14,7 +14,6 @@ import WorkshopDetailContainer from '../WorkshopDetailContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
-import AdminNav from '../AdminNav'
 
 export default class App extends Component {
   render () {
@@ -28,7 +27,7 @@ export default class App extends Component {
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        <Route exact path='/test' component={AdminNav}/>
+        {/* <Route exact path='/test' component={}/> */}
         <Route path='/' component={Footer}/>
       </div>
     )
