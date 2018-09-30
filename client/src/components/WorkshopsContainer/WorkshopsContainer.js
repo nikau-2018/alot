@@ -3,26 +3,33 @@ import React, {Component} from 'react'
 import Workshops from '../Workshops'
 
 export default class WorkshopsContainer extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      workshops: []
-    }
-  }
-
   componentDidMount () {
     this.props.fetchWorkshops()
-      .then(() => {
-        this.setState({
-          workshops: this.props.workshops
-        })
-      })
+    this.props.fetchCategories()
   }
+
   render () {
-    return (
-      <div className='workshops-container' >
-        <Workshops workshops={this.state.workshops}/>
-      </div>
-    )
+    if (this.props.ready) {
+      let filteredWorkshops = 0
+      if (this.props.match.params.category) {
+        const out = this.props.categories.find((cat) => (
+          cat.id === Number(this.props.match.params.category)
+        ))
+        filteredWorkshops = this.props.workshops.filter((workshop) => (
+          workshop.categoryId === out.id
+        ))
+      }
+      return (
+        <div className='workshops-container' >
+          {
+            <Workshops
+              workshops={filteredWorkshops || this.props.workshops}
+              category={this.props.categories}/>
+          }
+        </div>
+      )
+    } else {
+      return (<div>loading</div>)
+    }
   }
 }
