@@ -22,5 +22,7 @@ function getOrders (db = connection) {
       'users.email',
       'users.phone',
       'tools.name as tool',
-      'tools.id as toolId')
+      'tools.id as toolId',
+      'tools.category_id as category'
+    )
 }

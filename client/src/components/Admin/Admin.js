@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import { Card, Icon } from 'semantic-ui-react'
+import {Card, Icon} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 // Components
 // // import AdminNav from '../AdminNav'
@@ -13,13 +14,19 @@ export default class Admin extends Component {
     const orderCards = this.props.orders && this.props.orders.map(order =>
       <Card key={order.id}>
         <Card.Content>
-          <Card.Header><Icon name='dolly flatbed' /> Order #{order.id}</Card.Header>
-          <Card.Meta>Status: {order.status}</Card.Meta>
+          <Card.Header>
+            <Icon name='dolly flatbed' /> Order #{order.id}<br />
+          </Card.Header>
+          <Card.Meta>
+            <Link to={`/tools/${order.category}/${order.toolId}`}>
+              {order.tool}<br/>
+            </Link>
+            Status: {order.status
+            }</Card.Meta>
           <Card.Description>
             <Icon name='user' /> {order.firstName} {order.lastName}<br />
-            <Icon name='email' /> {order.email}<br />
-            <Icon name='phone' /> {order.phone}<br />
-            <Icon name='cog' /> {order.tool} ({order.toolId})<br /><br />
+            <Icon name='mail' /><a href={`mailto:${order.email}`}> {order.email}</a><br />
+            <Icon name='phone' /><a href={`tel:${order.phone}`}> {order.phone}</a><br /><br />
             <Icon name='pencil' /> {order.notes}
           </Card.Description>
         </Card.Content>
