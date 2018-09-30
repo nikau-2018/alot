@@ -30,6 +30,9 @@ export default class Admin extends Component {
             <Icon name='pencil' /> {order.notes}
           </Card.Description>
         </Card.Content>
+        <Card.Content extra>
+          <Icon name='calendar alternate outline' /> {order.createdAt}
+        </Card.Content>
       </Card>
     )
     return (

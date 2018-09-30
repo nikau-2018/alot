@@ -17,6 +17,7 @@ function getOrders (db = connection) {
     .select('orders.id',
       'orders.notes',
       'orders.status',
+      'orders.createdAt',
       'users.first_name as firstName',
       'users.last_name as lastName',
       'users.email',
