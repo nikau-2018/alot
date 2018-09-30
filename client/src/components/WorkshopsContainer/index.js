@@ -6,10 +6,14 @@ import {fetchCategories} from '../CategoryFilter/actions'
 import WorkshopsContainer from './WorkshopsContainer'
 
 const mapStateToProps = (state) => {
-  return {
-    workshops: state.workshops.workshops,
-    loading: state.workshops.pending,
-    categories: state.categories
+  if (state.workshops.workshops.length > 0) {
+    return {
+      workshops: state.workshops.workshops,
+      loading: state.workshops.pending,
+      categories: state.categories
+    }
+  } else {
+    return false
   }
 }
 
