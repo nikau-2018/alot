@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button} from 'semantic-ui-react'
+import {Button, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Logout from '../Auth/Logout'
@@ -19,20 +19,20 @@ class Nav extends Component {
       <div className='ui-grid'>
         <Button.Group vertical>
           <Link to="/">
-            <Button><i className='home icon'></i>Home</Button>
+            <Button><Icon name='home icon'/>Home</Button>
           </Link>
           <Link to="/tools">
-            <Button><i className='wrench icon'></i>Tools</Button>
+            <Button><Icon name='wrench icon' />Tools</Button>
           </Link>
           <Link to="/workshops">
-            <Button><i className='warehouse icon'></i>Workshops</Button>
+            <Button><Icon name='warehouse icon'/>Workshops</Button>
           </Link>
           {this.props.isAdmin && <Link to="/admin"><Button>Admin</Button></Link>}
           {
             this.props.isAuthenticated
               ? <Logout />
               : <Link to="/login">
-                <Button><i className='lock open icon'></i>Login</Button>
+                <Button><Icon name='lock open icon'/>Login</Button>
               </Link>
           }
         </Button.Group>
