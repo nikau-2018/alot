@@ -22,4 +22,14 @@ function createOrder (req, res) {
     })
 }
 
+router.get('/', (req, res) => {
+  db.getOrders()
+    .then(orders => {
+      res.status(200).json({orders})
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
+})
+
 module.exports = router
