@@ -12,15 +12,15 @@ export default class ToolCard extends Component {
 
   render () {
     return (
-      <Card>
-        <Card.Content>
-          <Card.Header>{this.props.name}</Card.Header>
-          <Link to={`/tools/${this.props.category}/${this.props.id}`}>
+      <Link to={`/tools/${this.props.category}/${this.props.id}`}>
+        <Card>
+          <Card.Content>
+            <Card.Header>{this.props.name}</Card.Header>
             <Image src={this.props.image} />
-          </Link>
-          <Card.Description>{this.props.description}</Card.Description>
-        </Card.Content>
-      </Card>
+            <Card.Description>{this.props.description}</Card.Description>
+          </Card.Content>
+        </Card>
+      </Link>
     )
   }
 }
