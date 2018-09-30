@@ -20,25 +20,11 @@ function getSingleTool (toolId, db = connection) {
 
 function addTool (tool, db = connection) {
   return db('tools')
-    .insert({
-      'category_id': tool.categoryId,
-      'name': tool.name,
-      'description': tool.description,
-      'body': tool.body,
-      'image': tool.image,
-      'active': tool.active
-    })
+    .insert(tool)
 }
 
 function editTool (id, tool, db = connection) {
   return db('tools')
     .where('id', id)
-    .update({
-      'category_id': tool.categoryId,
-      'name': tool.name,
-      'description': tool.description,
-      'body': tool.body,
-      'image': tool.image,
-      'active': tool.active
-    })
+    .update(tool)
 }
