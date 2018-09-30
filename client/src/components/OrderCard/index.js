@@ -14,7 +14,7 @@ export default function Orders (props) {
             <Icon name='dolly flatbed' /> Order #{order.id}<br />
           </Card.Header>
           <Card.Meta>
-            <Link to={`/tools/${order.category}/${order.toolId}`}>
+            <Link to={`/tools/${order.categoryId}/${order.toolId}`}>
               {order.tool}<br/>
             </Link>
             Status: {order.status
