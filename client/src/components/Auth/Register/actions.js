@@ -8,8 +8,6 @@ export const REGISTER_FAILURE = 'REGISTER_FAILURE'
 function requestRegister (creds) {
   return {
     type: REGISTER_REQUEST,
-    isFetching: true,
-    isAuthenticated: false,
     creds
   }
 }
@@ -17,8 +15,6 @@ function requestRegister (creds) {
 export function registerError (message) {
   return {
     type: REGISTER_FAILURE,
-    isFetching: false,
-    isAuthenticated: false,
     message
   }
 }

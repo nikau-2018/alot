@@ -19,12 +19,15 @@ function register (req, res) {
           message: 'User exists'
         })
         : db.createUser(req.body.user, req.body.password)
-          .then((id) => res.status(201).json(
-            {
-              ok: true,
-              token: getToken(id)
-            }
-          ))
+          .then(() => {
+            db.getUser(req.body.user.email)
+              .then(user => {
+                res.status(201).json({
+                  ok: true,
+                  token: getToken(user)
+                })
+              })
+          })
     })
     .catch(() => {
       res.status(500).json({
@@ -46,7 +49,7 @@ function login (req, res) {
             ok
               ? res.status(200).json({
                 ok: true,
-                token: getToken(user.id)
+                token: getToken(user)
               })
               : res.status(403).json({
                 ok: false,

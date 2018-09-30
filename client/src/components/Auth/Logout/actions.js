@@ -6,17 +6,13 @@ export const LOGOUT_FAILURE = 'LOGOUT_FAILURE'
 
 function requestLogout () {
   return {
-    type: LOGOUT_REQUEST,
-    isFetching: true,
-    isAuthenticated: true
+    type: LOGOUT_REQUEST
   }
 }
 
 function receiveLogout () {
   return {
-    type: LOGOUT_SUCCESS,
-    isFetching: false,
-    isAuthenticated: false
+    type: LOGOUT_SUCCESS
   }
 }
 
