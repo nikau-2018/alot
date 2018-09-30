@@ -7,8 +7,15 @@ module.exports = {
 }
 
 // Create a JWT with a user id in it
-function getToken (id) {
-  return jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: '1d'})
+function getToken (user) {
+  return jwt.sign({
+    id: user.id,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+    phone: user.phone,
+    role: user.role
+  }, process.env.JWT_SECRET, {expiresIn: '1d'})
 }
 
 function getSecret (req, payload, done) {
