@@ -1,17 +1,15 @@
 import React from 'react'
 import {Image, Divider} from 'semantic-ui-react'
 
-import logo from './alot-logo.png'
-import garageImage from './garage-banner2.png'
+import garageBanner from './garage-banner.jpg'
 
 import styles from './styles.css'
 
 export default function Welcome () {
   return (
     <div className='welcome'>
-      <Image src={logo} size='massive'/>
-      <Image src={garageImage} size='massive'/>
-      <h1>Welcome!</h1>
+      <Image src={garageBanner} fluid />
+      <h1>Welcome to the Auckland Library of Tools!</h1>
       <p>
         The Auckland Library of tools provides members with access to high quality and well maintained tools and equipment.
       </p>
