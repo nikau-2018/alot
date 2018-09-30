@@ -1,22 +1,42 @@
-import {RECEIVE_CATEGORIES} from './actions'
+import {REQUEST_CATEGORIES, RECEIVE_CATEGORIES, RECEIVE_CATEGORIES_ERROR} from './actions'
 
-const defaultState = [
-  {
-    id: 77701,
-    name: 'Sewing',
-    description: 'Everything to do with sewing',
-    image: '/placeholder-image.jpeg'
-  }
-]
+const defaultState =
+{
+  categories: [
+    {
+      id: 77701,
+      name: 'Sewing',
+      description: 'Everything to do with sewing',
+      image: '/placeholder-image.jpeg'
+    }
+  ],
+  error: null,
+  pending: false
+}
 
-function categories (state = defaultState, action) {
-  switch (action.type) {
+export default function (state = defaultState, {type, categories, error}) {
+  switch (type) {
+    case REQUEST_CATEGORIES:
+      return {
+        ...state,
+        error: null,
+        pending: true
+      }
     case RECEIVE_CATEGORIES:
-      return action.categories
-
+      return {
+        ...state,
+        error: null,
+        categories,
+        pending: false
+      }
+    case RECEIVE_CATEGORIES_ERROR:
+      return {
+        ...state,
+        error,
+        tools: null,
+        pending: false
+      }
     default:
       return state
   }
 }
-
-export default categories
