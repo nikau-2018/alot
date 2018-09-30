@@ -5,9 +5,8 @@ import {addTool} from './actions'
 import {fetchCategories} from '../CategoryFilter/actions'
 
 const mapStateToProps = (state) => {
-  const categoryIds = state.categories.categories.map((category) => category.id)
   return {
-    categoryIds: categoryIds
+    categories: state.categories.categories
   }
 }
 

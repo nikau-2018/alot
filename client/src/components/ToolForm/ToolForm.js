@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Form} from 'semantic-ui-react'
+import {Button, Form, Dropdown} from 'semantic-ui-react'
 
 export default class LoginForm extends Component {
   constructor (props) {
@@ -33,6 +33,12 @@ export default class LoginForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>Category:</label>
+          <Dropdown.Menu>
+            {this.props.cateogry}
+            <Dropdown.item>
+
+            </Dropdown.item>
+          </Dropdown.Menu>
           <input
           name='category'
           placeholder='Tool Category'
@@ -55,7 +61,7 @@ export default class LoginForm extends Component {
         {/* active status */}
         <input
         type='hidden'
-        name='image'
+        name='active'
         value={true}/>
         <Button onClick={this.props.handleSubmit}>Submit</Button>
       </Form>
