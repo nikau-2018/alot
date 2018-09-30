@@ -18,14 +18,33 @@ class Nav extends Component {
     return (
       <div className='ui-grid'>
         <Button.Group vertical>
-          <Link to="/"><Button>Home</Button></Link>
-          <Link to="/tools"><Button>Tools</Button></Link>
-          <Link to="/workshops"><Button>Workshops</Button></Link>
+          <Link to="/">
+            <Button>
+              <i className='home icon'></i>
+            Home
+            </Button>
+          </Link>
+          <Link to="/tools">
+            <Button>
+              <i className='wrench icon'></i>
+            Tools
+            </Button></Link>
+          <Link to="/workshops">
+            <Button>
+              <i className='warehouse icon'></i>
+            Workshops
+            </Button>
+          </Link>
           {this.props.isAdmin && <Link to="/admin"><Button>Admin</Button></Link>}
           {
             this.props.isAuthenticated
               ? <Logout />
-              : <Link to="/login"><Button>Login</Button></Link>
+              : <Link to="/login">
+                <Button>
+                  <i className='lock open icon'></i>
+                  Login
+                </Button>
+              </Link>
           }
         </Button.Group>
       </div>
