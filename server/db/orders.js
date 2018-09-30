@@ -7,4 +7,5 @@ module.exports = {
 function createOrder (order, db = connection) {
   return db('orders')
     .insert(order)
+    .returning('id')
 }
