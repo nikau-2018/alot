@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Card} from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
 
 import OrderCard from '../OrderCard'
 
