@@ -4,6 +4,8 @@ import {fetchCategories} from '../CategoryFilter/actions'
 
 import ToolDetail from './ToolDetail'
 
+import styles from './styles.css'
+
 const mapStateToProps = (state) => {
   return {
     categories: state.categories

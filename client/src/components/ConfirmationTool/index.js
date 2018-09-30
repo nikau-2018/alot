@@ -2,6 +2,8 @@ import React from 'react'
 import {Button, Divider, Image} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
+import styles from './styles.css'
+
 const ConfirmationTool = (props) => (
   <div className='confirmation'>
     <h1>Confirm Your Tool Rental</h1>
