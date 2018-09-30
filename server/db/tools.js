@@ -30,7 +30,15 @@ function addTool (tool, db = connection) {
     })
 }
 
-function editTool (db = connection) {
+function editTool (id, tool, db = connection) {
   return db('tools')
-    .select()
+    .where('id', id)
+    .update({
+      'category_id': tool.categoryId,
+      'name': tool.name,
+      'description': tool.description,
+      'body': tool.body,
+      'image': tool.image,
+      'active': tool.active
+    })
 }
