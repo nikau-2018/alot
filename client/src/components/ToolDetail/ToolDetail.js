@@ -11,7 +11,7 @@ export default function ToolDetail (props) {
       <Image src={props.tool.image} size='large' />
       <h3>{props.tool.description}</h3>
       <h4>Description:</h4>
-      <ul>{body.split('*').map(element => <li>{element}</li>)}</ul>
+      <ul>{body.split('*').map(element => <li>{element}</li>)}</ul> 
       <Link to={`/confirm/tool/${props.tool.id}`}>
         <Button basic color='green'>Rent</Button>
       </Link>
