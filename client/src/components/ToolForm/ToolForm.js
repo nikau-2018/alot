@@ -20,27 +20,31 @@ export default class LoginForm extends Component {
   }
 
   render () {
+    const { name, category, description } = this.state
     return (
       <Form>
-        <Form.Field>
+        <Form.Field required>
           <label>Name:</label>
           <input
           name='name'
           placeholder='Tool Name'
+          value={name}
           onChange={this.handleChange}/>
         </Form.Field>
-        <Form.Field>
+        <Form.Field required>
           <label>Category:</label>
           <input
           name='category'
           placeholder='Tool Category'
+          value={category}
           onChange={this.handleChange}/>
         </Form.Field>
-        <Form.Field>
+        <Form.Field required>
           <label>Description:</label>
           <input
           name='description'
           placeholder='Tool Description'
+          value={description}
           onChange={this.handleChange}/>
         </Form.Field>
         <Button onClick={this.props.handleSubmit}>Submit</Button>
