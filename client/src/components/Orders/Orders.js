@@ -2,9 +2,6 @@ import React, {Component} from 'react'
 import {Card, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
-// Components
-// // import AdminNav from '../AdminNav'
-
 export default class Admin extends Component {
   componentDidMount () {
     this.props.fetchOrders()
@@ -36,8 +33,7 @@ export default class Admin extends Component {
       </Card>
     )
     return (
-      <div className='admin'>
-        {/* <AdminNav /> */}
+      <div className='orders'>
         <h2>Orders</h2>
         <Card.Group>
           {orderCards}

@@ -1,19 +1,16 @@
-import {connect} from 'react-redux'
+import React, {Component} from 'react'
 
-import {fetchOrders} from './actions'
+// Components
+// import AdminNav from '../AdminNav'
+import Orders from '../Orders'
 
-import Admin from './Admin'
-
-import styles from './styles.css'
-
-const mapStateToProps = (state) => {
-  return {
-    orders: state.orders.orders
+export default class Admin extends Component {
+  render () {
+    return (
+      <div className='admin'>
+        {/* <AdminNav /> */}
+        <Orders />
+      </div>
+    )
   }
 }
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchOrders: () => dispatch(fetchOrders())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Admin)
