@@ -35,6 +35,7 @@ export default class Admin extends Component {
     return (
       <div className='admin'>
         {/* <AdminNav /> */}
+        <h2>Orders</h2>
         <Card.Group>
           {orderCards}
         </Card.Group>
