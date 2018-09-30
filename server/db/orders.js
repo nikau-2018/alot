@@ -19,11 +19,12 @@ function getOrders (db = connection) {
       'orders.notes',
       'orders.status',
       'orders.createdAt',
-      'users.first_name as firstName',
-      'users.last_name as lastName',
+      'users.firstName',
+      'users.lastName',
       'users.email',
       'users.phone',
       'tools.name as tool',
+      'users.id as userId',
       'tools.id as toolId',
       'tools.category_id as categoryId'
     )
