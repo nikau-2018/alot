@@ -11,7 +11,6 @@ export default class Orders extends Component {
 
   render () {
     const orders = this.props.orders
-    )
     return (
       <div className='orders'>
         <h2>Orders</h2>
