@@ -6,8 +6,10 @@ export default class LoginForm extends Component {
     super(props)
     this.state = {
       name: '',
-      category: '',
-      description: ''
+      category: null,
+      description: '',
+      image: 'https://www.fillmurray.com/200/300',
+      active: true
     }
   }
 
@@ -26,43 +28,42 @@ export default class LoginForm extends Component {
         <Form.Field required>
           <label>Name:</label>
           <input
-          name='name'
-          placeholder='Tool Name'
-          value={name}
-          onChange={this.handleChange}/>
+            name='name'
+            placeholder='Tool Name'
+            value={name}
+            onChange={this.handleChange}
+          />
         </Form.Field>
         <Form.Field required>
           <label>Category:</label>
           <Dropdown.Menu>
-            {this.props.cateogry}
+            {this.props.cateogries.map(category => (
+              <Dropdown.Item
+                text={category.name}
+                name={category.id}
+                onClick={this.handleChange}
+              />
+            ))}
             <Dropdown.item>
 
             </Dropdown.item>
           </Dropdown.Menu>
           <input
-          name='category'
-          placeholder='Tool Category'
-          value={category}
-          onChange={this.handleChange}/>
+            name='category'
+            placeholder='Tool Category'
+            value={category}
+            onChange={this.handleChange}
+          />
         </Form.Field>
         <Form.Field required>
           <label>Description:</label>
           <input
-          name='description'
-          placeholder='Tool Description'
-          value={description}
-          onChange={this.handleChange}/>
+            name='description'
+            placeholder='Tool Description'
+            value={description}
+            onChange={this.handleChange}
+          />
         </Form.Field>
-        {/* image */}
-        <input
-        type='hidden'
-        name='image'
-        value='https://www.fillmurray.com/200/300'/>
-        {/* active status */}
-        <input
-        type='hidden'
-        name='active'
-        value={true}/>
         <Button onClick={this.props.handleSubmit}>Submit</Button>
       </Form>
     )
