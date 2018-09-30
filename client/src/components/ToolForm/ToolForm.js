@@ -11,6 +11,8 @@ export default class LoginForm extends Component {
     }
   }
 
+  // submit will be handled by an inherited method from parent component
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -41,6 +43,7 @@ export default class LoginForm extends Component {
           placeholder='Tool Description'
           onChange={this.handleChange}/>
         </Form.Field>
+        <Button type='submit'>Submit</Button>
       </Form>
     )
   }

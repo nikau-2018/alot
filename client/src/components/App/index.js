@@ -14,7 +14,7 @@ import WorkshopDetailContainer from '../WorkshopDetailContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
-import ToolForm from '../ToolForm'
+import ToolForm from '../ToolForm/ToolForm'
 
 export default class App extends Component {
   render () {
