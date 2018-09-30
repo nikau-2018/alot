@@ -1,6 +1,7 @@
 import React from 'react'
-import {Card, Icon} from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import {Table} from 'semantic-ui-react'
+
+// import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
 
@@ -8,7 +9,7 @@ export default function Orders (props) {
   const order = props.order
   return (
     <div className='order-card'>
-      <Card>
+      {/* <Card>
         <Card.Content>
           <Card.Header>
             <Icon name='dolly flatbed' /> Order #{order.id}<br />
@@ -29,7 +30,18 @@ export default function Orders (props) {
         <Card.Content extra>
           <Icon name='calendar alternate outline' /> {order.createdAt}
         </Card.Content>
-      </Card>
+      </Card> */}
+
+      <Table.Row>
+        <Table.Cell>
+          Test
+        </Table.Cell>
+        <Table.Cell>First</Table.Cell>
+        <Table.Cell>First</Table.Cell>
+        <Table.Cell>First</Table.Cell>
+        <Table.Cell>First</Table.Cell>
+        <Table.Cell>First</Table.Cell>
+      </Table.Row>
     </div>
   )
 }

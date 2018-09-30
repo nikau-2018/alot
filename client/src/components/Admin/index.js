@@ -16,7 +16,6 @@ export default class Admin extends Component {
       <div className='admin'>
         {/* <AdminNav /> */}
         {/* Make below children conditionally render based on what's clicked in AdminNav */}
-        <h2>test red</h2>
         <Orders />
         {/* <AddTool /> */}
         {/* <AddWorkshop /> */}
