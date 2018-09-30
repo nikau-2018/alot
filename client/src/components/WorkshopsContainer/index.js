@@ -9,11 +9,11 @@ const mapStateToProps = (state) => {
   if (state.workshops.workshops.length > 0) {
     return {
       workshops: state.workshops.workshops,
-      loading: state.workshops.pending,
+      ready: true,
       categories: state.categories
     }
   } else {
-    return false
+    return {ready: false}
   }
 }
 
