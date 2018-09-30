@@ -20,7 +20,7 @@ export const requestCategories = () => {
 export const receiveCategories = (categories) => {
   return {
     type: RECEIVE_CATEGORIES,
-    categories: categories
+    categories
   }
 }
 

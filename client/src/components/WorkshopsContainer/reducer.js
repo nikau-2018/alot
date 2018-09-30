@@ -3,7 +3,7 @@ import {REQUEST_WORKSHOPS, RECEIVE_WORKSHOPS, RECEIVE_WORKSHOPS_ERROR} from './a
 const defaultState = {
   workshops: [{
     id: 88801,
-    categoryId: 77701,
+    categoryId: 81,
     userId: null,
     name: 'Basic Sewing Workshop',
     description: '1-2 hours, great for beginners',
@@ -15,7 +15,7 @@ const defaultState = {
     updatedAt: '2018-09-27 23:01:38'
   }],
   error: null,
-  pending: false
+  ready: false
 }
 
 export default function (state = defaultState, {type, workshops, error}) {
@@ -24,21 +24,20 @@ export default function (state = defaultState, {type, workshops, error}) {
       return {
         ...state,
         error: null,
-        pending: true
+        ready: false
       }
     case RECEIVE_WORKSHOPS:
       return {
-        ...state,
         error: null,
         workshops,
-        pending: false
+        ready: true
       }
     case RECEIVE_WORKSHOPS_ERROR:
       return {
         ...state,
         error,
         tools: null,
-        pending: false
+        ready: false
       }
     default:
       return state

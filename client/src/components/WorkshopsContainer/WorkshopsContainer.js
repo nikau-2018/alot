@@ -7,33 +7,29 @@ export default class WorkshopsContainer extends Component {
     this.props.fetchWorkshops()
     this.props.fetchCategories()
   }
-  
+
   render () {
-    if(!this.props.loading){
-    const {id} = this.props.categories.find((cat) => (
-      cat.name.toLowerCase() == this.props.match.params.category
-    ))
-    const filteredWorkshops = this.props.workshops.filter((workshop) => (
-      workshop.categoryId === id
-    ))
-      console.log(this.props.workshops)
-      console.log(id)
-      console.log(filteredWorkshops)
-    return (
-      <div className='workshops-container' >
-      {
-        this.props.match.params.category
-        ? <Workshops
-        workshops={filteredWorkshops}
-        category={this.props.categories}/>
-        : <Workshops
-        workshops={this.props.workshops}
-        category={this.props.categories}/>
+    if (this.props.ready) {
+      let filteredWorkshops = 0
+      if (this.props.match.params.category) {
+        const out = this.props.categories.find((cat) => (
+          cat.name.toLowerCase() == this.props.match.params.category
+        ))
+        filteredWorkshops = this.props.workshops.filter((workshop) => (
+          workshop.categoryId === out.id
+        ))
       }
-      </div>
-    )
-  } else {
-    return(null)
+      return (
+        <div className='workshops-container' >
+          {
+            <Workshops
+              workshops={filteredWorkshops || this.props.workshops}
+              category={this.props.categories}/>
+          }
+        </div>
+      )
+    } else {
+      return (<div>loading</div>)
+    }
   }
-}
 }
