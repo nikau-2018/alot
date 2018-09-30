@@ -13,19 +13,13 @@ export default class Admin extends Component {
     const test = this.props.orders && this.props.orders.map(order =>
       <Card key={order.id}>
         <Card.Content>
-          <Card.Header>Order #{order.id}</Card.Header>
+          <Card.Header><Icon name='dolly flatbed' /> Order #{order.id}</Card.Header>
           <Card.Meta>Status: {order.status}</Card.Meta>
-          <Card.Description>Notes: {order.notes}</Card.Description>
-          <List>
-            <List.Item>
-              <List.Icon name='user'/>
-              <List.Content>User: {order.userId}</List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='cog'/>
-              <List.Content>Tool: {order.toolId}</List.Content>
-            </List.Item>
-          </List>
+          <Card.Description>
+            <Icon name='user' /> {order.userId}<br />
+            <Icon name='cog' /> {order.toolId}<br /><br />
+            <Icon name='pencil' /> {order.notes}
+          </Card.Description>
         </Card.Content>
       </Card>
     )
