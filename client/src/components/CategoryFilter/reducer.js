@@ -4,7 +4,7 @@ const defaultState =
 {
   categories: [],
   error: null,
-  pending: false
+  ready: false
 }
 
 export default function (state = defaultState, {type, categories, error}) {
@@ -13,21 +13,21 @@ export default function (state = defaultState, {type, categories, error}) {
       return {
         ...state,
         error: null,
-        pending: true
+        ready: false
       }
     case RECEIVE_CATEGORIES:
       return {
         ...state,
         error: null,
         categories,
-        pending: false
+        ready: true
       }
     case RECEIVE_CATEGORIES_ERROR:
       return {
         ...state,
         error,
         tools: null,
-        pending: false
+        ready: false
       }
     default:
       return state

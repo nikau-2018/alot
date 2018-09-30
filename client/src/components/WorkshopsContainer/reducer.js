@@ -4,7 +4,7 @@ const defaultState =
 {
   workshops: [],
   error: null,
-  pending: false
+  ready: false
 }
 
 export default function (state = defaultState, {type, workshops, error}) {
@@ -13,21 +13,20 @@ export default function (state = defaultState, {type, workshops, error}) {
       return {
         ...state,
         error: null,
-        pending: true
+        ready: false
       }
     case RECEIVE_WORKSHOPS:
       return {
-        ...state,
         error: null,
         workshops,
-        pending: false
+        ready: true
       }
     case RECEIVE_WORKSHOPS_ERROR:
       return {
         ...state,
         error,
         tools: null,
-        pending: false
+        ready: false
       }
     default:
       return state
