@@ -13,6 +13,7 @@ import WorkshopsContainer from '../WorkshopsContainer'
 import WorkshopDetailContainer from '../WorkshopDetailContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
+import Admin from '../Admin'
 import Footer from '../Footer'
 
 export default class App extends Component {
@@ -27,7 +28,10 @@ export default class App extends Component {
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        {/* <Route exact path='/test' component={}/> */}
+        {/* For testing non connected components */}
+        {/* <Route exact path='/test' component={}/>         */}
+        <Route exact path='/admin' component={Admin}/>
+        <Divider />
         <Route path='/' component={Footer}/>
       </div>
     )
