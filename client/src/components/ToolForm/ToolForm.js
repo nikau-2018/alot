@@ -43,7 +43,7 @@ export default class LoginForm extends Component {
           placeholder='Tool Description'
           onChange={this.handleChange}/>
         </Form.Field>
-        <Button type='submit'>Submit</Button>
+        <Button onClick={this.props.handleSubmit}>Submit</Button>
       </Form>
     )
   }

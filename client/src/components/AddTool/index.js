@@ -4,7 +4,9 @@ import AddTool from './AddTool'
 import {addTool} from './actions'
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    
+  }
 }
 
 const mapDispatchToProps = () => ({
