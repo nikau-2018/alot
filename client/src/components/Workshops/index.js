@@ -8,7 +8,7 @@ const Workshops = (props) => {
   return (
     <div className='workshops'>
       <Search />
-      <CategoryFilter />
+      <CategoryFilter type='workshops' />
       {props.workshops.map((workshop) => (
         <WorkshopCard
           category={props.category}
