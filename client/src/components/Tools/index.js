@@ -4,6 +4,8 @@ import React from 'react'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
 
+import styles from './styles.css'
+
 const Tools = (props) => (
   <div>
     <CategoryFilter type='tools' />

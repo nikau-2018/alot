@@ -2,6 +2,8 @@ import React from 'react'
 
 import logo from './alot-logo.png'
 
+import styles from './styles.css'
+
 export default function Welcome () {
   return (
     <div className='welcome'>
