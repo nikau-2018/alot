@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Card, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
-export default class Admin extends Component {
+export default class Orders extends Component {
   componentDidMount () {
     this.props.fetchOrders()
   }
