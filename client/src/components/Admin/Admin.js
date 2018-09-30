@@ -16,8 +16,10 @@ export default class Admin extends Component {
           <Card.Header><Icon name='dolly flatbed' /> Order #{order.id}</Card.Header>
           <Card.Meta>Status: {order.status}</Card.Meta>
           <Card.Description>
-            <Icon name='user' /> {order.userId}<br />
-            <Icon name='cog' /> {order.toolId}<br /><br />
+            <Icon name='user' /> {order.firstName} {order.lastName}<br />
+            <Icon name='email' /> {order.email}<br />
+            <Icon name='phone' /> {order.phone}<br />
+            <Icon name='cog' /> {order.tool} ({order.toolId})<br /><br />
             <Icon name='pencil' /> {order.notes}
           </Card.Description>
         </Card.Content>
