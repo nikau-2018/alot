@@ -1,17 +1,16 @@
 import {connect} from 'react-redux'
 
 import AddTool from './AddTool'
-import {addTool} from './actions'
 import {fetchCategories} from '../CategoryFilter/actions'
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories.categories
+    categories: state.categories.categories,
+    ready: state.categories.ready
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addTool: () => dispatch(addTool()),
   fetchCategories: () => dispatch(fetchCategories())
 })
 

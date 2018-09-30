@@ -14,7 +14,7 @@ import WorkshopDetailContainer from '../WorkshopDetailContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
-import ToolForm from '../ToolForm/ToolForm'
+import AddTool from '../AddTool'
 
 export default class App extends Component {
   render () {
@@ -28,7 +28,7 @@ export default class App extends Component {
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        <Route exact path='/test' component={ToolForm}/>
+        <Route exact path='/test' component={AddTool}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>

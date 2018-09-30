@@ -22,7 +22,7 @@ export default class LoginForm extends Component {
   }
 
   render () {
-    const { name, category, description } = this.state
+    const { name, description } = this.state
     return (
       <Form>
         <Form.Field required>
@@ -44,16 +44,7 @@ export default class LoginForm extends Component {
                 onClick={this.handleChange}
               />
             ))}
-            <Dropdown.item>
-
-            </Dropdown.item>
           </Dropdown.Menu>
-          <input
-            name='category'
-            placeholder='Tool Category'
-            value={category}
-            onChange={this.handleChange}
-          />
         </Form.Field>
         <Form.Field required>
           <label>Description:</label>

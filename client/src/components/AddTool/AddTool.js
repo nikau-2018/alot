@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {get} from '../Auth/utils/localstorage'
+import {Loader} from 'semantic-ui-react'
 
 import ToolForm from '../ToolForm'
 
@@ -24,10 +25,14 @@ export default class AddTool extends Component {
   }
 
   render () {
+    if (this.props.ready) {
     return (
       <ToolForm
       handleSubmit={this.handleSubmit}
-      categoryIds={props.categoryIds}/>
+      categories={this.props.categories}/>
     )
+    } else {
+      return <Loader active inline='centered'/>
+    }
   }
 }
