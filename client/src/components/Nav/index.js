@@ -22,7 +22,7 @@ class Nav extends Component {
           {
             this.props.isAuthenticated
               ? <Logout />
-              : <Link to="/auth"><Button>Login</Button></Link>
+              : <Link to="/login"><Button>Login</Button></Link>
           }
         </Button.Group>
       </div>
