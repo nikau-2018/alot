@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Divider} from 'semantic-ui-react'
 
 import Welcome from '../Welcome'
 import ToolCard from '../ToolCard'
@@ -9,8 +10,8 @@ export default class WelcomeContainer extends Component {
     return (
       <div className='welcome-container' >
         <Welcome />
-        <hr/>
-        <h3>What a tool test...</h3>
+        <Divider />
+        <h3>What a tool...</h3>
         <ToolCard
           key={randomTool.id}
           id={randomTool.id}
