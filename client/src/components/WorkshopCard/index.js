@@ -15,7 +15,7 @@ export default class WorkshopCard extends Component {
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
           <Image src={this.props.image} />
-          <Card.Description>{this.props.description}
+          <Card.Description><ul>{this.props.description.split('*').map(element => <li>{element}</li>)}</ul>
           </Card.Description>
         </Card.Content>
       </Card>

@@ -20,11 +20,6 @@ export default class ToolCard extends Component {
           </Link>
           <Card.Description>{this.props.description}</Card.Description>
         </Card.Content>
-        <Link to={`/confirm/tool/${this.props.id}`}>
-          <Button basic color='green'>
-              Rent
-          </Button>
-        </Link>
       </Card>
     )
   }
