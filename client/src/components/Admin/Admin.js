@@ -10,9 +10,13 @@ export default class Admin extends Component {
 
   render () {
     console.log(this.props.orders)
+    const test = this.props.orders && this.props.orders.map(order => {
+      return <p>{order.id}</p>
+    })
     return (
       <div className='admin'>
         {/* <AdminNav /> */}
+        {test}
       </div>
     )
   }
