@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { List, Card } from 'semantic-ui-react'
+import { List, Card, Icon } from 'semantic-ui-react'
 
 // Components
 // // import AdminNav from '../AdminNav'
@@ -13,11 +13,10 @@ export default class Admin extends Component {
     const test = this.props.orders && this.props.orders.map(order =>
       <Card key={order.id}>
         <Card.Content>
+          <Card.Header>Order #{order.id}</Card.Header>
+          <Card.Meta>Status: {order.status}</Card.Meta>
+          <Card.Description>Notes: {order.notes}</Card.Description>
           <List>
-            <List.Item>
-              <List.Icon name='dolly flatbed'/>
-              <List.Content>Order: {order.id}</List.Content>
-            </List.Item>
             <List.Item>
               <List.Icon name='user'/>
               <List.Content>User: {order.userId}</List.Content>
@@ -25,14 +24,6 @@ export default class Admin extends Component {
             <List.Item>
               <List.Icon name='cog'/>
               <List.Content>Tool: {order.toolId}</List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='pencil'/>
-              <List.Content>Notes: {order.notes}</List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='clipboard'/>
-              <List.Content>Status: {order.status}</List.Content>
             </List.Item>
           </List>
         </Card.Content>
@@ -48,3 +39,27 @@ export default class Admin extends Component {
     )
   }
 }
+
+// Putting this here if we want to change from Cards back to List
+// <List>
+//   <List.Item>
+//     <List.Icon name='dolly flatbed'/>
+//     <List.Content>Order: {order.id}</List.Content>
+//   </List.Item>
+//   <List.Item>
+//     <List.Icon name='user'/>
+//     <List.Content>User: {order.userId}</List.Content>
+//   </List.Item>
+//   <List.Item>
+//     <List.Icon name='cog'/>
+//     <List.Content>Tool: {order.toolId}</List.Content>
+//   </List.Item>
+//   <List.Item>
+//     <List.Icon name='pencil'/>
+//     <List.Content>Notes: {order.notes}</List.Content>
+//   </List.Item>
+//   <List.Item>
+//     <List.Icon name='clipboard'/>
+//     <List.Content>Status: {order.status}</List.Content>
+//   </List.Item>
+// </List>
