@@ -4,6 +4,8 @@ import {fetchCategories} from './actions'
 
 import CategoryFilter from './CategoryFilter'
 
+import styles from './styles.css'
+
 const mapStateToProps = (state) => {
   return {
     categories: state.categories.categories

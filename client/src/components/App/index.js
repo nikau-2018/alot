@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Route} from 'react-router-dom'
+import {Divider} from 'semantic-ui-react'
 
 import './styles.css'
 
@@ -20,14 +21,14 @@ export default class App extends Component {
       <div>
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
-        <Route path='/Auth' component={Auth}/>
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
+        <Route path='/login' component={Auth}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components <Route exact path='/test' component={}/> */}
-        <hr/>
+        <Divider />
         <Route path='/' component={Footer}/>
       </div>
     )

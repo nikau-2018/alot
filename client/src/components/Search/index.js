@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Input, Button} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class Nav extends Component {
   render () {
     return (
