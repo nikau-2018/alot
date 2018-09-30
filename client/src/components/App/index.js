@@ -15,6 +15,7 @@ import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Admin from '../Admin'
 import Footer from '../Footer'
+import AdminTest from '../Admin/AdminTest'
 
 export default class App extends Component {
   render () {
@@ -29,7 +30,7 @@ export default class App extends Component {
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
-        {/* <Route exact path='/test' component={}/>         */}
+        <Route exact path='/test' component={AdminTest}/>
         <Route exact path='/admin' component={Admin}/>
         <Divider />
         <Route path='/' component={Footer}/>
