@@ -8,7 +8,7 @@ import styles from './styles.css'
 
 const mapStateToProps = (state) => {
   return {
-    orders: state.orders.orders
+    orders: state.orders
   }
 }
 

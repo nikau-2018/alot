@@ -14,6 +14,8 @@ import WorkshopsContainer from '../WorkshopsContainer'
 import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
+// Testing below Admin component
+import Admin from '../Admin'
 
 export default class App extends Component {
   render () {
@@ -27,7 +29,8 @@ export default class App extends Component {
         <Route exact path='/workshops' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        {/* For testing non connected components <Route exact path='/test' component={}/> */}
+        {/* For testing non connected components */}
+        <Route exact path='/test' component={Admin}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
