@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { List, Card, Icon } from 'semantic-ui-react'
+import { Card, Icon } from 'semantic-ui-react'
 
 // Components
 // // import AdminNav from '../AdminNav'
@@ -10,7 +10,7 @@ export default class Admin extends Component {
   }
 
   render () {
-    const test = this.props.orders && this.props.orders.map(order =>
+    const orderCards = this.props.orders && this.props.orders.map(order =>
       <Card key={order.id}>
         <Card.Content>
           <Card.Header><Icon name='dolly flatbed' /> Order #{order.id}</Card.Header>
@@ -27,33 +27,9 @@ export default class Admin extends Component {
       <div className='admin'>
         {/* <AdminNav /> */}
         <Card.Group>
-          {test}
+          {orderCards}
         </Card.Group>
       </div>
     )
   }
 }
-
-// Putting this here if we want to change from Cards back to List
-// <List>
-//   <List.Item>
-//     <List.Icon name='dolly flatbed'/>
-//     <List.Content>Order: {order.id}</List.Content>
-//   </List.Item>
-//   <List.Item>
-//     <List.Icon name='user'/>
-//     <List.Content>User: {order.userId}</List.Content>
-//   </List.Item>
-//   <List.Item>
-//     <List.Icon name='cog'/>
-//     <List.Content>Tool: {order.toolId}</List.Content>
-//   </List.Item>
-//   <List.Item>
-//     <List.Icon name='pencil'/>
-//     <List.Content>Notes: {order.notes}</List.Content>
-//   </List.Item>
-//   <List.Item>
-//     <List.Icon name='clipboard'/>
-//     <List.Content>Status: {order.status}</List.Content>
-//   </List.Item>
-// </List>
