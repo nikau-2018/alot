@@ -47,6 +47,16 @@ export default class LoginForm extends Component {
           value={description}
           onChange={this.handleChange}/>
         </Form.Field>
+        {/* image */}
+        <input
+        type='hidden'
+        name='image'
+        value='https://www.fillmurray.com/200/300'/>
+        {/* active status */}
+        <input
+        type='hidden'
+        name='image'
+        value={true}/>
         <Button onClick={this.props.handleSubmit}>Submit</Button>
       </Form>
     )
