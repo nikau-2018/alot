@@ -11,7 +11,7 @@ export default class WelcomeContainer extends Component {
       <div className='welcome-container' >
         <Welcome />
         <Divider />
-        <h3>What a tool test...</h3>
+        <h3>What a tool...</h3>
         <ToolCard
           key={randomTool.id}
           id={randomTool.id}
