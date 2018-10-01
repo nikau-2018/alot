@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import {Image, Button, Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
@@ -17,7 +18,8 @@ export default function WorkshopDetail (props) {
       <h3>Instructor: </h3>
       <p>{props.workshop.instructor}</p>
       <h3>Date:</h3>
-      <p>{props.workshop.dateTime}</p>
+      <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
+      <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
       <Link to={`/workshops/${props.workshop.categoryId}`}>
         <Button basic>Similar Workshops</Button>
       </Link>
