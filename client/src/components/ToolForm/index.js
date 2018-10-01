@@ -1,12 +1,14 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown, Message} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+
 
 export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
-      error: false,
+      error: true,
       name: '',
       categoryId: null,
       description: '',
@@ -24,10 +26,15 @@ export default class ToolForm extends Component {
   render () {
     const { name, description } = this.state
     let {selectedCategory, error, ...rest} = this.state
-    if (this.state.error){(
-      <Message warning>
-        <Message.Header>There was an error adding that tool to the database</Message.Header>
-      </Message>
+    if (this.state.error){return (
+      <div>
+        <Message warning>
+          <Message.Header>There was an error adding that tool to the database</Message.Header>
+        </Message>
+        <Link to={this.props.path}>
+          <Button>Try Again</Button>
+        </Link>
+      </div>
     )}
     else {return (
       <Form>

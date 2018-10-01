@@ -32,7 +32,8 @@ export default class AddTool extends Component {
     return (
       <ToolForm
       handleSubmit={this.handleSubmit}
-      categories={this.props.categories}/>
+      categories={this.props.categories}
+      path={this.props.match.path}/>
     )
     } else {
       return <Loader active inline='centered'/>
