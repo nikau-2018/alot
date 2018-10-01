@@ -1,24 +1,25 @@
 const express = require('express')
+const verifyJwt = require('express-jwt')
+const {getSecret, handleError, isAdmin} = require('../auth')
 
 const router = express.Router()
 
 const db = require('../db/orders')
 
-router.post('/create', createOrder)
+router.post('/create', verifyJwt({secret: getSecret}), createOrder, handleError)
 
 function createOrder (req, res) {
   const order = req.body
-  // when we have auth, we can grab the userId from the token
-  order.user_id = 44401
+  order.userId = req.user.id
+  order.status = 1
   db.createOrder(order)
     .then(id => {
       res.status(201).json({
-        ok: true,
-        id: id[0]
+        ok: true
       })
     })
-    .catch(err => {
-      res.status(500).json(err)
+    .catch(() => {
+      res.status(500).json('DB error')
     })
 }
 
@@ -27,8 +28,8 @@ router.get('/', (req, res) => {
     .then(orders => {
       res.status(200).json({orders})
     })
-    .catch(err => {
-      res.status(500).json(err)
+    .catch(() => {
+      res.status(500).json('DB error')
     })
 })
 
