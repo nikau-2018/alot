@@ -10,7 +10,7 @@ const defaultState = {
     active: true
   }],
   error: null,
-  pending: false
+  ready: false
 }
 
 export default function (state = defaultState, {type, tools, error}) {
@@ -19,21 +19,21 @@ export default function (state = defaultState, {type, tools, error}) {
       return {
         ...state,
         error: null,
-        pending: true
+        ready: false
       }
     case RECEIVE_TOOLS:
       return {
         ...state,
         error: null,
         tools,
-        pending: false
+        ready: true
       }
     case RECEIVE_TOOLS_ERROR:
       return {
         ...state,
         error,
         tools: null,
-        pending: false
+        ready: false
       }
     default:
       return state
