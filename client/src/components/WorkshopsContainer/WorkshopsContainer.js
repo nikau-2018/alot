@@ -1,35 +1,31 @@
 import React, {Component} from 'react'
+import {Loader, Dimmer} from 'semantic-ui-react'
 
 import Workshops from '../Workshops'
 
 export default class WorkshopsContainer extends Component {
   componentDidMount () {
     this.props.fetchWorkshops()
-    this.props.fetchCategories()
   }
 
   render () {
-    if (this.props.ready) {
-      let filteredWorkshops = 0
-      if (this.props.match.params.category) {
-        const out = this.props.categories.find((cat) => (
-          cat.id === Number(this.props.match.params.category)
-        ))
-        filteredWorkshops = this.props.workshops.filter((workshop) => (
-          workshop.categoryId === out.id
-        ))
-      }
-      return (
-        <div className='workshops-container' >
-          {
-            <Workshops
-              workshops={filteredWorkshops || this.props.workshops}
-              category={this.props.categories}/>
-          }
-        </div>
-      )
-    } else {
-      return (<div>loading</div>)
-    }
+    const category = this.props.match.params.category
+    const workshops = this.props.workshops.filter(workshop => workshop.name.toLowerCase().includes(this.props.search.toLowerCase()))
+    const filteredWorkshops = !category
+      ? workshops
+      : workshops.filter((workshop) => {
+        return Number(category) === workshop.categoryId
+      })
+    return (
+      <div className='workshops-container'>
+        {this.props.workshops.length > 0
+          ? <Workshops
+            filteredWorkshops={filteredWorkshops}
+            category={category}
+          />
+          : <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
+        }
+      </div>
+    )
   }
 }
