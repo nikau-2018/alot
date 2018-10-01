@@ -12,12 +12,12 @@ export default class CategoryFilter extends Component {
 
   componentDidMount () {
     this.props.fetchCategories()
-    const categoryId = this.props.category    
-    console.log(this.props.categories)
-    const categoryName = this.props.categories.find(category => category.id == categoryId)
-    categoryName && this.setState({
-      selected: categoryName
-    })
+    if (this.props.category && this.props.categories) {
+      const categoryName = this.props.categories.find(category => category.id == this.props.category).name
+      this.setState({
+        selected: categoryName
+      })
+    }
   }
 
   handleClick = (e) => {
