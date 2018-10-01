@@ -12,7 +12,6 @@ afterEach(() => {
   testEnv.cleanup(testDb)
 })
 
-
 test('getCategories returns 4 categories', () => {
   return db.getCategories(testDb)
     .then(categories => {
