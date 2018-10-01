@@ -11,8 +11,7 @@ export default class WorkshopForm extends Component {
       categoryId: null,
       description: '',
       body: '',
-      image: 'https://www.fillmurray.com/200/300',
-      active: true
+      image: 'https://www.fillmurray.com/200/300'
     }
   }
 
@@ -22,6 +21,7 @@ export default class WorkshopForm extends Component {
     })
   }
 
+  // to modify later on completion of edit workshop
   componentDidMount() {
     if(this.props.parent === 'edit') {
       let {name, categoryId, id, description, image, active} = this.props.editing
