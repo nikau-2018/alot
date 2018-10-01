@@ -19,13 +19,19 @@ class Nav extends Component {
       <div className='ui-grid'>
         <Button.Group vertical>
           <Link to="/">
-            <Button><Icon name='home'/>Home</Button>
+            <Button>
+              <Icon name='home'/>Home
+            </Button>
           </Link>
           <Link to="/tools">
-            <Button><Icon name='wrench' />Tools</Button>
+            <Button>
+              <Icon name='wrench' />Tools
+            </Button>
           </Link>
           <Link to="/workshops">
-            <Button><Icon name='warehouse'/>Workshops</Button>
+            <Button>
+              <Icon name='warehouse'/>Workshops
+            </Button>
           </Link>
           {this.props.isAdmin && <Link to="/admin"><Button>Admin</Button></Link>}
           {
