@@ -7,7 +7,7 @@ import styles from './styles.css'
 
 export default function Footer () {
   return (
-    <div className='footer'>
+    <div className={styles.footer}>
       <Image size='medium' src={logo} />
       <h4><Icon name='warehouse' /> Auckland Library of Tools</h4>
       <p><Icon name='location arrow' />Grey Lynn, Auckland</p>

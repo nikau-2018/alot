@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom'
 
 import ToolForm from '../ToolForm'
 
+import styles from './styles.css'
+
 export default class EditTool extends Component {
   constructor (props) {
     super(props)
