@@ -163,8 +163,9 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
+                        modules: true,
                         minimize: true,
-                        sourceMap: shouldUseSourceMap
+                        sourceMap: true
                       }
                     },
                     {
@@ -292,9 +293,7 @@ module.exports = {
         if (message.indexOf('Skipping static resource') === 0) {
           // This message obscures real errors so we ignore it.
           // https://github.com/facebookincubator/create-react-app/issues/2612
-          return
         }
-        console.log(message)
       },
       minify: true,
       // For unknown URLs, fallback to the index page
