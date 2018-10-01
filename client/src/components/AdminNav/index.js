@@ -2,32 +2,34 @@ import React from 'react'
 import {Button, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
+import styles from './styles.css'
+
 export default function AdminNav (props) {
   const url = props.url
   return (
-    <div className='ui buttons'>
+    <div className={styles.adminNav}>
       <Link to={`${url}/add-tool`}>
-        <Button className='ui button'>
+        <Button className={styles.button}>
           <Icon name='wrench'/>
-        Add Tool
+          Add Tool
         </Button>
       </Link>
       <Link to={`${url}/add-workshop`}>
-        <Button className='ui button'>
+        <Button className={styles.button}>
           <Icon name='calendar alternate'/>
-        Add Workshop
+          Add Workshop
         </Button>
       </Link>
       <Link to={`${url}/edit-employee`}>
-        <Button className='ui button'>
+        <Button className={styles.button}>
           <Icon name='user plus'/>
-        Edit Employee
+          Edit Employee
         </Button>
       </Link>
       <Link to={`${url}/orders`}>
-        <Button className='ui button'>
+        <Button className={styles.button}>
           <Icon name='envelope'/>
-        Maintain Orders
+          Maintain Orders
         </Button>
       </Link>
     </div>

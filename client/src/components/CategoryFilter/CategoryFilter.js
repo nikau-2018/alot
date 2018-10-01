@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Dropdown} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class CategoryFilter extends Component {
   componentDidMount () {
     this.props.fetchCategories()
@@ -9,7 +11,7 @@ export default class CategoryFilter extends Component {
 
   render () {
     return (
-      <Dropdown className= 'categories' text={this.props.categoryName}>
+      <Dropdown className={styles.categoryFilter} text={this.props.categoryName}>
         <Dropdown.Menu>
           <Link to={`/${this.props.type}`}>
             <Dropdown.Item
