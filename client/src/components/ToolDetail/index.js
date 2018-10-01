@@ -22,6 +22,9 @@ export default function ToolDetail (props) {
       <Link to={`/tools/${props.tool.categoryId}`}>
         <Button basic>Similar Tools</Button>
       </Link>
+      {
+        props.isAdmin && <Button>Edit Tool</Button>
+      }
     </div>
   )
 }
