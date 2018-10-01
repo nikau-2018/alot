@@ -19,7 +19,7 @@ export default class EditTool extends Component {
     this.props.fetchCategories()
   }
 
-  toggleError = ()=> {
+  toggleError = () => {
     this.setState({
       postErr: !this.state.postErr
     })
@@ -29,19 +29,25 @@ export default class EditTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     return axios
       .post(`api/v1/tools/edit/${toolId}`, formObj)
-      // redirect back to admin page here? .then() 
+      // redirect back to admin page here? .then()
       .catch(() => {
-        this.toggleError() // need to do proper error handling here too
+        this.toggleError() // need to do proper error handling here eventually
       })
   }
 
   render () {
     if (this.props.ready && !this.state.postErr) {
+    const toolId = Number(this.props.match.params.id)
+    const selectedTool = this.props.tools.find((tool) => tool.id === toolId)
+    const {name} = this.props.categories.find((category) => {
+      return category.id === selectedTool.categoryId})
     return (
       <ToolForm
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
-      toolId={this.props.match.params.id}/>
+      editing={selectedTool}
+      categoryName={name}
+      parent='edit'/>
     )
     } else if (this.state.postErr) {
       return (

@@ -20,10 +20,30 @@ export default class ToolForm extends Component {
     })
   }
 
+  componentDidMount() {
+    if(this.props.parent === 'edit') {
+      // ({name, categoryId, description, image, active} = this.props.editing)
+      this.setState({
+        selectedCategory: this.props.categoryName,
+        name: this.props.editing.name,
+        categoryId: this.props.editing.categoryId,
+        description: this.props.editing.description,
+        image: this.props.editing.image,
+        active: this.props.editing.active
+      })
+    }
+  }
+
   render () {
     const { name, description } = this.state
     let {selectedCategory, error, ...rest} = this.state
     return (
+      <div>
+      {
+      this.props.parent === 'edit'
+      ? <h2>Edit this tool:</h2>
+      : <h2>Add a tool:</h2>
+      }
       <Form>
         <Form.Field required>
           <label>Name:</label>
@@ -63,6 +83,7 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Button onClick={() => this.props.handleSubmit(rest)}>Submit</Button>
       </Form>
+      </div>
     )
   }
 }
