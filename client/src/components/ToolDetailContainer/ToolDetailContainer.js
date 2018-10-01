@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 
-// Components
 import ToolDetail from '../ToolDetail'
 
 export default class ToolDetailContainer extends Component {
