@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 
 import AddWorkshop from './AddWorkshop'
-import {fetchCategories} from '../WorkshopsContainer/actions'
+import {fetchCategories} from '../CategoryFilter/actions'
 
 const mapStateToProps = (state) => {
   return {

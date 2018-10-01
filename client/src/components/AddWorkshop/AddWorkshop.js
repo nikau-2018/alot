@@ -15,7 +15,7 @@ export default class AddWorkshop extends Component {
   }
 
   componentDidMount () {
-    this.props.fetchWorkshops()
+    this.props.fetchCategories()
   }
 
   toggleError = ()=> {
