@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  searchTest: (e) => dispatch(search(e.currentTarget.value))
+  searchString: (e) => dispatch(search(e.currentTarget.value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)
