@@ -17,12 +17,8 @@ export default function ToolDetail (props) {
       <ul>
         {body.split('*').map(element => <li>{element}</li>)}
       </ul>
-      <Link to={`/confirm/tool/${props.tool.id}`}>
-        <Button basic color='green'>Rent</Button>
-      </Link>
-      <Link to={`/tools/${props.tool.categoryId}`}>
-        <Button basic>Similar Tools</Button>
-      </Link>
+      <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Rent</Button>
+      <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
       {isAdmin && <Button>Edit Tool</Button>}
     </div>
   )
