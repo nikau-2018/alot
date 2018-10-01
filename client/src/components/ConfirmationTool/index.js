@@ -1,15 +1,17 @@
 import React from 'react'
 import {Button, Divider, Image, Form, TextArea} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
-
+import axios from 'axios'
 import styles from './styles.css'
+import {get} from '../Auth/utils/localstorage'
 
 export default class ConfirmationTool extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       tool: {},
-      notes: ''
+      notes: '',
+      submitted: false
     }
   }
 
@@ -24,16 +26,28 @@ export default class ConfirmationTool extends React.Component {
     })
   }
 
-  handleClick = () => {
-    const {email, password} = this.state
-    const creds = {
-      email: email.trim(),
-      password: password.trim()
-    }
-    this.props.loginUser(creds)
+  handleSubmit = () => {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
+    return axios
+      .post('/api/v1/orders/create', {
+        toolId: this.state.tool.id,
+        notes: this.state.notes
+      })
+      .then(() => {
+        this.setState({submitted: true})
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
-  render () {
+  submitted () {
+    return (
+      <div>Order submitted succesfully.</div>
+    )
+  }
+
+  pending () {
     const tool = this.state.tool
     const returnPath = `/tools/${tool.categoryId}/${tool.id}`
     return (
@@ -59,7 +73,8 @@ export default class ConfirmationTool extends React.Component {
         </Form>
         <Button.Group>
           <Link to='#'>
-            <Button positive>Confirm</Button>
+            <Button positive
+            onClick={() => this.handleSubmit()}>Confirm</Button>
           </Link>
           <Button.Or />
           <Link to={returnPath}>
@@ -67,6 +82,14 @@ export default class ConfirmationTool extends React.Component {
           </Link>
         </Button.Group>
       </div>
+    )
+  }
+
+  render () {
+    return (
+    <div>
+    {this.state.submitted ? this.submitted() : this.pending()}
+    </div>
     )
   }
 }
