@@ -1,15 +1,19 @@
-import React, {Component} from 'react'
-import {Input, Button} from 'semantic-ui-react'
+import {connect} from 'react-redux'
+
+import {search} from './actions'
+
+import Search from './Search'
 
 import styles from './styles.css'
 
-export default class Search extends Component {
-  render () {
-    return (
-      <div>
-        <Input placeholder='Search...' /> &nbsp;
-        <Button>Search</Button>
-      </div>
-    )
+const mapStateToProps = (state) => {
+  return {
+    search: state.search
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  searchTest: (e) => dispatch(search(e.currentTarget.value))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)
