@@ -3,22 +3,38 @@ import React, {Component} from 'react'
 // Components
 import ConfirmationTool from '../ConfirmationTool'
 import ConfirmationWorkshop from '../ConfirmationWorkshop'
+import Auth from '../Auth'
 
 export default class ConfirmationContainer extends Component {
-  render () {
-    const type = (this.props.match.params.type)
+  loggedIn () {
     const selectedId = Number(this.props.match.params.id)
     const [ selectedTool ] = this.props.tools.filter((tool) => selectedId === tool.id)
     const [ selectedWorkshop ] = this.props.workshops.filter((workshop) => selectedId === workshop.id)
-    switch (type) {
+    switch (this.props.match.params.type) {
       case 'tool':
         return <ConfirmationTool selectedTool={selectedTool}/>
       case 'workshop':
         return <ConfirmationWorkshop selectedWorkshop={selectedWorkshop}/>
     }
   }
-}
 
+  loggedOut () {
+    return (
+      <div>
+        <h2>Please login or register before continuing</h2>
+        <Auth inline={true} />
+      </div>
+    )
+  }
+
+  render () {
+    return (
+      <div>
+        {this.props.isAuthenticated ? this.loggedIn() : this.loggedOut()}
+      </div>
+    )
+  }
+}
 ConfirmationContainer.defaultProps = {
   workshops: [{
     id: 88801,
