@@ -22,6 +22,9 @@ export default class AddTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     return axios
       .post('api/v1/tools/add', formObj)
+      .catch(err => {
+        return err
+      })
   }
 
   render () {

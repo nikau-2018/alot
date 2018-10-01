@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import {Button, Form, Dropdown} from 'semantic-ui-react'
+import {Button, Form, Dropdown, Message} from 'semantic-ui-react'
 
 export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
+      error: false,
       name: '',
       categoryId: null,
       description: '',
@@ -22,8 +23,13 @@ export default class ToolForm extends Component {
 
   render () {
     const { name, description } = this.state
-    let {selectedCategory, ...rest} = this.state
-    return (
+    let {selectedCategory, error, ...rest} = this.state
+    if (this.state.error){(
+      <Message warning>
+        <Message.Header>There was an error adding that tool to the database</Message.Header>
+      </Message>
+    )}
+    else {return (
       <Form>
         <Form.Field required>
           <label>Name:</label>
@@ -63,6 +69,6 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Button onClick={() => this.props.handleSubmit(rest)}>Submit</Button>
       </Form>
-    )
+    )}
   }
 }
