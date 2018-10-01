@@ -10,6 +10,7 @@ export default class ToolForm extends Component {
       name: '',
       categoryId: null,
       description: '',
+      body: '',
       image: 'https://www.fillmurray.com/200/300',
       active: true
     }
@@ -23,7 +24,7 @@ export default class ToolForm extends Component {
 
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      let {name, categoryId, id, description, image, active} = this.props.editing
+      let {name, categoryId, id, description, image, active, body} = this.props.editing
       this.setState({
         selectedCategory: this.props.categoryName,
         name: name,
@@ -31,13 +32,14 @@ export default class ToolForm extends Component {
         categoryId: categoryId,
         description: description,
         image: image,
-        active: active
+        active: active,
+        body: body
       })
     }
   }
 
   render () {
-    const { name, description } = this.state
+    const { name, description, body } = this.state
     let {selectedCategory, error, toolId, ...rest} = this.state
     return (
       <div>
@@ -80,6 +82,15 @@ export default class ToolForm extends Component {
             name='description'
             placeholder='Tool Description'
             value={description}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field required>
+          <label>Details:</label>
+          <input
+            name='body'
+            placeholder='Tool Details'
+            value={body}
             onChange={this.handleChange}
           />
         </Form.Field>
