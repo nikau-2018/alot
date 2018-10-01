@@ -9,9 +9,11 @@ import styles from './styles.css'
 const mapStateToProps = (state, ownProps) => {
   const {categories} = state.categories
   let categoryName = 'Categories'
-  if (categories.length !== 0) {
-    categoryName = categories.find(category => category.id === ownProps.category).name
+  const category = categories.find(cat => cat.id == ownProps.category)
+  if (category) {
+    categoryName = category.name
   }
+  
   return {
     categories,
     categoryName
