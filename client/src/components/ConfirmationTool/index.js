@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Divider, Image} from 'semantic-ui-react'
+import {Button, Divider, Image, Form, TextArea} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
@@ -8,12 +8,29 @@ export default class ConfirmationTool extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      tool: {}
+      tool: {},
+      notes: ''
     }
   }
 
   componentDidMount () {
     this.setState({tool: this.props.selectedTool})
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleClick = () => {
+    const {email, password} = this.state
+    const creds = {
+      email: email.trim(),
+      password: password.trim()
+    }
+    this.props.loginUser(creds)
   }
 
   render () {
@@ -30,10 +47,16 @@ export default class ConfirmationTool extends React.Component {
           />
         </Link>
         <h2>{tool.name}</h2>
-        <br/>
         <p>Would like to rent this tool?</p>
-        <br/>
         <p>It will be available for collection from 9am Monday - Friday</p>
+        <Form>
+          <Form.Field>
+          <label>Order notes:</label>
+          <TextArea name='notes'
+            placeholder='Order notes'
+            onChange={this.handleChange} rows='3' style='resize:'/>
+        </Form.Field>
+        </Form>
         <Button.Group>
           <Link to='#'>
             <Button positive>Confirm</Button>
