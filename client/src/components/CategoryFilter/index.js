@@ -6,9 +6,15 @@ import CategoryFilter from './CategoryFilter'
 
 import styles from './styles.css'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  const {categories} = state.categories
+  let categoryName = 'Categories'
+  if (categories.length !== 0) {
+    categoryName = categories.find(category => category.id === ownProps.category).name
+  }
   return {
-    categories: state.categories.categories
+    categories,
+    categoryName
   }
 }
 
