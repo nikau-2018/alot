@@ -1,7 +1,6 @@
 import {connect} from 'react-redux'
 
 import {fetchTools} from './actions'
-import {fetchCategories} from '../CategoryFilter/actions'
 
 import ToolsContainer from './ToolsContainer'
 
