@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
 
-export default class LoginForm extends Component {
+export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
