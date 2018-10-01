@@ -6,6 +6,7 @@ import styles from './styles.css'
 
 export default function ToolDetail (props) {
   const body = props.tool.body || ''
+  const isAdmin = props.isAdmin
   return (
     <div>
       <h1>{props.tool.name}</h1>
@@ -22,9 +23,7 @@ export default function ToolDetail (props) {
       <Link to={`/tools/${props.tool.categoryId}`}>
         <Button basic>Similar Tools</Button>
       </Link>
-      {
-        props.isAdmin && <Button>Edit Tool</Button>
-      }
+      {isAdmin && <Button>Edit Tool</Button>}
     </div>
   )
 }
