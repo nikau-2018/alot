@@ -6,7 +6,7 @@ export default class WorkshopForm extends Component {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
-      WorkshopId: 0,
+      workshopId: 0,
       name: '',
       categoryId: null,
       description: '',
