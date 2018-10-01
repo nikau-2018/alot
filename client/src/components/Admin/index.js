@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 // Components
-// import AdminNav from '../AdminNav'
+import AdminNav from '../AdminNav'
 import Orders from '../Orders'
 // import AddTool from '../AddTool'
 // import AddWorkshop from '../AddWorkshop'
@@ -14,7 +14,7 @@ export default class Admin extends Component {
   render () {
     return (
       <div className='admin'>
-        {/* <AdminNav /> */}
+        <AdminNav />
         {/* Make below children conditionally render based on what's clicked in AdminNav */}
         <Orders />
         {/* <AddTool /> */}
