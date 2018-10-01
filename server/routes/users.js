@@ -2,7 +2,7 @@ const express = require('express')
 const verifyJwt = require('express-jwt')
 
 const {checkHash} = require('../auth/hash')
-const {getToken, getSecret, handleError} = require('../auth')
+const {getToken, getSecret, handleError, isAdmin} = require('../auth')
 
 const router = express.Router()
 
@@ -67,12 +67,20 @@ function login (req, res) {
     }))
 }
 
-router.get('/secret', verifyJwt({secret: getSecret}), handleError, secret)
+router.get('/protected', verifyJwt({secret: getSecret}), protec, handleError)
 
-// These routes are protected
-function secret (req, res) {
+function protec (req, res) {
   res.json({
-    message: 'This is a SECRET quote.',
+    message: 'You can only see this if you are logged in.',
+    user: `Your user ID is: ${req.user.id}`,
+  })
+}
+
+router.get('/protectedadmin', verifyJwt({secret: getSecret}), isAdmin, protecadmin, handleError)
+
+function protecadmin (req, res) {
+  res.json({
+    message: 'You can only see this if you are logged in as an ADMIN.',
     user: `Your user ID is: ${req.user.id}`
   })
 }

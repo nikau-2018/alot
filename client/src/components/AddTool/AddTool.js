@@ -28,6 +28,7 @@ export default class AddTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     return axios
       .post('api/v1/tools/add', formObj)
+      // redirect back to admin page here? .then() 
       .catch(() => {
         this.toggleError()
       })
