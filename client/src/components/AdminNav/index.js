@@ -8,30 +8,22 @@ export default function AdminNav (props) {
   const url = props.url
   return (
     <div className={styles.adminNav}>
-      <Link to={`${url}/add-tool`}>
-        <Button className={styles.button}>
-          <Icon name='wrench'/>
-          Add Tool
-        </Button>
-      </Link>
-      <Link to={`${url}/add-workshop`}>
-        <Button className={styles.button}>
-          <Icon name='calendar alternate'/>
-          Add Workshop
-        </Button>
-      </Link>
-      <Link to={`${url}/edit-employee`}>
-        <Button className={styles.button}>
-          <Icon name='user plus'/>
-          Edit Employee
-        </Button>
-      </Link>
-      <Link to={`${url}/orders`}>
-        <Button className={styles.button}>
-          <Icon name='envelope'/>
-          Maintain Orders
-        </Button>
-      </Link>
+      <Button as={Link} to={`${url}/add-tool`} className={styles.button}>
+        <Icon name='wrench'/>
+        Add Tool
+      </Button>
+      <Button as={Link} to={`${url}/add-workshop`} className={styles.button}>
+        <Icon name='calendar alternate'/>
+        Add Workshop
+      </Button>
+      <Button as={Link} to={`${url}/edit-employee`} className={styles.button}>
+        <Icon name='user plus'/>
+        Edit Employee
+      </Button>
+      <Button as={Link} to={`${url}/orders`} className={styles.button}>
+        <Icon name='envelope'/>
+        Maintain Orders
+      </Button>
     </div>
   )
 }
