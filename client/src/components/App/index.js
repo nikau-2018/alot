@@ -32,7 +32,6 @@ export default class App extends Component {
         <Route exact path='/edit/tools/:id' component={EditTool}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
-        <Route exact path='/admin' component={Admin}/>
         <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
         <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
