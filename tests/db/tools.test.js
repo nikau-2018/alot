@@ -1,5 +1,5 @@
-const db = require('../server/db/tools')
-const testEnv = require('./testEnvironment')
+const db = require('../../server/db/tools')
+const testEnv = require('../testEnvironment')
 
 let testDb = null
 
@@ -19,9 +19,3 @@ test('getTools returns 5 tools', () => {
     })
 })
 
-test('getCategories returns 4 categories', () => {
-  return db.getCategories(testDb)
-    .then(categories => {
-      expect(categories.length).toBe(4)
-    })
-})
