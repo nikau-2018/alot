@@ -4,24 +4,20 @@ import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
 
-export default class WorkshopCard extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {} // not sure if we will need state yet
-  }
-
-  render () {
-    return (
-      <Link to={`/workshops/${this.props.category}/${this.props.id}`}>
-        <Card>
-          <Card.Content>
-            <Card.Header>{this.props.name}</Card.Header>
-            <Image src={this.props.image} />
-            <Card.Description><ul>{this.props.description.split('*').map(element => <li>{element}</li>)}</ul>
-            </Card.Description>
-          </Card.Content>
-        </Card>
-      </Link>
-    )
-  }
+export default function ToolCard (props) {
+  return (
+    <Link to={`/workshops/${props.category}/${props.id}`}>
+      <Card>
+        <Card.Content>
+          <Card.Header>{props.name}</Card.Header>
+          <Image src={props.image} />
+          <Card.Description>
+            <ul>
+              {props.description.split('*').map(element => <li>{element}</li>)}
+            </ul>
+          </Card.Description>
+        </Card.Content>
+      </Card>
+    </Link>
+  )
 }
