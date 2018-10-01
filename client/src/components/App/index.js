@@ -16,6 +16,7 @@ import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
 import AdminTest from '../Admin/AdminTest'
 import EditTool from '../EditTool'
+import EditWorkshop from '../EditWorkshop'
 // Admin route imports
 import Admin from '../Admin'
 
@@ -30,6 +31,7 @@ export default class App extends Component {
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route exact path='/edit/tool/:id' component={EditTool}/>
+        <Route exact path='/edit/workshop/:id' component={EditWorkshop}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
