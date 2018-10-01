@@ -30,7 +30,7 @@ export default class App extends Component {
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
-        <Route exact path='/test' component={AdminTest}/>
+        <Route exact path='/protectedtest' component={AdminTest}/>
         <Route exact path='/admin' component={Admin}/>
         <Divider />
         <Route path='/' component={Footer}/>
