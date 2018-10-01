@@ -7,19 +7,19 @@ export default function AdminNav (props) {
     <div className='ui buttons'>
       <Button className='ui button' onClick={props.handleClick}>
         <Icon name='wrench'/>
-      Add Tool
+        Add Tool
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
         <Icon name='calendar alternate'/>
-      Add Workshop
+        Add Workshop
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
         <Icon name='user plus'/>
-      Edit Employee
+        Edit Employee
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
         <Icon name='envelope'/>
-      Maintain Orders
+        Maintain Orders
       </Button>
     </div>
   )
