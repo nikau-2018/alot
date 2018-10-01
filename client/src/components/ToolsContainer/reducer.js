@@ -19,14 +19,14 @@ export default function (state = defaultState, {type, tools, error}) {
       return {
         ...state,
         error: null,
-        ready: true
+        ready: false
       }
     case RECEIVE_TOOLS:
       return {
         ...state,
         error: null,
         tools,
-        ready: false
+        ready: true
       }
     case RECEIVE_TOOLS_ERROR:
       return {
