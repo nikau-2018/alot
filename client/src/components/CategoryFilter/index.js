@@ -4,9 +4,19 @@ import {fetchCategories} from './actions'
 
 import CategoryFilter from './CategoryFilter'
 
-const mapStateToProps = (state) => {
+import styles from './styles.css'
+
+const mapStateToProps = (state, ownProps) => {
+  const {categories} = state.categories
+  let categoryName = 'Categories'
+  const category = categories.find(cat => cat.id === Number(ownProps.category))
+  if (category) {
+    categoryName = category.name
+  }
+
   return {
-    categories: state.categories
+    categories,
+    categoryName
   }
 }
 

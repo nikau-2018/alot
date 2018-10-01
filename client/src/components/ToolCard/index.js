@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import {Button, Card, Image} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+
+import styles from './styles.css'
 
 export default class ToolCard extends Component {
   constructor (props) {
@@ -9,25 +12,15 @@ export default class ToolCard extends Component {
 
   render () {
     return (
-      <Card>
-        <Card.Content>
-          <Card.Header>{this.props.name}</Card.Header>
-          <a href={`/tools/${this.props.id}`}>
+      <Link to={`/tools/${this.props.category}/${this.props.id}`}>
+        <Card>
+          <Card.Content>
+            <Card.Header>{this.props.name}</Card.Header>
             <Image src={this.props.image} />
-          </a>
-          <Card.Description>{this.props.description}</Card.Description>
-        </Card.Content>
-        <Button basic color='green'>
-            Rent
-        </Button>
-      </Card>
+            <Card.Description>{this.props.description}</Card.Description>
+          </Card.Content>
+        </Card>
+      </Link>
     )
   }
-}
-
-// Default props until dummy data comes in, to remove later
-ToolCard.defaultProps = {
-  name: 'Saw',
-  description: 'it cuts stuff',
-  image: 'https://www.worx.com/media/catalog/product/w/x/wx429-1.1458148644.jpg'
 }

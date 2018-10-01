@@ -1,34 +1,28 @@
 import request from 'axios'
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'
-export const REQUEST_CATEGORIES = 'REQUEST_CATEGORIES'
+export const RECEIVE_CATEGORIES_ERROR = 'RECEIVE_ CATEGORIES_ERROR'
+export const REQUEST_CATEGORIES = 'REQUEST_ CATEGORIES'
+export const RECEIVE_CATEGORIES = 'RECEIVE_ CATEGORIES'
 
-export const showError = (errorMessage) => {
-  return {
-    type: SHOW_ERROR,
-    errorMessage: errorMessage
-  }
-}
+export const showError = error => ({
+  type: RECEIVE_CATEGORIES_ERROR,
+  error
+})
 
-export const requestCategories = () => {
-  return {
-    type: REQUEST_CATEGORIES
-  }
-}
+export const requestCategories = () => ({
+  type: REQUEST_CATEGORIES
+})
 
-export const receiveCategories = (categories) => {
-  return {
-    type: RECEIVE_CATEGORIES,
-    categories: categories
-  }
-}
+export const receiveCategories = categories => ({
+  type: RECEIVE_CATEGORIES,
+  categories
+})
 
 export function fetchCategories () {
   return (dispatch) => {
     dispatch(requestCategories())
     return request
-      .get('/api/v1/categories')    
+      .get('/api/v1/categories')
       .then(res => {
         dispatch(receiveCategories(res.data.categories))
       })

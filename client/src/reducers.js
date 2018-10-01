@@ -4,8 +4,16 @@ import {combineReducers} from 'redux'
 // e.g import register from './components/Register/reducer'
 import categories from './components/CategoryFilter/reducer'
 import tools from './components/ToolsContainer/reducer'
+import auth from './components/Auth/reducer'
+import workshops from './components/WorkshopsContainer/reducer'
+import orders from './components/Orders/reducer'
+import search from './components/Search/reducer'
 
 export default combineReducers({
   categories,
-  tools
+  tools,
+  auth,
+  workshops,
+  orders,
+  search
 })
