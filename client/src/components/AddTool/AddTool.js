@@ -9,8 +9,7 @@ export default class AddTool extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      // could retrieve db table details here which may affect
-      // how the form is rendered, if we want to make form multi purpose
+      postErr: false
     }
   }
 
@@ -23,7 +22,7 @@ export default class AddTool extends Component {
     return axios
       .post('api/v1/tools/add', formObj)
       .catch(err => {
-        return err
+        this.setState({postErr: true})
       })
   }
 
@@ -33,7 +32,8 @@ export default class AddTool extends Component {
       <ToolForm
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
-      path={this.props.match.path}/>
+      path={this.props.match.path}
+      error={this.props.postErr}/>
     )
     } else {
       return <Loader active inline='centered'/>

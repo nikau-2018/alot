@@ -8,7 +8,7 @@ export default class ToolForm extends Component {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
-      error: true,
+      error: this.props.error,
       name: '',
       categoryId: null,
       description: '',
