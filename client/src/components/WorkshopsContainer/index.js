@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchWorkshops: () => dispatch(fetchWorkshops()),
+  fetchWorkshops: () => dispatch(fetchWorkshops())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(WorkshopsContainer)
