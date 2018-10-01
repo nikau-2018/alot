@@ -16,6 +16,7 @@ export default class EditTool extends Component {
 
   componentDidMount () {
     this.props.fetchTools()
+    this.props.fetchCategories()
   }
 
   toggleError = ()=> {
@@ -40,7 +41,7 @@ export default class EditTool extends Component {
       <ToolForm
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
-      toolId={this.props.match.params}/>
+      toolId={this.props.match.params.id}/>
     )
     } else if (this.state.postErr) {
       return (

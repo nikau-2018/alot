@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
   return {
     tools: state.tools.tools,
     categories: state.categories.categories, // might not need these
-    ready: state.tools.ready
+    ready: state.tools.ready && state.categories.ready
   }
 }
 
