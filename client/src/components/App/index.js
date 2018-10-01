@@ -16,6 +16,7 @@ import ConfirmationContainer from '../ConfirmationContainer'
 import Admin from '../Admin'
 import Footer from '../Footer'
 import AddTool from '../AddTool'
+import AdminTest from '../Admin/AdminTest'
 
 export default class App extends Component {
   render () {
@@ -23,12 +24,15 @@ export default class App extends Component {
       <div>
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
-        <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route path='/login' component={Auth}/>
+        <Route exact path='/admin' component={Admin}/>
+        <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
-        <Route path='/workshops/:category?' component={WorkshopsContainer} />
-        {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
+        <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
+        <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
+        {/* For testing non connected components */}
+        <Route exact path='/protectedtest' component={AdminTest}/>
         <Route exact path='/admin' component={Admin}/>
         {/* For testing non connected components */}
         <Route exact path='/test' component={AddTool}/>
