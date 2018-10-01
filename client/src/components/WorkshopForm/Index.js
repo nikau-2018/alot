@@ -31,8 +31,7 @@ export default class WorkshopForm extends Component {
         workshopId: id,
         categoryId: categoryId,
         description: description,
-        image: image,
-        active: active
+        image: image
       })
     }
   }

@@ -24,7 +24,7 @@ export default class ToolForm extends Component {
 
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      let {name, categoryId, id, description, image, active} = this.props.editing
+      let {name, categoryId, id, description, image, active, body} = this.props.editing
       this.setState({
         selectedCategory: this.props.categoryName,
         name: name,
@@ -32,7 +32,8 @@ export default class ToolForm extends Component {
         categoryId: categoryId,
         description: description,
         image: image,
-        active: active
+        active: active,
+        body: body
       })
     }
   }
