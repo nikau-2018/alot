@@ -14,8 +14,6 @@ export default class ToolForm extends Component {
     }
   }
 
-  // submit will be handled by an inherited method from parent component
-
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value

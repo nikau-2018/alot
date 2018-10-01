@@ -18,10 +18,10 @@ export default class AddTool extends Component {
     this.props.fetchCategories()
   }
 
-  handleSubmit = (formState) => {
+  handleSubmit = (formObj) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     return axios
-      .post('api/v1/tools/add', formState)
+      .post('api/v1/tools/add', formObj)
   }
 
   render () {
