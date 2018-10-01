@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, Divider} from 'semantic-ui-react'
+import {Image, Divider, Grid, Segment} from 'semantic-ui-react'
 
 import garageBanner from './garage-banner.jpg'
 
@@ -23,6 +23,24 @@ export default function Welcome () {
         The dominant economic model encourages ownership and discourages sharing. Tools rarely used, gather dust. Objects with owners, but no users, fall into disrepair. Overproduction has become the norm, while disused but perfectly functional items slowly make their way to landfill. All the while, people and projects without funds or equipment fail to get off the ground. ALoT offers a better way; one based on the provision of shared resources, and a reduction of the wasteful and widespread communal hoarding of objects.
       </p>
 
+      <h2>People</h2>
+      <Grid columns={2}>
+        <Grid.Column>
+          <Segment basic>
+            <h4>Amanada Chapman</h4>
+            <p>info</p>
+            <Image src={`http://www.placepuppy.net/400/250`} />
+          </Segment>
+        </Grid.Column>
+        <Divider vertical></Divider>
+        <Grid.Column>
+          <Segment basic>
+            <h4>Tom Greer</h4>
+            <p>info</p>
+            <Image src={`http://www.placepuppy.net/400/250`} />
+          </Segment>
+        </Grid.Column>
+      </Grid>
     </div>
   )
 }
