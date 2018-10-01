@@ -2,7 +2,6 @@ import {connect} from 'react-redux'
 
 import ConfirmationContainer from './ConfirmationContainer'
 
-import styles from './styles.css'
 import { isAuthenticated } from '../Auth/utils/auth';
 
 const mapStateToProps = (state) => {
