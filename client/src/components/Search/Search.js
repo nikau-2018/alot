@@ -5,7 +5,7 @@ export default class Search extends Component {
   render () {
     return (
       <div>
-        <Input placeholder='Search...' onKeyUp={this.props.searchTest} /> &nbsp;
+        <Input placeholder='Search...' onKeyUp={this.props.searchTest} />
       </div>
     )
   }
