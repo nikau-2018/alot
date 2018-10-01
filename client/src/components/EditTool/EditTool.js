@@ -39,7 +39,8 @@ export default class EditTool extends Component {
     return (
       <ToolForm
       handleSubmit={this.handleSubmit}
-      categories={this.props.categories}/>
+      categories={this.props.categories}
+      toolId={this.props.match.params}/>
     )
     } else if (this.state.postErr) {
       return (

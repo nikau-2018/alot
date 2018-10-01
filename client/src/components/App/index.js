@@ -27,11 +27,11 @@ export default class App extends Component {
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route path='/login' component={Auth}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
+        <Route exact path='/tools/edit/:id' component={EditTool}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         <Route exact path='/admin' component={Admin}/>
-        <Route exact Path='/test' component={EditTool}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
