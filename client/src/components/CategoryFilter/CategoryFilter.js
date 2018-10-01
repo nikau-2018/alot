@@ -11,7 +11,7 @@ export default class CategoryFilter extends Component {
     return (
       <Dropdown className= 'categories' text={this.props.categoryName}>
         <Dropdown.Menu>
-          <Link to={this.props.type}>
+          <Link to={`/${this.props.type}`}>
             <Dropdown.Item
               text='All'
               name='All'
