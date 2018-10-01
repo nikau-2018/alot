@@ -33,7 +33,6 @@ export default class App extends Component {
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
-        <Route exact path='/admin' component={Admin}/>
         {/* For testing non connected components */}
         <Route exact path='/test' component={AddTool}/>
         <Divider />
