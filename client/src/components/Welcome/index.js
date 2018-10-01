@@ -9,7 +9,9 @@ import styles from './styles.css'
 export default function Welcome () {
   return (
     <div className='welcome'>
-      <Image src={garageBanner} fluid />
+      <div className={styles.padding}>
+        <Image src={garageBanner} fluid />
+      </div>
       <h1>Welcome to the Auckland Library of Tools!</h1>
       <h2>Coming soon...</h2>
       <p>
