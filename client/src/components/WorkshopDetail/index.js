@@ -1,5 +1,5 @@
 import React from 'react'
-
+import moment from 'moment'
 import {Image, Divider} from 'semantic-ui-react'
 
 import styles from './styles.css'
@@ -17,7 +17,8 @@ export default function WorkshopDetail (props) {
       <h3>Instructor: </h3>
       <p>{props.workshop.instructor}</p>
       <h3>Date:</h3>
-      <p>{props.workshop.dateTime}</p>
+      <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
+      <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
     </div>
   )
 }
