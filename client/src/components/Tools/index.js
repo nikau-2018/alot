@@ -10,7 +10,10 @@ import styles from './styles.css'
 const Tools = (props) => (
   <div>
     <Search />
-    <CategoryFilter type='tools' />
+    <CategoryFilter 
+      type='tools' 
+      category={props.category}
+    />
     {props.filteredTools.map((tool) => (
       <ToolCard
         key={tool.id}

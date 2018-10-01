@@ -25,7 +25,7 @@ export default class CategoryFilter extends Component {
   }
 
   render () {
-    console.log(this.props.match)
+    console.log(this.props.category)
     return (
       <Dropdown className= 'categories' text={this.state.selected}>
         <Dropdown.Menu>
