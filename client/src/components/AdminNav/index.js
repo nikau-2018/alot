@@ -1,25 +1,25 @@
 
 import React from 'react'
-import {Button} from 'semantic-ui-react'
+import {Button, Icon} from 'semantic-ui-react'
 
 export default function AdminNav (props) {
   return (
     <div className='ui buttons'>
       <Button className='ui button' onClick={props.handleClick}>
-        <i className='fire extinguisher icon'></i>
-      Add Tool
+        <Icon name='wrench'/>
+        Add Tool
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
-        <i className='calendar alternate icon'></i>
-      Add Workshop
+        <Icon name='calendar alternate'/>
+        Add Workshop
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
-        <i className='user plus icon'></i>
-      Edit Employee
+        <Icon name='user plus'/>
+        Edit Employee
       </Button>
       <Button className='ui button' onClick={props.handleClick}>
-        <i className='envelope icon'></i>
-      Maintain Orders
+        <Icon name='envelope'/>
+        Maintain Orders
       </Button>
     </div>
   )

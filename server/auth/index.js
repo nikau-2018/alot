@@ -1,9 +1,11 @@
 const jwt = require('jsonwebtoken')
+const {getUser} = require('../db/users')
 
 module.exports = {
   getToken,
   getSecret,
-  handleError
+  handleError,
+  isAdmin
 }
 
 // Create a JWT with a user id in it
@@ -30,4 +32,16 @@ function handleError (err, req, res, next) {
     })
   }
   next()
+}
+
+// figure out why this crashes the server...
+function isAdmin (req, res, next) {
+  getUser(req.user.email)
+    .then(user => {
+      if (user.role === 1) {
+        next()
+      } else {
+        next('not an admin')
+      }
+    })
 }
