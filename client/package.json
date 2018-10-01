@@ -92,6 +92,7 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-react-css-modules": "^3.4.2",
     "jwt-decode": "^2.2.0",
     "semantic-ui-react": "^0.82.5"
   }
