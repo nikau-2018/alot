@@ -17,10 +17,13 @@ export default class ToolsContainer extends Component {
       })
     return (
       <div className='tools-container'>
-        <Tools
-          filteredTools={filteredTools}
-          category={category}
-        />
+        {this.props.tools.length > 0
+          ? <Tools
+            filteredTools={filteredTools}
+            category={category}
+          />
+          : <div>LOADING</div>
+        }
       </div>
     )
   }
