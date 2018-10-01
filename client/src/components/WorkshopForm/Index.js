@@ -6,7 +6,7 @@ export default class WorkshopForm extends Component {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
-      toolId: 0,
+      WorkshopId: 0,
       name: '',
       categoryId: null,
       description: '',
@@ -28,7 +28,7 @@ export default class WorkshopForm extends Component {
       this.setState({
         selectedCategory: this.props.categoryName,
         name: name,
-        toolId: id,
+        workshopId: id,
         categoryId: categoryId,
         description: description,
         image: image,
@@ -39,7 +39,7 @@ export default class WorkshopForm extends Component {
 
   render () {
     const { name, description, body, instructor } = this.state
-    let {selectedCategory, error, toolId, ...rest} = this.state
+    let {selectedCategory, error, workshopId, ...rest} = this.state
     return (
       <div>
       {
@@ -102,7 +102,7 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
+        <Button onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
       </Form>
       </div>
     )
