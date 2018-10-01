@@ -67,7 +67,7 @@ function login (req, res) {
     }))
 }
 
-router.get('/protected', verifyJwt({secret: getSecret}), handleError, protec)
+router.get('/protected', verifyJwt({secret: getSecret}), protec, handleError)
 
 function protec (req, res) {
   res.json({
@@ -76,7 +76,7 @@ function protec (req, res) {
   })
 }
 
-router.get('/protectedadmin', verifyJwt({secret: getSecret}), isAdmin, handleError, protecadmin)
+router.get('/protectedadmin', verifyJwt({secret: getSecret}), isAdmin, protecadmin, handleError)
 
 function protecadmin (req, res) {
   res.json({
