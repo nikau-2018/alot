@@ -15,6 +15,7 @@ import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Admin from '../Admin'
 import Footer from '../Footer'
+import AddTool from '../AddTool'
 import AdminTest from '../Admin/AdminTest'
 
 export default class App extends Component {
@@ -32,6 +33,9 @@ export default class App extends Component {
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
+        <Route exact path='/admin' component={Admin}/>
+        {/* For testing non connected components */}
+        <Route exact path='/test' component={AddTool}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
