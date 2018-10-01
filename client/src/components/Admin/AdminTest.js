@@ -2,19 +2,35 @@ import React from 'react'
 import axios from 'axios'
 
 export default class AdminTest extends React.Component {
-  render () {
-    let result = ''
+  constructor (props) {
+    super(props)
+    this.state = {
+      admin: false,
+      logged: false
+    }
+  }
+
+  componentDidMount () {
+    console.log('hi')
     axios
       .get('/api/v1/users/protectedadmin')
       .then(res => {
-        console.log(res.data)
+        this.setState({admin: true})
       })
-      .catch(err => {
-        console.log(err.message)
+
+    axios
+      .get('/api/v1/users/protected')
+      .then(res => {
+        this.setState({logged: true})
       })
+  }
+
+  render () {
     return (
       <div className='admin-test'>
-        {result && result}
+        {this.state.admin ? <p>Is admin</p> : <p>Not admin</p> }
+        {this.state.logged ? <p>Is logged in</p> : <p>Not logged in</p> }
+
       </div>
     )
   }
