@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
   if (category) {
     categoryName = category.name
   }
-  
+
   return {
     categories,
     categoryName
