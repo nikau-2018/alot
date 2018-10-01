@@ -5,10 +5,11 @@ export default class WorkshopForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      selectedCategory: 'select a category',
       workshopId: 0,
       name: '',
       categoryId: null,
+      selectedCategory: 'select a category',
+      instructor: '',
       description: '',
       body: '',
       image: 'https://www.fillmurray.com/200/300'
@@ -24,13 +25,15 @@ export default class WorkshopForm extends Component {
   // to modify later on completion of edit workshop
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      let {name, categoryId, id, description, image, active} = this.props.editing
+      let {name, categoryId, id, description, image, body, instructor} = this.props.editing
       this.setState({
-        selectedCategory: this.props.categoryName,
-        name: name,
         workshopId: id,
+        name: name,
         categoryId: categoryId,
+        selectedCategory: this.props.categoryName,
+        instructor: instructor,
         description: description,
+        body: body,
         image: image
       })
     }
