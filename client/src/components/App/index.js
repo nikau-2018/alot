@@ -15,6 +15,7 @@ import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Footer from '../Footer'
 import AdminTest from '../Admin/AdminTest'
+import EditTool from '../EditTool'
 // Admin route imports
 import Admin from '../Admin'
 
