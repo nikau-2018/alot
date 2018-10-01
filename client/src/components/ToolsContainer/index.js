@@ -8,10 +8,8 @@ import ToolsContainer from './ToolsContainer'
 import styles from './styles.css'
 
 const mapStateToProps = (state) => {
-  const allCategories = state.categories.categories.map((category) => category.id)
   return {
     tools: state.tools.tools,
-    displayedCategory: allCategories,
     search: state.search
   }
 }
