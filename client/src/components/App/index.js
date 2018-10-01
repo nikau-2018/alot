@@ -17,6 +17,8 @@ import Admin from '../Admin'
 import Footer from '../Footer'
 import AdminTest from '../Admin/AdminTest'
 import EditTool from '../EditTool'
+import AddTool from '../AddTool'
+// import AdminTest from '../Admin/AdminTest'
 
 export default class App extends Component {
   render () {
@@ -30,8 +32,12 @@ export default class App extends Component {
         <Route exact path='/edit/tools/:id' component={EditTool}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
-        <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         <Route exact path='/admin' component={Admin}/>
+        <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
+        <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
+        <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
+        {/* For testing non connected components */}
+        <Route exact path='/protectedtest' component={AdminTest}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
