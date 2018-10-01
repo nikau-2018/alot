@@ -24,10 +24,10 @@ export default class App extends Component {
       <div>
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
-        <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route path='/login' component={Auth}/>
+        <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
-        <Route exact path='/tools/edit/:id' component={EditTool}/>
+        <Route exact path='/edit/tools/:id' component={EditTool}/>
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
