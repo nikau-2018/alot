@@ -5,9 +5,9 @@ export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
-      category: null,
       selectedCategory: 'select a category',
+      name: '',
+      categoryId: null,
       description: '',
       image: 'https://www.fillmurray.com/200/300',
       active: true
@@ -24,6 +24,7 @@ export default class ToolForm extends Component {
 
   render () {
     const { name, description } = this.state
+    let {selectedCategory, ...rest} = this.state
     return (
       <Form>
         <Form.Field required>
@@ -41,10 +42,11 @@ export default class ToolForm extends Component {
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item
+                  key={category.id}
                   text={category.name}
                   name='category'
                   onClick={() => this.setState({
-                    category: category.id,
+                    categoryId: category.id,
                     selectedCategory: category.name
                   })}
                 />
@@ -61,7 +63,7 @@ export default class ToolForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={this.props.handleSubmit}>Submit</Button>
+        <Button onClick={() => this.props.handleSubmit(rest)}>Submit</Button>
       </Form>
     )
   }
