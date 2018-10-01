@@ -1,17 +1,17 @@
 import {connect} from 'react-redux'
 
 import AddWorkshop from './AddWorkshop'
-import {fetchWorkshops} from '../WorkshopsContainer/actions'
+import {fetchCategories} from '../WorkshopsContainer/actions'
 
 const mapStateToProps = (state) => {
   return {
-    workshops: state.workshops.workshops,
-    ready: state.workshops.ready
+    categories: state.categories.categories,
+    ready: state.categories.ready
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchWorkshops: () => dispatch(fetchWorkshops())
+  fetchCategories: () => dispatch(fetchCategories())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddWorkshop)
