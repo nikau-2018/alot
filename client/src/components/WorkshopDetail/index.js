@@ -1,6 +1,6 @@
 import React from 'react'
-
-import {Image, Divider} from 'semantic-ui-react'
+import {Image, Button, Divider} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
 
@@ -10,7 +10,7 @@ export default function WorkshopDetail (props) {
     <div>
       <h1>{props.workshop.name}</h1>
       <Divider/>
-      <Image src={props.workshop.image}/>
+      <Image src={props.workshop.image} size='large'/>
       <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>
@@ -18,6 +18,9 @@ export default function WorkshopDetail (props) {
       <p>{props.workshop.instructor}</p>
       <h3>Date:</h3>
       <p>{props.workshop.dateTime}</p>
+      <Link to={`/workshops/${props.workshop.categoryId}`}>
+        <Button basic>Similar Workshops</Button>
+      </Link>
     </div>
   )
 }
