@@ -6,7 +6,6 @@ export default class Search extends Component {
     return (
       <div>
         <Input placeholder='Search...' onKeyUp={this.props.searchTest} /> &nbsp;
-        {/* <Button>Search</Button> */}
       </div>
     )
   }
