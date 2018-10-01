@@ -7,7 +7,7 @@ import styles from './styles.css'
 
 const Logout = (props) => {
   return (
-    <Button className={styles.button} onClick={props.logoutUser}>
+    <Button className={styles.george} onClick={props.logoutUser}>
       Logout
     </Button>
   )

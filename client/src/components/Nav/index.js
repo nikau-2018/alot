@@ -18,33 +18,25 @@ class Nav extends Component {
     return (
       <div className={styles.nav}>
         <Button.Group vertical>
-          <Link to="/">
-            <Button className={styles.button}>
-              <Icon name='home'/>Home
-            </Button>
-          </Link>
-          <Link to="/tools">
-            <Button className={styles.button}>
-              <Icon name='wrench' />Tools
-            </Button>
-          </Link>
-          <Link to="/workshops">
-            <Button className={styles.button}>
-              <Icon name='warehouse'/>Workshops
-            </Button>
-          </Link>
+          <Button as={Link} to="/" className={styles.button}>
+            <Icon name='home'/>Home
+          </Button>
+          <Button as={Link} to="/tools" className={styles.button}>
+            <Icon name='wrench' />Tools
+          </Button>
+          <Button as={Link} to="/workshops" className={styles.button}>
+            <Icon name='warehouse'/>Workshops
+          </Button>
           {this.props.isAdmin &&
-            <Link to="/admin">
-              <Button className={styles.button}>Admin</Button>
-            </Link>}
-          {
-            this.props.isAuthenticated
-              ? <Logout className={styles.button} />
-              : <Link to="/login">
-                <Button className={styles.button}>
-                  <Icon name='lock open'/>Login
-                </Button>
-              </Link>
+            <Button as={Link} to="/admin" className={styles.button}>
+              Admin
+            </Button>
+          }
+          {this.props.isAuthenticated
+            ? <Logout />
+            : <Button as={Link} to="/login" className={styles.button}>
+              <Icon name='lock open'/>Login
+            </Button>
           }
         </Button.Group>
       </div>
