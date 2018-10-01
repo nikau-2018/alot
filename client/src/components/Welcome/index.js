@@ -2,7 +2,7 @@ import React from 'react'
 import {Image, Divider} from 'semantic-ui-react'
 
 import garageBanner from './garage-banner.jpg'
-import About from '../About'
+import People from '../People'
 
 import styles from './styles.css'
 
@@ -25,7 +25,7 @@ export default function Welcome () {
       <p>
         The dominant economic model encourages ownership and discourages sharing. Tools rarely used, gather dust. Objects with owners, but no users, fall into disrepair. Overproduction has become the norm, while disused but perfectly functional items slowly make their way to landfill. All the while, people and projects without funds or equipment fail to get off the ground. ALoT offers a better way; one based on the provision of shared resources, and a reduction of the wasteful and widespread communal hoarding of objects.
       </p>
-      <About />
+      <People />
     </div>
   )
 }
