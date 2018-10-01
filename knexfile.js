@@ -4,7 +4,6 @@ const {camelToSnake, snakeToCamel} = require('./util/knex-converters')
 // result before it's used.
 // Ref: https://knexjs.org/#Installation-post-process-response
 const postProcessResponse = result => {
-  console.log(result, typeof result)
   return Array.isArray(result)
     ? result.map(row => snakeToCamel(row))
     : snakeToCamel(result)
