@@ -35,5 +35,8 @@
     "postinstall": "knex migrate:latest",
     "start": "yarn --silent message && yarn server:prod",
     "test": "jest"
+  },
+  "jest": {
+    "roots": ["tests"]
   }
 }
