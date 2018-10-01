@@ -11,9 +11,10 @@ export default class ToolsContainer extends Component {
 
   render () {
     const category = this.props.match.params.category
+    const tools = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.props.search.toLowerCase()))
     const filteredTools = !category
-      ? this.props.tools
-      : this.props.tools.filter((tool) => {
+      ? tools
+      : tools.filter((tool) => {
         return category == tool.categoryId
       })
     return (
