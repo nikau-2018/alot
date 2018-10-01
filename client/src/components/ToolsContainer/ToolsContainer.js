@@ -10,15 +10,17 @@ export default class ToolsContainer extends Component {
   }
 
   render () {
-    const filteredTools = !this.props.match.params.category
+    const category = this.props.match.params.category
+    const filteredTools = !category
       ? this.props.tools
       : this.props.tools.filter((tool) => {
-        return this.props.match.params.category == tool.categoryId
+        return category == tool.categoryId
       })
     return (
       <div className='tools-container'>
         <Tools
           filteredTools={filteredTools}
+          category={category}
         />
       </div>
     )
