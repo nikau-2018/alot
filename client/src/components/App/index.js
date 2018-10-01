@@ -28,7 +28,7 @@ export default class App extends Component {
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
         <Route path='/login' component={Auth}/>
-        <Route exact path='/admin' component={Admin}/>
+        <Route path='/admin' component={Admin}/>
         <Route exact path='/tools/:category?' component={ToolsContainer}/>
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route exact path='/edit/tools/:id' component={EditTool}/>
