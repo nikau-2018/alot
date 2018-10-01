@@ -12,20 +12,24 @@ export default class CategoryFilter extends Component {
 
   componentDidMount () {
     this.props.fetchCategories()
+    // const categoryId = this.props.match.params.category    
+    // categoryId && this.setState({
+    //   selected: categoryId
+    // })
   }
 
   handleClick = (e) => {
-    console.log(e)
     this.setState({
       selected: e.target.name
     })
   }
 
   render () {
+    console.log(this.props.match)
     return (
-      <Dropdown className= 'categories' text={`${this.state.selected}`}>
+      <Dropdown className= 'categories' text={this.state.selected}>
         <Dropdown.Menu>
-          <Link to={`/${this.props.type}`}>
+          <Link to={this.props.type}>
             <Dropdown.Item
               text='All'
               name='All'
