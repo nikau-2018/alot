@@ -34,13 +34,19 @@ function handleError (err, req, res, next) {
   next()
 }
 
+// figure out why this crashes the server...
 function isAdmin (req, res, next) {
-  getUser(req.user.email)
-    .then(user => {
-      if (user.role === 1) {
-        next()
-      } else {
-        throw new Error('not an admin')
-      }
-    })
+  // getUser(req.user.email)
+  //   .then(user => {
+  //     if (user.role === 1) {
+  //       next()
+  //     } else {
+  //       throw new Error('not an admin')
+  //     }
+  //   })
+  if (req.user.role === 1) {
+    next()
+  } else {
+    throw new Error('not an admin')
+  }
 }
