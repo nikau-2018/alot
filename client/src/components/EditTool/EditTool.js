@@ -25,10 +25,10 @@ export default class EditTool extends Component {
     })
   }
 
-  handleSubmit = (formObj) => {
+  handleSubmit = (formObj, toolId) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
-    return axios
-      .post(`api/v1/tools/edit/${toolId}`, formObj)
+    axios
+      .put(`api/v1/tools/edit/${toolId}`, formObj)
       // redirect back to admin page here? .then()
       .catch(() => {
         this.toggleError() // need to do proper error handling here eventually
@@ -55,7 +55,7 @@ export default class EditTool extends Component {
         <Message warning>
           <Message.Header>There was an error submitting that tool to the database</Message.Header>
         </Message>
-        <Link to={this.props.match.path}>
+        <Link to={this.props.match.url}>
           <Button onClick={() => this.toggleError()}>Try Again</Button>
         </Link>
       </div>

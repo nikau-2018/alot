@@ -7,7 +7,7 @@ import {fetchTools} from '../ToolsContainer/actions'
 const mapStateToProps = (state) => {
   return {
     tools: state.tools.tools,
-    categories: state.categories.categories, // might not need these
+    categories: state.categories.categories,
     ready: state.tools.ready && state.categories.ready
   }
 }

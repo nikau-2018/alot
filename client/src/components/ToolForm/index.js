@@ -6,6 +6,7 @@ export default class ToolForm extends Component {
     super(props)
     this.state = {
       selectedCategory: 'select a category',
+      toolId: 0,
       name: '',
       categoryId: null,
       description: '',
@@ -22,21 +23,22 @@ export default class ToolForm extends Component {
 
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      // ({name, categoryId, description, image, active} = this.props.editing)
+      let {name, categoryId, id, description, image, active} = this.props.editing
       this.setState({
         selectedCategory: this.props.categoryName,
-        name: this.props.editing.name,
-        categoryId: this.props.editing.categoryId,
-        description: this.props.editing.description,
-        image: this.props.editing.image,
-        active: this.props.editing.active
+        name: name,
+        toolId: id,
+        categoryId: categoryId,
+        description: description,
+        image: image,
+        active: active
       })
     }
   }
 
   render () {
     const { name, description } = this.state
-    let {selectedCategory, error, ...rest} = this.state
+    let {selectedCategory, error, toolId, ...rest} = this.state
     return (
       <div>
       {
@@ -81,7 +83,7 @@ export default class ToolForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest)}>Submit</Button>
+        <Button onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
       </Form>
       </div>
     )
