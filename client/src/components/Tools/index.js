@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Components
 import Search from '../Search'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
@@ -8,7 +7,7 @@ import ToolCard from '../ToolCard'
 import styles from './styles.css'
 
 const Tools = (props) => (
-  <div>
+  <div className='tools'>
     <Search />
     <CategoryFilter
       type='tools'
