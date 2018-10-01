@@ -13,8 +13,10 @@ export default class CategoryFilter extends Component {
   componentDidMount () {
     this.props.fetchCategories()
     const categoryId = this.props.category    
-    categoryId && this.setState({
-      selected: categoryId
+    console.log(this.props.categories)
+    const categoryName = this.props.categories.find(category => category.id == categoryId)
+    categoryName && this.setState({
+      selected: categoryName
     })
   }
 
