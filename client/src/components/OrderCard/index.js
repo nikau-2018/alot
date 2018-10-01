@@ -7,8 +7,8 @@ import styles from './styles.css'
 export default function Orders (props) {
   const order = props.order
   return (
-    <div className='order-card'>
-      <Card>
+    <div>
+      <Card className={styles.orderCard}>
         <Card.Content>
           <Card.Header>
             <Icon name='dolly flatbed' /> Order #{order.id}<br />
