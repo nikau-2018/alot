@@ -30,11 +30,13 @@ module.exports = {
     connection: {
       filename: ':memory:'
     },
+    postProcessResponse,
+    wrapIdentifier,
     useNullAsDefault: true,
     seeds: {
       directory: './tests/seeds'
     }
-},
+  },
 
   staging: {
     client: 'postgresql',
