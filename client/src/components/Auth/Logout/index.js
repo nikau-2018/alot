@@ -3,9 +3,11 @@ import {connect} from 'react-redux'
 import {Button} from 'semantic-ui-react'
 import {logoutUser} from './actions'
 
+import styles from './styles.css'
+
 const Logout = (props) => {
   return (
-    <Button onClick={props.logoutUser}>
+    <Button className={styles.button} onClick={props.logoutUser}>
       Logout
     </Button>
   )
