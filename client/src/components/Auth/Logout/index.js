@@ -8,6 +8,7 @@ import styles from './styles.css'
 
 const Logout = (props) => {
   return (
+    // This needs both logout and button classes to work for the css modules
     <div className={styles.logout}>
       <Button className={styles.button} onClick={props.logoutUser}>
         Logout
