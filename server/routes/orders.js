@@ -11,6 +11,7 @@ router.post('/create', verifyJwt({secret: getSecret}), createOrder, handleError)
 function createOrder (req, res) {
   const order = req.body
   order.userId = req.user.id
+  order.status = 1
   db.createOrder(order)
     .then(id => {
       res.status(201).json({
