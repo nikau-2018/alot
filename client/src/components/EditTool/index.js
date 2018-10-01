@@ -2,12 +2,13 @@ import {connect} from 'react-redux'
 
 import EditTool from './EditTool'
 import {fetchCategories} from '../CategoryFilter/actions'
-import {fetchTools} from '../Tools/actions'
+import {fetchTools} from '../ToolsContainer/actions'
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories.categories,
-    ready: state.categories.ready
+    tools: state.tools.tools,
+    categories: state.categories.categories, // might not need these
+    ready: state.tools.ready
   }
 }
 
