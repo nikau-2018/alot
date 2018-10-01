@@ -15,7 +15,7 @@ const wrapIdentifier = (identifier, origImpl) => origImpl(camelToSnake(identifie
 
 module.exports = {
 
-  development: {
+  _development: {
     client: 'sqlite3',
     connection: {
       filename: './dev.sqlite3'
@@ -38,7 +38,7 @@ module.exports = {
     }
   },
 
-  staging: {
+  development: {
     client: 'postgresql',
     connection: {
       host: '192.168.1.183',
