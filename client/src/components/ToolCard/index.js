@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Card, Image} from 'semantic-ui-react'
+import {Card, Image} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
