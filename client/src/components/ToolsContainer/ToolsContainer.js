@@ -5,7 +5,6 @@ import Tools from '../Tools'
 export default class ToolsContainer extends Component {
   componentDidMount () {
     this.props.fetchTools()
-    this.props.fetchCategories()
   }
 
   render () {
