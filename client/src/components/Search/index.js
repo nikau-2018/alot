@@ -3,7 +3,7 @@ import {Input, Button} from 'semantic-ui-react'
 
 import styles from './styles.css'
 
-export default class Nav extends Component {
+export default class Search extends Component {
   render () {
     return (
       <div>
