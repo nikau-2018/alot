@@ -72,7 +72,7 @@ router.get('/protected', verifyJwt({secret: getSecret}), protec, handleError)
 function protec (req, res) {
   res.json({
     message: 'You can only see this if you are logged in.',
-    user: `Your user ID is: ${req.user.id}`,
+    user: `Your user ID is: ${req.user.id}`
   })
 }
 
