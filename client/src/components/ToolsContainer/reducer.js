@@ -1,14 +1,7 @@
 import {REQUEST_TOOLS, RECEIVE_TOOLS, RECEIVE_TOOLS_ERROR} from './actions'
 
 const defaultState = {
-  tools: [{
-    id: 55501,
-    categoryId: 77702,
-    name: 'lawn Mower',
-    description: 'Ryobi 190cc....',
-    image: '/placeholder-image.jpeg',
-    active: true
-  }],
+  tools: [],
   error: null,
   ready: false
 }
