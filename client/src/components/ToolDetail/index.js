@@ -1,16 +1,19 @@
-import React from 'react'
+import {connect} from 'react-redux'
 
-import { Button, Divider } from 'semantic-ui-react'
+import {fetchCategories} from '../CategoryFilter/actions'
 
-export default function ToolDetail (props) {
-  return (
-    <div>
-      <h1>{props.tool.name}</h1>
-      <Divider/>
-      <img src={props.tool.image}/>
-      <h3>Description:</h3>
-      <p>{props.tool.description}</p>
-      <Button basic color='green'>Rent</Button>
-    </div>
-  )
+import ToolDetail from './ToolDetail'
+
+import styles from './styles.css'
+
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categories.categories
+  }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchCategories: () => dispatch(fetchCategories())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToolDetail)

@@ -2,7 +2,7 @@ const express = require('express')
 const verifyJwt = require('express-jwt')
 
 const {checkHash} = require('../auth/hash')
-const {getToken} = require('../auth/token')
+const {getToken, getSecret, handleError} = require('../auth')
 
 const router = express.Router()
 
@@ -19,12 +19,15 @@ function register (req, res) {
           message: 'User exists'
         })
         : db.createUser(req.body.user, req.body.password)
-          .then((id) => res.status(201).json(
-            {
-              ok: true,
-              token: getToken(id)
-            }
-          ))
+          .then(() => {
+            db.getUser(req.body.user.email)
+              .then(user => {
+                res.status(201).json({
+                  ok: true,
+                  token: getToken(user)
+                })
+              })
+          })
     })
     .catch(() => {
       res.status(500).json({
@@ -46,7 +49,7 @@ function login (req, res) {
             ok
               ? res.status(200).json({
                 ok: true,
-                token: getToken(user.id)
+                token: getToken(user)
               })
               : res.status(403).json({
                 ok: false,
@@ -62,6 +65,16 @@ function login (req, res) {
       ok: false,
       message: 'Unknown error when logging in.'
     }))
+}
+
+router.get('/secret', verifyJwt({secret: getSecret}), handleError, secret)
+
+// These routes are protected
+function secret (req, res) {
+  res.json({
+    message: 'This is a SECRET quote.',
+    user: `Your user ID is: ${req.user.id}`
+  })
 }
 
 module.exports = router

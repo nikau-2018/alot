@@ -4,6 +4,7 @@ exports.up = knex =>
     t.integer('category_id').references('categories.id')
     t.string('name')
     t.string('description')
+    t.string('body')
     t.string('image')
     t.boolean('active')
     t.timestamps(false, true)
