@@ -28,7 +28,7 @@ export default class EditTool extends Component {
   handleSubmit = (formObj, toolId) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
-      .put(`api/v1/tools/edit/${toolId}`, formObj)
+      .put(`/api/v1/tools/edit/${toolId}`, formObj)
       // redirect back to admin page here? .then()
       .catch(() => {
         this.toggleError() // need to do proper error handling here eventually
