@@ -11,7 +11,8 @@ const mapStateToProps = (state) => {
   return {
     workshops: state.workshops.workshops,
     ready: state.workshops.workshops.length > 0 && state.categories.categories.length > 0,
-    categories: state.categories.categories
+    categories: state.categories.categories,
+    search: state.search
   }
 }
 

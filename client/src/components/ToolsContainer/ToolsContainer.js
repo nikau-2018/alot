@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 
-// Components
 import Tools from '../Tools'
 
 export default class ToolsContainer extends Component {
@@ -15,7 +14,7 @@ export default class ToolsContainer extends Component {
     const filteredTools = !category
       ? tools
       : tools.filter((tool) => {
-        return category == tool.categoryId
+        return Number(category) === tool.categoryId
       })
     return (
       <div className='tools-container'>
