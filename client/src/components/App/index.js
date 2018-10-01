@@ -16,6 +16,7 @@ import ConfirmationContainer from '../ConfirmationContainer'
 import Admin from '../Admin'
 import Footer from '../Footer'
 import AdminTest from '../Admin/AdminTest'
+import EditTool from '../EditTool'
 
 export default class App extends Component {
   render () {
@@ -32,6 +33,7 @@ export default class App extends Component {
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
         <Route exact path='/admin' component={Admin}/>
+        <Route exact Path='/test' component={EditTool}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
