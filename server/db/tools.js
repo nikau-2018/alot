@@ -19,7 +19,7 @@ function getSingleTool (toolId, db = connection) {
 }
 
 function addTool (tool, db = connection) {
-  return db('tools')
+  return db('toolss')
     .insert(tool)
 }
 

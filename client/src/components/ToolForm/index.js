@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Form, Dropdown, Message} from 'semantic-ui-react'
+import {Button, Form, Dropdown} from 'semantic-ui-react'
 
 export default class ToolForm extends Component {
   constructor (props) {
