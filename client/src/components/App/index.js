@@ -15,7 +15,7 @@ import Auth from '../Auth'
 import ConfirmationContainer from '../ConfirmationContainer'
 import Admin from '../Admin'
 import Footer from '../Footer'
-import AdminTest from '../Admin/AdminTest'
+import AddTool from '../AddTool'
 
 export default class App extends Component {
   render () {
@@ -29,9 +29,9 @@ export default class App extends Component {
         <Route path='/workshops/:category?' component={WorkshopsContainer} />
         {/* <Route path='/workshops/:category/:id' component={WorkshopDetailContainer} /> */}
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        {/* For testing non connected components */}
-        <Route exact path='/protectedtest' component={AdminTest}/>
         <Route exact path='/admin' component={Admin}/>
+        {/* For testing non connected components */}
+        <Route exact path='/test' component={AddTool}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
