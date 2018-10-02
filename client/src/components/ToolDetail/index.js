@@ -6,6 +6,7 @@ import styles from './styles.css'
 
 export default function ToolDetail (props) {
   const body = props.tool.body || ''
+  const isAdmin = props.isAdmin
   return (
     <div>
       <h1>{props.tool.name}</h1>
@@ -16,12 +17,9 @@ export default function ToolDetail (props) {
       <ul>
         {body.split('*').map(element => <li>{element}</li>)}
       </ul>
-      <Link to={`/confirm/tool/${props.tool.id}`}>
-        <Button basic color='green'>Rent</Button>
-      </Link>
-      <Link to={`/tools/${props.tool.categoryId}`}>
-        <Button basic>Similar Tools</Button>
-      </Link>
+      <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Rent</Button>
+      <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
+      {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
     </div>
   )
 }

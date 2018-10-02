@@ -37,6 +37,7 @@ export default class ConfirmationContainer extends Component {
     )
   }
 }
+
 ConfirmationContainer.defaultProps = {
   workshops: [{
     id: 88801,
