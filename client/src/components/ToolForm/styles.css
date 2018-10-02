@@ -1,9 +1,16 @@
+/* overall layout */
+.toolForm .header {
+  padding-top: 1em;
+  font-weight: 400 !important;
+}
+
 .toolForm {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;  
 }
 
+/* input positioning */
 .toolForm .field {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -14,11 +21,7 @@
   float: left;
 }
 
-.toolForm .header {
-  padding-top: 1em;
-  font-weight: 400 !important;
-}
-
+/* input styling */
 .toolForm .input {
   border-bottom-color: #43296C;
   border-bottom-style: ridge;
@@ -31,6 +34,7 @@
   font-size: 1.2rem !important;
 }
 
+/* autocomplete styling */
 input:-webkit-autofill {
   color: #2a2a2a !important;
   -webkit-box-shadow: 0 0 0 30px white inset !important;
