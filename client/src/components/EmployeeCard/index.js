@@ -18,7 +18,7 @@ export default function EmployeeCard (props) {
             <Icon name='mail' /><a href={`mailto:${employee.email}`}> {employee.email}</a><br />
             <Icon name='phone' /><a href={`tel:${employee.phone}`}> {employee.phone}</a><br /><br />
           </Card.Description>
-          <Button as={Link} to={`/edit-employee/${employee.id}`}>Edit</Button>
+          <Button as={Link} to={`/admin/edit-employee/${employee.id}`}>Edit</Button>
         </Card.Content>
         <Card.Content extra>
           <Icon name='calendar alternate outline' /> <div>last updated on: {employee.updatedAt}</div>

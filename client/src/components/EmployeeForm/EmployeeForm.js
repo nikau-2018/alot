@@ -23,7 +23,8 @@ export default class EmployeeForm extends Component {
   }
 
   componentDidMount() {
-    const employee = this.state.employees.users.find((employee) => this.props.params.id === employee.id)
+    if(this.props.ready){
+    const employee = this.props.employees.find((employee) => Number(this.props.match.params.id) === employee.id)
       let {id, email, firstName, lastName, phone, role} = employee
       this.setState({
         employeeId: id,
@@ -33,10 +34,21 @@ export default class EmployeeForm extends Component {
         phone: phone,
         role: role
       })
+    }
+  }
+
+  handleSubmit = (formObj, userId) => {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
+    axios
+      .put(`/api/v1/users/edit/${userId}`, formObj)
+      .then(this.props.history.goBack())
+      .catch(() => {
+        this.toggleError() // need to do proper error handling here eventually
+      })
   }
 
   render () {
-    const { firstName, lastName, email, phone, body} = this.state
+    const { firstName, lastName, email, phone, } = this.state
     let {error, employeeId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>

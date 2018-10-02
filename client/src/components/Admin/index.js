@@ -18,7 +18,7 @@ export default class Admin extends Component {
         <AdminNav url={url}/>
         <Route path={`${path}/add-tool`} component={AddTool} />
         <Route path={`${path}/add-workshop`} component={AddWorkshop} />
-        <Route path={`${path}/edit-employee`} component={EditEmployee} />
+        <Route exact path={`${path}/edit-employee`} component={EditEmployee} />
         <Route path={`${path}/edit-employee/:id`} component={EmployeeForm} />
         <Route path={`${path}/orders`} component={Orders} />
       </div>

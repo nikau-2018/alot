@@ -42,7 +42,7 @@ export default class App extends Component {
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
         {/* For testing non connected components */}
-        <Route exact path='/test' component={EmployeeForm}/>
+        {/* <Route exact path='/test' component={}/> */}
         <Divider />
         <Route path='/' component={Footer}/>
       </div>

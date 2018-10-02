@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 
-import {fetchUsers} from './actions'
+import {fetchUsers} from '../EditEmployee/actions'
 
 import EmployeeForm from './EmployeeForm'
 
