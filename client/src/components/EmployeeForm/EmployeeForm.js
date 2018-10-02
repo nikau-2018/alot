@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import axios from 'axios'
+import {get} from '../Auth/utils/localstorage'
 
 import styles from './styles.css'
 
@@ -12,14 +14,9 @@ export default class EmployeeForm extends Component {
       lastName: '',
       email: '',
       phone: '',
-      role: 1
+      role: 1,
+      postErr: false
     }
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
   }
 
   componentDidMount() {
@@ -37,6 +34,19 @@ export default class EmployeeForm extends Component {
     }
   }
 
+  toggleError = () => {
+    this.setState({
+      postErr: !this.state.postErr
+    })
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+
   handleSubmit = (formObj, userId) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
@@ -47,9 +57,11 @@ export default class EmployeeForm extends Component {
       })
   }
 
-  render () {
+  render () {this.state.postErr ? this.showError() : this.showForm()}
+
+  showForm () {
     const { firstName, lastName, email, phone, } = this.state
-    let {error, employeeId, ...rest} = this.state
+    let {postErr, employeeId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>
       <h2>Edit this employee:</h2>
@@ -90,10 +102,24 @@ export default class EmployeeForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest, employeeId)}>Submit</Button>
+        <Button onClick={() => this.handleSubmit(rest, employeeId)}>Submit</Button>
         <Button onClick={() => this.props.goBack()}>Go Back</Button>
       </Form>
       </div>
     )
   }
+
+  showError () {
+    return (
+      <div>
+        <Message warning>
+          <Message.Header>There was an error updating that employee</Message.Header>
+        </Message>
+        <Link to={this.props.match.url}>
+          <Button onClick={() => this.toggleError()}>Try Again</Button>
+        </Link>
+      </div>
+    )
+  }
+
 }

@@ -8,6 +8,7 @@ const router = express.Router()
 
 const db = require('../db/users')
 
+// Admin routes for employee maintenance
 router.get('/get-employees', verifyJwt({secret: getSecret}), isAdmin, getEmployees, handleError)
 
 function getEmployees (req, res) {
@@ -17,6 +18,18 @@ function getEmployees (req, res) {
     })
     .catch(err => {
       res.status(500).json(err)
+    })
+}
+
+router.put('/edit/:id', verifyJwt({secret: getSecret}), isAdmin, updateEmployee, handleError)
+
+function updateEmployee (req, res) {
+  db.updateEmployee()
+    .then(() => {
+      res.status(201).end()
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 }
 
