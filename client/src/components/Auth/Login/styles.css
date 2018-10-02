@@ -8,8 +8,8 @@
   .loginForm .button {
     border-radius: 10%/50%;    
     width: 100%;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding-top: 6%;
+    padding-bottom: 6%;
   }
   .inputs {
     margin-bottom: 15%;
@@ -22,13 +22,13 @@
     margin-top: 3em;
   }
   .loginForm .button {
-    border-radius: 5%/50%;    
+    border-radius: 3%/50%;    
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
   }
   .login {
-    width: 25%;
+    width: 30%;
     margin: auto;
   }
   .inputs {
