@@ -12,6 +12,8 @@ export default function ToolDetail (props) {
       <Divider/>
       <Image src={props.tool.image} size='large' />
       <h3>{props.tool.description}</h3>
+      <h5>In library: {props.tool.stocked}</h5>
+      <h5>Available: {props.tool.available}</h5>
       <h4>Description:</h4>
       <ul>
         {body.split('*').map(element => <li>{element}</li>)}
