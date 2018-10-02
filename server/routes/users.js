@@ -8,6 +8,33 @@ const router = express.Router()
 
 const db = require('../db/users')
 
+// Admin routes for user maintenance
+router.get('/get-users', verifyJwt({secret: getSecret}), isAdmin, getUsers, handleError)
+
+function getUsers (req, res) {
+  db.getUsers()
+    .then(users => {
+      res.status(200).json({users})
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
+}
+
+router.put('/edit/:id', verifyJwt({secret: getSecret}), isAdmin, updateUser, handleError)
+
+function updateUser (req, res) {
+  const id = Number(req.params.id)
+  const user = req.body
+  db.updateUser(id, user)
+    .then(() => {
+      res.status(201).end()
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+}
+
 router.post('/register', register)
 
 function register (req, res) {

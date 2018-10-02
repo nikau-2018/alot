@@ -1,4 +1,4 @@
-import request from 'axios'
+import axios from 'axios'
 
 export const RECEIVE_WORKSHOPS_ERROR = 'RECEIVE_ WORKSHOPS_ERROR'
 export const REQUEST_WORKSHOPS = 'REQUEST_ WORKSHOPS'
@@ -21,7 +21,7 @@ export const receiveWorkshops = workshops => ({
 export const fetchWorkshops = () => {
   return (dispatch) => {
     dispatch(requestWorkshops())
-    return request
+    return axios
       .get('/api/v1/workshops')
       .then(res => {
         dispatch(receiveWorkshops(res.data.workshops))
