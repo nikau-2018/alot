@@ -8,13 +8,15 @@ import styles from './styles.css'
 
 const Tools = (props) => (
   <div>
-    <Search toolSearch={true} />
+
     <CategoryFilter
       type='tools'
       category={props.category}
+      className={styles.filter}
     />
+    <Search className={styles.search} toolSearch={true} />
     <div className={styles.tools}>
-      <Card.Group>
+      <Card.Group stackable>
         {props.filteredTools.map((tool) => (
           <ToolCard
             key={tool.id}

@@ -13,7 +13,6 @@
   border-radius: 0.5em !important;
 }
 
-
 .card {
   text-align: center;
   margin: 0 !important;
@@ -25,7 +24,12 @@
 }
 
 .content {
-  background-color: #FDFBF7 !important;
+  background-color: #fefefe !important;
+  text-align: center;
+}
+
+.available {
+ float: right;
 }
 
 body {

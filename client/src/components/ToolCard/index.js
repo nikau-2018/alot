@@ -14,12 +14,13 @@ export default function ToolCard (props) {
         <Card.Header className={styles.header}>{props.name}</Card.Header>
         <Image src={props.image} small verticalAlign='middle' spaced='left'/>
       </Card.Content>
-      <Card.Content extra>
-        <Card.Description className={styles.description}>{props.description}<br />
-        Available: {props.available ? <Icon name='check' /> : <Icon name='x' />}
-
+      <Card.Content extra className={styles.content}>
+        <Card.Description className={styles.description}>
+          {props.description}
         </Card.Description>
-
+        <span className={styles.available}>
+        Available: {props.available ? <Icon name='check' /> : <Icon name='x' />}
+        </span>
       </Card.Content>
     </Card>
   )
