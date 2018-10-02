@@ -35,13 +35,14 @@ export default class App extends Component {
         <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
         <Route exact path='/edit/tool/:id' component={EditTool}/>
         <Route exact path='/edit/workshop/:id' component={EditWorkshop}/>
+        <Route exact path='/edit/employee' component={EditEmployee}/>
         <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
         <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
         {/* For testing non connected components */}
-        <Route exact path='/test' component={EditEmployee}/>
+        {/* <Route exact path='/test' component={}/> */}
         <Divider />
         <Route path='/' component={Footer}/>
       </div>

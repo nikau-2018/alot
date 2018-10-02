@@ -8,7 +8,7 @@ export default function EmployeeCard (props) {
   const employee = props.employee
   return (
     <div>
-      <Card as={Link} to='/' className={styles.employeeCard}>
+      <Card as={Link} to='/edit/employee' className={styles.employeeCard}>
         <Card.Content>
           <Card.Header>
             {employee.firstName}<br />

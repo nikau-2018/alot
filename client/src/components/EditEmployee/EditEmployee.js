@@ -17,7 +17,7 @@ export default class EditEmployee extends Component {
 
   ready () {
     return (
-    this.props.employees.map(employee => <EmployeeCard key={employee.id} employee={employee}/> )
+      this.props.employees.map(employee => <EmployeeCard key={employee.id} employee={employee}/>)
     )
   }
 
