@@ -1,3 +1,20 @@
 .footer {
   text-align: center;
+  background-color:  #F9F3E2;
+  padding: 20px 0px 0px 0px;
+}
+
+h3 {
+  color: #43296C;
+}
+
+a {
+  color: #43296C;
+  font-size: 15px;
+}
+
+p {
+  padding: 0px 0px 0px 0px;
+  font-size: 15px;
+
 }
