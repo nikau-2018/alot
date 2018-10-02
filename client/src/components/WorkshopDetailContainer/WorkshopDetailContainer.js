@@ -23,7 +23,7 @@ export default class WorkshopDetailContainer extends Component {
   render () {
     return (
       <div>
-        {this.state.workshop && <WorkshopDetail workshop= {this.state.workshop} />}
+        {this.state.workshop && <WorkshopDetail workshop={this.state.workshop} isAdmin={this.props.isAdmin}/>}
       </div>
     )
   }
