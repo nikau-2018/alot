@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      selectedCategory: 'select a category',
+      selectedCategory: 'Select',
       toolId: 0,
       name: '',
       categoryId: null,
@@ -42,7 +44,7 @@ export default class ToolForm extends Component {
     const { name, description, body } = this.state
     let {selectedCategory, error, toolId, ...rest} = this.state
     return (
-      <div>
+      <div className={styles.toolForm}>
       {
       this.props.parent === 'edit'
       ? <h2>Edit this tool:</h2>

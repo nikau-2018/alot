@@ -8,7 +8,7 @@ export default class WorkshopForm extends Component {
       workshopId: 0,
       name: '',
       categoryId: null,
-      selectedCategory: 'select a category',
+      selectedCategory: 'Select',
       instructor: '',
       description: '',
       body: '',
