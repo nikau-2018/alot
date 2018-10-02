@@ -46,37 +46,32 @@ export default class RegisterForm extends React.Component {
     return (
       <div className={styles.registerForm}>
         <Form>
-          <h1> Create an Account </h1>
+          <h1>Create an Account</h1>
           <Form.Field>
-            <label>First Name</label>
             <input name='firstName'
             placeholder='First Name'
             value = {firstName}
             onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
-            <label>Last Name</label>
             <input name='lastName'
             placeholder='Last Name'
             value = {lastName}
             onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
-            <label>Email</label>
             <input name='email'
             placeholder='Email'
             value = {email}
             onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
-            <label>Phone Number</label>
             <input name='phone'
             placeholder='Phone Number'
             value={phone}
             onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
-            <label>Password</label>
             <input name='password'
             type='password'
             placeholder='Password'
@@ -84,7 +79,6 @@ export default class RegisterForm extends React.Component {
             onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
-            <label>Confirm Password</label>
             <input name='confirm'
             type='password'
             placeholder='Password'
