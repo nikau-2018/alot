@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom'
 
 import ToolForm from '../ToolForm'
 
+import styles from './styles.css'
+
 export default class EditTool extends Component {
   constructor (props) {
     super(props)
@@ -43,6 +45,7 @@ export default class EditTool extends Component {
       return category.id === selectedTool.categoryId})
     return (
       <ToolForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
       editing={selectedTool}

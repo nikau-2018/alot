@@ -7,22 +7,24 @@ import ToolCard from '../ToolCard'
 import styles from './styles.css'
 
 const Tools = (props) => (
-  <div className='tools'>
-    <Search />
+  <div>
+    <Search toolSearch={true} />
     <CategoryFilter
       type='tools'
       category={props.category}
     />
-    {props.filteredTools.map((tool) => (
-      <ToolCard
-        key={tool.id}
-        id={tool.id}
-        name={tool.name}
-        image={tool.image}
-        description={tool.description}
-        category={tool.categoryId}
-      />
-    ))}
+    <div className={styles.tools}>
+      {props.filteredTools.map((tool) => (
+        <ToolCard
+          key={tool.id}
+          id={tool.id}
+          name={tool.name}
+          image={tool.image}
+          description={tool.description}
+          category={tool.categoryId}
+        />
+      ))}
+    </div>
   </div>
 )
 

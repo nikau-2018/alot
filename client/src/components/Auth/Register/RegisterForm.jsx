@@ -5,6 +5,8 @@ import {pick, clone} from 'lodash'
 
 import ErrorMessage from '../ErrorMessage'
 
+import styles from './styles.css'
+
 export default class RegisterForm extends React.Component {
   constructor (props) {
     super(props)
@@ -42,10 +44,8 @@ export default class RegisterForm extends React.Component {
   render () {
     const {firstName, lastName, email, phone, password, confirm} = this.state
     return (
-      <div>
-              
+      <div className={styles.registerForm}>
         <Form>
-        <div className='register'>
           <h1> Create an Account </h1>
           <Form.Field>
             <label>First Name</label>
@@ -94,7 +94,6 @@ export default class RegisterForm extends React.Component {
           <ErrorMessage reducer='auth' />
           <Button onClick={this.handleClick}>Submit</Button><br /><br />
           <Button onClick={this.handleSwitch}>Already have an account?</Button>
-        </div>
       </Form>
       </div>
     )

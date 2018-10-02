@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Route} from 'react-router-dom'
 import {Divider} from 'semantic-ui-react'
 
-import './styles.css'
+import styles from './styles.css'
 
 // components for testing, remove later
 import Nav from '../Nav'
@@ -25,7 +25,7 @@ import Admin from '../Admin'
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className={styles.app}>
         <Nav />
         <Route exact path='/' component={WelcomeContainer}/>
         <Route path='/login' component={Auth}/>

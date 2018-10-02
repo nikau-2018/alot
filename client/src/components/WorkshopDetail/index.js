@@ -9,10 +9,11 @@ export default function WorkshopDetail (props) {
   const description = props.workshop.description || ''
   const isAdmin = props.isAdmin
   return (
-    <div>
+    <div className={styles.workshopDetail}>
       <h1>{props.workshop.name}</h1>
       <Divider/>
-      <Image src={props.workshop.image} size='large'/>
+      <Image src={props.workshop.image} size='large' centered />
+      <Divider/>
       <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>

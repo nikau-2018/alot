@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import styles from './styles.css'
 
 const ConfirmationWorkshop = (props) => (
-  <div className='confirmation'>
+  <div className={styles.confirmationWorkshop}>
     <h1>Confirm Your Workshop Booking</h1>
     <Divider/>
     <Image src={props.selectedWorkshop.image}
