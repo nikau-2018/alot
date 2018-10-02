@@ -7,6 +7,7 @@ import styles from './styles.css'
 
 export default function WorkshopDetail (props) {
   const description = props.workshop.description || ''
+  const isAdmin = props.isAdmin
   return (
     <div>
       <h1>{props.workshop.name}</h1>
@@ -21,7 +22,7 @@ export default function WorkshopDetail (props) {
       <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
       <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
       <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} basic>Similar Workshops</Button>
-      {props.isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
+      {isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
     </div>
   )
 }
