@@ -1,7 +1,7 @@
 import {SEARCH_TOOL} from './actions'
 import {SEARCH_WORKSHOP} from './actions'
 
-export default function (state = '', action) {
+export function searchToolReducer (state = '', action) {
   switch (action.type) {
     case SEARCH_TOOL:
       return action.searchTool
@@ -10,7 +10,7 @@ export default function (state = '', action) {
   }
 }
 
-export default function (state = '', action) {
+export function searchWorkshopReducer (state = '', action) {
   switch (action.type) {
     case SEARCH_WORKSHOP:
       return action.searchWorkshop
