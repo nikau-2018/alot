@@ -1,3 +1,4 @@
+/* FOR MOBILE */
 @media only screen and (max-width: 600px) {
   .loginForm {
     margin-top: 10%;
@@ -15,6 +16,7 @@
   }
 }
 
+/* FOR DESKTOP */
 @media not screen and (max-width: 600px) {
   .loginForm .button {
     padding-left: 12em;
@@ -22,10 +24,13 @@
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  .inputs {
+  .login {
     width: 25%;
     margin: auto;
-    margin-bottom: 3%;    
+  }
+  .inputs {
+    width: 100%;
+    margin-bottom: 3%;
   }
 }
 
@@ -50,12 +55,10 @@
   font-weight: bold;
 }
 
-
-
-.switch {
-  background-color: transparent !important;
-  padding: 0px !important;
-  color: black !important;
+.loginForm .switch {
+  background-color: transparent;
+  padding: 0px;
+  color: black;
 }
 
 .p {
