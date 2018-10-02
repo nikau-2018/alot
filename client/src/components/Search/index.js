@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 
-import {searchTool} from './actions'
+import {searchTool, searchWorkshop} from './actions'
 
 import Search from './Search'
 
@@ -13,7 +13,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  searchString: (e) => dispatch(searchTool(e.currentTarget.value))
+  searchStringTool: (e) => dispatch(searchTool(e.currentTarget.value)),
+  searchStringWorkshop: (e) => dispatch(searchWorkshop(e.currentTarget.value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)
