@@ -2,6 +2,9 @@
   text-align: center;
 }
 
-.auth .button {
+.back {
   margin: 1%;
+  background-color: transparent !important;
+  padding: 0px !important;
+  color: black !important;
 }
