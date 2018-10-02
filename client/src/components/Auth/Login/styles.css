@@ -6,6 +6,7 @@
     margin-right: 8%;  
   }
   .loginForm .button {
+    border-radius: 10%/50%;    
     width: 100%;
     padding-top: 7%;
     padding-bottom: 7%;
@@ -18,9 +19,10 @@
 /* FOR DESKTOP */
 @media only screen and (min-width: 700px) {
   .loginForm {
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .loginForm .button {
+    border-radius: 5%/50%;    
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
@@ -41,7 +43,6 @@
 }
 
 .loginForm .button {
-  border-radius: 10%/50%;
   background-color: black;
   color: white;
 }
