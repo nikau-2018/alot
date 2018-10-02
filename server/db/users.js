@@ -37,4 +37,5 @@ function getUser (email, db = connection) {
 function getEmployees (db = connection) {
   return db('users')
     .where('role', 1)
+    .select('id', 'email', 'firstName', 'lastName', 'phone', 'role', 'createdAt', 'updatedAt')
 }
