@@ -23,7 +23,7 @@ export default class ToolDetailContainer extends Component {
   render () {
     return (
       <div>
-        {this.state.tool && <ToolDetail tool={this.state.tool} />}
+        {this.state.tool && <ToolDetail tool={this.state.tool} isAdmin={this.props.isAdmin}/>}
       </div>
     )
   }
