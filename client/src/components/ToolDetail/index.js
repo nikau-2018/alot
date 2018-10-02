@@ -23,7 +23,7 @@ export default function ToolDetail (props) {
         </ul>
       </div>
       {
-        props.available
+        props.tool.available
           ? <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Reserve</Button>
           : <Button basic color='red'>Not available</Button>
       }
