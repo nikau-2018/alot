@@ -1,4 +1,4 @@
-import request from 'axios'
+import axios from 'axios'
 
 export const REQUEST_USERS = 'REQUEST_USERS'
 export const RECEIVE_USERS = 'RECEIVE_USERS'
@@ -22,5 +22,12 @@ export const fetchUsers = ()  => {
   return (dispatch) => {
     dispatch(requestUsers())
     axios
+      .get('')
+      .then(res => {
+        dispatch(receiveUsers(res.data.users))
+      })
+      .catch(err => {
+        dispatch(showError(err.message))
+      })
   }
 }
