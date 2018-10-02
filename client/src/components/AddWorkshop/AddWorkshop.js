@@ -28,7 +28,7 @@ export default class AddWorkshop extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
       .post('/api/v1/workshops/add', formObj)
-      // redirect back to admin page here? .then() 
+      .then(this.props.history.goBack())
       .catch(() => {
         this.toggleError()
       })
