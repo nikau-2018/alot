@@ -6,6 +6,7 @@ import People from '../People'
 import About from '../About'
 import Member from '../Member'
 import Banner from '../Banner'
+import Map from '../Map'
 
 import styles from './styles.css'
 
@@ -19,6 +20,7 @@ export default function Welcome () {
       <About />
       <Member />
       <People />
+      <Map />
     </div>
   )
 }
