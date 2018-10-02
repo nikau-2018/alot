@@ -38,6 +38,7 @@ export default class AddTool extends Component {
     if (this.props.ready && !this.state.postErr) {
     return (
       <ToolForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}/>
     )
