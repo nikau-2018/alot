@@ -7,10 +7,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.alisa{
-  background: red;
+  height: 300px;
 }
 
 .p {
@@ -18,8 +15,9 @@
   padding: 10px;
   
 }
+
 .h1 {
-  font-size: 30px;
+  font-size: 35px;
   padding: 10px;
 }
 

@@ -1,0 +1,18 @@
+.about {
+    text-align: center;
+  }
+
+  .h1 {
+    font-size: 35px;
+  }
+
+  .p {
+    font-size: 20px;
+  }
+
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+  }
