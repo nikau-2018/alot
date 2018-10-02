@@ -6,7 +6,8 @@ import EditEmployee from './EditEmployee'
 
 const mapStateToProps = (state) => {
   return {
-    employees: state.employees.users
+    employees: state.employees.users,
+    ready: state.employees.ready
   }
 }
 
