@@ -1,13 +1,26 @@
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .loginForm .button {
-    border-radius: 10%/50%;
     padding-left: 40%;
     padding-right: 40%;
     padding-top: 7%;
     padding-bottom: 7%;
-    background-color: black;
   }
-} */
+}
+
+@media not screen and (max-width: 600px) {
+  .loginForm .button {
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+.loginForm .button {
+  border-radius: 10%/50%;
+  background-color: black;
+  color: white;
+}
 
 .loginForm {
   text-align: center;
@@ -16,28 +29,30 @@
   margin-right: 8%;  
 }
 
-.loginForm .inputs .input {
-  border-bottom: .1em solid black;
+.input {
+  border-bottom: .15em solid black;
+  padding-bottom: .5em;
+  padding-left: .6em;
 }
 
-/* input::placeholder {
-  color: black !important;
+.loginForm .inputs input::placeholder {
+  color: black;
   font-weight: bold;
-} */
+}
 
 .inputs {
-  margin-bottom: 15% !important;
+  margin-bottom: 15%;
 }
 
-.loginForm .button {
+/* .loginForm .button {
   border-radius: 10%/50%;
-  padding-left: 40%;
-  padding-right: 40%;
-  padding-top: 7%;
-  padding-bottom: 7%;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   background-color: black;
   color: white;
-}
+} */
 
 .switch {
   background-color: transparent !important;

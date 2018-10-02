@@ -48,7 +48,7 @@ export default class RegisterForm extends React.Component {
         <Form>
           <h1>SIGN UP</h1>
           <div className={styles.inputs}>
-            <Form.Input 
+            <Form.Input transparent
               name='firstName'
               placeholder='First Name'
               value={firstName}            
@@ -57,7 +57,7 @@ export default class RegisterForm extends React.Component {
               icon='user'
               iconPosition='left'
             />
-            <Form.Input 
+            <Form.Input transparent
               name='lastName'
               placeholder='Last Name'
               value={lastName}            
@@ -66,7 +66,7 @@ export default class RegisterForm extends React.Component {
               icon='user'
               iconPosition='left'
             />
-            <Form.Input 
+            <Form.Input transparent
               name='email'
               placeholder='Email'
               value={email}
@@ -75,7 +75,7 @@ export default class RegisterForm extends React.Component {
               icon='mail'
               iconPosition='left'
             />
-            <Form.Input 
+            <Form.Input transparent 
               name='phone'
               placeholder='Phone Number'
               value={phone}
@@ -84,7 +84,7 @@ export default class RegisterForm extends React.Component {
               icon='phone'
               iconPosition='left'
             />
-            <Form.Input 
+            <Form.Input transparent
               name='password'
               type='password'
               placeholder='Password'
@@ -94,7 +94,7 @@ export default class RegisterForm extends React.Component {
               icon='lock'
               iconPosition='left'
             />
-            <Form.Input 
+            <Form.Input transparent
               name='confirm'
               type='password'
               placeholder='Confirm Passsword'

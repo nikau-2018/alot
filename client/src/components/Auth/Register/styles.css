@@ -1,4 +1,13 @@
-
+/* @media only screen and (max-width: 600px) {
+  .registerForm .button {
+    border-radius: 10%/50%;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background-color: black;
+  }
+} */
 
 .registerForm {
   text-align: center;
@@ -7,20 +16,19 @@
   margin-right: 8%;  
 }
 
-/* input {
-  border: none !important;
-  border-bottom: 1px solid black !important;
-  border-radius: 0px !important;
-  background-color: transparent !important;
-} */
+.input {
+  border-bottom: .15em solid black;
+  padding-bottom: .5em;
+  padding-left: .6em;
+}
 
-/* input::placeholder {
-  color: black !important;
+.registerForm .inputs input::placeholder {
+  color: black;
   font-weight: bold;
-} */
+}
 
 .inputs {
-  margin-bottom: 15% !important;
+  margin-bottom: 15%;
 }
 
 .registerForm .button {
