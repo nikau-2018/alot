@@ -37,6 +37,7 @@ export default class App extends Component {
         <Route exact path='/edit/workshop/:id' component={EditWorkshop}/>
         <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
         <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
+        <Route exact path='/admin/edit-employee/:id' component={EmployeeForm} />
         <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
