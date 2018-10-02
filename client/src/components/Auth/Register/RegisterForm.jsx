@@ -47,65 +47,69 @@ export default class RegisterForm extends React.Component {
       <div className={styles.registerForm}>
         <Form>
           <h1>SIGN UP</h1>
-          <Form.Input 
-            name='firstName'
-            placeholder='First Name'
-            value={firstName}            
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='user'
-            iconPosition='left'
-          />
-          <Form.Input 
-            name='lastName'
-            placeholder='Last Name'
-            value={lastName}            
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='user'
-            iconPosition='left'
-          />
-          <Form.Input 
-            name='email'
-            placeholder='Email'
-            value={email}
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='mail'
-            iconPosition='left'
-          />
-          <Form.Input 
-            name='phone'
-            placeholder='Phone Number'
-            value={phone}
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='phone'
-            iconPosition='left'
-          />
-          <Form.Input 
-            name='password'
-            type='password'
-            placeholder='********'
-            value={password}            
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='lock'
-            iconPosition='left'
-          />
-          <Form.Input 
-            name='confirm'
-            type='password'
-            placeholder='********'
-            value={confirm}            
-            onChange={this.handleChange}
-            className={styles.input}
-            icon='lock'
-            iconPosition='left'
-          />
+          <div className={styles.inputs}>
+            <Form.Input 
+              name='firstName'
+              placeholder='First Name'
+              value={firstName}            
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='user'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='lastName'
+              placeholder='Last Name'
+              value={lastName}            
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='user'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='email'
+              placeholder='Email'
+              value={email}
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='mail'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='phone'
+              placeholder='Phone Number'
+              value={phone}
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='phone'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='password'
+              type='password'
+              placeholder='********'
+              value={password}            
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='lock'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='confirm'
+              type='password'
+              placeholder='********'
+              value={confirm}            
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='lock'
+              iconPosition='left'
+            />
+          </div>
           <ErrorMessage reducer='auth' />
-          <Button onClick={this.handleClick}>Submit</Button><br /><br />
-          <Button onClick={this.handleSwitch}>Already have an account?</Button>
+          <Button onClick={this.handleClick}>SIGN UP</Button><br /><br />
+          <div className={styles.p}>
+            Already have an account? <Button onClick={this.handleSwitch} className={styles.switch}>Login</Button>
+          </div>
       </Form>
       </div>
     )

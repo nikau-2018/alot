@@ -4,3 +4,38 @@
   margin-left: 8%;
   margin-right: 8%;  
 }
+
+input {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0px !important;
+}
+
+input::placeholder {
+  color: black !important;
+  font-weight: bold;
+}
+
+.inputs {
+  margin-bottom: 15% !important;
+}
+
+button {
+  border-radius: 10%/50% !important;
+  padding-left: 40% !important;
+  padding-right: 40% !important;
+  padding-top: 7% !important;
+  padding-bottom: 7% !important;
+  background-color: black !important;
+  color: white !important;
+}
+
+.switch {
+  background-color: transparent !important;
+  padding: 0px !important;
+  color: black !important;
+}
+
+.p {
+  color: black;
+}

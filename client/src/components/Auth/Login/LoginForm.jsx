@@ -63,7 +63,7 @@ export default class LoginForm extends React.Component {
             <Button onClick={this.handleClick}>SIGN IN</Button><br />
             <ErrorMessage reducer='auth' />
             <div className={styles.p}>
-              Don't have an account? <Button onClick={this.handleSwitch} className={styles.signUp}>Sign Up</Button>
+              Don't have an account? <Button onClick={this.handleSwitch} className={styles.switch}>Sign Up</Button>
             </div>
         </Form>
       </div>      
