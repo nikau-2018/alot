@@ -8,7 +8,7 @@ import auth from './components/Auth/reducer'
 import workshops from './components/WorkshopsContainer/reducer'
 import orders from './components/Orders/reducer'
 import {searchTool, searchWorkshop} from './components/Search/reducer'
-import employees from './components/EditEmployee/reducer'
+import users from './components/EditEmployee/reducer'
 
 export default combineReducers({
   categories,
@@ -18,5 +18,5 @@ export default combineReducers({
   orders,
   searchTool,
   searchWorkshop,
-  employees
+  users
 })

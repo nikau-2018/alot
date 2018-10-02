@@ -8,11 +8,11 @@ const router = express.Router()
 
 const db = require('../db/users')
 
-// Admin routes for employee maintenance
-router.get('/get-employees', verifyJwt({secret: getSecret}), isAdmin, getEmployees, handleError)
+// Admin routes for user maintenance
+router.get('/get-users', verifyJwt({secret: getSecret}), isAdmin, getUsers, handleError)
 
-function getEmployees (req, res) {
-  db.getEmployees()
+function getUsers (req, res) {
+  db.getUsers()
     .then(users => {
       res.status(200).json({users})
     })
@@ -21,12 +21,12 @@ function getEmployees (req, res) {
     })
 }
 
-router.put('/edit/:id', verifyJwt({secret: getSecret}), isAdmin, updateEmployee, handleError)
+router.put('/edit/:id', verifyJwt({secret: getSecret}), isAdmin, updateUser, handleError)
 
-function updateEmployee (req, res) {
+function updateUser (req, res) {
   const id = Number(req.params.id)
-  const employee = req.body
-  db.updateEmployee(id, employee)
+  const user = req.body
+  db.updateUser(id, user)
     .then(() => {
       res.status(201).end()
     })
