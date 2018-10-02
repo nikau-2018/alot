@@ -18,7 +18,7 @@ export default class WorkshopsContainer extends Component {
           return Number(category) === workshop.categoryId
         })
       return (
-        <div className='workshops-container'>
+        <div>
           <Workshops
             filteredWorkshops={filteredWorkshops}
             category={category}

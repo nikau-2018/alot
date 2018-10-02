@@ -2,8 +2,6 @@ import {connect} from 'react-redux'
 
 import ConfirmationContainer from './ConfirmationContainer'
 
-import styles from './styles.css'
-
 const mapStateToProps = (state) => {
   return {
     tools: state.tools.tools,

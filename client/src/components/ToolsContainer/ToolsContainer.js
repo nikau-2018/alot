@@ -19,7 +19,7 @@ export default class ToolsContainer extends Component {
         })
 
       return (
-        <div className='tools-container'>
+        <div>
           <Tools
             filteredTools={filteredTools}
             category={category}

@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class WorkshopForm extends Component {
   constructor (props) {
     super(props)
@@ -8,7 +10,7 @@ export default class WorkshopForm extends Component {
       workshopId: 0,
       name: '',
       categoryId: null,
-      selectedCategory: 'select a category',
+      selectedCategory: 'Select',
       instructor: '',
       description: '',
       body: '',
@@ -43,7 +45,7 @@ export default class WorkshopForm extends Component {
     const { name, description, body, instructor } = this.state
     let {selectedCategory, error, workshopId, ...rest} = this.state
     return (
-      <div>
+      <div className={styles.workshopForm}>
       {
       this.props.parent === 'edit'
       ? <h2>Edit this workshop:</h2>
@@ -51,7 +53,7 @@ export default class WorkshopForm extends Component {
       }
       <Form>
         <Form.Field required>
-          <label>Name:</label>
+          <label>Name</label>
           <input
             name='name'
             placeholder='Workshop Name'
@@ -60,8 +62,8 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Category:</label>
-          <Dropdown className='categories' text={this.state.selectedCategory}>
+          <label>Category</label>
+          <Dropdown text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item
@@ -78,7 +80,7 @@ export default class WorkshopForm extends Component {
           </Dropdown>
         </Form.Field>
         <Form.Field required>
-          <label>Instructor:</label>
+          <label>Instructor</label>
           <input
             name='instructor'
             placeholder='Instructor Name'
@@ -87,7 +89,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Description:</label>
+          <label>Description</label>
           <input
             name='description'
             placeholder='Workshop Description'
@@ -96,7 +98,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Details:</label>
+          <label>Details</label>
           <input
             name='body'
             placeholder='Workshop Details'

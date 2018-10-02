@@ -3,6 +3,8 @@ import {Button, Form} from 'semantic-ui-react'
 
 import ErrorMessage from '../ErrorMessage'
 
+import styles from './styles.css'
+
 export default class LoginForm extends React.Component {
   constructor (props) {
     super(props)
@@ -35,27 +37,27 @@ export default class LoginForm extends React.Component {
 
   render () {
     return (
-      <Form>
-        <div className='login'>
-          <h1> Login </h1>
-          <Form.Field>
-            <label>Email</label>
-            <input name='email'
-              placeholder='Email'
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Password</label>
-            <input name='password'
-              type='password'
-              placeholder='Password'
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Button onClick={this.handleClick}>Submit</Button>
-          <ErrorMessage reducer='auth' />
-          <Button onClick={this.handleSwitch}>Need an account?</Button>
-        </div>
-      </Form>
+      <div className={styles.loginForm}>
+        <Form>
+            <h1>Login</h1>
+            <Form.Field>
+              <label>Email</label>
+              <input name='email'
+                placeholder='Email'
+                onChange={this.handleChange} />
+            </Form.Field>
+            <Form.Field>
+              <label>Password</label>
+              <input name='password'
+                type='password'
+                placeholder='Password'
+                onChange={this.handleChange} />
+            </Form.Field>
+            <Button onClick={this.handleClick}>Submit</Button>
+            <ErrorMessage reducer='auth' />
+            <Button onClick={this.handleSwitch}>Need an account?</Button>
+        </Form>
+      </div>      
     )
   }
 }
