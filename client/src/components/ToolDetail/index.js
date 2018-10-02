@@ -15,9 +15,11 @@ export default function ToolDetail (props) {
       <Divider/>
       <h3>{props.tool.description}</h3>
       <h4>Description:</h4>
-      <ul>
-        {body.split('*').map(element => <li>{element}</li>)}
-      </ul>
+      <div className={styles.description}>
+        <ul>
+          {body.split('*').map(element => <li>{element}</li>)}
+        </ul>
+      </div>
       <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Rent</Button>
       <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
       {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
