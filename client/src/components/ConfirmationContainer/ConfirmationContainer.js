@@ -35,3 +35,16 @@ export default class ConfirmationContainer extends Component {
     )
   }
 }
+
+ConfirmationContainer.defaultProps = {
+  workshops: [{
+    id: 88801,
+    categoryId: 77701,
+    name: 'Basic Sewing Workshop',
+    description: '1-2 hours, great for beginners',
+    body: 'In this workshop you will learn how to use a sewing machine and the stitching basics',
+    image: '/placeholder-image.jpeg',
+    instructor: 'Mary Valentine',
+    dateTime: null
+  }]
+}
