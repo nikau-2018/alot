@@ -10,6 +10,7 @@ export default class EmployeeForm extends Component {
       employeeId: 0,
       firstName: '',
       lastName: '',
+      email: '',
       phone: '',
       role: 1
     }
@@ -22,7 +23,8 @@ export default class EmployeeForm extends Component {
   }
 
   componentDidMount() {
-      let {id, email, firstName, lastName, phone, role} = this.props.employee
+    const employee = this.state.employees.users.find((employee) => this.props.params.id === employee.id)
+      let {id, email, firstName, lastName, phone, role} = employee
       this.setState({
         employeeId: id,
         firstName: firstName,
