@@ -8,7 +8,8 @@ import styles from './styles.css'
 
 const mapStateToProps = (state) => {
   return {
-    workshops: state.workshops.workshops
+    workshops: state.workshops.workshops,
+    isAdmin: state.auth.isAdmin
   }
 }
 

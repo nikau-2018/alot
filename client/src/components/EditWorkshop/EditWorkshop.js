@@ -29,7 +29,7 @@ export default class EditWorkshop extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
       .put(`/api/v1/workshops/edit/${workshopId}`, formObj)
-      // redirect back to admin page here? .then()
+      .then(this.props.history.goBack())
       .catch(() => {
         this.toggleError() // need to do proper error handling here eventually
       })
