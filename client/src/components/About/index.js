@@ -10,7 +10,7 @@ export default function About () {
         <Grid.Column>
           <Segment basic>
             <h4>Amanada Chapman</h4>
-            <p>info</p>
+            <p>Info</p>
             <Image src={`http://www.placepuppy.net/400/250`} />
           </Segment>
         </Grid.Column>
@@ -18,7 +18,7 @@ export default function About () {
         <Grid.Column>
           <Segment basic>
             <h4>Tom Greer</h4>
-            <p>info</p>
+            <p>Info</p>
             <Image src={`http://www.placepuppy.net/400/250`} />
           </Segment>
         </Grid.Column>
