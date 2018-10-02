@@ -6,7 +6,7 @@ exports.up = knex =>
     t.string('description')
     t.string('body')
     t.string('image')
-    t.boolean('active')
+    t.integer('stocked')
     t.timestamps(false, true)
   })
 

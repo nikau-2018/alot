@@ -135,6 +135,28 @@ module.exports = {
               compact: true
             }
           },
+          {
+            test: /\.css$/,
+            exclude: [/src/],
+            loader: ExtractTextPlugin.extract(
+              Object.assign({
+                fallback: {
+                  loader: require.resolve('style-loader'),
+                  options: {
+                    hmr: false
+                  }
+                },
+                use: [{
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    importLoaders: 1,
+                    minimize: true,
+                    sourceMap: shouldUseSourceMap
+                  }
+                }]
+              })
+            )
+          },
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -149,6 +171,7 @@ module.exports = {
           // in the main CSS file.
           {
             test: /\.css$/,
+            exclude: [/node_modules/],
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
