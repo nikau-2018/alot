@@ -8,10 +8,10 @@ const router = express.Router()
 
 const db = require('../db/users')
 
-router.get('/getusers', verifyJwt({secret: getSecret}), isAdmin, getUsers, handleError)
+router.get('/getEmployees', verifyJwt({secret: getSecret}), isAdmin, getEmployees, handleError)
 
-function getUsers (req, res) {
-  db.getUsers()
+function getEmployees (req, res) {
+  db.getEmployees()
     .then(users => {
       res.status(200).json({users})
     })

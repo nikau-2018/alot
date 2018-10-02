@@ -5,7 +5,7 @@ module.exports = {
   createUser,
   getUser,
   userExists,
-  getUsers
+  getEmployees
 }
 
 function createUser (user, password, db = connection) {
@@ -34,7 +34,7 @@ function getUser (email, db = connection) {
     .first()
 }
 
-function getUsers (db = connection) {
+function getEmployees (db = connection) {
   return db('users')
-    .select()
+    .where('role', 1)
 }
