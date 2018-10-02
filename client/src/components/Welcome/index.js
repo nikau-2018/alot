@@ -14,15 +14,6 @@ export default function Welcome () {
       <div className={styles.padding}>
         <Image src={garageBanner} fluid />
       </div>
-      <h1>Welcome to the Auckland Library of Tools!</h1>
-      <h2>Coming soon...</h2>
-      <p>
-        The Auckland Library of tools will provide members with access to high quality and well maintained tools and equipment.
-      </p>
-      <p>
-        The hub will consist of a well stocked “library”, a storage and repair space, and a makerspace where members can attend workshops, learn, collaborate, meet, as well as share resources and ideas.
-      </p>
-      <Divider />
       <About />
       <Member />
       <People />

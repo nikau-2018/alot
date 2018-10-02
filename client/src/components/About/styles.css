@@ -12,7 +12,11 @@
   }
 
   .image {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .text {
+    justify-content: center;
   }

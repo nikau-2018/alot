@@ -8,7 +8,7 @@ export default function People () {
   return (
     <div className={styles.people}>
     <h1 className={styles.h1}>Meet the Team</h1>
-      <Grid columns={2} divided>
+      <Grid stackable columns={2} divided>
       <Grid.Row>
         <Grid.Column>
             <h2 className={styles.h2}>Amanda Chapman</h2>
