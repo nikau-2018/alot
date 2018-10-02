@@ -4,7 +4,7 @@
   padding: 20px 0px 0px 0px;
 }
 
-h3 {
+.h3 {
   color: #43296C;
 }
 
@@ -13,8 +13,8 @@ a {
   font-size: 15px;
 }
 
-p {
+.p {
   padding: 0px 0px 0px 0px;
   font-size: 15px;
-
+  color: #43296C;
 }
