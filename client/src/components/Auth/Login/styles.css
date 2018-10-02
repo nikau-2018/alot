@@ -17,10 +17,11 @@
 }
 
 /* FOR DESKTOP */
-@media not screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
+  .loginForm {
+    margin-top: 5em;
+  }
   .loginForm .button {
-    padding-left: 10em;
-    padding-right: 10em;
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
