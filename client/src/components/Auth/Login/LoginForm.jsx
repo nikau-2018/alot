@@ -40,19 +40,23 @@ export default class LoginForm extends React.Component {
       <div className={styles.loginForm}>
         <Form>
             <h1>Login</h1>
-            <Form.Field>
-              <label>Email</label>
-              <input name='email'
-                placeholder='Email'
-                onChange={this.handleChange} />
-            </Form.Field>
-            <Form.Field>
-              <label>Password</label>
-              <input name='password'
-                type='password'
-                placeholder='Password'
-                onChange={this.handleChange} />
-            </Form.Field>
+            <Form.Input 
+              name='email'
+              placeholder='Email'
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='mail'
+              iconPosition='left'
+            />
+            <Form.Input 
+              name='password'
+              type='password'
+              placeholder='********'
+              onChange={this.handleChange}
+              className={styles.input}
+              icon='lock'
+              iconPosition='left'
+            />
             <Button onClick={this.handleClick}>Submit</Button>
             <ErrorMessage reducer='auth' />
             <Button onClick={this.handleSwitch}>Need an account?</Button>

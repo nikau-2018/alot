@@ -3,3 +3,14 @@
   margin-left: 10%;
   margin-right: 10%;  
 }
+
+input {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0px !important;
+}
+
+input::placeholder {
+  color: black !important;
+  font-weight: bold;
+}
