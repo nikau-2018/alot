@@ -43,7 +43,6 @@ export default class App extends Component {
         <Route exact path='/protectedtest' component={AdminTest}/>
         {/* For testing non connected components */}
         {/* <Route exact path='/test' component={}/> */}
-        <Divider />
         <Route path='/' component={Footer}/>
       </div>
     )
