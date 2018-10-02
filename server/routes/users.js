@@ -24,7 +24,9 @@ function getEmployees (req, res) {
 router.put('/edit/:id', verifyJwt({secret: getSecret}), isAdmin, updateEmployee, handleError)
 
 function updateEmployee (req, res) {
-  db.updateEmployee()
+  const id = Number(req.params.id)
+  const employee = req.body
+  db.updateEmployee(id, employee)
     .then(() => {
       res.status(201).end()
     })

@@ -20,7 +20,7 @@ export default class EditEmployee extends Component {
     return (
       this.props.employees.map(employee => {
         return (
-          <div className={styles.editEmployee}>
+          <div key={employee.id} className={styles.editEmployee}>
             <h2>Employees</h2>
             <Card.Group>
               <EmployeeCard key={employee.id} employee={employee}/>

@@ -59,6 +59,7 @@ export default class EmployeeForm extends Component {
 
   render () {this.state.postErr ? this.showError() : this.showForm()}
 
+  // shows by default
   showForm () {
     const { firstName, lastName, email, phone, } = this.state
     let {postErr, employeeId, ...rest} = this.state
@@ -109,6 +110,7 @@ export default class EmployeeForm extends Component {
     )
   }
 
+  // shows on form submit error
   showError () {
     return (
       <div>
