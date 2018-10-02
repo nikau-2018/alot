@@ -1,15 +1,18 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class ToolForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      selectedCategory: 'select a category',
+      selectedCategory: 'Select',
       toolId: 0,
       name: '',
       categoryId: null,
       description: '',
+      body: '',
       image: 'https://www.fillmurray.com/200/300',
       active: true
     }
@@ -23,7 +26,7 @@ export default class ToolForm extends Component {
 
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      let {name, categoryId, id, description, image, active} = this.props.editing
+      let {name, categoryId, id, description, image, active, body} = this.props.editing
       this.setState({
         selectedCategory: this.props.categoryName,
         name: name,
@@ -31,16 +34,17 @@ export default class ToolForm extends Component {
         categoryId: categoryId,
         description: description,
         image: image,
-        active: active
+        active: active,
+        body: body
       })
     }
   }
 
   render () {
-    const { name, description } = this.state
+    const { name, description, body } = this.state
     let {selectedCategory, error, toolId, ...rest} = this.state
     return (
-      <div>
+      <div className={styles.toolForm}>
       {
       this.props.parent === 'edit'
       ? <h2>Edit this tool:</h2>
@@ -48,7 +52,7 @@ export default class ToolForm extends Component {
       }
       <Form>
         <Form.Field required>
-          <label>Name:</label>
+          <label>Name</label>
           <input
             name='name'
             placeholder='Tool Name'
@@ -57,8 +61,8 @@ export default class ToolForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Category:</label>
-          <Dropdown className='categories' text={this.state.selectedCategory}>
+          <label>Category</label>
+          <Dropdown text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item
@@ -75,7 +79,7 @@ export default class ToolForm extends Component {
           </Dropdown>
         </Form.Field>
         <Form.Field required>
-          <label>Description:</label>
+          <label>Description</label>
           <input
             name='description'
             placeholder='Tool Description'
@@ -83,7 +87,17 @@ export default class ToolForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
+        <Form.Field required>
+          <label>Details</label>
+          <input
+            name='body'
+            placeholder='Tool Details'
+            value={body}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
         <Button onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
+        <Button onClick={() => this.props.goBack()}>Go Back</Button>
       </Form>
       </div>
     )

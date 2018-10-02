@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom'
 
 import ToolForm from '../ToolForm'
 
+import styles from './styles.css'
+
 export default class EditTool extends Component {
   constructor (props) {
     super(props)
@@ -29,7 +31,7 @@ export default class EditTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
       .put(`/api/v1/tools/edit/${toolId}`, formObj)
-      // redirect back to admin page here? .then()
+      .then(this.props.history.goBack())
       .catch(() => {
         this.toggleError() // need to do proper error handling here eventually
       })
@@ -43,6 +45,7 @@ export default class EditTool extends Component {
       return category.id === selectedTool.categoryId})
     return (
       <ToolForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
       editing={selectedTool}

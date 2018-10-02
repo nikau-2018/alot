@@ -1,24 +1,19 @@
 import {connect} from 'react-redux'
 
 import {fetchWorkshops} from './actions'
-import {fetchCategories} from '../CategoryFilter/actions'
 
 import WorkshopsContainer from './WorkshopsContainer'
-
-import styles from './styles.css'
 
 const mapStateToProps = (state) => {
   return {
     workshops: state.workshops.workshops,
-    ready: state.workshops.workshops.length > 0 && state.categories.categories.length > 0,
-    categories: state.categories.categories,
-    search: state.search
+    searchWorkshop: state.searchWorkshop,
+    ready: state.workshops.ready
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchWorkshops: () => dispatch(fetchWorkshops()),
-  fetchCategories: () => dispatch(fetchCategories())
+  fetchWorkshops: () => dispatch(fetchWorkshops())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(WorkshopsContainer)

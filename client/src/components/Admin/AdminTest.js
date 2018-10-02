@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import styles from './styles.css'
+
 export default class AdminTest extends React.Component {
   constructor (props) {
     super(props)
@@ -27,7 +29,7 @@ export default class AdminTest extends React.Component {
 
   render () {
     return (
-      <div className='admin-test'>
+      <div className={styles.adminTest}>
         {this.state.admin ? <p>Is admin</p> : <p>Not admin</p> }
         {this.state.logged ? <p>Is logged in</p> : <p>Not logged in</p> }
 

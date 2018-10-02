@@ -1,26 +1,20 @@
-import React, {Component} from 'react'
-import {Button, Card, Image} from 'semantic-ui-react'
+import React from 'react'
+import {Card, Image, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
 
-export default class ToolCard extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {} // not sure if we will need state yet
-  }
-
-  render () {
-    return (
-      <Link to={`/tools/${this.props.category}/${this.props.id}`}>
-        <Card>
-          <Card.Content>
-            <Card.Header>{this.props.name}</Card.Header>
-            <Image src={this.props.image} />
-            <Card.Description>{this.props.description}</Card.Description>
-          </Card.Content>
-        </Card>
-      </Link>
-    )
-  }
+export default function ToolCard (props) {
+  return (
+    <Card 
+      color={props.available ? 'green' : 'red'}
+      as={Link} to={`/tools/${props.category}/${props.id}`}>
+      <Card.Content>
+        <Card.Header className={styles.header}>{props.name}</Card.Header>
+        <Image src={props.image} />
+        <Card.Description>{props.description}</Card.Description>
+        <Card.Description>Available: {props.available ? <p><Icon name='check' /></p> : <p><Icon name='x' /></p>}</Card.Description>
+      </Card.Content>
+    </Card>
+  )
 }
