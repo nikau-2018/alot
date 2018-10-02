@@ -1,6 +1,6 @@
-export const SEARCH = 'SEARCH'
+export const SEARCH_TOOL = 'SEARCH_TOOL'
 
-export const search = search => ({
-  type: SEARCH,
-  search
+export const searchTool = searchTool => ({
+  type: SEARCH_TOOL,
+  searchTool
 })
