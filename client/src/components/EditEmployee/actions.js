@@ -22,7 +22,7 @@ export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(requestUsers())
     axios
-      .get('/api/v1/users/getusers')
+      .get('/api/v1/users/get-employees')
       .then(res => {
         dispatch(receiveUsers(res.data.users))
       })

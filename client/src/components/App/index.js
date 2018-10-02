@@ -21,6 +21,7 @@ import EditWorkshop from '../EditWorkshop'
 // import AdminTest from '../Admin/AdminTest'
 // Admin route imports
 import Admin from '../Admin'
+import EditEmployee from '../EditEmployee'
 
 export default class App extends Component {
   render () {
@@ -40,7 +41,7 @@ export default class App extends Component {
         {/* For testing non connected components */}
         <Route exact path='/protectedtest' component={AdminTest}/>
         {/* For testing non connected components */}
-        {/* <Route exact path='/test' component={}/> */}
+        <Route exact path='/test' component={EditEmployee}/>
         <Divider />
         <Route path='/' component={Footer}/>
       </div>
