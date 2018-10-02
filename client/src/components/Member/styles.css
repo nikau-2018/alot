@@ -3,10 +3,17 @@
     padding: 0px 0px 40px 0px;
 }
 
-.h1 {
+h1 {
     font-size: 35px;
+    color: #43296C;
 }
 
-.p {
+p {
     font-size: 18px; 
+    color: #43296C;
+}
+
+.button {
+    background-color: #FDE19A !important;
+    color: #43296C !important;
 }

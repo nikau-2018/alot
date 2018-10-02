@@ -5,6 +5,7 @@ import garageBanner from './garage-banner.jpg'
 import People from '../People'
 import About from '../About'
 import Member from '../Member'
+import Banner from '../Banner'
 
 import styles from './styles.css'
 
@@ -14,6 +15,7 @@ export default function Welcome () {
       <div className={styles.padding}>
         <Image src={garageBanner} fluid />
       </div>
+      <Banner />
       <About />
       <Member />
       <People />
