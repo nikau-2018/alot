@@ -11,7 +11,7 @@ export default class WorkshopsContainer extends Component {
   render () {
     if (this.props.ready) {
       const category = this.props.match.params.category
-      const workshops = this.props.workshops.filter(workshop => workshop.name.toLowerCase().includes(this.props.searchTool.toLowerCase()))
+      const workshops = this.props.workshops.filter(workshop => workshop.name.toLowerCase().includes(this.props.searchWorkshop.toLowerCase()))
       const filteredWorkshops = !category
         ? workshops
         : workshops.filter((workshop) => {
