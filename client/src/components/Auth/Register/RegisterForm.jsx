@@ -46,45 +46,63 @@ export default class RegisterForm extends React.Component {
     return (
       <div className={styles.registerForm}>
         <Form>
-          <h1>Create an Account</h1>
-          <Form.Field>
-            <input name='firstName'
+          <h1>SIGN UP</h1>
+          <Form.Input 
+            name='firstName'
             placeholder='First Name'
-            value = {firstName}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <input name='lastName'
+            value={firstName}            
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='user'
+            iconPosition='left'
+          />
+          <Form.Input 
+            name='lastName'
             placeholder='Last Name'
-            value = {lastName}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <input name='email'
+            value={lastName}            
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='user'
+            iconPosition='left'
+          />
+          <Form.Input 
+            name='email'
             placeholder='Email'
-            value = {email}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <input name='phone'
+            value={email}
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='mail'
+            iconPosition='left'
+          />
+          <Form.Input 
+            name='phone'
             placeholder='Phone Number'
             value={phone}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <input name='password'
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='phone'
+            iconPosition='left'
+          />
+          <Form.Input 
+            name='password'
             type='password'
-            placeholder='Password'
-            value={password}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <input name='confirm'
+            placeholder='********'
+            value={password}            
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='lock'
+            iconPosition='left'
+          />
+          <Form.Input 
+            name='confirm'
             type='password'
-            placeholder='Password'
-            value={confirm}
-            onChange={this.handleChange} />
-          </Form.Field>
+            placeholder='********'
+            value={confirm}            
+            onChange={this.handleChange}
+            className={styles.input}
+            icon='lock'
+            iconPosition='left'
+          />
           <ErrorMessage reducer='auth' />
           <Button onClick={this.handleClick}>Submit</Button><br /><br />
           <Button onClick={this.handleSwitch}>Already have an account?</Button>
