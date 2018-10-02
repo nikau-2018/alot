@@ -54,6 +54,7 @@ export default class ToolForm extends Component {
         <Form.Field required>
           <label>Name</label>
           <input
+            className={styles.input}
             name='name'
             placeholder='Tool Name'
             value={name}

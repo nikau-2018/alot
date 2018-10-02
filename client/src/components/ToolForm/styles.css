@@ -1,5 +1,9 @@
 .toolForm {
   text-align: center;
   margin-left: 10%;
-  margin-right: 10%;  
+  margin-right: 10% !important;
+}
+
+.toolForm.input {
+  background-color: red !important;
 }
