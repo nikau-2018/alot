@@ -42,7 +42,7 @@ export default class LoginForm extends React.Component {
         <Form>
             <h1>LOGIN</h1>
             <div className={styles.inputs}>
-              <Form.Input 
+              <Form.Input transparent
                 name='email'
                 placeholder='Email'
                 onChange={this.handleChange}
@@ -50,7 +50,7 @@ export default class LoginForm extends React.Component {
                 icon='mail'
                 iconPosition='left'
               />
-              <Form.Input 
+              <Form.Input transparent
                 name='password'
                 type='password'
                 placeholder='Password'

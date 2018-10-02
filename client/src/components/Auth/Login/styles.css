@@ -16,17 +16,14 @@
   margin-right: 8%;  
 }
 
-input {
-  border: none !important;
-  border-bottom: 1px solid black !important;
-  border-radius: 0px !important;
-  background-color: transparent !important;  
+.loginForm .inputs .input {
+  border-bottom: .1em solid black;
 }
 
-input::placeholder {
+/* input::placeholder {
   color: black !important;
   font-weight: bold;
-}
+} */
 
 .inputs {
   margin-bottom: 15% !important;
