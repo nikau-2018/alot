@@ -17,7 +17,7 @@ export default class WorkshopsContainer extends Component {
         return Number(category) === workshop.categoryId
       })
     return (
-      <div className='workshops-container'>
+      <div>
         {this.props.workshops.length > 0
           ? <Workshops
             filteredWorkshops={filteredWorkshops}

@@ -62,7 +62,7 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>Category:</label>
-          <Dropdown className='categories' text={this.state.selectedCategory}>
+          <Dropdown text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item

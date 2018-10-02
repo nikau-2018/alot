@@ -5,6 +5,8 @@ import {pick, clone} from 'lodash'
 
 import ErrorMessage from '../ErrorMessage'
 
+import styles from './styles.css'
+
 export default class RegisterForm extends React.Component {
   constructor (props) {
     super(props)
@@ -45,7 +47,7 @@ export default class RegisterForm extends React.Component {
       <div>
               
         <Form>
-        <div className='register'>
+        <div>
           <h1> Create an Account </h1>
           <Form.Field>
             <label>First Name</label>

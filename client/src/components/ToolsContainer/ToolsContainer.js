@@ -17,7 +17,7 @@ export default class ToolsContainer extends Component {
         return Number(category) === tool.categoryId
       })
     return (
-      <div className='tools-container'>
+      <div>
         {this.props.tools.length > 0
           ? <Tools
             filteredTools={filteredTools}
