@@ -8,7 +8,7 @@ import styles from './styles.css'
 
 const Workshops = (props) => (
   <div className='workshops'>
-    <Search />
+    <Search toolSearch={false} />
     <CategoryFilter
       type='workshops'
       category={props.category}

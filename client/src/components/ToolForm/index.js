@@ -95,6 +95,7 @@ export default class ToolForm extends Component {
           />
         </Form.Field>
         <Button onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
+        <Button onClick={() => this.props.goBack()}>Go Back</Button>
       </Form>
       </div>
     )

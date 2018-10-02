@@ -9,7 +9,8 @@ import styles from './styles.css'
 const mapStateToProps = (state) => {
   return {
     workshops: state.workshops.workshops,
-    search: state.search
+    searchWorkshop: state.searchWorkshop,
+    ready: state.workshops.ready
   }
 }
 

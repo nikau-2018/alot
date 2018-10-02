@@ -9,23 +9,25 @@ export default class ToolsContainer extends Component {
   }
 
   render () {
-    const category = this.props.match.params.category
-    const tools = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.props.search.toLowerCase()))
-    const filteredTools = !category
-      ? tools
-      : tools.filter((tool) => {
-        return Number(category) === tool.categoryId
-      })
-    return (
-      <div className='tools-container'>
-        {this.props.tools.length > 0
-          ? <Tools
+    if (this.props.ready) {
+      const category = this.props.match.params.category
+      const tools = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.props.searchTool.toLowerCase()))
+      const filteredTools = !category
+        ? tools
+        : tools.filter((tool) => {
+          return Number(category) === tool.categoryId
+        })
+
+      return (
+        <div className='tools-container'>
+          <Tools
             filteredTools={filteredTools}
             category={category}
           />
-          : <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
-        }
-      </div>
-    )
+        </div>
+      )
+    } else {
+      return <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
+    }
   }
 }
