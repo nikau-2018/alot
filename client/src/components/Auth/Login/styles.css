@@ -7,9 +7,9 @@
   }
   .loginForm .button {
     border-radius: 10%/50%;    
-    width: 100%;
     padding-top: 6%;
     padding-bottom: 6%;
+    width: 100%;    
   }
   .inputs {
     margin-bottom: 15%;
@@ -42,9 +42,9 @@
   color: black;
 }
 
-.loginForm .button {
-  background-color: black;
-  color: white;
+.loginForm .inputs input::placeholder {
+  color: black;
+  font-weight: bold;
 }
 
 .input {
@@ -53,9 +53,9 @@
   padding-left: .6em;
 }
 
-.loginForm .inputs input::placeholder {
-  color: black;
-  font-weight: bold;
+.loginForm .button {
+  background-color: black;
+  color: white;
 }
 
 .loginForm .switch {
