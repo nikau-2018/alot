@@ -1,3 +1,5 @@
+
+
 .registerForm {
   text-align: center;
   margin-top: 10%;
@@ -9,6 +11,7 @@ input {
   border: none !important;
   border-bottom: 1px solid black !important;
   border-radius: 0px !important;
+  background-color: transparent !important;
 }
 
 input::placeholder {
@@ -26,7 +29,7 @@ button {
   padding-right: 40% !important;
   padding-top: 7% !important;
   padding-bottom: 7% !important;
-  background-color: black !important;
+  background-color: black;
   color: white !important;
 }
 
