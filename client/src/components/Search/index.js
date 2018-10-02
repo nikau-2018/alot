@@ -4,8 +4,6 @@ import {search} from './actions'
 
 import Search from './Search'
 
-import styles from './styles.css'
-
 const mapStateToProps = (state) => {
   return {
     search: state.search

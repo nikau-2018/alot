@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {Input} from 'semantic-ui-react'
 
+import styles from './styles.css'
+
 export default class Search extends Component {
   render () {
     return (
-      <div>
-        <Input placeholder='Search...' onKeyUp={this.props.searchString} />
+      <div className={styles.search}>
+        <Input className={styles.input} placeholder='Search...' onKeyUp={this.props.searchString} icon='search' />
       </div>
     )
   }
