@@ -2,8 +2,10 @@ import React from 'react'
 import {Button, Divider, Image, Form, TextArea} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import styles from './styles.css'
+
 import {get} from '../Auth/utils/localstorage'
+
+import styles from './styles.css'
 
 export default class ConfirmationTool extends React.Component {
   constructor (props) {
@@ -51,7 +53,7 @@ export default class ConfirmationTool extends React.Component {
     const tool = this.state.tool
     const returnPath = `/tools/${tool.categoryId}/${tool.id}`
     return (
-      <div className='confirmation'>
+      <div>
         <h1>Confirm Your Tool Rental</h1>
         <Divider/>
         <Link to={`/tools/${tool.id}`}>
@@ -87,7 +89,7 @@ export default class ConfirmationTool extends React.Component {
 
   render () {
     return (
-    <div>
+    <div className={styles.confirmationTool}>
     {this.state.submitted ? this.submitted() : this.pending()}
     </div>
     )

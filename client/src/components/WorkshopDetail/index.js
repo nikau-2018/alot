@@ -7,11 +7,13 @@ import styles from './styles.css'
 
 export default function WorkshopDetail (props) {
   const description = props.workshop.description || ''
+  const isAdmin = props.isAdmin
   return (
-    <div>
+    <div className={styles.workshopDetail}>
       <h1>{props.workshop.name}</h1>
       <Divider/>
-      <Image src={props.workshop.image} size='large'/>
+      <Image src={props.workshop.image} size='large' centered />
+      <Divider/>
       <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>
@@ -20,9 +22,8 @@ export default function WorkshopDetail (props) {
       <h3>Date:</h3>
       <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
       <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
-      <Link to={`/workshops/${props.workshop.categoryId}`}>
-        <Button basic>Similar Workshops</Button>
-      </Link>
+      <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} basic>Similar Workshops</Button>
+      {isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
     </div>
   )
 }

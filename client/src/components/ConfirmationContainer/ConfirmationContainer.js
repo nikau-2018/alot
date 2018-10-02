@@ -5,6 +5,8 @@ import ConfirmationTool from '../ConfirmationTool'
 import ConfirmationWorkshop from '../ConfirmationWorkshop'
 import Auth from '../Auth'
 
+import styles from './styles.css'
+
 export default class ConfirmationContainer extends Component {
   loggedIn () {
     const selectedId = Number(this.props.match.params.id)
@@ -20,7 +22,7 @@ export default class ConfirmationContainer extends Component {
 
   loggedOut () {
     return (
-      <div>
+      <div className={styles.confirmationContainer}>
         <h2>Please login or register before continuing</h2>
         <Auth inline={true} />
       </div>
@@ -35,6 +37,7 @@ export default class ConfirmationContainer extends Component {
     )
   }
 }
+
 ConfirmationContainer.defaultProps = {
   workshops: [{
     id: 88801,

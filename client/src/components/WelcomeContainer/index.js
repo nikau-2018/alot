@@ -4,8 +4,6 @@ import {fetchTools} from '../ToolsContainer/actions'
 
 import WelcomeContainer from './WelcomeContainer'
 
-import styles from './styles.css'
-
 const mapStateToProps = (state) => {
   return {
     tools: state.tools.tools

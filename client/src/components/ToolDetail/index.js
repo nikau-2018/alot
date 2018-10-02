@@ -6,24 +6,25 @@ import styles from './styles.css'
 
 export default function ToolDetail (props) {
   const body = props.tool.body || ''
+  const isAdmin = props.isAdmin
   return (
-    <div>
+    <div className={styles.toolDetail}>
       <h1>{props.tool.name}</h1>
       <Divider/>
-      <Image src={props.tool.image} size='large' />
+      <Image src={props.tool.image} size='large' centered />
+      <Divider/>
       <h3>{props.tool.description}</h3>
       <h5>In library: {props.tool.stocked}</h5>
       <h5>Available: {props.tool.available}</h5>
       <h4>Description:</h4>
-      <ul>
-        {body.split('*').map(element => <li>{element}</li>)}
-      </ul>
-      <Link to={`/confirm/tool/${props.tool.id}`}>
-        <Button basic color='green'>Rent</Button>
-      </Link>
-      <Link to={`/tools/${props.tool.categoryId}`}>
-        <Button basic>Similar Tools</Button>
-      </Link>
+      <div className={styles.description}>
+        <ul>
+          {body.split('*').map(element => <li>{element}</li>)}
+        </ul>
+      </div>
+      <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Rent</Button>
+      <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
+      {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
     </div>
   )
 }

@@ -6,15 +6,15 @@ import styles from './styles.css'
 
 export default function ToolCard (props) {
   return (
-    <Link to={`/tools/${props.category}/${props.id}`}>
-      <Card color={props.available ? 'green' : 'red'}>
-        <Card.Content className={styles.tools}>
-          <Card.Header>{props.name}</Card.Header>
-          <Image src={props.image} />
-          <Card.Description>{props.description}</Card.Description>
-          <Card.Description>Available: {props.available ? <p><Icon name='check' /></p> : <p><Icon name='x' /></p>}</Card.Description>
-        </Card.Content>
-      </Card>
-    </Link>
+    <Card 
+      color={props.available ? 'green' : 'red'}
+      as={Link} to={`/tools/${props.category}/${props.id}`}>
+      <Card.Content>
+        <Card.Header className={styles.header}>{props.name}</Card.Header>
+        <Image src={props.image} />
+        <Card.Description>{props.description}</Card.Description>
+        <Card.Description>Available: {props.available ? <p><Icon name='check' /></p> : <p><Icon name='x' /></p>}</Card.Description>
+      </Card.Content>
+    </Card>
   )
 }

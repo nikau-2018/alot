@@ -2,34 +2,28 @@ import React from 'react'
 import {Button, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
+import styles from './styles.css'
+
 export default function AdminNav (props) {
   const url = props.url
   return (
-    <div className='ui buttons'>
-      <Link to={`${url}/add-tool`}>
-        <Button className='ui button'>
-          <Icon name='wrench'/>
+    <div className={styles.adminNav}>
+      <Button as={Link} to={`${url}/add-tool`} className={styles.button}>
+        <Icon name='wrench'/>
         Add Tool
-        </Button>
-      </Link>
-      <Link to={`${url}/add-workshop`}>
-        <Button className='ui button'>
-          <Icon name='calendar alternate'/>
+      </Button>
+      <Button as={Link} to={`${url}/add-workshop`} className={styles.button}>
+        <Icon name='calendar alternate'/>
         Add Workshop
-        </Button>
-      </Link>
-      <Link to={`${url}/edit-employee`}>
-        <Button className='ui button'>
-          <Icon name='user plus'/>
+      </Button>
+      <Button as={Link} to={`${url}/edit-employee`} className={styles.button}>
+        <Icon name='user plus'/>
         Edit Employee
-        </Button>
-      </Link>
-      <Link to={`${url}/orders`}>
-        <Button className='ui button'>
-          <Icon name='envelope'/>
+      </Button>
+      <Button as={Link} to={`${url}/orders`} className={styles.button}>
+        <Icon name='envelope'/>
         Maintain Orders
-        </Button>
-      </Link>
+      </Button>
     </div>
   )
 }
