@@ -7,7 +7,7 @@ import ToolCard from '../ToolCard'
 import styles from './styles.css'
 
 const Tools = (props) => (
-  <div className='tools'>
+  <div>
     <Search />
     <CategoryFilter
       type='tools'
