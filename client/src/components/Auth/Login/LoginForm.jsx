@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 import ErrorMessage from '../ErrorMessage'
 
@@ -57,9 +58,11 @@ export default class LoginForm extends React.Component {
               icon='lock'
               iconPosition='left'
             />
-            <Button onClick={this.handleClick}>Submit</Button>
-            <ErrorMessage reducer='auth' />
-            <Button onClick={this.handleSwitch}>Need an account?</Button>
+              <Button onClick={this.handleClick}>SIGN IN</Button><br />
+              <ErrorMessage reducer='auth' />
+              <div className={styles.p}>
+                Don't have an account? <Button onClick={this.handleSwitch} className={styles.signUp}>Sign Up</Button>
+              </div>
         </Form>
       </div>      
     )

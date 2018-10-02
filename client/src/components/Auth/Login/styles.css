@@ -14,3 +14,19 @@ input::placeholder {
   color: black !important;
   font-weight: bold;
 }
+
+button {
+  border-radius: 10%/50% !important;
+  padding-left: 40% !important;
+  padding-right: 40% !important;
+}
+
+.signUp {
+  background-color: transparent !important;
+  padding: 0px !important;
+  color: black !important;
+}
+
+.p {
+  color: black;
+}
