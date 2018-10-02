@@ -8,7 +8,7 @@ export default function ToolCard (props) {
   return (
     <Card as={Link} to={`/tools/${props.category}/${props.id}`}>
       <Card.Content>
-        <Card.Header>{props.name}</Card.Header>
+        <Card.Header style={{textAlign: 'center'}}>{props.name}</Card.Header>
         <Image src={props.image} />
         <Card.Description>{props.description}</Card.Description>
       </Card.Content>

@@ -13,16 +13,18 @@ const Tools = (props) => (
       type='tools'
       category={props.category}
     />
-    {props.filteredTools.map((tool) => (
-      <ToolCard
-        key={tool.id}
-        id={tool.id}
-        name={tool.name}
-        image={tool.image}
-        description={tool.description}
-        category={tool.categoryId}
-      />
-    ))}
+    <div className={styles.tools}>
+      {props.filteredTools.map((tool) => (
+        <ToolCard
+          key={tool.id}
+          id={tool.id}
+          name={tool.name}
+          image={tool.image}
+          description={tool.description}
+          category={tool.categoryId}
+        />
+      ))}
+    </div>
   </div>
 )
 
