@@ -106,7 +106,7 @@ export default class RegisterForm extends React.Component {
             />
           </div>
           <ErrorMessage reducer='auth' />
-          <Button onClick={this.handleClick}>SIGN UP</Button><br /><br />
+          <Button onClick={this.handleClick} className={styles.button}>SIGN UP</Button><br />
           <div className={styles.p}>
             Already have an account? <Button onClick={this.handleSwitch} className={styles.switch}>Login</Button>
           </div>

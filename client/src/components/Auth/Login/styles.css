@@ -33,12 +33,13 @@ input::placeholder {
 }
 
 .loginForm .button {
-  /* border-radius: 10%/50%;
+  border-radius: 10%/50%;
   padding-left: 40%;
   padding-right: 40%;
   padding-top: 7%;
-  padding-bottom: 7%; */
+  padding-bottom: 7%;
   background-color: black;
+  color: white;
 }
 
 .switch {

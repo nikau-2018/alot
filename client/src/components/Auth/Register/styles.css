@@ -23,14 +23,14 @@ input::placeholder {
   margin-bottom: 15% !important;
 }
 
-button {
-  border-radius: 10%/50% !important;
-  padding-left: 40% !important;
-  padding-right: 40% !important;
-  padding-top: 7% !important;
-  padding-bottom: 7% !important;
+.registerForm .button {
+  border-radius: 10%/50%;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 7%;
+  padding-bottom: 7%;
   background-color: black;
-  color: white !important;
+  color: white;
 }
 
 .switch {
