@@ -2,7 +2,7 @@ import React from 'react'
 import {Input} from 'semantic-ui-react'
 
 const Search = (props) => (
-  this.props.parent
+  props.toolSearch
     ? <div>
       <Input placeholder='Search...' onKeyUp={props.searchStringTool} />
     </div>
