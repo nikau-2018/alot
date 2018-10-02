@@ -29,7 +29,7 @@ export default class EditTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     axios
       .put(`/api/v1/tools/edit/${toolId}`, formObj)
-      .then(this.props.history.go(`/tools/${formObj.categoryId}/${toolId}`))
+      .then(this.props.history.goBack())
       .catch(() => {
         this.toggleError() // need to do proper error handling here eventually
       })
