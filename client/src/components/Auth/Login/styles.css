@@ -1,7 +1,8 @@
 .loginForm {
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;  
+  margin-top: 10%;
+  margin-left: 8%;
+  margin-right: 8%;  
 }
 
 input {
@@ -15,10 +16,18 @@ input::placeholder {
   font-weight: bold;
 }
 
+.inputs {
+  margin-bottom: 15% !important;
+}
+
 button {
   border-radius: 10%/50% !important;
   padding-left: 40% !important;
   padding-right: 40% !important;
+  padding-top: 7% !important;
+  padding-bottom: 7% !important;
+  background-color: black !important;
+  color: white !important;
 }
 
 .signUp {
