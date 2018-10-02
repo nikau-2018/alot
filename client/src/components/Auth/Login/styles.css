@@ -19,13 +19,14 @@
 /* FOR DESKTOP */
 @media not screen and (max-width: 600px) {
   .loginForm .button {
-    padding-left: 12em;
-    padding-right: 12em;
+    padding-left: 10em;
+    padding-right: 10em;
     padding-top: 1em;
     padding-bottom: 1em;
+    width: 100%;
   }
   .login {
-    width: 25%;
+    width: 20%;
     margin: auto;
   }
   .inputs {
