@@ -31,7 +31,7 @@ export default class ConfirmationContainer extends Component {
 
   render () {
     return (
-      <div>
+      <div className={styles.confirmationContainer}>
         {this.props.isAuthenticated ? this.loggedIn() : this.loggedOut()}
       </div>
     )
