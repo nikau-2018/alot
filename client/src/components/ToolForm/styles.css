@@ -4,6 +4,38 @@
   margin-right: 10%;  
 }
 
-.input {
-  background-color: red !important;
+.toolForm .field {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+.toolForm .dropdown {
+  float: left;
+}
+
+.toolForm .header {
+  padding-top: 1em;
+  font-weight: 400 !important;
+}
+
+.toolForm .input {
+  border-bottom-color: #43296C;
+  border-bottom-style: ridge;
+  border-bottom-width: 0.2em !important;
+  font-size: 1em !important;
+}
+
+.toolForm .label {
+  text-align: left;
+  font-size: 1.2rem !important;
+}
+
+input:-webkit-autofill {
+  color: #2a2a2a !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #43296C !important;
 }
