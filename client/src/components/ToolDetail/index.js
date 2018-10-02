@@ -19,7 +19,7 @@ export default function ToolDetail (props) {
       </ul>
       <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Rent</Button>
       <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
-      {isAdmin && <Button>Edit Tool</Button>}
+      {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
     </div>
   )
 }
