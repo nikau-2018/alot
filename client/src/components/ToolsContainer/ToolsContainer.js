@@ -20,13 +20,10 @@ export default class ToolsContainer extends Component {
 
       return (
         <div className='tools-container'>
-          {this.props.tools.length > 0
-            ? <Tools
-              filteredTools={filteredTools}
-              category={category}
-            />
-            : <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
-          }
+          <Tools
+            filteredTools={filteredTools}
+            category={category}
+          />
         </div>
       )
     } else {
