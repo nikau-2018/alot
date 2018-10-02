@@ -70,7 +70,7 @@ export default class ConfirmationTool extends React.Component {
           <label>Order notes:</label>
           <TextArea name='notes'
             placeholder='Order notes'
-            onChange={this.handleChange} rows='3' style='resize:'/>
+            onChange={this.handleChange} rows='3' />
         </Form.Field>
         </Form>
         <Button.Group>
