@@ -1,16 +1,17 @@
 import {connect} from 'react-redux'
 
-import {fetchEmployees} from './actions'
+import {fetchUsers} from './actions'
 import CategoryFilter from '../CategoryFilter';
 
 import EditEmployee from './EditEmployee'
 
 const mapStateToProps = () => {
+  
 
 }
 
-const mapDispatchToProps =() => ({
-
+const mapDispatchToProps = (dispatch) => ({
+  fetchUsers: () => dispatch(fetchUsers())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditEmployee)
