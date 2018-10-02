@@ -108,7 +108,7 @@ export default class EmployeeForm extends Component {
           />
         </Form.Field>
         <Button onClick={() => this.handleSubmit(rest, employeeId)}>Submit</Button>
-        <Button onClick={() => this.props.goBack()}>Go Back</Button>
+        <Button onClick={() => this.props.history.goBack()}>Go Back</Button>
       </Form>
       </div>
     )
