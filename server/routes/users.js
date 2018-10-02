@@ -8,6 +8,12 @@ const router = express.Router()
 
 const db = require('../db/users')
 
+router.get('/', getUsers)
+
+function getUsers (req, res) {
+  db.getUser
+}
+
 router.post('/register', register)
 
 function register (req, res) {
