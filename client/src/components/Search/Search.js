@@ -7,7 +7,7 @@ export default class Search extends Component {
   render () {
     return (
       <div className={styles.search}>
-        <Input className={styles.input} placeholder='Search...' onKeyUp={this.props.searchString} icon='search' />
+        <Input placeholder='Search...' onKeyUp={this.props.searchString} icon='search' size='large' />
       </div>
     )
   }
