@@ -8,7 +8,7 @@ const router = express.Router()
 
 const db = require('../db/users')
 
-router.get('/', getUsers)
+router.get('/getusers', verifyJwt({secret: getSecret}), isAdmin, getUsers, handleError)
 
 function getUsers (req, res) {
   db.getUsers()

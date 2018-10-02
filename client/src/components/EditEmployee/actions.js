@@ -18,11 +18,11 @@ export const receiveUsers = users => ({
   users
 })
 
-export const fetchUsers = ()  => {
+export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(requestUsers())
     axios
-      .get('/api/v1/users')
+      .get('/api/v1/users/getusers')
       .then(res => {
         dispatch(receiveUsers(res.data.users))
       })
