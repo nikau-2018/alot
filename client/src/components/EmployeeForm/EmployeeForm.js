@@ -57,7 +57,11 @@ export default class EmployeeForm extends Component {
       })
   }
 
-  render () {this.state.postErr ? this.showError() : this.showForm()}
+  render () {
+    return (
+      this.state.postErr ? this.showError() : this.showForm()
+    )
+  }
 
   // shows by default
   showForm () {
