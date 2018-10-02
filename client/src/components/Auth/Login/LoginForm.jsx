@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 import ErrorMessage from '../ErrorMessage'
 
@@ -39,23 +40,31 @@ export default class LoginForm extends React.Component {
     return (
       <div className={styles.loginForm}>
         <Form>
-            <h1>Login</h1>
-            <Form.Field>
-              <label>Email</label>
-              <input name='email'
+            <h1>LOGIN</h1>
+            <div className={styles.inputs}>
+              <Form.Input 
+                name='email'
                 placeholder='Email'
-                onChange={this.handleChange} />
-            </Form.Field>
-            <Form.Field>
-              <label>Password</label>
-              <input name='password'
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='mail'
+                iconPosition='left'
+              />
+              <Form.Input 
+                name='password'
                 type='password'
                 placeholder='Password'
-                onChange={this.handleChange} />
-            </Form.Field>
-            <Button onClick={this.handleClick}>Submit</Button>
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='lock'
+                iconPosition='left'
+              />
+            </div>
+            <Button onClick={this.handleClick}>SIGN IN</Button><br />
             <ErrorMessage reducer='auth' />
-            <Button onClick={this.handleSwitch}>Need an account?</Button>
+            <div className={styles.p}>
+              Don't have an account? <Button onClick={this.handleSwitch} className={styles.signUp}>Sign Up</Button>
+            </div>
         </Form>
       </div>      
     )
