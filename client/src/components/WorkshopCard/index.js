@@ -6,18 +6,16 @@ import styles from './styles.css'
 
 export default function ToolCard (props) {
   return (
-    <Link to={`/workshops/${props.category}/${props.id}`}>
-      <Card>
-        <Card.Content>
-          <Card.Header>{props.name}</Card.Header>
-          <Image src={props.image} />
-          <Card.Description>
-            <ul>
-              {props.description.split('*').map(element => <li>{element}</li>)}
-            </ul>
-          </Card.Description>
-        </Card.Content>
-      </Card>
-    </Link>
+    <Card as={Link} to={`/workshops/${props.category}/${props.id}`}>
+      <Card.Content>
+        <Card.Header>{props.name}</Card.Header>
+        <Image src={props.image} />
+        <Card.Description>
+          <ul>
+            {props.description.split('*').map(element => <li>{element}</li>)}
+          </ul>
+        </Card.Description>
+      </Card.Content>
+    </Card>
   )
 }
