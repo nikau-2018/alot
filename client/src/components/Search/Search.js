@@ -1,14 +1,15 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Input} from 'semantic-ui-react'
 
 import styles from './styles.css'
 
-export default class Search extends Component {
-  render () {
-    return (
-      <div className={styles.search}>
-        <Input placeholder='Search...' onKeyUp={this.props.searchString} icon='search' size='large' />
-      </div>
-    )
-  }
-}
+const Search = (props) => (
+  props.toolSearch
+    ? <div className={styles.search}>
+      <Input placeholder='Search...' onKeyUp={props.searchStringTool} />
+    </div>
+    : <div className={styles.search}>
+      <Input placeholder='Search...' onKeyUp={props.searchStringWorkshop} />
+    </div>
+)
+export default Search

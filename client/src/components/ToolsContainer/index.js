@@ -7,7 +7,8 @@ import ToolsContainer from './ToolsContainer'
 const mapStateToProps = (state) => {
   return {
     tools: state.tools.tools,
-    search: state.search
+    searchTool: state.searchTool,
+    ready: state.tools.ready
   }
 }
 

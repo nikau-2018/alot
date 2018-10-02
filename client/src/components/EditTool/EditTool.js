@@ -45,6 +45,7 @@ export default class EditTool extends Component {
       return category.id === selectedTool.categoryId})
     return (
       <ToolForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
       editing={selectedTool}

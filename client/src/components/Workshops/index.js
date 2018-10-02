@@ -8,12 +8,12 @@ import styles from './styles.css'
 
 const Workshops = (props) => (
   <div>
-    <Search />
+    <Search toolSearch={false} />
     <CategoryFilter
       type='workshops'
       category={props.category}
     />
-    <div className={styles.workshops}>    
+    <div className={styles.workshops}>
       {props.filteredWorkshops.map((workshop) => (
         <WorkshopCard
           category={workshop.categoryId}
@@ -26,7 +26,7 @@ const Workshops = (props) => (
           dateTime={workshop.dateTime}/>
       ))}
     </div>
-  </div>  
+  </div>
 )
 
 export default Workshops

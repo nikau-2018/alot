@@ -107,6 +107,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Button onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+        <Button onClick={() => this.props.goBack()}>Go Back</Button>
       </Form>
       </div>
     )
