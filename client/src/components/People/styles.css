@@ -13,7 +13,7 @@
   border: 1px solid;
 }
 
-.p {
+p {
   font-size: 18px;
   padding: 10px;
   color: #43296C;
@@ -26,7 +26,7 @@
   color: #43296C;
 }
 
-.h2 {
+h2 {
   font-size: 30px;
   color: #43296C;
 }
