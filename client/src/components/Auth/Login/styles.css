@@ -1,5 +1,50 @@
+/* @media only screen and (max-width: 600px) {
+  .loginForm .button {
+    border-radius: 10%/50%;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background-color: black;
+  }
+} */
+
 .loginForm {
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;  
+  margin-top: 10%;
+  margin-left: 8%;
+  margin-right: 8%;  
+}
+
+.loginForm .inputs .input {
+  border-bottom: .1em solid black;
+}
+
+/* input::placeholder {
+  color: black !important;
+  font-weight: bold;
+} */
+
+.inputs {
+  margin-bottom: 15% !important;
+}
+
+.loginForm .button {
+  border-radius: 10%/50%;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  background-color: black;
+  color: white;
+}
+
+.switch {
+  background-color: transparent !important;
+  padding: 0px !important;
+  color: black !important;
+}
+
+.p {
+  color: black;
 }

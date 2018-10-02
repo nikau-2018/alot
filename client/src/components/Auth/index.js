@@ -31,7 +31,7 @@ class Auth extends React.Component {
               : action === 'register' && <Register callback={this.setAction}/>
         }
         {
-          !this.props.inline && <Button onClick={() => this.props.history.goBack()} className={styles.button}>Back</Button>
+          !this.props.inline && <Button onClick={() => this.props.history.goBack()} className={styles.back}>Go Back</Button>
         }
                 
       </div>
