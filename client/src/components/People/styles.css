@@ -1,5 +1,6 @@
 .people {
   text-align: center;
+  background-color: rgb(238, 234, 234);
 }
 
 .image {
@@ -11,7 +12,7 @@
 }
 
 .p {
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
   
 }
@@ -23,4 +24,8 @@
 
 .h2 {
   font-size: 30px;
+}
+
+.email {
+  font-size: 17px;
 }

@@ -22,9 +22,7 @@ export default function Welcome () {
       </p>
       <Divider />
       <About />
-      <Divider />
       <Member />
-      <Divider />
       <People />
     </div>
   )
