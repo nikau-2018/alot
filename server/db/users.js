@@ -5,8 +5,8 @@ module.exports = {
   createUser,
   getUser,
   userExists,
-  getEmployees,
-  updateEmployee
+  getUsers,
+  updateUser
 }
 
 function createUser (user, password, db = connection) {
@@ -35,14 +35,13 @@ function getUser (email, db = connection) {
     .first()
 }
 
-function getEmployees (db = connection) {
+function getUsers (db = connection) {
   return db('users')
-    .where('role', 1)
     .select('id', 'email', 'firstName', 'lastName', 'phone', 'role', 'createdAt', 'updatedAt')
 }
 
-function updateEmployee (id, employee, db=connection) {
+function updateUser (id, user, db=connection) {
   return db('users')
     .where('id', id)
-    .update(employee)
+    .update(user)
 }

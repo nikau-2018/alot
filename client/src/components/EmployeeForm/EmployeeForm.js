@@ -9,7 +9,7 @@ export default class EmployeeForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      employeeId: 0,
+      userId: 0,
       firstName: '',
       lastName: '',
       email: '',
@@ -21,10 +21,10 @@ export default class EmployeeForm extends Component {
 
   componentDidMount() {
     if(this.props.ready){
-    const employee = this.props.employees.find((employee) => Number(this.props.match.params.id) === employee.id)
-      let {id, email, firstName, lastName, phone, role} = employee
+    const user = this.props.users.find((user) => Number(this.props.match.params.id) === user.id)
+      let {id, email, firstName, lastName, phone, role} = user
       this.setState({
-        employeeId: id,
+        userId: id,
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -65,12 +65,21 @@ export default class EmployeeForm extends Component {
 
   // shows by default
   showForm () {
-    const { firstName, lastName, email, phone, } = this.state
-    let {postErr, employeeId, ...rest} = this.state
+    const { firstName, lastName, email, phone, role} = this.state
+    let {postErr, userId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>
-      <h2>Edit this employee:</h2>
+      <h2>Edit this User:</h2>
       <Form>
+      <Form.Field required>
+          <label>Role</label>
+          <input
+            name='role'
+            placeholder='Role'
+            value={role}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
         <Form.Field required>
           <label>First Name</label>
           <input
@@ -107,7 +116,7 @@ export default class EmployeeForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.handleSubmit(rest, employeeId)}>Submit</Button>
+        <Button onClick={() => this.handleSubmit(rest, userId)}>Submit</Button>
         <Button onClick={() => this.props.history.goBack()}>Go Back</Button>
       </Form>
       </div>
@@ -119,7 +128,7 @@ export default class EmployeeForm extends Component {
     return (
       <div>
         <Message warning>
-          <Message.Header>There was an error updating that employee</Message.Header>
+          <Message.Header>There was an error updating that user</Message.Header>
         </Message>
         <Link to={this.props.match.url}>
           <Button onClick={() => this.toggleError()}>Try Again</Button>

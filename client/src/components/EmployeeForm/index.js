@@ -6,8 +6,8 @@ import EmployeeForm from './EmployeeForm'
 
 const mapStateToProps = (state) => {
   return {
-    employees: state.employees.users,
-    ready: state.employees.ready
+    users: state.users.users,
+    ready: state.users.ready
   }
 }
 
