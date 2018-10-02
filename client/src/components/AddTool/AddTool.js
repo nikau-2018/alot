@@ -28,7 +28,7 @@ export default class AddTool extends Component {
     axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
     return axios
       .post('/api/v1/tools/add', formObj)
-      // redirect back to admin page here? .then() 
+      .then(this.props.history.goBack())
       .catch(() => {
         this.toggleError()
       })
@@ -38,6 +38,7 @@ export default class AddTool extends Component {
     if (this.props.ready && !this.state.postErr) {
     return (
       <ToolForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}/>
     )

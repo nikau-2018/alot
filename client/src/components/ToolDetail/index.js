@@ -8,10 +8,11 @@ export default function ToolDetail (props) {
   const body = props.tool.body || ''
   const isAdmin = props.isAdmin
   return (
-    <div>
+    <div className={styles.toolDetail}>
       <h1>{props.tool.name}</h1>
       <Divider/>
-      <Image src={props.tool.image} size='large' />
+      <Image src={props.tool.image} size='large' centered />
+      <Divider/>
       <h3>{props.tool.description}</h3>
       <h4>Description:</h4>
       <ul>

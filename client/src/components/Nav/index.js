@@ -16,24 +16,27 @@ class Nav extends Component {
 
   render () {
     return (
-      <div className='ui-grid'>
+      <div className={styles.nav}>
         <Button.Group vertical>
-          <Link to="/">
-            <Button><Icon name='home'/>Home</Button>
-          </Link>
-          <Link to="/tools">
-            <Button><Icon name='wrench' />Tools</Button>
-          </Link>
-          <Link to="/workshops">
-            <Button><Icon name='warehouse'/>Workshops</Button>
-          </Link>
-          {this.props.isAdmin && <Link to="/admin"><Button>Admin</Button></Link>}
-          {
-            this.props.isAuthenticated
-              ? <Logout />
-              : <Link to="/login">
-                <Button><Icon name='lock open'/>Login</Button>
-              </Link>
+          <Button as={Link} to="/" className={styles.button}>
+            <Icon name='home'/>Home
+          </Button>
+          <Button as={Link} to="/tools" className={styles.button}>
+            <Icon name='wrench' />Tools
+          </Button>
+          <Button as={Link} to="/workshops" className={styles.button}>
+            <Icon name='warehouse'/>Workshops
+          </Button>
+          {this.props.isAdmin &&
+            <Button as={Link} to="/admin" className={styles.button}>
+              Admin
+            </Button>
+          }
+          {this.props.isAuthenticated
+            ? <Logout />
+            : <Button as={Link} to="/login" className={styles.button}>
+              <Icon name='lock open'/>Login
+            </Button>
           }
         </Button.Group>
       </div>
