@@ -65,12 +65,21 @@ export default class EmployeeForm extends Component {
 
   // shows by default
   showForm () {
-    const { firstName, lastName, email, phone, } = this.state
+    const { firstName, lastName, email, phone, role} = this.state
     let {postErr, userId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>
       <h2>Edit this User:</h2>
       <Form>
+      <Form.Field required>
+          <label>Role</label>
+          <input
+            name='role'
+            placeholder='Role'
+            value={role}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
         <Form.Field required>
           <label>First Name</label>
           <input

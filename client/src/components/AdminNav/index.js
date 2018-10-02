@@ -16,7 +16,7 @@ export default function AdminNav (props) {
         <Icon name='calendar alternate'/>
         Add Workshop
       </Button>
-      <Button as={Link} to={`${url}/edit-employee`} className={styles.button}>
+      <Button as={Link} to={`${url}/edit-user`} className={styles.button}>
         <Icon name='user plus'/>
         Edit Employee
       </Button>
