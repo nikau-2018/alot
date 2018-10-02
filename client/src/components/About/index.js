@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Image, Grid, Icon} from 'semantic-ui-react'
+import {Image, Grid} from 'semantic-ui-react'
 
 import styles from './styles.css'
 

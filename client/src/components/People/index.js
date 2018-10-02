@@ -11,7 +11,7 @@ export default function People () {
       <Grid columns={2} divided>
       <Grid.Row>
         <Grid.Column>
-            <h2 className={styles.h2}>Amanada Chapman</h2>
+            <h2 className={styles.h2}>Amanda Chapman</h2>
             <Image className={styles.image} src={'/people/amanda.jpg'} circular/>
             <p className={styles.p}>Amanda Chapman​ established the Auckland Community Fridge, NZ’s first free food sharing fridge. Amanda blogs about waste reduction and her tiny 
               house build. Amanda works for We Compost and United Sustainable Sisters (part of Tamaki WRAP). Amanda has completed a PGDipSci in Environmental 

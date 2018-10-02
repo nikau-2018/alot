@@ -4,6 +4,7 @@ import {Image, Divider} from 'semantic-ui-react'
 import garageBanner from './garage-banner.jpg'
 import People from '../People'
 import About from '../About'
+import Member from '../Member'
 
 import styles from './styles.css'
 
@@ -21,6 +22,9 @@ export default function Welcome () {
       </p>
       <Divider />
       <About />
+      <Divider />
+      <Member />
+      <Divider />
       <People />
     </div>
   )
