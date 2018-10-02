@@ -10,7 +10,7 @@ export function searchTool (state = '', action) {
   }
 }
 
-export function searchWorkshopReducer (state = '', action) {
+export function searchWorkshop (state = '', action) {
   switch (action.type) {
     case SEARCH_WORKSHOP:
       return action.searchWorkshop
