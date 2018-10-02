@@ -52,7 +52,7 @@ export default class ToolForm extends Component {
       }
       <Form>
         <Form.Field required>
-          <label>Name:</label>
+          <label>Name</label>
           <input
             name='name'
             placeholder='Tool Name'
@@ -61,7 +61,7 @@ export default class ToolForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Category:</label>
+          <label>Category</label>
           <Dropdown text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
@@ -79,7 +79,7 @@ export default class ToolForm extends Component {
           </Dropdown>
         </Form.Field>
         <Form.Field required>
-          <label>Description:</label>
+          <label>Description</label>
           <input
             name='description'
             placeholder='Tool Description'
@@ -88,7 +88,7 @@ export default class ToolForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Details:</label>
+          <label>Details</label>
           <input
             name='body'
             placeholder='Tool Details'

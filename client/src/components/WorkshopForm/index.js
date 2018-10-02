@@ -53,7 +53,7 @@ export default class WorkshopForm extends Component {
       }
       <Form>
         <Form.Field required>
-          <label>Name:</label>
+          <label>Name</label>
           <input
             name='name'
             placeholder='Workshop Name'
@@ -62,7 +62,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Category:</label>
+          <label>Category</label>
           <Dropdown text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
@@ -80,7 +80,7 @@ export default class WorkshopForm extends Component {
           </Dropdown>
         </Form.Field>
         <Form.Field required>
-          <label>Instructor:</label>
+          <label>Instructor</label>
           <input
             name='instructor'
             placeholder='Instructor Name'
@@ -89,7 +89,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Description:</label>
+          <label>Description</label>
           <input
             name='description'
             placeholder='Workshop Description'
@@ -98,7 +98,7 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Details:</label>
+          <label>Details</label>
           <input
             name='body'
             placeholder='Workshop Details'
