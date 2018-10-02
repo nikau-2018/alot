@@ -27,7 +27,8 @@ export default class EditEmployee extends Component {
             </Card.Group>
           </div>
         )
- }))
+      })
+    )
   }
 
   loading () {
