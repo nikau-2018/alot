@@ -43,6 +43,7 @@ export default class EditWorkshop extends Component {
       return category.id === selectedWorkshop.categoryId})
     return (
       <WorkshopForm
+      goBack={this.props.history.goBack}
       handleSubmit={this.handleSubmit}
       categories={this.props.categories}
       editing={selectedWorkshop}
