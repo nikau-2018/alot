@@ -1,7 +1,7 @@
 import {SEARCH_TOOL} from './actions'
 import {SEARCH_WORKSHOP} from './actions'
 
-export function searchToolReducer (state = '', action) {
+export function searchTool (state = '', action) {
   switch (action.type) {
     case SEARCH_TOOL:
       return action.searchTool
