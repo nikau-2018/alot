@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Icon} from 'semantic-ui-react'
+import {Button, Icon, Menu} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Logout from '../Auth/Logout'
@@ -17,28 +17,33 @@ class Nav extends Component {
   render () {
     return (
       <div className={styles.nav}>
-        <Button.Group vertical>
-          <Button as={Link} to="/" className={styles.button}>
+        <Menu inverted icon='labeled' small>
+          <Menu.Item className={styles.icon} as={Link} to="/">
             <Icon name='home'/>Home
-          </Button>
-          <Button as={Link} to="/tools" className={styles.button}>
+          </Menu.Item>
+
+          <Menu.Item className={styles.icon} as={Link} to="/tools">
             <Icon name='wrench' />Tools
-          </Button>
-          <Button as={Link} to="/workshops" className={styles.button}>
+          </Menu.Item>
+
+          <Menu.Item className={styles.icon} as={Link} to="/workshops">
             <Icon name='warehouse'/>Workshops
-          </Button>
-          {this.props.isAdmin &&
-            <Button as={Link} to="/admin" className={styles.button}>
-              Admin
-            </Button>
-          }
-          {this.props.isAuthenticated
-            ? <Logout />
-            : <Button as={Link} to="/login" className={styles.button}>
-              <Icon name='lock open'/>Login
-            </Button>
-          }
-        </Button.Group>
+          </Menu.Item>
+
+          <Menu.Menu position='right'>
+            {this.props.isAdmin &&
+              <Menu.Item className={styles.icon} as={Link} to="/admin">
+                <Icon name='book'/>Admin
+              </Menu.Item>
+            }
+            {this.props.isAuthenticated
+              ? <Logout />
+              : <Menu.Item className={styles.icon} as={Link} to="/login">
+                <Icon name='lock open'/>Login
+              </Menu.Item>
+            }
+          </Menu.Menu>
+        </Menu>
       </div>
     )
   }
