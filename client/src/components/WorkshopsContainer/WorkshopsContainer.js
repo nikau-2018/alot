@@ -19,13 +19,10 @@ export default class WorkshopsContainer extends Component {
         })
       return (
         <div className='workshops-container'>
-          {this.props.workshops.length > 0
-            ? <Workshops
-              filteredWorkshops={filteredWorkshops}
-              category={category}
-            />
-            : <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
-          }
+          <Workshops
+            filteredWorkshops={filteredWorkshops}
+            category={category}
+          />
         </div>
       )
     } else {
