@@ -17,7 +17,7 @@ const Tools = (props) => (
       <Search className={styles.search} toolSearch={true} />
     </div>
     <div className={styles.toolCards}>
-      <Card.Group stackable>
+      <Card.Group stackable centered>
         {props.filteredTools.map((tool) => (
           <ToolCard
             key={tool.id}
