@@ -1,3 +1,8 @@
+/* CSS Variable */
+:root {
+  --dark-main: #43296C;
+}
+
 /* FOR MOBILE */
 @media only screen and (max-width: 700px) {
   .loginForm {
@@ -39,27 +44,31 @@
 
 .loginForm {
   text-align: center;
-  color: black;
+  color: var(--dark-main);
+}
+
+.loginForm i {
+  color: var(--dark-main) !important;  
 }
 
 .loginForm .inputs input::placeholder {
-  color: black;
+  color: var(--dark-main);
   font-weight: bold;
 }
 
 .input {
-  border-bottom: .15em solid black;
+  border-bottom: .15em solid var(--dark-main);
   padding-bottom: .5em;
   padding-left: .6em;
 }
 
 .loginForm .button {
-  background-color: black;
+  background-color: var(--dark-main);
   color: white;
 }
 
 .loginForm .switch {
   background-color: transparent;
   padding: 0px;
-  color: black;
+  color: var(--dark-main);
 }
