@@ -17,7 +17,7 @@ class Nav extends Component {
   render () {
     return (
       <div className={styles.nav}>
-        <Menu inverted icon='labeled' small>
+        <Menu icon='labeled' small className={styles.menu}>
           <Menu.Item className={styles.icon} as={Link} to="/">
             <Icon name='home'/>Home
           </Menu.Item>
