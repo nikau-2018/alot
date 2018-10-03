@@ -9,9 +9,9 @@ export default function ToolDetail (props) {
   const isAdmin = props.isAdmin
   return (
     <div className={styles.toolDetail}>
-      <Image src={props.tool.image} size='large' centered />
       <h1 className={styles.h1}>{props.tool.name}</h1>
       <h3 className={styles.h3}>{props.tool.description}</h3>
+      <Image src={props.tool.image} size='large' centered />
       {
         props.tool.available
           ? <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Reserve</Button>
