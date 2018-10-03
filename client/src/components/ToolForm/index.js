@@ -13,8 +13,8 @@ export default class ToolForm extends Component {
       categoryId: null,
       description: '',
       body: '',
-      image: 'https://www.fillmurray.com/200/300',
-      active: true
+      image: '/tool-images/placeholder.jpg',
+      stocked: 1
     }
   }
 
@@ -26,7 +26,7 @@ export default class ToolForm extends Component {
 
   componentDidMount() {
     if(this.props.parent === 'edit') {
-      let {name, categoryId, id, description, image, active, body} = this.props.editing
+      let {name, categoryId, id, description, image, stocked, body} = this.props.editing
       this.setState({
         selectedCategory: this.props.categoryName,
         name: name,
@@ -34,14 +34,14 @@ export default class ToolForm extends Component {
         categoryId: categoryId,
         description: description,
         image: image,
-        active: active,
+        stocked: stocked,
         body: body
       })
     }
   }
 
   render () {
-    const { name, description, body } = this.state
+    const { name, description, body, stocked } = this.state
     let {selectedCategory, error, toolId, ...rest} = this.state
     return (
       <div className={styles.toolForm}>
@@ -53,7 +53,8 @@ export default class ToolForm extends Component {
       <Form>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Name</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='name'
             placeholder='Tool Name'
@@ -81,7 +82,8 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Description</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='description'
             placeholder='Tool Description'
@@ -91,11 +93,23 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Details</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='body'
             placeholder='Tool Details'
             value={body}
+            onChange={this.handleChange}
+          />
+        </Form.Field>
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Number stocked</p>
+          <Form.Input
+            transparent
+            className={styles.input}
+            name='body'
+            placeholder='Number stocked'
+            value={stocked}
             onChange={this.handleChange}
           />
         </Form.Field>
