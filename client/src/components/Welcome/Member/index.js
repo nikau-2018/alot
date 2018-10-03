@@ -17,7 +17,7 @@ export default function Member () {
       </p>
       <p className={styles.p}>All profits are cycled back into the library and cover maintenace, repairs and new tools. We consult
         with the community, and provide resources that appeal to and service a broad cross-section of people.</p>
-      <Button as={Link} to='/login' className={styles.button} size='huge'>Create an Account</Button>
+      <Button as={Link} to='/login' className={styles.button} size='huge'>SIGN UP</Button>
     </div>
   )
 }

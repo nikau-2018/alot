@@ -7,7 +7,7 @@ export default function Footer () {
   return (
     <div className={styles.footer}>
       <h3><Icon name='warehouse' /> Auckland Library of Tools</h3>
-      <p className={styles.p}><Icon name='location arrow' /> Grey Lynn, Auckland</p>
+      <p className={styles.p}><Icon name='location arrow' /> 11 Example St, Grey Lynn</p>
       <a href="https://www.facebook.com/AucklandLibraryofTools/">
         <Icon name='facebook' /> AucklandLibraryofTools
       </a><br /><br />

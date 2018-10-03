@@ -27,7 +27,7 @@
     padding-bottom: 1em;
     width: 100%;
   }
-  .register {
+  .form {
     width: 30%;
     margin: auto;
   }
@@ -39,27 +39,35 @@
 
 .registerForm {
   text-align: center;
-  color: black;
+}
+
+.registerForm i {
+  color: var(--dark-main) !important;  
 }
 
 .registerForm .inputs input::placeholder {
-  color: black;
+  color: var(--dark-main);
   font-weight: bold;
 }
 
 .input {
-  border-bottom: .15em solid black;
+  border-bottom: .15em solid var(--dark-main);
   padding-bottom: .5em;
   padding-left: .6em;
 }
 
 .registerForm .button {
-  background-color: black;
+  background-color: var(--dark-main);
   color: white;
+}
+
+.switch:hover{
+  background-color: transparent !important;
+  color: var(--button-hover) !important;
 }
 
 .registerForm .switch {
   background-color: transparent;
   padding: 0px;
-  color: black;
+  color: var(--dark-main);
 }

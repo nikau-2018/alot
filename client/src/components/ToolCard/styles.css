@@ -1,5 +1,5 @@
 .header {
-  background-color: #503875 !important;
+  background-color: var(--dark-main) !important;
   text-align: center;
   margin-bottom: 1em !important;
 }
