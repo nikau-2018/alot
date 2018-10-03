@@ -52,9 +52,11 @@ export default class WorkshopForm extends Component {
       : <h2>Add a workshop:</h2>
       }
       <Form>
-        <Form.Field required>
+        <Form.Field className={styles.field} required>
           <label>Name</label>
-          <input
+          <Form.Input
+            transparent
+            className={styles.input}
             name='name'
             placeholder='Workshop Name'
             value={name}
@@ -62,8 +64,8 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Category</label>
-          <Dropdown text={this.state.selectedCategory}>
+          <p className={styles.label}>Category</p>
+          <Dropdown className={styles.dropdown} text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item
@@ -79,9 +81,11 @@ export default class WorkshopForm extends Component {
             </Dropdown.Menu>
           </Dropdown>
         </Form.Field>
-        <Form.Field required>
-          <label>Instructor</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Instructor</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='instructor'
             placeholder='Instructor Name'
             value={instructor}
@@ -89,8 +93,10 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Description</label>
-          <input
+          <p className={styles.label}>Description</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='description'
             placeholder='Workshop Description'
             value={description}
@@ -98,16 +104,20 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <Form.Field required>
-          <label>Details</label>
-          <input
+          <p className={styles.label}>Details</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='body'
             placeholder='Workshop Details'
             value={body}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
-        <Button onClick={() => this.props.goBack()}>Go Back</Button>
+        <div className={styles.buttonContainer}>
+        <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+        <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+        </div>
       </Form>
       </div>
     )

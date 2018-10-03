@@ -1,5 +1,78 @@
+/* overall layout */
+.workshopForm .header {
+  padding-top: 1em;
+  font-weight: 400 !important;
+}
+
 .workshopForm {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;  
+}
+
+/* input positioning */
+.workshopForm .field {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+.workshopForm .dropdown {
+  float: left;
+}
+
+/* input styling */
+.workshopForm .input {
+  border-bottom-color: #43296C;
+  border-bottom-style: ridge;
+  border-bottom-width: 0.2em !important;
+  font-size: 1em !important;
+  padding-bottom: 0.4em;
+}
+
+.workshopForm .label {
+  text-align: left;
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+}
+
+/* autocomplete styling */
+input:-webkit-autofill {
+  color: #2a2a2a !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #43296C !important;
+}
+
+/* button styling  */
+.workshopForm .buttonContainer {
+  /* max-width: 50%; */
+  display:flex;
+  justify-content: center;
+  box-align: center;
+  margin-bottom: 2em;
+}
+
+.workshopForm .submit {
+  background-color: #FDE19A;
+  color: #43296C;
+  width: 300px;
+  margin-right: 2em;
+}
+
+.workshopForm .submit:hover {
+  background-color: rgb(209, 193, 152);
+}
+
+.workshopForm .back {
+  background-color: #FDE19A;
+  color: #43296C;
+  width: 300px;
+  float: right;
+}
+
+.workshopForm .back:hover {
+  background-color: rgb(209, 193, 152);
 }
