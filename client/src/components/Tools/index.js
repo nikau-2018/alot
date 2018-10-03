@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Image, Icon} from 'semantic-ui-react'
+import {Card} from 'semantic-ui-react'
 import Search from '../Search'
 import CategoryFilter from '../CategoryFilter'
 import ToolCard from '../ToolCard'
@@ -17,7 +17,7 @@ const Tools = (props) => (
       />
       <Search className={styles.search} toolSearch={true} />
     </div>
-    <div className={styles.toolCards}>
+    <div>
       <Card.Group stackable centered>
         {props.filteredTools.map((tool) => (
           <ToolCard
