@@ -1,7 +1,7 @@
 .welcome .hero {
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.589),
       rgba(0, 0, 0, 0.5)
     ),
     url('/homepage-images/wood-shavings.jpg');
@@ -19,5 +19,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 200px !important;
+  font-size: 2em !important;
 }

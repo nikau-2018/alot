@@ -13,7 +13,7 @@ export default function Welcome () {
       <div className={styles.padding}>
         <div className={styles.hero} >
           <div className={styles.herotext}>
-            <h1>Welcome To The Auckland Library of Tools</h1>
+            <h1 className={styles.herotext}>The Auckland Library of Tools</h1>
           </div>
         </div>
       </div>
