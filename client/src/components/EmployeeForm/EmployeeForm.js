@@ -69,7 +69,7 @@ export default class EmployeeForm extends Component {
     let {postErr, userId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>
-      <h2>Edit this User:</h2>
+      <h2 className={styles.header}>Edit this User:</h2>
       <Form>
       <Form.Field required>
           <label>Role</label>

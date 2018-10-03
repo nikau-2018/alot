@@ -1,0 +1,22 @@
+/* overall layout */
+.employeeForm .header {
+  padding-top: 1em;
+  font-weight: 400 !important;
+}
+
+.employeeForm {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;  
+}
+
+/* input positioning */
+.employeeForm .field {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+.employeeForm .dropdown {
+  float: left;
+}
