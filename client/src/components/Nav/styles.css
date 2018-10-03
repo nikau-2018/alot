@@ -23,5 +23,5 @@ align-items: center;
 }
 
 .menuRight {
-
+display: flex;
 }
