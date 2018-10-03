@@ -14,6 +14,7 @@ function getTools (db = connection) {
       (SELECT tools.stocked - COUNT(orders.id)
       FROM orders WHERE orders.tool_id = tools.id
       AND orders.status >0) AS available`))
+    .orderBy('name', 'asc')
 }
 
 // warning - this wont have availability in it!
