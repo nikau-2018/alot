@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css'
 
 import styles from './styles.css'
 
@@ -14,7 +17,8 @@ export default class WorkshopForm extends Component {
       instructor: '',
       description: '',
       body: '',
-      image: 'https://www.fillmurray.com/200/300'
+      image: 'https://www.fillmurray.com/200/300',
+      dateTime: moment()
     }
   }
 
@@ -22,6 +26,12 @@ export default class WorkshopForm extends Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  handleDateChange = (date) => {
+    this.setState({
+      dateTime: date
+    });
   }
 
   // to modify later on completion of edit workshop
@@ -48,22 +58,24 @@ export default class WorkshopForm extends Component {
       <div className={styles.workshopForm}>
       {
       this.props.parent === 'edit'
-      ? <h2>Edit this workshop:</h2>
-      : <h2>Add a workshop:</h2>
+      ? <h2 className={styles.header}>Edit this workshop:</h2>
+      : <h2 className={styles.header}>Add a workshop:</h2>
       }
       <Form>
-        <Form.Field required>
-          <label>Name</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Name</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='name'
             placeholder='Workshop Name'
             value={name}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Category</label>
-          <Dropdown text={this.state.selectedCategory}>
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Category</p>
+          <Dropdown className={styles.dropdown} text={this.state.selectedCategory}>
             <Dropdown.Menu>
               {this.props.categories.map(category => (
                 <Dropdown.Item
@@ -79,35 +91,51 @@ export default class WorkshopForm extends Component {
             </Dropdown.Menu>
           </Dropdown>
         </Form.Field>
-        <Form.Field required>
-          <label>Instructor</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Instructor</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='instructor'
             placeholder='Instructor Name'
             value={instructor}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Description</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Description</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='description'
             placeholder='Workshop Description'
             value={description}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Details</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Details</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='body'
             placeholder='Workshop Details'
             value={body}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
-        <Button onClick={() => this.props.goBack()}>Go Back</Button>
+        <div>
+        <DatePicker className={styles.picker}
+          selected={this.state.dateTime}
+          onChange={this.handleDateChange}
+          showTimeSelect
+          dateFormat="LLL" />
+    
+      </div>
+        <div className={styles.buttonContainer}>
+          <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+        </div>
       </Form>
       </div>
     )
