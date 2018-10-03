@@ -1,8 +1,12 @@
 .icon {
+  text-align: center;
   font-size: 0.85em !important;
   padding-right: 0.5em;
   width: 10em;
   height: 30px;
+  border-right-style: solid;
+  border-width: 3px !important;
+  border-color: black;
 }
 
 .nav {
@@ -15,7 +19,7 @@ height: 30px;
 
 .menuLeft {
 display: flex;
-
+align-items: center;
 }
 
 .menuRight {
