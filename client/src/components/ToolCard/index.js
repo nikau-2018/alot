@@ -12,8 +12,8 @@ export default function ToolCard (props) {
       <Card.Content className={styles.contentTop}>
         {/* <Button attached className={styles.header}>{props.name}</Button> */}
         <Card.Header className={styles.header}>{props.name}</Card.Header>
-        <Image src={props.image} small verticalAlign='middle' spaced='left'/>
       </Card.Content>
+      <Image src={props.image} size='medium' centered className={styles.image}/>
       <Card.Content extra className={styles.content}>
         <Card.Description className={styles.description}>
           {props.description}

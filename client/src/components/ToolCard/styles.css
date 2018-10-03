@@ -7,10 +7,6 @@
   text-align: center;
   background-color:black !important;
   color: white !important;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 2px solid !important;
-  border-radius: 0.5em !important;
 }
 
 .card {
@@ -27,9 +23,17 @@
   background-color: #fefefe !important;
   text-align: center;
 }
+.contentTop {
+  background-color: #000 !important;
+  text-align: center;
+}
 
 .available {
  float: right;
+}
+
+.image {
+  background-color: white;
 }
 
 body {
