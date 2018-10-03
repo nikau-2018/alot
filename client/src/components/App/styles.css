@@ -1,7 +1,8 @@
 /* CSS Variable */
 :root {
   --dark-main: #43296C;
-  --hover: #d1c198;
+  /* --hover: #d1c198; */
+  --button-hover: #55318B;
 }
 
 .main {
@@ -25,7 +26,8 @@
   font-family: 'Poppins', sans-serif !important;
   color: var(--dark-main);
 }
-/* 
+
 button:hover {
-  background-color: var(--hover) !important;
-} */
+  background-color: var(--button-hover) !important;
+  color: white !important;
+}
