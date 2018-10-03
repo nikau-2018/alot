@@ -1,4 +1,5 @@
 .about {
+    display: flex;
     text-align: center;
     background-color: #F9F3E2;
   }
@@ -16,7 +17,8 @@
   }
 
   .image {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
+    height: 20em;
+    width: auto;
   }

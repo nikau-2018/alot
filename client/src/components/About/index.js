@@ -10,7 +10,7 @@ export default function About () {
       <Divider />
       <Grid stackable>
         <Grid.Column width={6}>
-          <Image className={styles.image} src={'/tools.jpg'} size='medium'/>
+          <img className={styles.image} src={'/tools.jpg'}/>
         </Grid.Column>
         <Grid.Column width={10}>
           <h1 className={styles.h1}>About ALoT</h1>
