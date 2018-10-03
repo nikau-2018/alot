@@ -44,11 +44,13 @@ export default class Nav extends Component {
             </Link>
           }
           {this.props.isAuthenticated
-            ? <div className={styles.icon} onClick={this.props.logoutUser}>
-                <Icon name='log out'/>Logout
-              </div>
+            ? <Link to='#'>
+                <div className={styles.icon} onClick={this.props.logoutUser}>
+                  <Icon name='log out'/>Logout
+                </div>
+              </Link>
             : <Link to='/login'>
-                <div className={styles.icon} as={Link} to="/login">
+                <div className={styles.icon}>
                   <Icon name='lock open'/>Login
                 </div>
               </Link>
