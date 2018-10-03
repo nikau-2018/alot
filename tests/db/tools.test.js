@@ -18,4 +18,3 @@ test('getTools returns 5 tools', () => {
       expect(tools.length).toBe(5)
     })
 })
-
