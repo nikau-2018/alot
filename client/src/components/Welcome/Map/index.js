@@ -18,7 +18,7 @@ export default function Map () {
         <p className={styles.p}>Saturday 11am-3pm</p>
         <p className={styles.p}>Sunday 11am-3pm</p>
       </div>
-      <div>
+      <div className={styles.map}>
         <Image className={styles.image} src={'/grey-lynn.jpg'}size='large'/>
       </div>
     </div>
