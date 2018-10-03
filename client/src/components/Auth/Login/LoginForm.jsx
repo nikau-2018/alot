@@ -50,6 +50,7 @@ export default class LoginForm extends React.Component {
                   className={styles.input}
                   icon='mail'
                   iconPosition='left'
+                  autoComplete='off'
                 />
                 <Form.Input transparent
                   name='password'
@@ -59,6 +60,7 @@ export default class LoginForm extends React.Component {
                   className={styles.input}
                   icon='lock'
                   iconPosition='left'
+                  autoComplete='off'
                 />
               </div>
               <Button onClick={this.handleClick} className={styles.button}>SIGN IN</Button><br />

@@ -12,9 +12,9 @@ afterEach(() => {
   testEnv.cleanup(testDb)
 })
 
-test('getCategories returns 4 categories', () => {
+test('getCategories returns 6 categories', () => {
   return db.getCategories(testDb)
     .then(categories => {
-      expect(categories.length).toBe(4)
+      expect(categories.length).toBe(6)
     })
 })
