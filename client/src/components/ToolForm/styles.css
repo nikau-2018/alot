@@ -50,18 +50,28 @@ input:-webkit-autofill {
   /* max-width: 50%; */
   display:flex;
   justify-content: center;
+  box-align: center;
+  margin-bottom: 20px;
 }
 
 .toolForm .submit {
   background-color: #FDE19A;
   color: #43296C;
-  border-radius: 10%;
   width: 300px;
+  margin-right: 2em;
+}
+
+.toolForm .submit:hover {
+  background-color: rgb(209, 193, 152);
 }
 
 .toolForm .back {
   background-color: #FDE19A;
   color: #43296C;
-  border-radius: 10%;
   width: 300px;
+  float: right;
+}
+
+.toolForm .back:hover {
+  background-color: rgb(209, 193, 152);
 }
