@@ -56,8 +56,8 @@ input:-webkit-autofill {
 }
 
 .toolForm .submit {
-  background-color: #FDE19A;
-  color:  var(--dark-main);
+  background-color: var(--dark-main);
+  color: white;
   width: 300px;
   margin-right: 2em;
 }
@@ -67,8 +67,8 @@ input:-webkit-autofill {
 }
 
 .toolForm .back {
-  background-color: #FDE19A;
-  color:  var(--dark-main);
+  background-color: var(--dark-main);
+  color: white;
   width: 300px;
   float: right;
 }

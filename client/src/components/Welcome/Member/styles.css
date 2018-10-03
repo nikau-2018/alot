@@ -1,3 +1,10 @@
+/* FOR MOBILE */
+@media only screen and (max-width: 700px) {
+    .member .button {
+        width: 100%;    
+    }
+  }
+
 .member {
     text-align: center;
     padding: 2em;
