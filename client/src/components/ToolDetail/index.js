@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, Button, Divider} from 'semantic-ui-react'
+import {Image, Button, Divider, Grid} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
@@ -19,10 +19,18 @@ export default function ToolDetail (props) {
       }
       <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
       {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
+      <Grid stackable columns={2}>
+        <Grid.Row>
+          <Grid.Column>
+            <h5>In Library: {props.tool.stocked}</h5>
+          </Grid.Column>
+          <Grid.Column>
+            <h5>Available: {props.tool.available}</h5>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
       <Divider/>
-      <h5>In library: {props.tool.stocked}</h5>
-      <h5>Available: {props.tool.available}</h5>
-      <h4>Description:</h4>
+      <h4 className={styles.h4}>Product Description</h4>
       <div className={styles.description}>
         <ul>
           {body.split('*').map(element => <li>{element}</li>)}
