@@ -1,8 +1,14 @@
 .about {
-    display: flex;
-    text-align: center;
-    background-color: #F9F3E2;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #F9F3E2;
   }
+
+.about .text {
+  padding: 2em;
+}
 
   .h1 {
     font-size: 35px;
@@ -17,8 +23,7 @@
   }
 
   .image {
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 2em;
     height: 20em;
     width: auto;
   }
