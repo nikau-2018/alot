@@ -25,7 +25,8 @@ exports.seed = function (knex, Promise) {
         {id: 55521, category_id: 77706, name: 'Moisture Meter', description: 'Stanley Moisture Meter', body: 'Measuring environment temperature *Two detection pins (8mm length) to locate in material being tested *Operating temperature 0 - 40° C', image: '/tool-images/moisture-meter.jpg', stocked: 2},
         {id: 55522, category_id: 77706, name: 'Level', description: 'Stabila Type 96 Standard Aluminium Level 1200mm Yellow', body: 'Anti-slip stopper *Shock-Absorbing Ends *Hanghole', image: '/tool-images/level.jpg', stocked: 3},
         {id: 55523, category_id: 77706, name: 'Tool Bag', description: 'Stanley Xtreme Tool Bag Round Top', body: 'The most heavy duty 1200 denier fabric for long lasting durability *Rigid and waterproof plastic base moulded to plastic *Multiple use tool compartments for all storage needs with easy access pockets', image: '/tool-images/tool-bag.jpg', stocked: 2},
-        {id: 55524, category_id: 77706, name: 'Digital Calipers', description: 'Kincrome 150mm Digital Vernier Calipers', body: '4 way measurement * 0.001 - 150mm * Digital screen * Plastic case * Heavy duty use', image: '/tool-images/calipers.jpg', stocked: 5}
+        {id: 55524, category_id: 77706, name: 'Digital Calipers', description: 'Kincrome 150mm Digital Vernier Calipers', body: '4 way measurement * 0.001 - 150mm * Digital screen * Plastic case * Heavy duty use', image: '/tool-images/calipers.jpg', stocked: 5},
+        {id: 55525, category_id: 77705, name: 'Demolition Hammer', description: 'Full Boar 1750W Heavy Duty', body: '45 Joules to power through tough demolition jobs * Carry case with wheels provides convenient transport and storage * Soft grip handles increase user comfort and provide a more secure grip * Flat and pointed chisels included * Auto stop carbon brushes work to protect the armature', image: '/tool-images/demo.jpg', stocked: 1}
       ])
     })
 }
