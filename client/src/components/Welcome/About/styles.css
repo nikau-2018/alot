@@ -1,13 +1,8 @@
 .about {
-  display: flex;
-  flex-flow: row;
   text-align: center;
   background-color: #F9F3E2;
-  }
-
-.about .text {
   padding: 2em;
-}
+  }
 
   .h1 {
     padding: 0.5em;
