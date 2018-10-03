@@ -13,7 +13,7 @@ export default class CategoryFilter extends Component {
     return (
       <div className={styles.categoryFilter}>
         <Dropdown text={this.props.categoryName}>
-          <Dropdown.Menu className={styles.dropdownA}>
+          <Dropdown.Menu>
             <Link to={`/${this.props.type}`}>
               <Dropdown.Item className={styles.dropdown}
                 text='All Categories'
