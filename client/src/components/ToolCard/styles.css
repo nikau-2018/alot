@@ -1,3 +1,41 @@
+/* * {
+  margin: 0 !important;
+  padding: 0 !important;
+} */
+
 .header {
   text-align: center;
+  background-color:black !important;
+  color: white !important;
 }
+
+.card {
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.description {
+  height: 4em !important;
+}
+
+.content {
+  background-color: #fefefe !important;
+  text-align: center;
+}
+.contentTop {
+  background-color: #000 !important;
+  text-align: center;
+}
+
+.available {
+ float: right;
+}
+
+.image {
+  background-color: white;
+}
+
+body {
+}
+
