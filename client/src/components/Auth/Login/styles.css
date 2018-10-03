@@ -62,6 +62,11 @@
   color: white;
 }
 
+.switch:hover{
+  background-color: transparent !important;
+  color: var(--button-hover) !important;
+}
+
 .loginForm .switch {
   background-color: transparent;
   padding: 0px;

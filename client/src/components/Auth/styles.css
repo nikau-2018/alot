@@ -8,3 +8,8 @@
   padding: 0px !important;
   color: var(--dark-purple) !important;  
 }
+
+.back:hover{
+  background-color: transparent !important;
+  color: var(--button-hover) !important;
+}
