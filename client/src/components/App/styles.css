@@ -1,3 +1,9 @@
+/* CSS Variable */
+:root {
+  --dark-main: #43296C;
+  --hover: #d1c198;
+}
+
 .main {
   color: green;
   font-weight: bold;
@@ -17,5 +23,9 @@
  
 :not(i) {
   font-family: 'Poppins', sans-serif !important;
-  color: #43296C;  
+  color: var(--dark-main);
 }
+/* 
+button:hover {
+  background-color: var(--hover) !important;
+} */
