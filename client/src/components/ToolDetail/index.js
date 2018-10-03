@@ -19,13 +19,13 @@ export default function ToolDetail (props) {
       }
       <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
       {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
-      <Grid stackable columns={2}>
+      <Grid stackable columns={2} >
         <Grid.Row>
           <Grid.Column>
-            <h5>In Library: {props.tool.stocked}</h5>
+            <h5 className={styles.h51}>In Library: {props.tool.stocked}</h5>
           </Grid.Column>
           <Grid.Column>
-            <h5>Available: {props.tool.available}</h5>
+            <h5 className={styles.h52}>Available: {props.tool.available}</h5>
           </Grid.Column>
         </Grid.Row>
       </Grid>
