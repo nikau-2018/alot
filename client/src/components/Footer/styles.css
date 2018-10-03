@@ -3,19 +3,10 @@
   background-color:  #F9F3E2;
   padding: 2em;
   margin-top: 2em;
+  color: #43296C;  
 }
 
-.h3 {
-  color: #43296C;
-}
-
-a {
-  color: #43296C;
-  font-size: 15px;
-}
-
-.p {
-  padding: 0px 0px 0px 0px;
-  font-size: 15px;
+.p, .footer a {
+  font-size: 1em;
   color: #43296C;
 }
