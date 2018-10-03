@@ -1,0 +1,8 @@
+.employeeCard .button {
+  background-color: var(--dark-main);
+  color: white;
+}
+
+.employeeCard .header, .employeeCard .description {
+  color: var(--dark-main) !important;
+}

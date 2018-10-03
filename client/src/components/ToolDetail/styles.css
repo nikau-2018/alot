@@ -51,6 +51,8 @@
   margin-bottom: 2em;
 }
 
-.button {
+.toolDetail .button {
   margin: 0.25em !important;
+  background-color: var(--dark-main);
+  color: white;
 }
