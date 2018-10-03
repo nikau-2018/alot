@@ -54,7 +54,7 @@ export default class LoginForm extends React.Component {
                 <Form.Input transparent
                   name='password'
                   type='password'
-                  placeholder='********'
+                  placeholder='Password'
                   onChange={this.handleChange}
                   className={styles.input}
                   icon='lock'

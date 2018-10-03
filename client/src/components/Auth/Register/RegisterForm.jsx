@@ -88,7 +88,7 @@ export default class RegisterForm extends React.Component {
               <Form.Input transparent
                 name='password'
                 type='password'
-                placeholder='********'
+                placeholder='Password'
                 value={password}            
                 onChange={this.handleChange}
                 className={styles.input}
@@ -98,7 +98,7 @@ export default class RegisterForm extends React.Component {
               <Form.Input transparent
                 name='confirm'
                 type='password'
-                placeholder='********'
+                placeholder='Confirm Password'
                 value={confirm}            
                 onChange={this.handleChange}
                 className={styles.input}
