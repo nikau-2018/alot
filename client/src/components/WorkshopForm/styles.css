@@ -4,6 +4,10 @@
   font-weight: 400 !important;
 }
 
+.picker>li {
+  background-color: red !important;
+}
+
 .workshopForm {
   text-align: center;
   margin-left: 10%;
