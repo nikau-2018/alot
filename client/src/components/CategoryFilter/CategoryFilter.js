@@ -13,16 +13,16 @@ export default class CategoryFilter extends Component {
     return (
       <div className={styles.categoryFilter}>
         <Dropdown text={this.props.categoryName}>
-          <Dropdown.Menu>
+          <Dropdown.Menu className={styles.dropdownA}>
             <Link to={`/${this.props.type}`}>
-              <Dropdown.Item
-                text='All'
+              <Dropdown.Item className={styles.dropdown}
+                text='All Categories'
                 name='All'
               />
             </Link>
             {this.props.categories.map(category =>
               <Link to={`/${this.props.type}/${category.id}`} key={category.id}>
-                <Dropdown.Item
+                <Dropdown.Item className={styles.dropdown}
                   text={`${category.name}`}
                   name={`${category.name}`}
                 />
