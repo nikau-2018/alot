@@ -1,4 +1,9 @@
 .categoryFilter {
   text-align: center;
   font-size: 1.5em;
+  color: #43296C;
+}
+
+.dropdown {
+  font-size: 1.2em !important;
 }
