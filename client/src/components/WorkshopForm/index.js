@@ -53,7 +53,7 @@ export default class WorkshopForm extends Component {
       }
       <Form>
         <Form.Field className={styles.field} required>
-          <label className={styles.label}>Name</label>
+          <p className={styles.label}>Name</p>
           <Form.Input
             transparent
             className={styles.input}
@@ -115,8 +115,8 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <div className={styles.buttonContainer}>
-        <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
-        <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+          <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
         </div>
       </Form>
       </div>
