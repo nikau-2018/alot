@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import {Button, Form, Dropdown} from 'semantic-ui-react'
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css'
 
 import styles from './styles.css'
 
@@ -14,7 +17,8 @@ export default class WorkshopForm extends Component {
       instructor: '',
       description: '',
       body: '',
-      image: 'https://www.fillmurray.com/200/300'
+      image: 'https://www.fillmurray.com/200/300',
+      dateTime: moment()
     }
   }
 
@@ -22,6 +26,12 @@ export default class WorkshopForm extends Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  handleDateChange = (date) => {
+    this.setState({
+      dateTime: date
+    });
   }
 
   // to modify later on completion of edit workshop
@@ -53,7 +63,7 @@ export default class WorkshopForm extends Component {
       }
       <Form>
         <Form.Field className={styles.field} required>
-          <label className={styles.label}>Name</label>
+          <p className={styles.label}>Name</p>
           <Form.Input
             transparent
             className={styles.input}
@@ -114,9 +124,17 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
+        <div>
+        <DatePicker className={styles.picker}
+          selected={this.state.dateTime}
+          onChange={this.handleDateChange}
+          showTimeSelect
+          dateFormat="LLL" />
+    
+      </div>
         <div className={styles.buttonContainer}>
-        <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
-        <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+          <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
         </div>
       </Form>
       </div>

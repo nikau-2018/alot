@@ -36,6 +36,7 @@
     "promise": "8.0.1",
     "raf": "3.4.0",
     "react": "^16.5.2",
+    "react-datepicker": "^1.6.0",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -95,6 +96,7 @@
     "babel-plugin-react-css-modules": "^3.4.2",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
+    "react-dropdown-timepicker": "^1.0.4",
     "semantic-ui-css": "^2.4.0",
     "semantic-ui-react": "^0.82.5"
   }
