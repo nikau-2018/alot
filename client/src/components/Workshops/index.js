@@ -28,7 +28,8 @@ const Workshops = (props) => (
             image={workshop.image}
             description={workshop.description}
             instructor={workshop.instructor}
-            dateTime={workshop.dateTime}/>
+            dateTime={workshop.dateTime}
+            body={workshop.body} />
         ))}
       </Card.Group>
     </div>
