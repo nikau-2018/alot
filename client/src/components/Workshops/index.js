@@ -8,7 +8,7 @@ import styles from './styles.css'
 
 const Workshops = (props) => (
   <div className={styles.workshops}>
-    <h1 className={styles.header}>Tools</h1>
+    <h1 className={styles.header}>Workshops</h1>
     <div className={styles.top}>
       <CategoryFilter
         type='workshops'
