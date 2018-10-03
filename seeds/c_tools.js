@@ -17,6 +17,6 @@ exports.seed = function (knex, Promise) {
         {id: 55513, category_id: 77701, name: 'Needles', description: 'Birch Crewel Needles', body: 'Versatile all-purpose needles *Durable and easy to handle', image: '/tool-images/needles.jpg', stocked: 3},
 
         {id: 55514, category_id: 77704, name: 'Impact Drill', description: 'Ryobi Impact Drill 800W', body: '180W motor *Efficient cyclonic micro filtration dust collection *Triangular shaped front base for detail and corner sanding', image: '/tool-images/impact-drill.jpg', stocked: 1}
+      ])
     })
 }
-
