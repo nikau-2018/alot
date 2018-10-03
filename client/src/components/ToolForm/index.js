@@ -53,7 +53,8 @@ export default class ToolForm extends Component {
       <Form>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Name</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='name'
             placeholder='Tool Name'
@@ -81,7 +82,8 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Description</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='description'
             placeholder='Tool Description'
@@ -91,7 +93,8 @@ export default class ToolForm extends Component {
         </Form.Field>
         <Form.Field className={styles.field} required>
           <p className={styles.label}>Details</p>
-          <Form.Input transparent
+          <Form.Input
+            transparent
             className={styles.input}
             name='body'
             placeholder='Tool Details'
