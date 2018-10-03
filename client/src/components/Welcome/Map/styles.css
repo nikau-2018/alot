@@ -1,5 +1,11 @@
 .map{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items:flex-start;
   text-align: center;
+  padding-top: 3em;
 }
 
 .h1 {
@@ -23,4 +29,8 @@
 .p{
   font-size: 20px;
   color: #43296C;
+}
+
+.about {
+  padding-top: 5em;
 }
