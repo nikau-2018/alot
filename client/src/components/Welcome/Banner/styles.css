@@ -1,6 +1,7 @@
 .h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 3em;
     color: #43296C;
     padding: 60px 0px 60px 0px;
+    font-family: 'Poppins', sans-serif;
 }

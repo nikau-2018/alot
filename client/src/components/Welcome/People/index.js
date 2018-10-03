@@ -20,11 +20,14 @@ export default function People () {
           <Grid.Column>
             <h2>Tom Greer</h2>
             <Image className={styles.image} src={'/people/tomGreer.jpg'} circular/>
-            <p className={styles.p}>Tom Greer​ studies Landscape Architecture, and has worked in ecology and environmental science. He has a 
-              passion for the natural world, design and social systems. Tom previously studied biology and statistics, 
-              and has completed a BA(Hons) and PGDipSci. He also has several years experience working in libraries of 
+            <p className={styles.p}>Tom Greer​ studies Landscape Architecture, and has worked in ecology and environmental science. He has a
+              passion for the natural world, design and social systems. Tom previously studied biology and statistics,
+              and has completed a BA(Hons) and PGDipSci. He also has several years experience working in libraries of
               books (libraries)</p>
             <p className={styles.email}><Icon name='mail' />tza.greer@gmail.com</p>
+            <a href="mailto:tza.greer@gmail.com">
+              <Icon name='mail' /> tza.greer@gmail.com
+            </a>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

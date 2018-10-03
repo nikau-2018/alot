@@ -8,9 +8,14 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 .body {
   flex: 1;
 }
  /*  */
  
+:not(i) {
+  font-family: 'Poppins', sans-serif !important;
+  color: #43296C;  
+}
