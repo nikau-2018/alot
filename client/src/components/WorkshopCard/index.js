@@ -12,7 +12,7 @@ export default function WorkshopCard (props) {
       <Card.Content className={styles.header}>
         <Card.Header className={styles.headerText}>{props.name}</Card.Header>
       </Card.Content>
-      <Image spacecd src={props.image} size='medium' fluid centered className={styles.image}/>
+      <div className={styles.fixed}><Image src={props.image} size='medium' fluid centered className={styles.image}/></div>
       <Card.Content extra className={styles.content}>
         <Card.Description className={styles.description}>
           {props.body}
