@@ -9,11 +9,17 @@ export default function ToolDetail (props) {
   const isAdmin = props.isAdmin
   return (
     <div className={styles.toolDetail}>
-      <h1>{props.tool.name}</h1>
-      <Divider/>
       <Image src={props.tool.image} size='large' centered />
+      <h1 className={styles.h1}>{props.tool.name}</h1>
+      <h3 className={styles.h3}>{props.tool.description}</h3>
+      {
+        props.tool.available
+          ? <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Reserve</Button>
+          : <Button basic color='red'>Not available</Button>
+      }
+      <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
+      {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
       <Divider/>
-      <h3>{props.tool.description}</h3>
       <h5>In library: {props.tool.stocked}</h5>
       <h5>Available: {props.tool.available}</h5>
       <h4>Description:</h4>
@@ -22,13 +28,6 @@ export default function ToolDetail (props) {
           {body.split('*').map(element => <li>{element}</li>)}
         </ul>
       </div>
-      {
-        props.tool.available
-          ? <Button as={Link} to={`/confirm/tool/${props.tool.id}`} basic color='green'>Reserve</Button>
-          : <Button basic color='red'>Not available</Button>
-      }
-      <Button as={Link} to={`/tools/${props.tool.categoryId}`} basic>Similar Tools</Button>
-      {isAdmin && <Button as={Link} to={`/edit/tool/${props.tool.id}`} basic>Edit Tool</Button>}
     </div>
   )
 }
