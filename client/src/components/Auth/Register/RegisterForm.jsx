@@ -46,7 +46,7 @@ export default class RegisterForm extends React.Component {
     return (
       <div className={styles.registerForm}>
         <Form>
-          <div className={styles.register}>          
+          <div className={styles.form}>          
             <h1>SIGN UP</h1>
             <div className={styles.inputs}>
               <Form.Input transparent

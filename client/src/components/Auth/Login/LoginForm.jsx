@@ -40,7 +40,7 @@ export default class LoginForm extends React.Component {
     return (
       <div className={styles.loginForm}>
         <Form>
-            <div className={styles.login}>
+            <div className={styles.form}>
               <h1>LOGIN</h1>
               <div className={styles.inputs}>
                 <Form.Input transparent
