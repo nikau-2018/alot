@@ -7,10 +7,9 @@ import styles from './styles.css'
 export default function Member () {
   return (
     <div className={styles.member}>
-      <Divider />
       <h1 className={styles.h1}>Become a Member</h1>
       <p className={styles.p}>Any person over the age of 18 is welcome to become a member of the Auckland Library of Tools. The membership
-         fee is $40 for a year and this fee can be paid to a staff memeber the first time you collect a tool.
+        fee is $40 for a year and this fee can be paid to a staff memeber the first time you collect a tool.
       </p>
       <p className={styles.p}>
         The library is staffed by knowledgeable people who are able to advise members and ensure the proper maintenance of equipment.

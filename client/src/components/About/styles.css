@@ -1,7 +1,6 @@
 .about {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
   text-align: center;
   background-color: #F9F3E2;
   }
@@ -12,18 +11,10 @@
 
   .h1 {
     font-size: 35px;
-    padding:20px 0px 0px 0px;
     color: #43296C;
   }
 
   .p {
     font-size: 20px;
     color: #43296C;
-    padding: 0px 0px 20px 0px;
-  }
-
-  .image {
-    padding-top: 2em;
-    height: 20em;
-    width: auto;
   }
