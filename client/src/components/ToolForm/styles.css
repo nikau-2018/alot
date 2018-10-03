@@ -23,7 +23,7 @@
 
 /* input styling */
 .toolForm .input {
-  border-bottom-color: #43296C;
+  border-bottom-color:  var(--dark-main);
   border-bottom-style: ridge;
   border-bottom-width: 0.2em !important;
   font-size: 1em !important;
@@ -43,7 +43,7 @@ input:-webkit-autofill {
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: #43296C !important;
+  -webkit-text-fill-color:  var(--dark-main) !important;
 }
 
 /* button styling  */
@@ -57,7 +57,7 @@ input:-webkit-autofill {
 
 .toolForm .submit {
   background-color: #FDE19A;
-  color: #43296C;
+  color:  var(--dark-main);
   width: 300px;
   margin-right: 2em;
 }
@@ -68,7 +68,7 @@ input:-webkit-autofill {
 
 .toolForm .back {
   background-color: #FDE19A;
-  color: #43296C;
+  color:  var(--dark-main);
   width: 300px;
   float: right;
 }

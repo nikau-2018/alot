@@ -6,5 +6,10 @@
   margin: 1%;
   background-color: transparent !important;
   padding: 0px !important;
-  color: black !important;
+  color: var(--dark-purple) !important;  
+}
+
+.back:hover{
+  background-color: transparent !important;
+  color: var(--button-hover) !important;
 }
