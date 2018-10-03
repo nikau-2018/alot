@@ -14,7 +14,9 @@ exports.seed = function (knex, Promise) {
         {id: 55510, category_id: 77704, name: 'Screwdrivers', description: 'Fuller Robertson Screwdriver Set 4pc', body: 'Non-slip grip handles *Set includes: S2x38mm, S1x100mm, S2x100mm, S2x200mm', image: '/tool-images/screwdrivers.jpg', stocked: 1},
         {id: 55511, category_id: 77704, name: 'Sander', description: 'Ryobi 180W Multi Pad Sander', body: '180W motor *Efficient cyclonic micro filtration dust collection *Triangular shaped front base for detail and corner sanding', image: '/tool-images/sander.jpg', stocked: 1},
         {id: 55512, category_id: 77701, name: 'Overlocker', description: 'Singer 14SH654 Finishing Touch Overlocker', body: 'Up to 1,300 stitches per minute *Three thread overlock *Conversion from normal over edging to rolled hemming can be accomplished without changing the throat plate', image: '/tool-images/overlocker.jpg', stocked: 1},
-        {id: 55513, category_id: 77701, name: 'Needles', description: 'Birch Crewel Needles', body: 'Versatile all-purpose needles *Durable and easy to handle', image: '/tool-images/needles.jpg', stocked: 3}
-      ])
+        {id: 55513, category_id: 77701, name: 'Needles', description: 'Birch Crewel Needles', body: 'Versatile all-purpose needles *Durable and easy to handle', image: '/tool-images/needles.jpg', stocked: 3},
+
+        {id: 55514, category_id: 77704, name: 'Impact Drill', description: 'Ryobi Impact Drill 800W', body: '180W motor *Efficient cyclonic micro filtration dust collection *Triangular shaped front base for detail and corner sanding', image: '/tool-images/impact-drill.jpg', stocked: 1}
     })
 }
+
