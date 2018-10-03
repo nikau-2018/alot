@@ -60,8 +60,8 @@ input:-webkit-autofill {
 }
 
 .workshopForm .submit {
-  background-color: #FDE19A;
-  color: #43296C;
+  background-color: var(--dark-main);
+  color: white;
   width: 300px;
   margin-right: 2em;
 }
@@ -71,8 +71,8 @@ input:-webkit-autofill {
 }
 
 .workshopForm .back {
-  background-color: #FDE19A;
-  color: #43296C;
+  background-color: var(--dark-main);
+  color: white;
   width: 300px;
   float: right;
 }

@@ -6,7 +6,6 @@
     margin-right: 8%;  
   }
   .registerForm .button {
-    border-radius: 10%/50%;    
     padding-top: 6%;
     padding-bottom: 6%;
     width: 100%;    
@@ -22,7 +21,6 @@
     margin-top: 3em;
   }
   .registerForm .button {
-    border-radius: 3%/50%;    
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;

@@ -19,16 +19,16 @@ export default class EditEmployee extends Component {
   ready () {
     return (
       <div>
-      <h2>Users</h2>
-      {this.props.users.map(user => {
-        return (
-          <div key={user.id} className={styles.editEmployee}>
-            <Card.Group>
-              <EmployeeCard key={user.id} user={user}/>
-            </Card.Group>
-          </div>
-        )
-      })}
+        <h2>Users</h2>
+        {this.props.users.map(user => {
+          return (
+            <div key={user.id} className={styles.editEmployee}>
+              <Card.Group centered>
+                <EmployeeCard key={user.id} user={user}/>
+              </Card.Group>
+            </div>
+          )
+        })}
       </div>
     )
   }
