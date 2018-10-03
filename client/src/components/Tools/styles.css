@@ -1,13 +1,15 @@
 .tools {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  background-color: #FDFBF7;
+  padding-bottom: 4em;
 }
 
-.search {
-  padding-bottom: 2em !important;
+body {
+  background-color: #FDFBF7;
 }
 
-.filter {
-  margin: 1em !important;
+.header {
+  padding-top: 0.5em;
+  text-align: center;
+  color: #43296C;
+  font-size: 2.5em;
 }

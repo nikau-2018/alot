@@ -6,7 +6,7 @@ import CategoryFilter from './CategoryFilter'
 
 const mapStateToProps = (state, ownProps) => {
   const {categories} = state.categories
-  let categoryName = 'Categories'
+  let categoryName = 'All Categories'
   const category = categories.find(cat => cat.id === Number(ownProps.category))
   if (category) {
     categoryName = category.name

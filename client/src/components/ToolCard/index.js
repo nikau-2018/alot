@@ -9,11 +9,10 @@ export default function ToolCard (props) {
     <Card
       color={props.available ? 'green' : 'red'}
       as={Link} to={`/tools/${props.category}/${props.id}`}>
-      <Card.Content className={styles.contentTop}>
-        {/* <Button attached className={styles.header}>{props.name}</Button> */}
-        <Card.Header className={styles.header}>{props.name}</Card.Header>
+      <Card.Content className={styles.header}>
+        <Card.Header className={styles.headerText}>{props.name}</Card.Header>
       </Card.Content>
-      <Image src={props.image} size='medium' centered className={styles.image}/>
+      <Image src={props.image} size='small' fluid centered className={styles.image}/>
       <Card.Content extra className={styles.content}>
         <Card.Description className={styles.description}>
           {props.description}
