@@ -2,3 +2,15 @@
   color: green;
   font-weight: bold;
 }
+
+/* This makes the footer stick to bottom of page */
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.body {
+  flex: 1;
+}
+ /*  */
+ 
