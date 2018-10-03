@@ -17,33 +17,33 @@ class Nav extends Component {
   render () {
     return (
       <div className={styles.nav}>
-        <Menu icon='labeled' small className={styles.menu}>
-          <Menu.Item className={styles.icon} as={Link} to="/">
+        <div className={styles.menuLeft}>
+          <div className={styles.icon} as={Link} to="/">
             <Icon name='home'/>Home
-          </Menu.Item>
+          </div>
 
-          <Menu.Item className={styles.icon} as={Link} to="/tools">
+          <div className={styles.icon} as={Link} to="/tools">
             <Icon name='wrench' />Tools
-          </Menu.Item>
+          </div>
 
-          <Menu.Item className={styles.icon} as={Link} to="/workshops">
+          <div className={styles.icon} as={Link} to="/workshops">
             <Icon name='warehouse'/>Workshops
-          </Menu.Item>
+          </div>
+        </div>
 
-          <Menu.Menu position='right'>
-            {this.props.isAdmin &&
-              <Menu.Item className={styles.icon} as={Link} to="/admin">
-                <Icon name='book'/>Admin
-              </Menu.Item>
-            }
-            {this.props.isAuthenticated
-              ? <Logout />
-              : <Menu.Item className={styles.icon} as={Link} to="/login">
+        <div className={styles.menuRight} position='right'>
+          {this.props.isAdmin &&
+            <div className={styles.icon} as={Link} to="/admin">
+              <Icon name='book'/>Admin
+            </div>
+          }
+          {this.props.isAuthenticated
+            ? <Logout />
+            : <div className={styles.icon} as={Link} to="/login">
                 <Icon name='lock open'/>Login
-              </Menu.Item>
-            }
-          </Menu.Menu>
-        </Menu>
+              </div>
+          }
+        </div>
       </div>
     )
   }
