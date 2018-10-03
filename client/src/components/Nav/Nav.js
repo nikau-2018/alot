@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import {Button, Icon, Menu} from 'semantic-ui-react'
+import {Button, Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 
 import styles from './styles.css'
@@ -16,47 +15,72 @@ export default class Nav extends Component {
 
   render () {
     return (
-      <div className={styles.nav}>
-        <div className={styles.menuLeft}>
-          <Link to='/'>
-            <div className={styles.icon} as={Link} to="/">
-              <Icon name='home'/>Home
-            </div>
-          </Link>
-          <Link to='/tools'>
-          <div className={styles.icon} as={Link} to="/tools">
-            <Icon name='wrench' />Tools
+      <nav role='navigation'>
+        <div id={styles.menuToggle}>
+        <input type='checkbox' />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id={styles.menu}>
+          <div className={styles.menuLeft}>
+            <Button  as={Link} to="/" className={styles.button}>
+                <Icon name='home'/>Home
+            </Button>
+            <Button  as={Link} to="/tools" className={styles.button}>
+              <Icon name='wrench' />Tools
+            </Button>
+            <Button  as={Link} to="/workshops" className={styles.button}>
+              <Icon name='warehouse'/>Workshops
+            </Button>
           </div>
-          </Link>
-          <Link to='/workshops'>
-          <div className={styles.icon} as={Link} to="/workshops">
-            <Icon name='warehouse'/>Workshops
-          </div>
-          </Link>
-        </div>
 
-        <div className={styles.menuRight} position='right'>
-          {this.props.isAdmin &&
-            <Link to='/admin'>
-              <div className={styles.icon} as={Link} to="/admin">
+          <div className={styles.menuRight} position='right'>
+            {this.props.isAdmin &&
+              <Button as={Link} to="/admin" className={styles.button}>
                 <Icon name='book'/>Admin
-              </div>
-            </Link>
-          }
-          {this.props.isAuthenticated
-            ? <Link to='#'>
-                <div className={styles.icon} onClick={this.props.logoutUser}>
+              </Button>
+            }
+            {this.props.isAuthenticated
+              ? <Button as={Link} to='#' className={styles.button} onClick={this.props.logoutUser}>
                   <Icon name='log out'/>Logout
-                </div>
-              </Link>
-            : <Link to='/login'>
-                <div className={styles.icon}>
+                </Button>
+              : <Button as={Link} to='/login' className={styles.button}>
                   <Icon name='lock open'/>Login
-                </div>
-              </Link>
-          }
+                </Button>
+            }
+          </div>
+        </ul>
         </div>
-      </div>
+      </nav>
     )
   }
 }
+
+// old menu attempt
+{/* <div className={styles.menuLeft}>
+  <Button  as={Link} to="/" className={styles.button}>
+      <Icon name='home'/>Home
+  </Button>
+  <Button  as={Link} to="/tools" className={styles.button}>
+    <Icon name='wrench' />Tools
+  </Button>
+  <Button  as={Link} to="/workshops" className={styles.button}>
+    <Icon name='warehouse'/>Workshops
+  </Button>
+</div>
+
+<div className={styles.menuRight} position='right'>
+  {this.props.isAdmin &&
+    <Button as={Link} to="/admin" className={styles.button}>
+      <Icon name='book'/>Admin
+    </Button>
+  }
+  {this.props.isAuthenticated
+    ? <Button as={Link} to='#' className={styles.button} onClick={this.props.logoutUser}>
+        <Icon name='log out'/>Logout
+      </Button>
+    : <Button as={Link} to='/login' className={styles.button}>
+        <Icon name='lock open'/>Login
+      </Button>
+  }
+</div> */}
