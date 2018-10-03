@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Form} from 'semantic-ui-react'
+import {Button, Form, Input} from 'semantic-ui-react'
 import axios from 'axios'
 import {get} from '../Auth/utils/localstorage'
 
@@ -73,7 +73,7 @@ export default class EmployeeForm extends Component {
       <Form>
       <Form.Field required>
           <label>Role</label>
-          <input
+          <Form.Input
             name='role'
             placeholder='Role'
             value={role}
@@ -82,7 +82,7 @@ export default class EmployeeForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>First Name</label>
-          <input
+          <Form.Input
             name='firstName'
             placeholder='First Name'
             value={firstName}
@@ -91,7 +91,7 @@ export default class EmployeeForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>Last Name</label>
-          <input
+          <Form.Input
             name='lastName'
             placeholder='Last Name'
             value={lastName}
@@ -100,7 +100,7 @@ export default class EmployeeForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>Email</label>
-          <input
+          <Form.Input
             name='email'
             placeholder='email address'
             value={email}
@@ -109,7 +109,7 @@ export default class EmployeeForm extends Component {
         </Form.Field>
         <Form.Field required>
           <label>Phone</label>
-          <input
+          <Form.Input
             name='phone'
             placeholder='Phone Number'
             value={phone}
