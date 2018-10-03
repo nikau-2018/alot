@@ -22,10 +22,10 @@ export default function ToolDetail (props) {
       <Grid columns={2} >
         <Grid.Row>
           <Grid.Column>
-            <h5 className={styles.h51}>In Library: {props.tool.stocked}</h5>
+            <h5 className={styles.h5one}>In Library: {props.tool.stocked}</h5>
           </Grid.Column>
           <Grid.Column>
-            <h5 className={styles.h52}>Available: {props.tool.available}</h5>
+            <h5 className={styles.h5two}>Available: {props.tool.available}</h5>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -33,7 +33,7 @@ export default function ToolDetail (props) {
       <h4 className={styles.h4}>Product Description</h4>
       <div className={styles.description}>
         <ul>
-          {body.split('*').map(element => <li>{element}</li>)}
+          {body.split('*').map(element => <li className={styles.li}>{element}</li>)}
         </ul>
       </div>
     </div>
