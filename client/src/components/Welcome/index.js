@@ -1,22 +1,22 @@
 import React from 'react'
-import {Image} from 'semantic-ui-react'
 
-import garageBanner from './garage-banner.jpg'
 import People from './People'
 import About from './About'
 import Member from './Member'
-import Banner from './Banner'
 import Map from './Map'
 
 import styles from './styles.css'
 
 export default function Welcome () {
   return (
-    <div className='welcome'>
+    <div className={styles.welcome}>
       <div className={styles.padding}>
-        <Image src={garageBanner} fluid />
+        <div className={styles.hero} >
+          <div className={styles.herotext}>
+            <h1 className={styles.herotext}>The Auckland Library of Tools</h1>
+          </div>
+        </div>
       </div>
-      <Banner />
       <About />
       <Member />
       <People />
