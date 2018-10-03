@@ -9,7 +9,7 @@ export default function Map () {
     <div className={styles.map}>
       <div className={styles.about}>
         <h2 className={styles.h2}>Address</h2>
-        <p className={styles.p}>11 Example Street</p>
+        <p className={styles.p}>11 Example St</p>
         <p className={styles.p}>Grey Lynn</p>
         <p className={styles.p}>Auckland</p>
       </div>
