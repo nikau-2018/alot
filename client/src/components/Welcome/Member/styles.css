@@ -16,3 +16,7 @@
     background-color: var(--dark-main) !important;
     color: white !important;
 }
+
+.button:hover {
+    background-color: var(--button-hover) !important;
+}
