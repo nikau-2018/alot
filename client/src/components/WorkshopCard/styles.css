@@ -1,7 +1,8 @@
 .header {
   background-color: #503875 !important;
   text-align: center;
-  margin-bottom: 1em !important;
+  
+
 }
 
 .headerText {
@@ -10,7 +11,6 @@
 }
 
 .content {
-  margin-top: 1em !important;
   background-color: white !important;
 }
 
@@ -26,13 +26,4 @@
 
 .available {
  float: right;
-}
-
-.image {
-  background-color: white;
-}
-
-.fixed {
-  height: 225px;
-  display: flex;
 }

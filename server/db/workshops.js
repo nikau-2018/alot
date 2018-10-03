@@ -9,6 +9,7 @@ module.exports = {
 function getWorkshops (db = connection) {
   return db('workshops')
     .select()
+    .orderBy('dateTime', 'asc')
 }
 
 function addWorkshop (workshop, db = connection) {

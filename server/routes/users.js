@@ -9,7 +9,7 @@ const router = express.Router()
 const db = require('../db/users')
 
 // Admin routes for user maintenance
-router.get('/get-users', verifyJwt({secret: getSecret}), isAdmin, getUsers, handleError)
+router.get('/get-users', verifyJwt({secret: getSecret}), getUsers, handleError)
 
 function getUsers (req, res) {
   db.getUsers()

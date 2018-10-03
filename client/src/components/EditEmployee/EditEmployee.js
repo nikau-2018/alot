@@ -18,7 +18,7 @@ export default class EditEmployee extends Component {
 
   ready () {
     return (
-      <div>
+      <div className={styles.users}>
         <h2>Users</h2>
         {this.props.users.map(user => {
           return (
