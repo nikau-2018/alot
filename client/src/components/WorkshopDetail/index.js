@@ -14,7 +14,9 @@ export default function WorkshopDetail (props) {
       <Divider/>
       <Image src={props.workshop.image} size='large' centered />
       <Divider/>
-      <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
+      <div className={styles.bullets}>
+        <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
+      </div>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>
       <h3>Instructor: </h3>
