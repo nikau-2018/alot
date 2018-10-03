@@ -1,7 +1,7 @@
 .map{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items:flex-start;
   text-align: center;
@@ -33,4 +33,23 @@
 
 .about {
   padding-top: 5em;
+  padding-left: 0.5em;
+}
+
+.map {
+  padding-bottom: 1.7em;
+}
+
+/* FOR MOBILE */
+@media only screen and (max-width: 845px) {
+  .about {
+    padding-top: 1.0em;
+  }
+  .map {
+
+  }
+}
+/* FOR DESKTOP */
+@media only screen and (min-width: 700px) {
+
 }
