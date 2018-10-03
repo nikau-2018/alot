@@ -14,11 +14,14 @@ export default class Nav extends Component {
   }
 
   render () {
-    
+    let inputs = document.getElementById('toggle')
+    console.log(inputs)
+    let toggle = () => {
+    }
     return (
       <nav role='navigation'>
         <div id={styles.menuToggle}>
-        <input type='checkbox' />
+        <input type='checkbox' id={styles.toggle}/>
         <span></span>
         <span></span>
         <span></span>
