@@ -1,19 +1,50 @@
-/* @media only screen and (max-width: 600px) {
-  .registerForm .button {
-    border-radius: 10%/50%;
-    padding-left: 40%;
-    padding-right: 40%;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    background-color: black;
+/* FOR MOBILE */
+@media only screen and (max-width: 700px) {
+  .registerForm {
+    margin-top: 10%;
+    margin-left: 8%;
+    margin-right: 8%;  
   }
-} */
+  .registerForm .button {
+    border-radius: 10%/50%;    
+    padding-top: 6%;
+    padding-bottom: 6%;
+    width: 100%;    
+  }
+  .inputs {
+    margin-bottom: 15%;
+  }
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 700px) {
+  .registerForm {
+    margin-top: 3em;
+  }
+  .registerForm .button {
+    border-radius: 3%/50%;    
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+  }
+  .register {
+    width: 30%;
+    margin: auto;
+  }
+  .inputs {
+    width: 100%;
+    margin-bottom: 3%;
+  }
+}
 
 .registerForm {
   text-align: center;
-  margin-top: 10%;
-  margin-left: 8%;
-  margin-right: 8%;  
+  color: black;
+}
+
+.registerForm .inputs input::placeholder {
+  color: black;
+  font-weight: bold;
 }
 
 .input {
@@ -22,31 +53,13 @@
   padding-left: .6em;
 }
 
-.registerForm .inputs input::placeholder {
-  color: black;
-  font-weight: bold;
-}
-
-.inputs {
-  margin-bottom: 15%;
-}
-
 .registerForm .button {
-  border-radius: 10%/50%;
-  padding-left: 40%;
-  padding-right: 40%;
-  padding-top: 7%;
-  padding-bottom: 7%;
   background-color: black;
   color: white;
 }
 
-.switch {
-  background-color: transparent !important;
-  padding: 0px !important;
-  color: black !important;
-}
-
-.p {
+.registerForm .switch {
+  background-color: transparent;
+  padding: 0px;
   color: black;
 }
