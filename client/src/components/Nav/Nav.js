@@ -14,6 +14,7 @@ export default class Nav extends Component {
   }
 
   render () {
+    
     return (
       <nav role='navigation'>
         <div id={styles.menuToggle}>
