@@ -1,3 +1,21 @@
+/* FOR MOBILE */
+/* @media only screen and (min-width: 700px) {
+    .member .button {
+        border-radius: 10%/50% !important;    
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+} */
+
+/* FOR DESKTOP */
+/* @media only screen and (min-width: 700px) {
+    .member .button {
+      border-radius: 3%/50%;    
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+} */
+
 .member {
     text-align: center;
     padding: 2em;
@@ -12,9 +30,10 @@
     font-size: 1.3rem; 
 }
 
-.button {
-    background-color: var(--dark-main) !important;
-    color: white !important;
+.member .button {
+    background-color: var(--dark-main);
+    color: white;
+
 }
 
 .button:hover {
