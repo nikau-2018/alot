@@ -1,21 +1,3 @@
-/* FOR MOBILE */
-/* @media only screen and (min-width: 700px) {
-    .member .button {
-        border-radius: 10%/50% !important;    
-        padding-top: 6%;
-        padding-bottom: 6%;
-    }
-} */
-
-/* FOR DESKTOP */
-/* @media only screen and (min-width: 700px) {
-    .member .button {
-      border-radius: 3%/50%;    
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-} */
-
 .member {
     text-align: center;
     padding: 2em;
