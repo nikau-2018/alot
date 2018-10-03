@@ -47,13 +47,13 @@ export default class ToolForm extends Component {
       <div className={styles.toolForm}>
       {
       this.props.parent === 'edit'
-      ? <h2>Edit this tool:</h2>
-      : <h2>Add a tool:</h2>
+      ? <h2 className={styles.header}>Edit this tool:</h2>
+      : <h2 className={styles.header}>Add a tool:</h2>
       }
       <Form>
-        <Form.Field required>
-          <label>Name</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Name</p>
+          <Form.Input transparent
             className={styles.input}
             name='name'
             placeholder='Tool Name'
@@ -61,10 +61,10 @@ export default class ToolForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Category</label>
-          <Dropdown text={this.state.selectedCategory}>
-            <Dropdown.Menu>
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Category</p>
+          <Dropdown className={styles.dropdown} text={this.state.selectedCategory}>
+            <Dropdown.Menu >
               {this.props.categories.map(category => (
                 <Dropdown.Item
                   key={category.id}
@@ -79,26 +79,30 @@ export default class ToolForm extends Component {
             </Dropdown.Menu>
           </Dropdown>
         </Form.Field>
-        <Form.Field required>
-          <label>Description</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Description</p>
+          <Form.Input transparent
+            className={styles.input}
             name='description'
             placeholder='Tool Description'
             value={description}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Details</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Details</p>
+          <Form.Input transparent
+            className={styles.input}
             name='body'
             placeholder='Tool Details'
             value={body}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
-        <Button onClick={() => this.props.goBack()}>Go Back</Button>
+        <div className={styles.buttonContainer}>
+          <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, toolId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+        </div>
       </Form>
       </div>
     )
