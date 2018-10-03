@@ -48,12 +48,12 @@ export default class WorkshopForm extends Component {
       <div className={styles.workshopForm}>
       {
       this.props.parent === 'edit'
-      ? <h2>Edit this workshop:</h2>
-      : <h2>Add a workshop:</h2>
+      ? <h2 className={styles.header}>Edit this workshop:</h2>
+      : <h2 className={styles.header}>Add a workshop:</h2>
       }
       <Form>
         <Form.Field className={styles.field} required>
-          <label>Name</label>
+          <p className={styles.label}>Name</p>
           <Form.Input
             transparent
             className={styles.input}
@@ -63,7 +63,7 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
+        <Form.Field className={styles.field} required>
           <p className={styles.label}>Category</p>
           <Dropdown className={styles.dropdown} text={this.state.selectedCategory}>
             <Dropdown.Menu>
@@ -92,7 +92,7 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
+        <Form.Field className={styles.field} required>
           <p className={styles.label}>Description</p>
           <Form.Input
             transparent
@@ -103,7 +103,7 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
+        <Form.Field className={styles.field} required>
           <p className={styles.label}>Details</p>
           <Form.Input
             transparent
@@ -115,8 +115,8 @@ export default class WorkshopForm extends Component {
           />
         </Form.Field>
         <div className={styles.buttonContainer}>
-        <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
-        <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+          <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
         </div>
       </Form>
       </div>
