@@ -28,21 +28,23 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <Nav />
-        <Route exact path='/' component={WelcomeContainer}/>
-        <Route path='/login' component={Auth}/>
-        <Route path='/admin' component={Admin}/>
-        <Route exact path='/tools/:category?' component={ToolsContainer}/>
-        <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
-        <Route exact path='/edit/tool/:id' component={EditTool}/>
-        <Route exact path='/edit/workshop/:id' component={EditWorkshop}/>
-        <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
-        <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
-        {/* <Route exact path='/edit-user/:id' component={EmployeeForm} /> */}
-        <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
-        {/* For testing non connected components */}
-        <Route exact path='/protectedtest' component={AdminTest}/>
-        {/* For testing non connected components */}
-        {/* <Route exact path='/test' component={}/> */}
+        <div className={styles.body}>
+          <Route exact path='/' component={WelcomeContainer}/>
+          <Route path='/login' component={Auth}/>
+          <Route path='/admin' component={Admin}/>
+          <Route exact path='/tools/:category?' component={ToolsContainer}/>
+          <Route exact path='/tools/:category/:id' component={ToolDetailContainer}/>
+          <Route exact path='/edit/tool/:id' component={EditTool}/>
+          <Route exact path='/edit/workshop/:id' component={EditWorkshop}/>
+          <Route exact path='/workshops/:category?' component={WorkshopsContainer} />
+          <Route exact path='/workshops/:category/:id' component={WorkshopDetailContainer} />
+          {/* <Route exact path='/edit-user/:id' component={EmployeeForm} /> */}
+          <Route exact path='/confirm/:type/:id' component={ConfirmationContainer}/>
+          {/* For testing non connected components */}
+          <Route exact path='/protectedtest' component={AdminTest}/>
+          {/* For testing non connected components */}
+          {/* <Route exact path='/test' component={}/> */}
+        </div>
         <Route path='/' component={Footer}/>
       </div>
     )

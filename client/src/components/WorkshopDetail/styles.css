@@ -1,3 +1,9 @@
 .workshopDetail {
   text-align: center;
 }
+
+.workshopDetail .bullets {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}

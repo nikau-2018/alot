@@ -31,7 +31,7 @@ export default function ToolDetail (props) {
       </Grid>
       <Divider/>
       <h4 className={styles.h4}>Product Description</h4>
-      <div className={styles.description}>
+      <div className={styles.bullets}>
         <ul>
           {body.split('*').map(element => <li>{element}</li>)}
         </ul>

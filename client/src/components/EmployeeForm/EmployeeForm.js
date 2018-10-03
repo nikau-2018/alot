@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Button, Form} from 'semantic-ui-react'
+import {Button, Form, Input} from 'semantic-ui-react'
 import axios from 'axios'
 import {get} from '../Auth/utils/localstorage'
 
@@ -69,55 +69,67 @@ export default class EmployeeForm extends Component {
     let {postErr, userId, ...rest} = this.state
     return (
       <div className={styles.employeeForm}>
-      <h2>Edit this User:</h2>
+      <h2 className={styles.header}>Edit this User:</h2>
       <Form>
-      <Form.Field required>
-          <label>Role</label>
-          <input
+      <Form.Field className={styles.field} required>
+          <p className={styles.label}>Role</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='role'
             placeholder='Role'
             value={role}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>First Name</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>First Name</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='firstName'
             placeholder='First Name'
             value={firstName}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Last Name</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Last Name</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='lastName'
             placeholder='Last Name'
             value={lastName}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Email</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Email</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='email'
             placeholder='email address'
             value={email}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Form.Field required>
-          <label>Phone</label>
-          <input
+        <Form.Field className={styles.field} required>
+          <p className={styles.label}>Phone</p>
+          <Form.Input
+            transparent
+            className={styles.input}
             name='phone'
             placeholder='Phone Number'
             value={phone}
             onChange={this.handleChange}
           />
         </Form.Field>
-        <Button onClick={() => this.handleSubmit(rest, userId)}>Submit</Button>
-        <Button onClick={() => this.props.history.goBack()}>Go Back</Button>
+        <div className={styles.buttonContainer}>
+          <Button className={styles.submit} onClick={() => this.handleSubmit(rest, userId)}>Submit</Button>
+          <Button className={styles.back} onClick={() => this.props.history.goBack()}>Go Back</Button>
+        </div>
       </Form>
       </div>
     )
