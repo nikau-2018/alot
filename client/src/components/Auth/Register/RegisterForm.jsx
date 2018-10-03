@@ -57,6 +57,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='user'
                 iconPosition='left'
+                autoComplete='off'
               />
               <Form.Input transparent
                 name='lastName'
@@ -66,6 +67,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='user'
                 iconPosition='left'
+                autoComplete='off'
               />
               <Form.Input transparent
                 name='email'
@@ -75,6 +77,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='mail'
                 iconPosition='left'
+                autoComplete='off'
               />
               <Form.Input transparent 
                 name='phone'
@@ -84,6 +87,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='phone'
                 iconPosition='left'
+                autoComplete='off'
               />
               <Form.Input transparent
                 name='password'
@@ -94,6 +98,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='lock'
                 iconPosition='left'
+                autoComplete='off'
               />
               <Form.Input transparent
                 name='confirm'
@@ -104,6 +109,7 @@ export default class RegisterForm extends React.Component {
                 className={styles.input}
                 icon='lock'
                 iconPosition='left'
+                autoComplete='off'
               />
             </div>
             <Button onClick={this.handleClick} className={styles.button}>SIGN UP</Button><br />            
