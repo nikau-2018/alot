@@ -8,6 +8,7 @@ import styles from './styles.css'
 
 const Tools = (props) => (
   <div className={styles.tools}>
+    <h1 className={styles.header}>Tools</h1>
     <div className={styles.top}>
       <CategoryFilter
         type='tools'
