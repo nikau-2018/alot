@@ -20,11 +20,12 @@
 }
 
 .h2 {
-  font-size: 30px;
+  font-size: 2.0rem;
 }
 
 .p {
   font-size: 1.3rem;
+  padding-top: 1em;
   color: #43296C;
 }
 
