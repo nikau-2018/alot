@@ -114,8 +114,10 @@ export default class WorkshopForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Field>
+        <div className={styles.buttonContainer}>
         <Button className={styles.submit} onClick={() => this.props.handleSubmit(rest, workshopId)}>Submit</Button>
         <Button className={styles.back} onClick={() => this.props.goBack()}>Go Back</Button>
+        </div>
       </Form>
       </div>
     )
