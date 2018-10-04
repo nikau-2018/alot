@@ -11,15 +11,14 @@ export default function WorkshopDetail (props) {
   return (
     <div className={styles.workshopDetail}>
       <h1 className={styles.h1}>{props.workshop.name}</h1>
-      <h3 className={styles.h3}>Date: {moment(props.workshop.dateTime).local().format('LLL')} ({moment.utc(props.workshop.dateTime).fromNow()})</h3>
+      <h2 className={styles.h2}>Date: {moment(props.workshop.dateTime).local().format('LLL')} ({moment.utc(props.workshop.dateTime).fromNow()})</h2>
       <Image src={props.workshop.image} size='large' centered />
+      <h3>Instructor: {props.workshop.instructor}</h3>
+      <h3>Description:</h3>
+      <p>{props.workshop.body}</p>
       <div className={styles.bullets}>
         <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
       </div>
-      <h3>Description:</h3>
-      <p>{props.workshop.body}</p>
-      <h3>Instructor: </h3>
-      <p>{props.workshop.instructor}</p>
       <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} className={styles.button}>SIMILAR WORKSHOPS</Button>
       {isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
     </div>
