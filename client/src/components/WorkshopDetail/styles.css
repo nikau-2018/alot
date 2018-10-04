@@ -13,6 +13,10 @@
   padding: 0% 0% 1.5% 0%;
 }
 
+.h5 {
+  color: rgb(65, 64, 64);
+}
+
 .workshopDetail .bullets {
   text-align: left;
   display: flex;

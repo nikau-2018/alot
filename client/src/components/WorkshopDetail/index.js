@@ -13,7 +13,7 @@ export default function WorkshopDetail (props) {
       <h1 className={styles.h1}>{props.workshop.name}</h1>
       <h2 className={styles.h2}>Date: {moment(props.workshop.dateTime).local().format('LLL')} ({moment.utc(props.workshop.dateTime).fromNow()})</h2>
       <Image src={props.workshop.image} size='large' centered />
-      <h3>Instructor: {props.workshop.instructor}</h3>
+      <h5 className={styles.h5}>Instructor: {props.workshop.instructor}</h5>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>
       <div className={styles.bullets}>
