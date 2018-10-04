@@ -12,7 +12,9 @@ export default function WorkshopDetail (props) {
     <div className={styles.workshopDetail}>
       <h1 className={styles.h1}>{props.workshop.name}</h1>
       <h2 className={styles.h2}>Date: {moment(props.workshop.dateTime).local().format('LLL')} ({moment.utc(props.workshop.dateTime).fromNow()})</h2>
-      <Image src={props.workshop.image} size='large' centered />
+      <Image src={props.workshop.image} size='large' centered className={styles.image}/>
+      <Button className={styles.button} color='green'>RSVP</Button>
+
       <h5 className={styles.h5}>Instructor: {props.workshop.instructor}</h5>
       <h3>Description:</h3>
       <p>{props.workshop.body}</p>
