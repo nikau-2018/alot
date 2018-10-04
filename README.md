@@ -1,6 +1,16 @@
 # ALoT: Auckland Library of Tools App
 A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way.
 
+Demo: https://www.alot.space/
+
+## Dev Team
+- James Built [@james-built](https://github.com/james-built)
+- Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
+- Tom Hall [@tommy-hall](https://github.com/tommy-hall)
+- George Hardy [@georgehardy](https://github.com/georgehardy)  
+- Alisa Herrera-Hayman [@alisamhh](https://github.com/alisamhh)  
+
+# About ALoT
 The Auckland Library of Tools will provide members with access to high quality and well
 maintained tools and equipment. The hub will consist of a well stocked “library”, a storage
 and repair space, and, ideally, an attached or associated makerspace where members can
@@ -23,45 +33,3 @@ a generative space centered on participation, community engagement, and sustaina
 - aucklandtoollibrary@gmail.com.
 - [Facebook page](https://www.facebook.com/AucklandLibraryofTools/)
 - [ALoT draft website](https://aucklandlibraryoftools.wordpress.com/)
-
-## Styling Info
-
-### CSS Framework
-- Can we use [Bulma](https://bulma.io)?
-- Another option is Semantic UI (https://semantic-ui.com/) both seem good options to start with
-- Class naming convention: kebab-case
-
-### Font
-- To be confirmed
-- If Bulma font is okay, keep it. Otherwise, go to [FontCDN](https://fontcdn.org/) or [Google Fonts](https://fonts.google.com/)
-
-### App Colours
-- seafoam green
-- yellow
-
-### Colours from logo:
-
-##### A
-- light grey: #ffffff
-- dark grey: #787878
-
-##### L
-- seafoam green: #57d2b3
-
-##### O
-- yellow: fff442
-
-##### T
-- grey: #dcdcdc
-- tan: #ead8b4
-
-## Library of Tools Examples
-- [Newtown Tool Library](https://newtown-tool-library.myturn.com/library/)
-- [Tacoma Tool Library](https://rebecca-solverson.squarespace.com/)
-
-## Dev Team
-- James Built [@james-built](https://github.com/james-built)
-- Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
-- Tom Hall [@tommy-hall](https://github.com/tommy-hall)
-- George Hardy [@georgehardy](https://github.com/georgehardy)  
-- Alisa Herrera-Hayman [@alisamhh](https://github.com/alisamhh)  
