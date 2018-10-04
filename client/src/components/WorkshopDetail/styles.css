@@ -12,3 +12,8 @@
   background-color: var(--dark-main);
   color: white;
 }
+
+.workshopDetail .button:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
