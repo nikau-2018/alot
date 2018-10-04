@@ -2,10 +2,10 @@
   font-size: 0.85em !important;
 }
 
-.nav .menu {
+/* .nav .menu {
   background-color: var(--dark-main);
-}
+} */
 
 .nav .menu i, .nav .menu .navText {
-  color: var(--darker-yellow);
+  color: var(--dark-main);
 }
