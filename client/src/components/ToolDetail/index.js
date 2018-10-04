@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, Button, Divider, Grid} from 'semantic-ui-react'
+import {Image, Button, Grid} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
@@ -17,7 +17,6 @@ export default function ToolDetail (props) {
           ? <Button className={styles.button} as={Link} to={`/confirm/tool/${props.tool.id}`} color='green'>RESERVE</Button>
           : <Button className={styles.button} color='red'>UNAVAILABLE</Button>
       }
-      <Button className={styles.button} as={Link} to={`/tools/${props.tool.categoryId}`}>SIMILAR TOOLS</Button>
       {isAdmin && <Button className={styles.button} as={Link} to={`/edit/tool/${props.tool.id}`} >EDIT TOOL</Button>}
       <Grid columns={2} >
         <Grid.Row>
@@ -29,12 +28,12 @@ export default function ToolDetail (props) {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <Divider/>
       <div className={styles.bullets}>
         <ul>
           {body.split('*').map(element => <li className={styles.li}>{element}</li>)}
         </ul>
       </div>
+      <Button className={styles.button} as={Link} to={`/tools/${props.tool.categoryId}`}>SIMILAR TOOLS</Button>
     </div>
   )
 }

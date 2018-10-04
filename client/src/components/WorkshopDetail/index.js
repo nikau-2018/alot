@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import {Image, Button, Divider} from 'semantic-ui-react'
+import {Image, Button} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 import styles from './styles.css'
@@ -11,9 +11,7 @@ export default function WorkshopDetail (props) {
   return (
     <div className={styles.workshopDetail}>
       <h1>{props.workshop.name}</h1>
-      <Divider/>
       <Image src={props.workshop.image} size='large' centered />
-      <Divider/>
       <div className={styles.bullets}>
         <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
       </div>
