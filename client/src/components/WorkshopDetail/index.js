@@ -10,7 +10,8 @@ export default function WorkshopDetail (props) {
   const isAdmin = props.isAdmin
   return (
     <div className={styles.workshopDetail}>
-      <h1>{props.workshop.name}</h1>
+      <h1 className={styles.h1}>{props.workshop.name}</h1>
+      <h3 className={styles.h3}>Date: {moment(props.workshop.dateTime).local().format('LLL')} ({moment.utc(props.workshop.dateTime).fromNow()})</h3>
       <Image src={props.workshop.image} size='large' centered />
       <div className={styles.bullets}>
         <ul>{description.split('*').map(element => <li>{element}</li>)}</ul>
@@ -19,9 +20,6 @@ export default function WorkshopDetail (props) {
       <p>{props.workshop.body}</p>
       <h3>Instructor: </h3>
       <p>{props.workshop.instructor}</p>
-      <h3>Date:</h3>
-      <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
-      <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
       <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} className={styles.button}>SIMILAR WORKSHOPS</Button>
       {isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
     </div>

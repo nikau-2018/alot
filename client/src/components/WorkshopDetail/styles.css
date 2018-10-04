@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.h1 {
+  font-size: 2.8em;
+  padding: 2% 0% 0% 0%;
+}
+
+.h3 {
+  color: grey;
+  font-size: 1.3em;
+  padding: 0% 0% 1.5% 0%;
+}
+
 .workshopDetail .bullets {
   text-align: left;
   display: flex;
