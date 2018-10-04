@@ -3,6 +3,9 @@
 }
 
 .menu {
+  background-color: #F9F3E2 !important;
+}
 
-
+.nav i {
+  color: var(--dark-main);
 }
