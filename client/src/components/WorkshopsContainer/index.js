@@ -6,7 +6,9 @@ import WorkshopsContainer from './WorkshopsContainer'
 
 const mapStateToProps = (state) => {
   return {
-    workshops: state.workshops.workshops
+    workshops: state.workshops.workshops,
+    searchWorkshop: state.searchWorkshop,
+    ready: state.workshops.ready
   }
 }
 

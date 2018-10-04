@@ -1,14 +1,23 @@
 const jwt = require('jsonwebtoken')
+const {getUser} = require('../db/users')
 
 module.exports = {
   getToken,
   getSecret,
-  handleError
+  handleError,
+  isAdmin
 }
 
 // Create a JWT with a user id in it
-function getToken (id) {
-  return jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: '1d'})
+function getToken (user) {
+  return jwt.sign({
+    id: user.id,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+    phone: user.phone,
+    role: user.role
+  }, process.env.JWT_SECRET, {expiresIn: '1d'})
 }
 
 function getSecret (req, payload, done) {
@@ -23,4 +32,16 @@ function handleError (err, req, res, next) {
     })
   }
   next()
+}
+
+// figure out why this crashes the server...
+function isAdmin (req, res, next) {
+  getUser(req.user.email)
+    .then(user => {
+      if (user.role === 1) {
+        next()
+      } else {
+        next('not an admin')
+      }
+    })
 }

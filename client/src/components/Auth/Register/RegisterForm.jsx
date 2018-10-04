@@ -5,6 +5,8 @@ import {pick, clone} from 'lodash'
 
 import ErrorMessage from '../ErrorMessage'
 
+import styles from './styles.css'
+
 export default class RegisterForm extends React.Component {
   constructor (props) {
     super(props)
@@ -42,59 +44,80 @@ export default class RegisterForm extends React.Component {
   render () {
     const {firstName, lastName, email, phone, password, confirm} = this.state
     return (
-      <div>
-              
+      <div className={styles.registerForm}>
         <Form>
-        <div className='register'>
-          <h1> Create an Account </h1>
-          <Form.Field>
-            <label>First Name</label>
-            <input name='firstName'
-            placeholder='First Name'
-            value = {firstName}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Last Name</label>
-            <input name='lastName'
-            placeholder='Last Name'
-            value = {lastName}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Email</label>
-            <input name='email'
-            placeholder='Email'
-            value = {email}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Phone Number</label>
-            <input name='phone'
-            placeholder='Phone Number'
-            value={phone}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Password</label>
-            <input name='password'
-            type='password'
-            placeholder='Password'
-            value={password}
-            onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Confirm Password</label>
-            <input name='confirm'
-            type='password'
-            placeholder='Password'
-            value={confirm}
-            onChange={this.handleChange} />
-          </Form.Field>
+          <div className={styles.form}>          
+            <h1>SIGN UP</h1>
+            <div className={styles.inputs}>
+              <Form.Input transparent
+                name='firstName'
+                placeholder='First Name'
+                value={firstName}            
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='user'
+                iconPosition='left'
+                autoComplete='off'
+              />
+              <Form.Input transparent
+                name='lastName'
+                placeholder='Last Name'
+                value={lastName}            
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='user'
+                iconPosition='left'
+                autoComplete='off'
+              />
+              <Form.Input transparent
+                name='email'
+                placeholder='Email'
+                value={email}
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='mail'
+                iconPosition='left'
+                autoComplete='off'
+              />
+              <Form.Input transparent 
+                name='phone'
+                placeholder='Phone Number'
+                value={phone}
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='phone'
+                iconPosition='left'
+                autoComplete='off'
+              />
+              <Form.Input transparent
+                name='password'
+                type='password'
+                placeholder='Password'
+                value={password}            
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='lock'
+                iconPosition='left'
+                autoComplete='off'
+              />
+              <Form.Input transparent
+                name='confirm'
+                type='password'
+                placeholder='Confirm Password'
+                value={confirm}            
+                onChange={this.handleChange}
+                className={styles.input}
+                icon='lock'
+                iconPosition='left'
+                autoComplete='off'
+              />
+            </div>
+            <Button onClick={this.handleClick} className={styles.button}>SIGN UP</Button><br />            
+          </div>
           <ErrorMessage reducer='auth' />
-          <Button onClick={this.handleClick}>Submit</Button><br /><br />
-          <Button onClick={this.handleSwitch}>Already have an account?</Button>
-        </div>
+          <div>
+            Already have an account? <Button onClick={this.handleSwitch} className={styles.switch}>Login</Button>
+          </div>
       </Form>
       </div>
     )

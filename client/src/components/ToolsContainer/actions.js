@@ -1,4 +1,5 @@
-import request from 'axios'
+import axios from 'axios'
+import {get} from '../Auth/utils/localstorage'
 
 export const RECEIVE_TOOLS_ERROR = 'RECEIVE_TOOLS_ERROR'
 export const REQUEST_TOOLS = 'REQUEST_TOOLS'
@@ -18,10 +19,12 @@ export const receiveTools = tools => ({
   tools
 })
 
+axios.defaults.headers.common['Authorization'] = `Bearer ${get('token')}`
+
 export const fetchTools = () => {
   return (dispatch) => {
     dispatch(requestTools())
-    return request
+    return axios
       .get('/api/v1/tools')
       .then(res => {
         dispatch(receiveTools(res.data.tools))

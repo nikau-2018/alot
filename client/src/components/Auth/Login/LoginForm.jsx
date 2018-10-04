@@ -1,7 +1,10 @@
 import React from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 import ErrorMessage from '../ErrorMessage'
+
+import styles from './styles.css'
 
 export default class LoginForm extends React.Component {
   constructor (props) {
@@ -35,27 +38,39 @@ export default class LoginForm extends React.Component {
 
   render () {
     return (
-      <Form>
-        <div className='login'>
-          <h1> Login </h1>
-          <Form.Field>
-            <label>Email</label>
-            <input name='email'
-              placeholder='Email'
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Form.Field>
-            <label>Password</label>
-            <input name='password'
-              type='password'
-              placeholder='Password'
-              onChange={this.handleChange} />
-          </Form.Field>
-          <Button onClick={this.handleClick}>Submit</Button>
-          <ErrorMessage reducer='auth' />
-          <Button onClick={this.handleSwitch}>Need an account?</Button>
-        </div>
-      </Form>
+      <div className={styles.loginForm}>
+        <Form>
+            <div className={styles.form}>
+              <h1>LOGIN</h1>
+              <div className={styles.inputs}>
+                <Form.Input transparent
+                  name='email'
+                  placeholder='Email'
+                  onChange={this.handleChange}
+                  className={styles.input}
+                  icon='mail'
+                  iconPosition='left'
+                  autoComplete='off'
+                />
+                <Form.Input transparent
+                  name='password'
+                  type='password'
+                  placeholder='Password'
+                  onChange={this.handleChange}
+                  className={styles.input}
+                  icon='lock'
+                  iconPosition='left'
+                  autoComplete='off'
+                />
+              </div>
+              <Button onClick={this.handleClick} className={styles.button}>SIGN IN</Button><br />
+            </div>
+            <ErrorMessage reducer='auth' />
+            <div>
+              Don't have an account? <Button onClick={this.handleSwitch} className={styles.switch}>Sign Up</Button>
+            </div>
+        </Form>
+      </div>      
     )
   }
 }

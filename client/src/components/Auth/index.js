@@ -4,6 +4,8 @@ import {Button} from 'semantic-ui-react'
 import Login from './Login'
 import Register from './Register'
 
+import styles from './styles.css'
+
 class Auth extends React.Component {
   constructor (props) {
     super(props)
@@ -20,7 +22,7 @@ class Auth extends React.Component {
   render () {
     const {action} = this.state
     return (
-      <div>
+      <div className={styles.auth}>
         {
           this.props.isAuthenticated
             ? !this.props.inline && this.props.history.goBack()
@@ -29,7 +31,7 @@ class Auth extends React.Component {
               : action === 'register' && <Register callback={this.setAction}/>
         }
         {
-          !this.props.inline && <Button onClick={() => this.props.history.goBack()}>Back</Button>
+          !this.props.inline && <Button onClick={() => this.props.history.goBack()} className={styles.back}>Go Back</Button>
         }
                 
       </div>

@@ -1,12 +1,12 @@
 {
-  "name": "simple-scaffold",
-  "description": "Ejected CRA and simple server.",
-  "version": "0.2.0",
+  "name": "ALoT",
+  "description": "🛠 A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way.",
+  "version": "0.1.0",
   "main": "index.js",
-  "author": "Rich Churcher",
+  "author": "Aimee Coxhead, Alisa Herrera-Hayman, George Hardy, James Built, Tom Hall",
   "license": "Apache-2.0",
   "private": false,
-  "repository": "git@github.com:richchurcher/simple-scaffold",
+  "repository": "git@github.com:nikau-2018/alot",
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
@@ -14,6 +14,7 @@
     "jsonwebtoken": "^8.3.0",
     "knex": "^0.15.2",
     "libsodium-wrappers": "^0.7.3",
+    "moment": "^2.22.2",
     "pg": "^7.4.3",
     "sqlite3": "^4.0.2"
   },
@@ -33,6 +34,12 @@
     "server:dev": "nodemon index",
     "server:prod": "node index",
     "postinstall": "knex migrate:latest",
-    "start": "yarn --silent message && yarn server:prod"
+    "start": "yarn --silent message && yarn server:prod",
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "tests"
+    ]
   }
 }

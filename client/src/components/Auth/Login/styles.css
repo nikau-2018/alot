@@ -1,0 +1,71 @@
+/* FOR MOBILE */
+@media only screen and (max-width: 700px) {
+  .loginForm {
+    margin-top: 10%;
+    margin-left: 8%;
+    margin-right: 8%;  
+  }
+  .loginForm .button {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    width: 100%;    
+  }
+  .inputs {
+    margin-bottom: 15%;
+  }
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 700px) {
+  .loginForm {
+    margin-top: 3em;
+  }
+  .loginForm .button {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+  }
+  .form {
+    width: 30%;
+    margin: auto;
+  }
+  .inputs {
+    width: 100%;
+    margin-bottom: 3%;
+  }
+}
+
+.loginForm {
+  text-align: center;
+}
+
+.loginForm i {
+  color: var(--dark-main) !important;  
+}
+
+.loginForm .inputs input::placeholder {
+  color: var(--dark-main);
+  font-weight: bold;
+}
+
+.input {
+  border-bottom: .15em solid var(--dark-main);
+  padding-bottom: .5em;
+  padding-left: .6em;
+}
+
+.loginForm .button {
+  background-color: var(--dark-main);
+  color: white;
+}
+
+.switch:hover{
+  background-color: transparent !important;
+  color: var(--button-hover) !important;
+}
+
+.loginForm .switch {
+  background-color: transparent;
+  padding: 0px;
+  color: var(--dark-main);
+}

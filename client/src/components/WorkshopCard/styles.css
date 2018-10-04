@@ -1,0 +1,29 @@
+.header {
+  background-color: #503875 !important;
+  text-align: center;
+  
+
+}
+
+.headerText {
+  text-align: center;
+  color: white !important;
+}
+
+.content {
+  background-color: white !important;
+}
+
+.description {
+  height: 6em !important;
+}
+
+.content {
+  background-color: #fefefe !important;
+  text-align: center;
+}
+
+
+.available {
+ float: right;
+}

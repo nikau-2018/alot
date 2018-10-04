@@ -6,7 +6,8 @@ import ToolDetailContainer from './ToolDetailContainer'
 
 const mapStateToProps = (state) => {
   return {
-    tools: state.tools.tools
+    tools: state.tools.tools,
+    isAdmin: state.auth.isAdmin
   }
 }
 

@@ -1,26 +1,33 @@
 import React, {Component} from 'react'
+import {Loader, Dimmer} from 'semantic-ui-react'
 
-// Components
 import Tools from '../Tools'
 
 export default class ToolsContainer extends Component {
   componentDidMount () {
     this.props.fetchTools()
-    this.props.fetchCategories()
   }
 
   render () {
-    const filteredTools = !this.props.match.params.category
-      ? this.props.tools
-      : this.props.tools.filter((tool) => {
-        return this.props.match.params.category == tool.categoryId
-      })
-    return (
-      <div className='tools-container'>
-        <Tools
-          filteredTools={filteredTools}
-        />
-      </div>
-    )
+    if (this.props.ready) {
+      const category = this.props.match.params.category
+      const tools = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.props.searchTool.toLowerCase()))
+      const filteredTools = !category
+        ? tools
+        : tools.filter((tool) => {
+          return Number(category) === tool.categoryId
+        })
+
+      return (
+        <div>
+          <Tools
+            filteredTools={filteredTools}
+            category={category}
+          />
+        </div>
+      )
+    } else {
+      return <Dimmer active inverted><Loader inverted>Loading</Loader></Dimmer>
+    }
   }
 }

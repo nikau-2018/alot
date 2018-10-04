@@ -1,0 +1,32 @@
+.people {
+  text-align: center;
+  background-color: #F9F3E2;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid;
+}
+
+.h1 {
+  padding: 0.5em;
+  font-size: 2.5rem;
+}
+
+.h2 {
+  font-size: 2.0rem;
+}
+
+.p {
+  font-size: 1.3rem;
+  padding-top: 1em;
+}
+
+.email {
+  font-size: 17px;
+}

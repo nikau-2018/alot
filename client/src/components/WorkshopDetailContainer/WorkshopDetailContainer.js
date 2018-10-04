@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 import WorkshopDetail from '../WorkshopDetail'
 
@@ -19,10 +19,11 @@ export default class WorkshopDetailContainer extends Component {
         this.setState({workshop})
       })
   }
+
   render () {
     return (
       <div>
-        {this.state.workshop && <WorkshopDetail workshop= {this.state.workshop} />}
+        {this.state.workshop && <WorkshopDetail workshop={this.state.workshop} isAdmin={this.props.isAdmin}/>}
       </div>
     )
   }

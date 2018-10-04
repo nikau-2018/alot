@@ -1,4 +1,33 @@
+/* CSS Variable */
+:root {
+  --dark-main: #43296C;
+  /* --hover: #d1c198; */
+  --button-hover: #55318B;
+}
+
 .main {
   color: green;
   font-weight: bold;
+}
+
+/* This makes the footer stick to bottom of page */
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+.body {
+  flex: 1;
+}
+ /*  */
+ 
+:not(i) {
+  font-family: 'Poppins', sans-serif !important;
+  color: var(--dark-main);
+}
+
+button:hover {
+  background-color: var(--button-hover) !important;
+  color: white !important;
 }

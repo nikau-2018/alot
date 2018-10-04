@@ -135,6 +135,28 @@ module.exports = {
               compact: true
             }
           },
+          {
+            test: /\.css$/,
+            exclude: [/src/],
+            loader: ExtractTextPlugin.extract(
+              Object.assign({
+                fallback: {
+                  loader: require.resolve('style-loader'),
+                  options: {
+                    hmr: false
+                  }
+                },
+                use: [{
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    importLoaders: 1,
+                    minimize: true,
+                    sourceMap: shouldUseSourceMap
+                  }
+                }]
+              })
+            )
+          },
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -149,6 +171,7 @@ module.exports = {
           // in the main CSS file.
           {
             test: /\.css$/,
+            exclude: [/node_modules/],
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -163,8 +186,9 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
+                        modules: true,
                         minimize: true,
-                        sourceMap: shouldUseSourceMap
+                        sourceMap: true
                       }
                     },
                     {
@@ -292,9 +316,7 @@ module.exports = {
         if (message.indexOf('Skipping static resource') === 0) {
           // This message obscures real errors so we ignore it.
           // https://github.com/facebookincubator/create-react-app/issues/2612
-          return
         }
-        console.log(message)
       },
       minify: true,
       // For unknown URLs, fallback to the index page

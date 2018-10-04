@@ -1,0 +1,52 @@
+.map{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:flex-start;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.image {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p{
+  font-size: 20px;
+}
+
+.about {
+  padding-top: 5em;
+  padding-left: 0.5em;
+}
+
+.map {
+  padding-bottom: 1.7em;
+}
+
+/* FOR MOBILE */
+@media only screen and (max-width: 845px) {
+  .about {
+    padding-top: 1.0em;
+  }
+  .map {
+
+  }
+}
+/* FOR DESKTOP */
+@media only screen and (min-width: 700px) {
+
+}

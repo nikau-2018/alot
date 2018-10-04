@@ -4,6 +4,7 @@ import {Provider} from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
+import 'semantic-ui-css/semantic.min.css'
 
 import App from './components/App'
 import reducers from './reducers'
