@@ -14,11 +14,11 @@ export default function ToolDetail (props) {
       <Image bordered className={styles.image}src={props.tool.image} size='large' centered />
       {
         props.tool.available
-          ? <Button className={styles.button} as={Link} to={`/confirm/tool/${props.tool.id}`} color='green'>Reserve</Button>
-          : <Button className={styles.button} color='red'>Not available</Button>
+          ? <Button className={styles.button} as={Link} to={`/confirm/tool/${props.tool.id}`} color='green'>RESERVE</Button>
+          : <Button className={styles.button} color='red'>UNAVAILABLE</Button>
       }
-      <Button className={styles.button} as={Link} to={`/tools/${props.tool.categoryId}`}>Similar Tools</Button>
-      {isAdmin && <Button className={styles.button} as={Link} to={`/edit/tool/${props.tool.id}`} >Edit Tool</Button>}
+      <Button className={styles.button} as={Link} to={`/tools/${props.tool.categoryId}`}>SIMILAR TOOLS</Button>
+      {isAdmin && <Button className={styles.button} as={Link} to={`/edit/tool/${props.tool.id}`} >EDIT TOOL</Button>}
       <Grid columns={2} >
         <Grid.Row>
           <Grid.Column>

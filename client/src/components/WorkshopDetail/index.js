@@ -24,7 +24,7 @@ export default function WorkshopDetail (props) {
       <h3>Date:</h3>
       <p>{moment(props.workshop.dateTime).local().format('LLL')}</p>
       <p>{moment.utc(props.workshop.dateTime).fromNow()}</p>
-      <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} className={styles.button}>Similar Workshops</Button>
+      <Button as={Link} to={`/workshops/${props.workshop.categoryId}`} className={styles.button}>SIMILAR WORKSHOPS</Button>
       {isAdmin && <Button as={Link} to={`/edit/workshop/${props.workshop.id}`} basic>Edit Workshop</Button>}
     </div>
   )
