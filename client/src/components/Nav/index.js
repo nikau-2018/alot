@@ -19,27 +19,27 @@ class Nav extends Component {
       <div className={styles.nav}>
         <Menu icon='labeled' small className={styles.menu}>
           <Menu.Item className={styles.icon} as={Link} to="/">
-            <Icon name='home'/>Home
+            <Icon name='home'/><div className={styles.navText}>Home</div>
           </Menu.Item>
 
           <Menu.Item className={styles.icon} as={Link} to="/tools">
-            <Icon name='wrench' />Tools
+            <Icon name='wrench' /><div className={styles.navText}>Tools</div>
           </Menu.Item>
 
           <Menu.Item className={styles.icon} as={Link} to="/workshops">
-            <Icon name='warehouse'/>Workshops
+            <Icon name='warehouse'/><div className={styles.navText}>Workshops</div>
           </Menu.Item>
 
           <Menu.Menu position='right'>
             {this.props.isAdmin &&
               <Menu.Item className={styles.icon} as={Link} to="/admin">
-                <Icon name='book'/>Admin
+                <Icon name='book'/><div className={styles.navText}>Admin</div>
               </Menu.Item>
             }
             {this.props.isAuthenticated
               ? <Logout />
               : <Menu.Item className={styles.icon} as={Link} to="/login">
-                <Icon name='lock open'/>Login
+                <Icon name='lock open'/><div className={styles.navText}>Login</div>
               </Menu.Item>
             }
           </Menu.Menu>
