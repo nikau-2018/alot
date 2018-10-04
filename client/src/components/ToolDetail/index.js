@@ -22,7 +22,7 @@ export default function ToolDetail (props) {
       <Grid columns={2} >
         <Grid.Row>
           <Grid.Column>
-            <h5 className={styles.h5one}>In Library  {props.tool.stocked}</h5>
+            <h5 className={styles.h5one}>In Library:  {props.tool.stocked}</h5>
           </Grid.Column>
           <Grid.Column>
             <h5 className={styles.h5two}>Available:  {props.tool.available}</h5>
