@@ -1,7 +1,7 @@
 # ALoT: Auckland Library of Tools App
 A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way.
 
-Demo: https://www.alot.space/
+Demo: https://alot.space/
 
 ## Dev Team
 - James Built [@james-built](https://github.com/james-built)
