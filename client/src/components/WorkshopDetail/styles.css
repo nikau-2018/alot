@@ -7,3 +7,8 @@
   display: flex;
   justify-content: center;
 }
+
+.workshopDetail .button {
+  background-color: var(--dark-main);
+  color: white;
+}
