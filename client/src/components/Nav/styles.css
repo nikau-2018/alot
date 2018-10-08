@@ -2,7 +2,10 @@
   font-size: 0.85em !important;
 }
 
-.menu {
+/* .nav .menu {
+  background-color: var(--dark-main);
+} */
 
-
+.nav .menu i, .nav .menu .navText {
+  color: var(--dark-main);
 }
