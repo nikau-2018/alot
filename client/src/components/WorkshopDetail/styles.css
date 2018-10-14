@@ -1,9 +1,40 @@
 .workshopDetail {
   text-align: center;
+  /* padding: 0% 5% 0% 5%; DOES THIS NEED TO BE ADDED FOR MOBILE? NO DIFF ON DESKTOP, IT'S IN TOOLDETAIL */
+}
+
+.h1 {
+  font-size: 2.8em;
+  padding: 2% 0% 0% 0%;
+}
+
+.h2 {
+  color: grey;
+  font-size: 1.3em;
+  padding: 0% 0% 1.5% 0%;
+}
+
+.h5 {
+  color: rgb(65, 64, 64);
 }
 
 .workshopDetail .bullets {
   text-align: left;
   display: flex;
   justify-content: center;
+}
+
+.image {
+  margin-bottom: 2em;
+}
+
+.workshopDetail .button {
+  margin: 0.25em !important;
+  background-color: var(--dark-main);
+  color: white;
+}
+
+.workshopDetail .button:hover {
+  background-color: var(--button-hover);
+  color: white;
 }
