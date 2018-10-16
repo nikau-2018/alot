@@ -7,7 +7,6 @@ const db = require('../db/tools')
 router.get('/', (req, res) => {
   db.getTools()
     .then(tools => {
-      // postgres return available as a string...
       const toolsList = tools.map(tool => {
         return {
           ...tool,
