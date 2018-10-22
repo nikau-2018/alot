@@ -27,7 +27,7 @@ export const fetchTools = () => {
     return axios
       .get('/api/v1/tools')
       .then(res => {
-        dispatch(receiveTools(res.data.tools))
+        dispatch(receiveTools(res.data.toolsList))
       })
       .catch(err => {
         dispatch(showError(err.message))
