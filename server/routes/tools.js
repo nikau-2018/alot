@@ -7,7 +7,13 @@ const db = require('../db/tools')
 router.get('/', (req, res) => {
   db.getTools()
     .then(tools => {
-      res.status(200).json({tools})
+      const toolsList = tools.map(tool => {
+        return {
+          ...tool,
+          available: Number(tool.available)
+        }
+      })
+      res.status(200).json({toolsList})
     })
     .catch(err => {
       res.status(500).json(err)
