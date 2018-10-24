@@ -3,6 +3,13 @@ A community hub that provides access to tools, reduces unnecessary consumption a
 
 Demo: https://alot.space/
 
+If you want to try it out locally, clone down the repo and run the following in the root directory:
+```sh
+touch .env && echo "JWT_SECRET=yourRandomSecretHere" >> .env
+yarn && yarn knex migrate:latest && yarn knex seed:run
+yarn dev
+```
+
 ## Dev Team
 - James Built [@james-built](https://github.com/james-built)
 - Aimee Coxhead [@aimee-coxhead](https://github.com/aimee-coxhead)
