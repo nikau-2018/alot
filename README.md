@@ -1,7 +1,7 @@
 # ALoT: Auckland Library of Tools App
 A community hub that provides access to tools, reduces unnecessary consumption and empowers people to build, share & create in a sustainable way.
 
-Demo: https://alot.space/
+Demo: http://alot.space/
 
 If you want to try it out locally, clone down the repo and run the following in the root directory:
 ```sh
