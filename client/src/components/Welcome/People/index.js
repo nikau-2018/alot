@@ -17,7 +17,7 @@ export default function People () {
               Amanda Chapman​ established the Auckland Community Fridge, NZ’s first free food sharing fridge. She blogs about waste reduction and her tiny house build. Amanda works for We Compost and United Sustainable Sisters (part of Tamaki WRAP). She has completed a PGDipSci in Environmental Science and Geography.
             </p>
             <a href="http://www.wastefreeland.nz" target="_blank" className={styles.email}>
-              <Icon name='mail' /> www.wastefreeland.nz
+              <Icon name='rss' /> www.wastefreeland.nz
             </a>
             <br></br>
             <a href="mailto:amandawastefree@gmail.com" className={styles.email}>
