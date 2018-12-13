@@ -16,7 +16,7 @@ export default function People () {
             <p className={styles.p}>
               Amanda Chapman​ established the Auckland Community Fridge, NZ’s first free food sharing fridge. She blogs about waste reduction and her tiny house build. Amanda works for We Compost and United Sustainable Sisters (part of Tamaki WRAP). She has completed a PGDipSci in Environmental Science and Geography.
             </p>
-            <a href="http://www.wastefreeland.nz" target="_blank" className={styles.email}>
+            <a href="http://www.wastefreeland.nz" target="mywindow" className={styles.email}>
               <Icon name='rss' /> www.wastefreeland.nz
             </a>
             <br></br>
