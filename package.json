@@ -23,6 +23,9 @@
     "jest": "^23.6.0",
     "nodemon": "^1.18.4"
   },
+  "resolutions": {
+    "**/event-stream": "^4.0.1"
+  },
   "scripts": {
     "build": "cd client && yarn build",
     "client": "cd client && yarn start",
