@@ -21,3 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 dev.sqlite3
+.idea/
