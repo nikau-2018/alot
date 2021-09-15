@@ -23,7 +23,7 @@
     "jest": "^23.6.0",
     "js-yaml": "^3.13.1",
     "nodemon": "^1.18.4",
-    "set-value": "^3.0.1"
+    "set-value": "^4.0.1"
   },
   "resolutions": {
     "**/event-stream": "^4.0.1"
