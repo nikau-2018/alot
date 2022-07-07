@@ -95,7 +95,7 @@
   "dependencies": {
     "babel-plugin-react-css-modules": "^3.4.2",
     "jwt-decode": "^2.2.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "react-dropdown-timepicker": "^1.0.4",
     "semantic-ui-css": "^2.4.0",
     "semantic-ui-react": "^0.82.5"
